@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Projekt
@@ -14,8 +12,15 @@ namespace Projekt
         [STAThread]
         static void Main()
         {
+            if (!File.Exists(Environment.CurrentDirectory + "pokladna.db"))
+            {
+                if (MessageBox.Show("Databáze nebyla nenalezena\nPřejete si vytvořit novou?", "Chyba databáze", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                {
+                     return;
+                }
+            }
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
     }
-}
+} 
