@@ -2,5 +2,7 @@
 # Tento soubor .gitignore byl automaticky vytvořen aplikací Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/Projekt
-/bin/Debug
+/.vs
+/bin
+/obj
+/packages/SQLite.3.13.0
