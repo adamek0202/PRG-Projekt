@@ -4,6 +4,7 @@
 
 /.vs
 /bin
-/obj
+/obj/Debug
+/obj/Release
 /packages/SQLite.3.13.0
 /packages
