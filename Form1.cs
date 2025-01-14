@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         public int SumPrice;
         
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -75,32 +75,34 @@ namespace Projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var group = new ListViewGroup();
-            AddHeadItem("Zinger double", 130, group);
+            AddHeadItem("Zinger double", 130, new ListViewGroup());
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0 && listView1.SelectedItems[0].Group != null)
             {
-                if (listView1.SelectedItems[0].Group.Items.Count > 0)
+                if (MessageBox.Show("Opravdu chctete tuto položku stornovat?", "Potvrzení", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    UpdateSumPrice(-Convert.ToInt32(new string(listView1.SelectedItems[0].Group.Items[0].SubItems[1].Text.Where(char.IsDigit).ToArray())));
+                    if (listView1.SelectedItems[0].Group.Items.Count > 0)
+                    {
+                        UpdateSumPrice(-Convert.ToInt32(new string(listView1.SelectedItems[0].Group.Items[0].SubItems[1].Text.Where(char.IsDigit).ToArray())));
 
-                }
-                foreach (var item in listView1.SelectedItems[0].Group.Items)
-                {
-                    listView1.Items.Remove((ListViewItem)item);
+                    }
+                    foreach (var item in listView1.SelectedItems[0].Group.Items)
+                    {
+                        listView1.Items.Remove((ListViewItem)item);
+                    } 
                 }
             }
         }
         
-        private void downButton_Click(object sender, EventArgs e)
+        private void DownButton_Click(object sender, EventArgs e)
         {
             SelectNextItem();
         }
         
-        private void upButton_Click(object sender, EventArgs e)
+        private void UpButton_Click(object sender, EventArgs e)
         {
             SelectPreviousItem();
         }
@@ -114,9 +116,19 @@ namespace Projekt
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
-            listView1.Groups.Clear();
-            UpdateSumPrice(-SumPrice);
+            if (listView1.Items.Count > 0)
+            {
+                if (MessageBox.Show("Opravdu chcete tento účet stornovat?", "Potvrzení", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    listView1.Items.Clear();
+                    listView1.Groups.Clear();
+                    UpdateSumPrice(-SumPrice);
+                } 
+            }
+            else
+            {
+                MessageBox.Show("Není co stornovat", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void NoButton_Click(object sender, EventArgs e)
@@ -125,6 +137,16 @@ namespace Projekt
             {
                 listView1.SelectedItems[0].BackColor = Color.Red;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AddHeadItem("Zinger", 120, new ListViewGroup());
         }
     }
 }
