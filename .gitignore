@@ -8,3 +8,4 @@
 /obj/Release
 /packages/SQLite.3.13.0
 /packages
+/pokladna.db
