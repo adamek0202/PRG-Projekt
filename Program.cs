@@ -12,7 +12,7 @@ namespace Projekt
         [STAThread]
         static void Main()
         {
-            if (!File.Exists(Environment.CurrentDirectory + "pokladna.db"))
+            if (!File.Exists(Environment.CurrentDirectory + "\\pokladna.db"))
             {
                 if (MessageBox.Show("Databáze nebyla nenalezena\nPřejete si vytvořit novou?", "Chyba databáze", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {

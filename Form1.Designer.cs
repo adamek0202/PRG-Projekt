@@ -42,7 +42,7 @@
             this.downButton = new System.Windows.Forms.Button();
             this.upButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
-            this.NoButton = new System.Windows.Forms.Button();
+            this.ReplaceButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.zingerMenuButton = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(13, 13);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.ShowGroups = false;
@@ -147,13 +147,14 @@
             this.zingerDoubleMenuButton.TabIndex = 1;
             this.zingerDoubleMenuButton.Text = "Zinger\r\nDouble\r\nMenu";
             this.zingerDoubleMenuButton.UseVisualStyleBackColor = false;
+            this.zingerDoubleMenuButton.Click += new System.EventHandler(this.Button4_Click);
             // 
             // sumLabel
             // 
             this.sumLabel.AutoSize = true;
             this.sumLabel.Location = new System.Drawing.Point(12, 734);
             this.sumLabel.Name = "sumLabel";
-            this.sumLabel.Size = new System.Drawing.Size(76, 23);
+            this.sumLabel.Size = new System.Drawing.Size(62, 18);
             this.sumLabel.TabIndex = 3;
             this.sumLabel.Text = "Celkem";
             // 
@@ -196,19 +197,19 @@
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // NoButton
+            // ReplaceButton
             // 
-            this.NoButton.BackColor = System.Drawing.Color.Yellow;
-            this.NoButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.NoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NoButton.ForeColor = System.Drawing.Color.Black;
-            this.NoButton.Location = new System.Drawing.Point(450, 633);
-            this.NoButton.Name = "NoButton";
-            this.NoButton.Size = new System.Drawing.Size(93, 59);
-            this.NoButton.TabIndex = 2;
-            this.NoButton.Text = "Ne";
-            this.NoButton.UseVisualStyleBackColor = false;
-            this.NoButton.Click += new System.EventHandler(this.NoButton_Click);
+            this.ReplaceButton.BackColor = System.Drawing.Color.Yellow;
+            this.ReplaceButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.ReplaceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReplaceButton.ForeColor = System.Drawing.Color.Black;
+            this.ReplaceButton.Location = new System.Drawing.Point(450, 633);
+            this.ReplaceButton.Name = "ReplaceButton";
+            this.ReplaceButton.Size = new System.Drawing.Size(93, 59);
+            this.ReplaceButton.TabIndex = 2;
+            this.ReplaceButton.Text = "Výměna";
+            this.ReplaceButton.UseVisualStyleBackColor = false;
+            this.ReplaceButton.Click += new System.EventHandler(this.ReplaceButton_Click);
             // 
             // button3
             // 
@@ -248,13 +249,13 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 766);
             this.Controls.Add(this.sumLabel);
             this.Controls.Add(this.upButton);
             this.Controls.Add(this.downButton);
-            this.Controls.Add(this.NoButton);
+            this.Controls.Add(this.ReplaceButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.zingerMenuButton);
@@ -266,10 +267,11 @@
             this.Controls.Add(this.listView1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Pokladna";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,7 +291,7 @@
         private System.Windows.Forms.Button upButton;
         private System.Windows.Forms.ColumnHeader Mnozstvi;
         private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button NoButton;
+        private System.Windows.Forms.Button ReplaceButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button zingerMenuButton;

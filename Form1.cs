@@ -9,10 +9,17 @@ namespace Projekt
     public partial class MainForm : Form
     {
         public int SumPrice;
+
+        public bool replace = false;
         
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DatabaseConnection.CloseConnection();
         }
 
         private void SelectPreviousItem()
@@ -107,7 +114,7 @@ namespace Projekt
             SelectPreviousItem();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             var group = new ListViewGroup();
             AddHeadItem("Zinger double menu", 210, group);
@@ -131,11 +138,11 @@ namespace Projekt
             }
         }
 
-        private void NoButton_Click(object sender, EventArgs e)
+        private void ReplaceButton_Click(object sender, EventArgs e)
         {
             if(listView1.SelectedItems.Count == 1)
             {
-                listView1.SelectedItems[0].BackColor = Color.Red;
+                replace = true;
             }
         }
 
