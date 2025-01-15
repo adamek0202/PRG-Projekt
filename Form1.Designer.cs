@@ -123,7 +123,7 @@
             this.zingerButton.Tag = "100";
             this.zingerButton.Text = "Zinger";
             this.zingerButton.UseVisualStyleBackColor = false;
-            this.zingerButton.Click += new System.EventHandler(this.button1_Click_1);
+            this.zingerButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // zingerDoubleButton
             // 
@@ -138,7 +138,7 @@
             this.zingerDoubleButton.Tag = "101";
             this.zingerDoubleButton.Text = "Zinger\r\nDouble";
             this.zingerDoubleButton.UseVisualStyleBackColor = false;
-            this.zingerDoubleButton.Click += new System.EventHandler(this.button2_Click);
+            this.zingerDoubleButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // RemoveButton
             // 
@@ -170,7 +170,7 @@
             this.mZingerDoubleButton.TabIndex = 1;
             this.mZingerDoubleButton.Text = "Zinger\r\nDouble\r\nMenu";
             this.mZingerDoubleButton.UseVisualStyleBackColor = false;
-            this.mZingerDoubleButton.Click += new System.EventHandler(this.Button4_Click);
+            this.mZingerDoubleButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // sumLabel
             // 
@@ -259,6 +259,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Twister\r\nMenu\r\nSýr";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button5
             // 
@@ -274,6 +275,7 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "Qurito Menu";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // mZingerButton
             // 
@@ -289,6 +291,7 @@
             this.mZingerButton.TabIndex = 1;
             this.mZingerButton.Text = "Zinger\r\nMenu";
             this.mZingerButton.UseVisualStyleBackColor = false;
+            this.mZingerButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button1
             // 
@@ -304,6 +307,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Twister\r\nMenu\r\nSlanina";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button2
             // 
@@ -319,6 +323,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Twister\r\nMenu\r\nSlanina";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button4
             // 
@@ -334,6 +339,7 @@
             this.button4.TabIndex = 1;
             this.button4.Text = "Classic\r\nMenu";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button6
             // 
@@ -349,6 +355,7 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Hot Wings\r\nMenu";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button7
             // 
@@ -364,6 +371,7 @@
             this.button7.TabIndex = 1;
             this.button7.Text = "Detske\r\nMenu";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button8
             // 
@@ -379,6 +387,7 @@
             this.button8.TabIndex = 1;
             this.button8.Text = "Strips\r\nMenu";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button9
             // 
@@ -394,6 +403,7 @@
             this.button9.TabIndex = 1;
             this.button9.Text = "Texas\r\nGrander\r\nMenu";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button10
             // 
@@ -408,7 +418,7 @@
             this.button10.Tag = "101";
             this.button10.Text = "Zinger\r\nDouble";
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button2_Click);
+            this.button10.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button11
             // 
@@ -423,7 +433,7 @@
             this.button11.Tag = "101";
             this.button11.Text = "Zinger\r\nDouble";
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button2_Click);
+            this.button11.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button12
             // 

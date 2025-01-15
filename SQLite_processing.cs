@@ -12,7 +12,7 @@ namespace Projekt
         {
             get
             {
-                if(_connection == null)
+                if (_connection == null)
                 {
                     _connection = new SQLiteConnection("Data source=pokladna.db;Version=3;");
                     _connection.Open();
@@ -27,7 +27,7 @@ namespace Projekt
             _connection = null;
         }
     }
-    
+
     public partial class MainForm : Form
     {
         private void AddMenuComponents(int[] componentIds, ListViewGroup group)
@@ -35,7 +35,7 @@ namespace Projekt
             var connection = DatabaseConnection.Connection;
             string querry = "SELECT Name FROM Products WHERE ProductID = @ProductID";
 
-            foreach(var componentId in componentIds)
+            foreach (var componentId in componentIds)
             {
                 using (var command = new SQLiteCommand(querry, connection))
                 {
@@ -51,18 +51,17 @@ namespace Projekt
                 }
             }
         }
-        
+
         private void HandleButtonPress(int buttonId)
         {
             var connection = DatabaseConnection.Connection;
             var group = new ListViewGroup();
-
-            if(buttonId < 200)
+            if (buttonId < 200)
             {
                 string querry = "SELECT Name, Price FROM Products WHERE ProductID = @ProductID";
                 using (var command = new SQLiteCommand(querry, connection))
                 {
-                    command.Parameters.AddWithValue("@ProdutID", buttonId);
+                    command.Parameters.AddWithValue("@ProductID", buttonId); // Corrected parameter name
                     using (var reader = command.ExecuteReader())
                     {
                         if (reader.Read())
@@ -73,12 +72,12 @@ namespace Projekt
                         }
                         else
                         {
-                            MessageBox.Show($"Produkt s ID {buttonId} nebylv databázi nalezen\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show($"Produkt s ID {buttonId} nebyl v databázi nalezen\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
             }
-            else if(buttonId >= 200)
+            else if (buttonId >= 200)
             {
                 string querry = "SELECT Name, Price, Components FROM Menus WHERE MenuID = @MenuID";
                 using (var command = new SQLiteCommand(querry, connection))
@@ -90,7 +89,7 @@ namespace Projekt
                         {
                             string name = reader["Name"].ToString();
                             int price = Convert.ToInt32(reader["Price"]);
-;                            string componentsJson = reader["Components"].ToString();
+                            ; string componentsJson = reader["Components"].ToString();
 
                             AddHeadItem(name, price, group);
 

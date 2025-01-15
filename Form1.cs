@@ -80,11 +80,6 @@ namespace Projekt
             sumLabel.Text = "Celkem " + SumPrice.ToString() + "Kč";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AddHeadItem("Zinger double", 130, new ListViewGroup());
-        }
-
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0 && listView1.SelectedItems[0].Group != null)
@@ -114,13 +109,6 @@ namespace Projekt
             SelectPreviousItem();
         }
 
-        private void Button4_Click(object sender, EventArgs e)
-        {
-            var group = new ListViewGroup();
-            AddHeadItem("Zinger double menu", 210, group);
-            AddSubItem(new string[] { "Zinger double", "Male hranolky", "Bezedny napoj" }, group);
-        }
-
         private void CancelButton_Click(object sender, EventArgs e)
         {
             if (listView1.Items.Count > 0)
@@ -146,14 +134,10 @@ namespace Projekt
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ItemButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            AddHeadItem("Zinger", 120, new ListViewGroup());
+            Button btn = sender as Button;
+            HandleButtonPress(Convert.ToInt32(btn.Tag));
         }
     }
 }
