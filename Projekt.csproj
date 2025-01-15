@@ -113,6 +113,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receipt.cs" />
+    <Compile Include="ScrollListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SQLite_processing.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

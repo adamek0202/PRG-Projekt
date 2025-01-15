@@ -2,12 +2,34 @@
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Projekt
 {
     public partial class MainForm : Form
     {
+        [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
+        private static extern int SetWindowTheme(IntPtr hWnd, string appName, string partList);
+
+        [DllImport("user32.dll")]
+        private static extern bool ShowScrollBar(IntPtr hWnd, int wBar, bool bShow);
+
+        private const int SB_HORZ = 0; // Horizontální scrollbar
+        private const int SB_VERT = 1; // Vertikální scrollbar
+
+        private void ForceShowScrollBar()
+        {
+            // Získej handle ListView a vynucení zobrazení scrollbarů
+            IntPtr handle = listView1.Handle;
+            ShowScrollBar(handle, SB_VERT, true);
+        }
+
+        private void DisableVisualStyles(Control control)
+        {
+            SetWindowTheme(control.Handle, "", "");
+        }
+
         public int SumPrice;
 
         public bool replace = false;
@@ -138,6 +160,12 @@ namespace Projekt
         {
             Button btn = sender as Button;
             HandleButtonPress(Convert.ToInt32(btn.Tag));
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            DisableVisualStyles(listView1);
+            ForceShowScrollBar();
         }
     }
 }

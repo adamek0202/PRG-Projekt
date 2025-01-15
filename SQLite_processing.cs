@@ -69,6 +69,7 @@ namespace Projekt
                             string name = reader["Name"].ToString();
                             int price = Convert.ToInt32(reader["Price"]);
                             AddHeadItem(name, price, group);
+                            ForceShowScrollBar();
                         }
                         else
                         {
