@@ -56,7 +56,7 @@ namespace Projekt
         {
             var connection = DatabaseConnection.Connection;
             var group = new ListViewGroup();
-            if (buttonId < 200)
+            if (buttonId < 1000)
             {
                 string querry = "SELECT Name, Price FROM Products WHERE ProductID = @ProductID";
                 using (var command = new SQLiteCommand(querry, connection))
@@ -77,7 +77,7 @@ namespace Projekt
                     }
                 }
             }
-            else if (buttonId >= 200)
+            else if (buttonId >= 1000)
             {
                 string querry = "SELECT Name, Price, Components FROM Menus WHERE MenuID = @MenuID";
                 using (var command = new SQLiteCommand(querry, connection))
