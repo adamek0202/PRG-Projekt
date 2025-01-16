@@ -2,6 +2,9 @@
 using System.Data.SQLite;
 using System.Windows.Forms;
 
+//Databázová logika
+//Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
+
 namespace Projekt
 {
     public static class DatabaseConnection

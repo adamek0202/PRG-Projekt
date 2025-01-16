@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System;
 
+//Neprovádět bezdůvodné zásahy do logiky, hrozí rozbití aplikace
+
 namespace Projekt
 {
     public class ListViewWithScrollBar : ListView
