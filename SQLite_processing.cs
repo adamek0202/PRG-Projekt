@@ -69,7 +69,7 @@ namespace Projekt
                             string name = reader["Name"].ToString();
                             int price = Convert.ToInt32(reader["Price"]);
                             AddHeadItem(name, price, group);
-                            ForceShowScrollBar();
+                            //NativeFunctions.ForceShowScrollBar(listView1.Handle);
                         }
                         else
                         {
@@ -90,7 +90,7 @@ namespace Projekt
                         {
                             string name = reader["Name"].ToString();
                             int price = Convert.ToInt32(reader["Price"]);
-                            ; string componentsJson = reader["Components"].ToString();
+                            string componentsJson = reader["Components"].ToString();
 
                             AddHeadItem(name, price, group);
 
