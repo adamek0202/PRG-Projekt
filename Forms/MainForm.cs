@@ -1,5 +1,6 @@
 ﻿using Projekt.Forms;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -19,11 +20,26 @@ namespace Projekt
             InitializeComponent();
         }
 
+        public List<ListViewItem> ListViewData
+        {
+            get
+            {
+                List<ListViewItem> data = new List<ListViewItem>();
+                foreach (ListViewItem item in listView1.Items)
+                {
+                    // Klonování položky, aby se zachovalo formátování
+                    data.Add((ListViewItem)item.Clone());
+                }
+                return data;
+            }
+        }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             DatabaseConnection.CloseConnection();
         }
 
+        #region
         private void SelectPreviousItem()
         {
             if (listView1.SelectedIndices.Count > 0)
@@ -61,6 +77,7 @@ namespace Projekt
                 listView1.Items[0].EnsureVisible();
             }
         }
+        #endregion
 
         private void AddHeadItem(string name, int price, ListViewGroup group)
         {
@@ -154,8 +171,13 @@ namespace Projekt
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var payForm = new PaymentForm();
+            var payForm = new PaymentForm(SumPrice ,ListViewData);
             payForm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -103,6 +103,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\BasicTheme.cs" />
+    <Compile Include="Forms\ConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfirmForm.Designer.cs">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +137,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQLite_processing.cs" />
+    <EmbeddedResource Include="Forms\ConfirmForm.resx">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.cs-CZ.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
