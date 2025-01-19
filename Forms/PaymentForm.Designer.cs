@@ -135,7 +135,7 @@
             this.kZeroButton.Name = "kZeroButton";
             this.kZeroButton.Size = new System.Drawing.Size(69, 72);
             this.kZeroButton.TabIndex = 4;
-            this.kZeroButton.Tag = "9";
+            this.kZeroButton.Tag = "0";
             this.kZeroButton.Text = "0";
             this.kZeroButton.UseVisualStyleBackColor = false;
             this.kZeroButton.Click += new System.EventHandler(this.KeypadButton_Click);
@@ -183,7 +183,7 @@
             this.PayedTextBox.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PayedTextBox.Location = new System.Drawing.Point(3, 3);
             this.PayedTextBox.Name = "PayedTextBox";
-            this.PayedTextBox.Size = new System.Drawing.Size(218, 34);
+            this.PayedTextBox.Size = new System.Drawing.Size(218, 29);
             this.PayedTextBox.TabIndex = 11;
             // 
             // kSevenButton
@@ -478,7 +478,7 @@
             this.sumLabel.Font = new System.Drawing.Font("Arial", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sumLabel.Location = new System.Drawing.Point(12, 9);
             this.sumLabel.Name = "sumLabel";
-            this.sumLabel.Size = new System.Drawing.Size(211, 33);
+            this.sumLabel.Size = new System.Drawing.Size(166, 26);
             this.sumLabel.TabIndex = 12;
             this.sumLabel.Text = "Celkem: xxx Kč";
             // 
@@ -569,7 +569,7 @@
             // 
             // PaymentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1318, 755);
