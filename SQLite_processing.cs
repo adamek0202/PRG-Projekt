@@ -91,8 +91,17 @@ namespace Projekt
                     {
                         if (reader.Read())
                         {
+                            int price;
                             string name = reader["Name"].ToString();
-                            int price = Convert.ToInt32(reader["Price"]);
+                            try
+                            {
+                                price = Convert.ToInt32(reader["Price"]);
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Nastala chyba při načítání položky z databáze\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
                             string componentsJson = reader["Components"].ToString();
 
                             AddHeadItem(name, price, group);

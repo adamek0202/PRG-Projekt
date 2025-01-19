@@ -57,24 +57,24 @@
             this.button5 = new System.Windows.Forms.Button();
             this.mBSmartsButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.bQurritoButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.sTexasGranderButton = new System.Windows.Forms.Button();
             this.sTwisterButton = new System.Windows.Forms.Button();
             this.sZingerButton = new System.Windows.Forms.Button();
             this.sZingerDoubleButton = new System.Windows.Forms.Button();
             this.sQurritoButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -113,6 +113,9 @@
             this.bTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.bTwisterButton.FlatAppearance.BorderSize = 0;
+            this.bTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTwisterButton.Location = new System.Drawing.Point(10, 3);
             this.bTwisterButton.Name = "bTwisterButton";
@@ -128,6 +131,9 @@
             this.bZingerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bZingerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.bZingerButton.FlatAppearance.BorderSize = 0;
+            this.bZingerButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bZingerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bZingerButton.Location = new System.Drawing.Point(112, 3);
             this.bZingerButton.Name = "bZingerButton";
@@ -159,6 +165,7 @@
             this.mZingerDoubleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerDoubleButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mZingerDoubleButton.FlatAppearance.BorderSize = 0;
+            this.mZingerDoubleButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerDoubleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerDoubleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerDoubleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -177,7 +184,7 @@
             this.sumLabel.ForeColor = System.Drawing.Color.White;
             this.sumLabel.Location = new System.Drawing.Point(337, 775);
             this.sumLabel.Name = "sumLabel";
-            this.sumLabel.Size = new System.Drawing.Size(0, 35);
+            this.sumLabel.Size = new System.Drawing.Size(0, 42);
             this.sumLabel.TabIndex = 0;
             // 
             // DownButton
@@ -248,6 +255,7 @@
             this.mTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mTwisterButton.FlatAppearance.BorderSize = 0;
+            this.mTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -264,6 +272,7 @@
             this.mQuritoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mQuritoButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mQuritoButton.FlatAppearance.BorderSize = 0;
+            this.mQuritoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mQuritoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mQuritoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mQuritoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -280,6 +289,7 @@
             this.mZingerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mZingerButton.FlatAppearance.BorderSize = 0;
+            this.mZingerButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mZingerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -296,6 +306,7 @@
             this.mTwisterBaconButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterBaconButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mTwisterBaconButton.FlatAppearance.BorderSize = 0;
+            this.mTwisterBaconButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterBaconButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterBaconButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterBaconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -312,6 +323,7 @@
             this.mTwisterCheeseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterCheeseButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mTwisterCheeseButton.FlatAppearance.BorderSize = 0;
+            this.mTwisterCheeseButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterCheeseButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterCheeseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTwisterCheeseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -328,6 +340,7 @@
             this.mClassicButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mClassicButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mClassicButton.FlatAppearance.BorderSize = 0;
+            this.mClassicButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mClassicButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mClassicButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -344,6 +357,7 @@
             this.x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.x.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.x.FlatAppearance.BorderSize = 0;
+            this.x.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.x.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.x.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.x.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -360,6 +374,7 @@
             this.mStripsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mStripsButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mStripsButton.FlatAppearance.BorderSize = 0;
+            this.mStripsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mStripsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mStripsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mStripsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -376,6 +391,7 @@
             this.mTexasGranderButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTexasGranderButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mTexasGranderButton.FlatAppearance.BorderSize = 0;
+            this.mTexasGranderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTexasGranderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTexasGranderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTexasGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -392,6 +408,9 @@
             this.bZingerDoubleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bZingerDoubleButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.bZingerDoubleButton.FlatAppearance.BorderSize = 0;
+            this.bZingerDoubleButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerDoubleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerDoubleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bZingerDoubleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bZingerDoubleButton.Location = new System.Drawing.Point(214, 3);
             this.bZingerDoubleButton.Name = "bZingerDoubleButton";
@@ -407,6 +426,9 @@
             this.bClassicButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bClassicButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.bClassicButton.FlatAppearance.BorderSize = 0;
+            this.bClassicButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bClassicButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bClassicButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bClassicButton.Location = new System.Drawing.Point(316, 3);
             this.bClassicButton.Name = "bClassicButton";
@@ -458,7 +480,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 22);
+            this.label1.Size = new System.Drawing.Size(120, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pokladní: ";
             // 
@@ -487,6 +509,9 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(727, 12);
             this.button5.Name = "button5";
@@ -502,6 +527,9 @@
             this.mBSmartsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mBSmartsButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.mBSmartsButton.FlatAppearance.BorderSize = 0;
+            this.mBSmartsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mBSmartsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mBSmartsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mBSmartsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mBSmartsButton.Location = new System.Drawing.Point(595, 12);
             this.mBSmartsButton.Name = "mBSmartsButton";
@@ -525,11 +553,31 @@
             this.panel2.Size = new System.Drawing.Size(659, 188);
             this.panel2.TabIndex = 3;
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(520, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(126, 176);
+            this.button9.TabIndex = 4;
+            this.button9.Tag = "100";
+            this.button9.Text = ">>";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // bQurritoButton
             // 
             this.bQurritoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bQurritoButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.bQurritoButton.FlatAppearance.BorderSize = 0;
+            this.bQurritoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bQurritoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bQurritoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bQurritoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bQurritoButton.Location = new System.Drawing.Point(418, 3);
             this.bQurritoButton.Name = "bQurritoButton";
@@ -538,6 +586,7 @@
             this.bQurritoButton.Tag = "101";
             this.bQurritoButton.Text = "Qurrito Box";
             this.bQurritoButton.UseVisualStyleBackColor = false;
+            this.bQurritoButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // button3
             // 
@@ -586,67 +635,103 @@
             this.panel3.Size = new System.Drawing.Size(658, 188);
             this.panel3.TabIndex = 4;
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(523, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(126, 176);
+            this.button10.TabIndex = 4;
+            this.button10.Tag = "100";
+            this.button10.Text = ">>";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
             // sTexasGranderButton
             // 
             this.sTexasGranderButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sTexasGranderButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.sTexasGranderButton.FlatAppearance.BorderSize = 0;
+            this.sTexasGranderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTexasGranderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTexasGranderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sTexasGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sTexasGranderButton.Location = new System.Drawing.Point(418, 3);
             this.sTexasGranderButton.Name = "sTexasGranderButton";
             this.sTexasGranderButton.Size = new System.Drawing.Size(96, 85);
             this.sTexasGranderButton.TabIndex = 2;
-            this.sTexasGranderButton.Tag = "101";
+            this.sTexasGranderButton.Tag = "103";
             this.sTexasGranderButton.Text = "Texas Grander";
             this.sTexasGranderButton.UseVisualStyleBackColor = false;
+            this.sTexasGranderButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // sTwisterButton
             // 
             this.sTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.sTwisterButton.FlatAppearance.BorderSize = 0;
+            this.sTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sTwisterButton.Location = new System.Drawing.Point(10, 3);
             this.sTwisterButton.Name = "sTwisterButton";
             this.sTwisterButton.Size = new System.Drawing.Size(96, 85);
             this.sTwisterButton.TabIndex = 1;
-            this.sTwisterButton.Tag = "400";
+            this.sTwisterButton.Tag = "102";
             this.sTwisterButton.Text = "Twister";
             this.sTwisterButton.UseVisualStyleBackColor = false;
+            this.sTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // sZingerButton
             // 
             this.sZingerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sZingerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.sZingerButton.FlatAppearance.BorderSize = 0;
+            this.sZingerButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sZingerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sZingerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sZingerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sZingerButton.Location = new System.Drawing.Point(112, 3);
             this.sZingerButton.Name = "sZingerButton";
             this.sZingerButton.Size = new System.Drawing.Size(96, 85);
             this.sZingerButton.TabIndex = 1;
-            this.sZingerButton.Tag = "401";
+            this.sZingerButton.Tag = "100";
             this.sZingerButton.Text = "Zinger";
             this.sZingerButton.UseVisualStyleBackColor = false;
+            this.sZingerButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // sZingerDoubleButton
             // 
             this.sZingerDoubleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sZingerDoubleButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.sZingerDoubleButton.FlatAppearance.BorderSize = 0;
+            this.sZingerDoubleButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sZingerDoubleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sZingerDoubleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sZingerDoubleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sZingerDoubleButton.Location = new System.Drawing.Point(214, 3);
             this.sZingerDoubleButton.Name = "sZingerDoubleButton";
             this.sZingerDoubleButton.Size = new System.Drawing.Size(96, 85);
             this.sZingerDoubleButton.TabIndex = 1;
-            this.sZingerDoubleButton.Tag = "402";
+            this.sZingerDoubleButton.Tag = "101";
             this.sZingerDoubleButton.Text = "Zinger Double";
             this.sZingerDoubleButton.UseVisualStyleBackColor = false;
+            this.sZingerDoubleButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // sQurritoButton
             // 
             this.sQurritoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sQurritoButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.sQurritoButton.FlatAppearance.BorderSize = 0;
+            this.sQurritoButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sQurritoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sQurritoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sQurritoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sQurritoButton.Location = new System.Drawing.Point(316, 3);
             this.sQurritoButton.Name = "sQurritoButton";
@@ -655,6 +740,7 @@
             this.sQurritoButton.Tag = "101";
             this.sQurritoButton.Text = "Qurrito";
             this.sQurritoButton.UseVisualStyleBackColor = false;
+            this.sQurritoButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // panel4
             // 
@@ -669,109 +755,14 @@
             this.panel4.Size = new System.Drawing.Size(658, 188);
             this.panel4.TabIndex = 5;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(418, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 85);
-            this.button1.TabIndex = 2;
-            this.button1.Tag = "101";
-            this.button1.Text = "Stripsy a Bites pro 2";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(10, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 85);
-            this.button2.TabIndex = 1;
-            this.button2.Tag = "400";
-            this.button2.Text = "15 Hot Wings";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(112, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(96, 85);
-            this.button6.TabIndex = 1;
-            this.button6.Tag = "401";
-            this.button6.Text = "30 Hot Wings";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(214, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(96, 85);
-            this.button7.TabIndex = 1;
-            this.button7.Tag = "402";
-            this.button7.Text = "Kyblík 11/11";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(316, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(96, 85);
-            this.button8.TabIndex = 1;
-            this.button8.Tag = "101";
-            this.button8.Text = "Kyblík Classic Pro 2";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(520, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(126, 176);
-            this.button9.TabIndex = 4;
-            this.button9.Tag = "100";
-            this.button9.Text = ">>";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(523, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(126, 176);
-            this.button10.TabIndex = 4;
-            this.button10.Tag = "100";
-            this.button10.Text = ">>";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button11.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Location = new System.Drawing.Point(520, 3);
             this.button11.Name = "button11";
@@ -781,12 +772,102 @@
             this.button11.Text = ">>";
             this.button11.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(418, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 85);
+            this.button1.TabIndex = 2;
+            this.button1.Tag = "101";
+            this.button1.Text = "Stripsy a Bites pro 2";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(10, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 85);
+            this.button2.TabIndex = 1;
+            this.button2.Tag = "400";
+            this.button2.Text = "15 Hot Wings";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(112, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(96, 85);
+            this.button6.TabIndex = 1;
+            this.button6.Tag = "401";
+            this.button6.Text = "30 Hot Wings";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(214, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(96, 85);
+            this.button7.TabIndex = 1;
+            this.button7.Tag = "402";
+            this.button7.Text = "Kyblík 11/11";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(316, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(96, 85);
+            this.button8.TabIndex = 1;
+            this.button8.Tag = "101";
+            this.button8.Text = "Kyblík Classic Pro 2";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(985, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 18);
+            this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "Menu";
             // 
@@ -795,25 +876,25 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(1202, 322);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 18);
+            this.label3.Size = new System.Drawing.Size(53, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Boxy";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1076, 519);
+            this.label4.Location = new System.Drawing.Point(1051, 517);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 18);
+            this.label4.Size = new System.Drawing.Size(211, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "Sendviče (samostatně)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1188, 713);
+            this.label5.Location = new System.Drawing.Point(1181, 711);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 18);
+            this.label5.Size = new System.Drawing.Size(74, 23);
             this.label5.TabIndex = 5;
             this.label5.Text = "Kyblíky";
             // 
@@ -1078,7 +1159,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 22F);
             this.label6.Location = new System.Drawing.Point(12, 775);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 35);
+            this.label6.Size = new System.Drawing.Size(254, 42);
             this.label6.TabIndex = 6;
             this.label6.Text = "Tady / s sebou";
             // 
@@ -1135,10 +1216,10 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(1920, 1061);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
