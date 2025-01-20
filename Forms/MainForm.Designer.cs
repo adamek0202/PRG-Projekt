@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.bTwisterButton = new System.Windows.Forms.Button();
             this.bZingerButton = new System.Windows.Forms.Button();
             this.RemoveItemButton = new System.Windows.Forms.Button();
@@ -54,22 +54,22 @@
             this.ManagerButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.menuNextButton = new System.Windows.Forms.Button();
             this.mBSmartsButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.boxesNextButton = new System.Windows.Forms.Button();
             this.bQurritoButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.paymentButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.sandwichesNextButton = new System.Windows.Forms.Button();
             this.sTexasGranderButton = new System.Windows.Forms.Button();
             this.sTwisterButton = new System.Windows.Forms.Button();
             this.sZingerButton = new System.Windows.Forms.Button();
             this.sZingerDoubleButton = new System.Windows.Forms.Button();
             this.sQurritoButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
+            this.bucketsNextButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -80,10 +80,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.chickenButton = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.othersButton = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
@@ -346,7 +346,7 @@
             this.mClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mClassicButton.Location = new System.Drawing.Point(127, 104);
             this.mClassicButton.Name = "mClassicButton";
-            this.mClassicButton.Size = new System.Drawing.Size(111, 85);
+            this.mClassicButton.Size = new System.Drawing.Size(111, 84);
             this.mClassicButton.TabIndex = 0;
             this.mClassicButton.Text = "Classic\r\nMenu";
             this.mClassicButton.UseVisualStyleBackColor = false;
@@ -397,7 +397,7 @@
             this.mTexasGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mTexasGranderButton.Location = new System.Drawing.Point(361, 104);
             this.mTexasGranderButton.Name = "mTexasGranderButton";
-            this.mTexasGranderButton.Size = new System.Drawing.Size(111, 85);
+            this.mTexasGranderButton.Size = new System.Drawing.Size(111, 84);
             this.mTexasGranderButton.TabIndex = 0;
             this.mTexasGranderButton.Text = "Texas\r\nGrander\r\nMenu";
             this.mTexasGranderButton.UseVisualStyleBackColor = false;
@@ -487,7 +487,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.menuNextButton);
             this.panel1.Controls.Add(this.mBSmartsButton);
             this.panel1.Controls.Add(this.mQuritoButton);
             this.panel1.Controls.Add(this.mTwisterButton);
@@ -504,23 +504,22 @@
             this.panel1.Size = new System.Drawing.Size(862, 205);
             this.panel1.TabIndex = 2;
             // 
-            // button5
+            // menuNextButton
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(727, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(126, 176);
-            this.button5.TabIndex = 3;
-            this.button5.Tag = "100";
-            this.button5.Text = ">>";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button1_Click);
+            this.menuNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.menuNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.menuNextButton.FlatAppearance.BorderSize = 0;
+            this.menuNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.menuNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.menuNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.menuNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuNextButton.Location = new System.Drawing.Point(727, 12);
+            this.menuNextButton.Name = "menuNextButton";
+            this.menuNextButton.Size = new System.Drawing.Size(126, 176);
+            this.menuNextButton.TabIndex = 3;
+            this.menuNextButton.Tag = "100";
+            this.menuNextButton.Text = ">>";
+            this.menuNextButton.UseVisualStyleBackColor = false;
             // 
             // mBSmartsButton
             // 
@@ -538,11 +537,10 @@
             this.mBSmartsButton.Tag = "100";
             this.mBSmartsButton.Text = "B-Smarty";
             this.mBSmartsButton.UseVisualStyleBackColor = false;
-            this.mBSmartsButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.boxesNextButton);
             this.panel2.Controls.Add(this.bQurritoButton);
             this.panel2.Controls.Add(this.bTwisterButton);
             this.panel2.Controls.Add(this.bZingerButton);
@@ -553,22 +551,22 @@
             this.panel2.Size = new System.Drawing.Size(659, 188);
             this.panel2.TabIndex = 3;
             // 
-            // button9
+            // boxesNextButton
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(520, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(126, 176);
-            this.button9.TabIndex = 4;
-            this.button9.Tag = "100";
-            this.button9.Text = ">>";
-            this.button9.UseVisualStyleBackColor = false;
+            this.boxesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.boxesNextButton.FlatAppearance.BorderSize = 0;
+            this.boxesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxesNextButton.Location = new System.Drawing.Point(520, 0);
+            this.boxesNextButton.Name = "boxesNextButton";
+            this.boxesNextButton.Size = new System.Drawing.Size(126, 176);
+            this.boxesNextButton.TabIndex = 4;
+            this.boxesNextButton.Tag = "100";
+            this.boxesNextButton.Text = ">>";
+            this.boxesNextButton.UseVisualStyleBackColor = false;
             // 
             // bQurritoButton
             // 
@@ -605,26 +603,26 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // paymentButton
             // 
-            this.button4.BackColor = System.Drawing.Color.Yellow;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(1726, 925);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(183, 124);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Platba";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.paymentButton.BackColor = System.Drawing.Color.Yellow;
+            this.paymentButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.paymentButton.FlatAppearance.BorderSize = 0;
+            this.paymentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.paymentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.paymentButton.ForeColor = System.Drawing.Color.Black;
+            this.paymentButton.Location = new System.Drawing.Point(1726, 925);
+            this.paymentButton.Name = "paymentButton";
+            this.paymentButton.Size = new System.Drawing.Size(183, 124);
+            this.paymentButton.TabIndex = 0;
+            this.paymentButton.Text = "Platba";
+            this.paymentButton.UseVisualStyleBackColor = false;
+            this.paymentButton.Click += new System.EventHandler(this.PaymentButton_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button10);
+            this.panel3.Controls.Add(this.sandwichesNextButton);
             this.panel3.Controls.Add(this.sTexasGranderButton);
             this.panel3.Controls.Add(this.sTwisterButton);
             this.panel3.Controls.Add(this.sZingerButton);
@@ -635,22 +633,22 @@
             this.panel3.Size = new System.Drawing.Size(658, 188);
             this.panel3.TabIndex = 4;
             // 
-            // button10
+            // sandwichesNextButton
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(523, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(126, 176);
-            this.button10.TabIndex = 4;
-            this.button10.Tag = "100";
-            this.button10.Text = ">>";
-            this.button10.UseVisualStyleBackColor = false;
+            this.sandwichesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sandwichesNextButton.FlatAppearance.BorderSize = 0;
+            this.sandwichesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sandwichesNextButton.Location = new System.Drawing.Point(523, 3);
+            this.sandwichesNextButton.Name = "sandwichesNextButton";
+            this.sandwichesNextButton.Size = new System.Drawing.Size(126, 176);
+            this.sandwichesNextButton.TabIndex = 4;
+            this.sandwichesNextButton.Tag = "100";
+            this.sandwichesNextButton.Text = ">>";
+            this.sandwichesNextButton.UseVisualStyleBackColor = false;
             // 
             // sTexasGranderButton
             // 
@@ -744,7 +742,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button11);
+            this.panel4.Controls.Add(this.bucketsNextButton);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.button6);
@@ -755,22 +753,22 @@
             this.panel4.Size = new System.Drawing.Size(658, 188);
             this.panel4.TabIndex = 5;
             // 
-            // button11
+            // bucketsNextButton
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button11.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(520, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(126, 176);
-            this.button11.TabIndex = 4;
-            this.button11.Tag = "100";
-            this.button11.Text = ">>";
-            this.button11.UseVisualStyleBackColor = false;
+            this.bucketsNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bucketsNextButton.FlatAppearance.BorderSize = 0;
+            this.bucketsNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bucketsNextButton.Location = new System.Drawing.Point(520, 3);
+            this.bucketsNextButton.Name = "bucketsNextButton";
+            this.bucketsNextButton.Size = new System.Drawing.Size(126, 176);
+            this.bucketsNextButton.TabIndex = 4;
+            this.bucketsNextButton.Tag = "100";
+            this.bucketsNextButton.Text = ">>";
+            this.bucketsNextButton.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -909,26 +907,26 @@
             this.button12.ForeColor = System.Drawing.Color.Black;
             this.button12.Location = new System.Drawing.Point(1248, 825);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(105, 70);
+            this.button12.Size = new System.Drawing.Size(105, 77);
             this.button12.TabIndex = 0;
-            this.button12.Text = "Nápoje (studené i teplé)";
+            this.button12.Text = "Nápoje (studené i\r\nteplé)";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // chickenButton
             // 
-            this.button13.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Location = new System.Drawing.Point(1359, 825);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(105, 70);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "Kuře";
-            this.button13.UseVisualStyleBackColor = false;
+            this.chickenButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.chickenButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.chickenButton.FlatAppearance.BorderSize = 0;
+            this.chickenButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.chickenButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.chickenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chickenButton.ForeColor = System.Drawing.Color.Black;
+            this.chickenButton.Location = new System.Drawing.Point(1359, 825);
+            this.chickenButton.Name = "chickenButton";
+            this.chickenButton.Size = new System.Drawing.Size(105, 77);
+            this.chickenButton.TabIndex = 0;
+            this.chickenButton.Text = "Kuře";
+            this.chickenButton.UseVisualStyleBackColor = false;
             // 
             // button14
             // 
@@ -941,7 +939,7 @@
             this.button14.ForeColor = System.Drawing.Color.Black;
             this.button14.Location = new System.Drawing.Point(1470, 825);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(105, 70);
+            this.button14.Size = new System.Drawing.Size(105, 77);
             this.button14.TabIndex = 0;
             this.button14.Text = "Přílohy";
             this.button14.UseVisualStyleBackColor = false;
@@ -957,26 +955,26 @@
             this.button15.ForeColor = System.Drawing.Color.Black;
             this.button15.Location = new System.Drawing.Point(1581, 825);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(105, 70);
+            this.button15.Size = new System.Drawing.Size(105, 77);
             this.button15.TabIndex = 0;
             this.button15.Text = "Dezerty";
             this.button15.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // othersButton
             // 
-            this.button16.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button16.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.Color.Black;
-            this.button16.Location = new System.Drawing.Point(1692, 825);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(105, 70);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "Jiné";
-            this.button16.UseVisualStyleBackColor = false;
+            this.othersButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.othersButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.othersButton.FlatAppearance.BorderSize = 0;
+            this.othersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.othersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.othersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.othersButton.ForeColor = System.Drawing.Color.Black;
+            this.othersButton.Location = new System.Drawing.Point(1692, 825);
+            this.othersButton.Name = "othersButton";
+            this.othersButton.Size = new System.Drawing.Size(105, 77);
+            this.othersButton.TabIndex = 0;
+            this.othersButton.Text = "Jiné";
+            this.othersButton.UseVisualStyleBackColor = false;
             // 
             // button17
             // 
@@ -989,7 +987,7 @@
             this.button17.ForeColor = System.Drawing.Color.Black;
             this.button17.Location = new System.Drawing.Point(1803, 825);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(105, 70);
+            this.button17.Size = new System.Drawing.Size(105, 77);
             this.button17.TabIndex = 0;
             this.button17.Text = "Taška\r\n5 Kč";
             this.button17.UseVisualStyleBackColor = false;
@@ -1005,7 +1003,7 @@
             this.button18.ForeColor = System.Drawing.Color.Black;
             this.button18.Location = new System.Drawing.Point(1138, 825);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(105, 70);
+            this.button18.Size = new System.Drawing.Size(105, 77);
             this.button18.TabIndex = 0;
             this.button18.Text = "Dotaz na cenu";
             this.button18.UseVisualStyleBackColor = false;
@@ -1016,9 +1014,9 @@
             this.button19.FlatAppearance.BorderSize = 0;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.ForeColor = System.Drawing.Color.Black;
-            this.button19.Location = new System.Drawing.Point(460, 31);
+            this.button19.Location = new System.Drawing.Point(460, 45);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(49, 47);
+            this.button19.Size = new System.Drawing.Size(65, 58);
             this.button19.TabIndex = 0;
             this.button19.Text = "1";
             this.button19.UseVisualStyleBackColor = false;
@@ -1029,9 +1027,9 @@
             this.button20.FlatAppearance.BorderSize = 0;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button20.Location = new System.Drawing.Point(460, 83);
+            this.button20.Location = new System.Drawing.Point(460, 111);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(49, 47);
+            this.button20.Size = new System.Drawing.Size(65, 58);
             this.button20.TabIndex = 0;
             this.button20.Text = "2";
             this.button20.UseVisualStyleBackColor = false;
@@ -1042,9 +1040,9 @@
             this.button21.FlatAppearance.BorderSize = 0;
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.ForeColor = System.Drawing.Color.Black;
-            this.button21.Location = new System.Drawing.Point(460, 136);
+            this.button21.Location = new System.Drawing.Point(460, 177);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(49, 47);
+            this.button21.Size = new System.Drawing.Size(65, 58);
             this.button21.TabIndex = 0;
             this.button21.Text = "3";
             this.button21.UseVisualStyleBackColor = false;
@@ -1055,9 +1053,9 @@
             this.button22.FlatAppearance.BorderSize = 0;
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.ForeColor = System.Drawing.Color.Black;
-            this.button22.Location = new System.Drawing.Point(460, 189);
+            this.button22.Location = new System.Drawing.Point(460, 243);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(49, 47);
+            this.button22.Size = new System.Drawing.Size(65, 58);
             this.button22.TabIndex = 0;
             this.button22.Text = "4";
             this.button22.UseVisualStyleBackColor = false;
@@ -1068,9 +1066,9 @@
             this.button23.FlatAppearance.BorderSize = 0;
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button23.ForeColor = System.Drawing.Color.Black;
-            this.button23.Location = new System.Drawing.Point(460, 242);
+            this.button23.Location = new System.Drawing.Point(460, 309);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(49, 47);
+            this.button23.Size = new System.Drawing.Size(65, 58);
             this.button23.TabIndex = 0;
             this.button23.Text = "5";
             this.button23.UseVisualStyleBackColor = false;
@@ -1081,9 +1079,9 @@
             this.button24.FlatAppearance.BorderSize = 0;
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button24.ForeColor = System.Drawing.Color.Black;
-            this.button24.Location = new System.Drawing.Point(460, 295);
+            this.button24.Location = new System.Drawing.Point(460, 375);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(49, 47);
+            this.button24.Size = new System.Drawing.Size(65, 58);
             this.button24.TabIndex = 0;
             this.button24.Text = "6";
             this.button24.UseVisualStyleBackColor = false;
@@ -1094,9 +1092,9 @@
             this.button25.FlatAppearance.BorderSize = 0;
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button25.ForeColor = System.Drawing.Color.Black;
-            this.button25.Location = new System.Drawing.Point(460, 348);
+            this.button25.Location = new System.Drawing.Point(460, 441);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(49, 47);
+            this.button25.Size = new System.Drawing.Size(65, 58);
             this.button25.TabIndex = 0;
             this.button25.Text = "7";
             this.button25.UseVisualStyleBackColor = false;
@@ -1107,9 +1105,9 @@
             this.button26.FlatAppearance.BorderSize = 0;
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button26.ForeColor = System.Drawing.Color.Black;
-            this.button26.Location = new System.Drawing.Point(460, 401);
+            this.button26.Location = new System.Drawing.Point(460, 507);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(49, 47);
+            this.button26.Size = new System.Drawing.Size(65, 58);
             this.button26.TabIndex = 0;
             this.button26.Text = "8";
             this.button26.UseVisualStyleBackColor = false;
@@ -1120,9 +1118,9 @@
             this.button27.FlatAppearance.BorderSize = 0;
             this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button27.ForeColor = System.Drawing.Color.Black;
-            this.button27.Location = new System.Drawing.Point(460, 454);
+            this.button27.Location = new System.Drawing.Point(460, 573);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(49, 47);
+            this.button27.Size = new System.Drawing.Size(65, 58);
             this.button27.TabIndex = 0;
             this.button27.Text = "9";
             this.button27.UseVisualStyleBackColor = false;
@@ -1133,9 +1131,9 @@
             this.button28.FlatAppearance.BorderSize = 0;
             this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button28.ForeColor = System.Drawing.Color.Black;
-            this.button28.Location = new System.Drawing.Point(460, 505);
+            this.button28.Location = new System.Drawing.Point(460, 639);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(49, 47);
+            this.button28.Size = new System.Drawing.Size(65, 58);
             this.button28.TabIndex = 0;
             this.button28.Text = "0";
             this.button28.UseVisualStyleBackColor = false;
@@ -1146,9 +1144,9 @@
             this.button29.FlatAppearance.BorderSize = 0;
             this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button29.ForeColor = System.Drawing.Color.Black;
-            this.button29.Location = new System.Drawing.Point(460, 558);
+            this.button29.Location = new System.Drawing.Point(460, 705);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(49, 47);
+            this.button29.Size = new System.Drawing.Size(65, 58);
             this.button29.TabIndex = 0;
             this.button29.Text = "X";
             this.button29.UseVisualStyleBackColor = false;
@@ -1174,17 +1172,17 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup1.Header = "Menu 1";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "Menu 2";
-            listViewGroup2.Name = "listViewGroup2";
+            listViewGroup3.Header = "Menu 1";
+            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup4.Header = "Menu 2";
+            listViewGroup4.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
+            listViewGroup3,
+            listViewGroup4});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(13, 35);
+            this.listView1.Location = new System.Drawing.Point(13, 37);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
@@ -1219,7 +1217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1055);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -1231,15 +1229,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sumLabel);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.paymentButton);
             this.Controls.Add(this.UpButton);
             this.Controls.Add(this.DownButton);
             this.Controls.Add(this.ManagerButton);
             this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.othersButton);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.chickenButton);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.CouponsButton);
@@ -1311,9 +1309,9 @@
         private System.Windows.Forms.Button mBSmartsButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button paymentButton;
         private System.Windows.Forms.Button bQurritoButton;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button menuNextButton;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button sTexasGranderButton;
         private System.Windows.Forms.Button sTwisterButton;
@@ -1326,18 +1324,18 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button boxesNextButton;
+        private System.Windows.Forms.Button sandwichesNextButton;
+        private System.Windows.Forms.Button bucketsNextButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button chickenButton;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button othersButton;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;

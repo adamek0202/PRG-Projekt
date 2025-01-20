@@ -18,6 +18,7 @@ namespace Projekt
         public MainForm()
         {
             InitializeComponent();
+            Height = 1080;
         }
 
         public List<ListViewItem> ListViewData
@@ -169,15 +170,18 @@ namespace Projekt
             Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void PaymentButton_Click(object sender, EventArgs e)
         {
-            var payForm = new PaymentForm(SumPrice ,ListViewData);
-            payForm.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            if (listView1.Items.Count >= 1 && SumPrice != 0)
+            {
+                var payForm = new PaymentForm(SumPrice, ListViewData);
+                if(payForm.ShowDialog() == DialogResult.OK)
+                {
+                    listView1.Items.Clear();
+                    listView1.Groups.Clear();
+                    UpdateSumPrice(-SumPrice);
+                }
+            }
         }
     }
 }

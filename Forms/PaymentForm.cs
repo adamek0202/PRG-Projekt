@@ -54,8 +54,34 @@ namespace Projekt.Forms
 
         private void KeypadButton_Click(object sender, EventArgs e)
         {
-            var btn = sender as System.Windows.Forms.Button;
-            PayedTextBox.Text += btn.Tag;
+            if (PayedTextBox.Text.Length < 5)
+            {
+                var btn = sender as System.Windows.Forms.Button;
+                PayedTextBox.Text += btn.Tag; 
+            }
+        }
+
+        private void GiftCardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cashButton_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(PayedTextBox.Text) >= Price)
+            {
+                var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
+                returnBox.ShowDialog();
+                DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void KRemoveButton_Click(object sender, EventArgs e)
+        {
+            if (PayedTextBox.Text.Length >= 1)
+            {
+                PayedTextBox.Text = PayedTextBox.Text.Remove(PayedTextBox.Text.Length - 1); 
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.keypad = new System.Windows.Forms.Panel();
@@ -55,11 +56,12 @@
             this.exactCashButton = new System.Windows.Forms.Button();
             this.sumLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.listView1 = new Projekt.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cancelButton = new System.Windows.Forms.Button();
             this.keypad.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -79,10 +81,10 @@
             this.keypad.Controls.Add(this.kThreeButton);
             this.keypad.Controls.Add(this.kTwoButton);
             this.keypad.Controls.Add(this.kOneButton);
-            this.keypad.Location = new System.Drawing.Point(489, 383);
+            this.keypad.Location = new System.Drawing.Point(477, 343);
             this.keypad.Margin = new System.Windows.Forms.Padding(4);
             this.keypad.Name = "keypad";
-            this.keypad.Size = new System.Drawing.Size(225, 360);
+            this.keypad.Size = new System.Drawing.Size(293, 400);
             this.keypad.TabIndex = 0;
             // 
             // kRemoveButton
@@ -94,13 +96,14 @@
             this.kRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kRemoveButton.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kRemoveButton.ForeColor = System.Drawing.Color.White;
-            this.kRemoveButton.Location = new System.Drawing.Point(147, 273);
+            this.kRemoveButton.Location = new System.Drawing.Point(199, 311);
             this.kRemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.kRemoveButton.Name = "kRemoveButton";
-            this.kRemoveButton.Size = new System.Drawing.Size(69, 72);
+            this.kRemoveButton.Size = new System.Drawing.Size(90, 81);
             this.kRemoveButton.TabIndex = 4;
             this.kRemoveButton.Text = "←";
             this.kRemoveButton.UseVisualStyleBackColor = false;
+            this.kRemoveButton.Click += new System.EventHandler(this.KRemoveButton_Click);
             // 
             // kDualZeroButton
             // 
@@ -111,10 +114,10 @@
             this.kDualZeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kDualZeroButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kDualZeroButton.ForeColor = System.Drawing.Color.White;
-            this.kDualZeroButton.Location = new System.Drawing.Point(7, 273);
+            this.kDualZeroButton.Location = new System.Drawing.Point(3, 311);
             this.kDualZeroButton.Margin = new System.Windows.Forms.Padding(4);
             this.kDualZeroButton.Name = "kDualZeroButton";
-            this.kDualZeroButton.Size = new System.Drawing.Size(69, 72);
+            this.kDualZeroButton.Size = new System.Drawing.Size(90, 81);
             this.kDualZeroButton.TabIndex = 4;
             this.kDualZeroButton.Tag = "00";
             this.kDualZeroButton.Text = "00";
@@ -130,10 +133,10 @@
             this.kZeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kZeroButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kZeroButton.ForeColor = System.Drawing.Color.White;
-            this.kZeroButton.Location = new System.Drawing.Point(77, 273);
+            this.kZeroButton.Location = new System.Drawing.Point(101, 311);
             this.kZeroButton.Margin = new System.Windows.Forms.Padding(4);
             this.kZeroButton.Name = "kZeroButton";
-            this.kZeroButton.Size = new System.Drawing.Size(69, 72);
+            this.kZeroButton.Size = new System.Drawing.Size(90, 81);
             this.kZeroButton.TabIndex = 4;
             this.kZeroButton.Tag = "0";
             this.kZeroButton.Text = "0";
@@ -149,10 +152,10 @@
             this.kNineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kNineButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kNineButton.ForeColor = System.Drawing.Color.White;
-            this.kNineButton.Location = new System.Drawing.Point(147, 200);
+            this.kNineButton.Location = new System.Drawing.Point(199, 222);
             this.kNineButton.Margin = new System.Windows.Forms.Padding(4);
             this.kNineButton.Name = "kNineButton";
-            this.kNineButton.Size = new System.Drawing.Size(69, 72);
+            this.kNineButton.Size = new System.Drawing.Size(90, 81);
             this.kNineButton.TabIndex = 4;
             this.kNineButton.Tag = "9";
             this.kNineButton.Text = "9";
@@ -168,10 +171,10 @@
             this.kEightButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kEightButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kEightButton.ForeColor = System.Drawing.Color.White;
-            this.kEightButton.Location = new System.Drawing.Point(77, 200);
+            this.kEightButton.Location = new System.Drawing.Point(101, 222);
             this.kEightButton.Margin = new System.Windows.Forms.Padding(4);
             this.kEightButton.Name = "kEightButton";
-            this.kEightButton.Size = new System.Drawing.Size(69, 72);
+            this.kEightButton.Size = new System.Drawing.Size(90, 81);
             this.kEightButton.TabIndex = 4;
             this.kEightButton.Tag = "8";
             this.kEightButton.Text = "8";
@@ -183,7 +186,7 @@
             this.PayedTextBox.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PayedTextBox.Location = new System.Drawing.Point(3, 3);
             this.PayedTextBox.Name = "PayedTextBox";
-            this.PayedTextBox.Size = new System.Drawing.Size(218, 29);
+            this.PayedTextBox.Size = new System.Drawing.Size(286, 34);
             this.PayedTextBox.TabIndex = 11;
             // 
             // kSevenButton
@@ -195,10 +198,10 @@
             this.kSevenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kSevenButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kSevenButton.ForeColor = System.Drawing.Color.White;
-            this.kSevenButton.Location = new System.Drawing.Point(7, 200);
+            this.kSevenButton.Location = new System.Drawing.Point(3, 222);
             this.kSevenButton.Margin = new System.Windows.Forms.Padding(4);
             this.kSevenButton.Name = "kSevenButton";
-            this.kSevenButton.Size = new System.Drawing.Size(69, 72);
+            this.kSevenButton.Size = new System.Drawing.Size(90, 81);
             this.kSevenButton.TabIndex = 4;
             this.kSevenButton.Tag = "7";
             this.kSevenButton.Text = "7";
@@ -214,10 +217,10 @@
             this.kSixButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kSixButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kSixButton.ForeColor = System.Drawing.Color.White;
-            this.kSixButton.Location = new System.Drawing.Point(147, 127);
+            this.kSixButton.Location = new System.Drawing.Point(199, 133);
             this.kSixButton.Margin = new System.Windows.Forms.Padding(4);
             this.kSixButton.Name = "kSixButton";
-            this.kSixButton.Size = new System.Drawing.Size(69, 72);
+            this.kSixButton.Size = new System.Drawing.Size(90, 81);
             this.kSixButton.TabIndex = 4;
             this.kSixButton.Tag = "6";
             this.kSixButton.Text = "6";
@@ -233,10 +236,10 @@
             this.kFiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kFiveButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kFiveButton.ForeColor = System.Drawing.Color.White;
-            this.kFiveButton.Location = new System.Drawing.Point(77, 127);
+            this.kFiveButton.Location = new System.Drawing.Point(101, 133);
             this.kFiveButton.Margin = new System.Windows.Forms.Padding(4);
             this.kFiveButton.Name = "kFiveButton";
-            this.kFiveButton.Size = new System.Drawing.Size(69, 72);
+            this.kFiveButton.Size = new System.Drawing.Size(90, 81);
             this.kFiveButton.TabIndex = 4;
             this.kFiveButton.Tag = "5";
             this.kFiveButton.Text = "5";
@@ -252,10 +255,10 @@
             this.kFourButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kFourButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kFourButton.ForeColor = System.Drawing.Color.White;
-            this.kFourButton.Location = new System.Drawing.Point(7, 127);
+            this.kFourButton.Location = new System.Drawing.Point(3, 133);
             this.kFourButton.Margin = new System.Windows.Forms.Padding(4);
             this.kFourButton.Name = "kFourButton";
-            this.kFourButton.Size = new System.Drawing.Size(69, 72);
+            this.kFourButton.Size = new System.Drawing.Size(90, 81);
             this.kFourButton.TabIndex = 3;
             this.kFourButton.Tag = "4";
             this.kFourButton.Text = "4";
@@ -271,10 +274,10 @@
             this.kThreeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kThreeButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kThreeButton.ForeColor = System.Drawing.Color.White;
-            this.kThreeButton.Location = new System.Drawing.Point(147, 54);
+            this.kThreeButton.Location = new System.Drawing.Point(199, 44);
             this.kThreeButton.Margin = new System.Windows.Forms.Padding(4);
             this.kThreeButton.Name = "kThreeButton";
-            this.kThreeButton.Size = new System.Drawing.Size(69, 72);
+            this.kThreeButton.Size = new System.Drawing.Size(90, 81);
             this.kThreeButton.TabIndex = 2;
             this.kThreeButton.Tag = "3";
             this.kThreeButton.Text = "3";
@@ -290,10 +293,10 @@
             this.kTwoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kTwoButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kTwoButton.ForeColor = System.Drawing.Color.White;
-            this.kTwoButton.Location = new System.Drawing.Point(77, 54);
+            this.kTwoButton.Location = new System.Drawing.Point(101, 44);
             this.kTwoButton.Margin = new System.Windows.Forms.Padding(4);
             this.kTwoButton.Name = "kTwoButton";
-            this.kTwoButton.Size = new System.Drawing.Size(69, 72);
+            this.kTwoButton.Size = new System.Drawing.Size(90, 81);
             this.kTwoButton.TabIndex = 0;
             this.kTwoButton.Tag = "2";
             this.kTwoButton.Text = "2";
@@ -309,10 +312,10 @@
             this.kOneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kOneButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kOneButton.ForeColor = System.Drawing.Color.White;
-            this.kOneButton.Location = new System.Drawing.Point(7, 54);
+            this.kOneButton.Location = new System.Drawing.Point(3, 44);
             this.kOneButton.Margin = new System.Windows.Forms.Padding(4);
             this.kOneButton.Name = "kOneButton";
-            this.kOneButton.Size = new System.Drawing.Size(69, 72);
+            this.kOneButton.Size = new System.Drawing.Size(90, 81);
             this.kOneButton.TabIndex = 1;
             this.kOneButton.Tag = "1";
             this.kOneButton.Text = "1";
@@ -420,6 +423,7 @@
             this.giftCardButton.TabIndex = 7;
             this.giftCardButton.Text = "Dárková karta";
             this.giftCardButton.UseVisualStyleBackColor = false;
+            this.giftCardButton.Click += new System.EventHandler(this.GiftCardButton_Click);
             // 
             // discountButton
             // 
@@ -454,6 +458,7 @@
             this.cashButton.TabIndex = 9;
             this.cashButton.Text = "Hotovost";
             this.cashButton.UseVisualStyleBackColor = false;
+            this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
             // 
             // exactCashButton
             // 
@@ -478,7 +483,7 @@
             this.sumLabel.Font = new System.Drawing.Font("Arial", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sumLabel.Location = new System.Drawing.Point(12, 9);
             this.sumLabel.Name = "sumLabel";
-            this.sumLabel.Size = new System.Drawing.Size(166, 26);
+            this.sumLabel.Size = new System.Drawing.Size(211, 33);
             this.sumLabel.TabIndex = 12;
             this.sumLabel.Text = "Celkem: xxx Kč";
             // 
@@ -493,10 +498,28 @@
             this.panel2.Controls.Add(this.cashButton);
             this.panel2.Controls.Add(this.ChequeButton);
             this.panel2.Controls.Add(this.button16);
-            this.panel2.Location = new System.Drawing.Point(734, 66);
+            this.panel2.Location = new System.Drawing.Point(787, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(371, 677);
             this.panel2.TabIndex = 14;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.BackColor = System.Drawing.Color.Red;
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.cancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
+            this.cancelButton.Location = new System.Drawing.Point(1165, 644);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(140, 99);
+            this.cancelButton.TabIndex = 9;
+            this.cancelButton.Text = "X";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.Button22_Click);
             // 
             // listView1
             // 
@@ -549,27 +572,9 @@
             this.Mnozstvi.Text = "";
             this.Mnozstvi.Width = 45;
             // 
-            // cancelButton
-            // 
-            this.cancelButton.BackColor = System.Drawing.Color.Red;
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.cancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(1165, 644);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(140, 99);
-            this.cancelButton.TabIndex = 9;
-            this.cancelButton.Text = "Zrušit\r\nplatbu";
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.Button22_Click);
-            // 
             // PaymentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1318, 755);
@@ -632,5 +637,6 @@
         private System.Windows.Forms.Button kRemoveButton;
         private System.Windows.Forms.Button kDualZeroButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
