@@ -338,6 +338,7 @@
             this.cardButton.TabIndex = 4;
             this.cardButton.Text = "Platební karta";
             this.cardButton.UseVisualStyleBackColor = false;
+            this.cardButton.Click += new System.EventHandler(this.CardButton_Click);
             // 
             // foodCardButton
             // 
@@ -476,6 +477,7 @@
             this.exactCashButton.TabIndex = 10;
             this.exactCashButton.Text = "Hotovost\r\npřesně\r\n";
             this.exactCashButton.UseVisualStyleBackColor = false;
+            this.exactCashButton.Click += new System.EventHandler(this.ExactCashButton_Click);
             // 
             // sumLabel
             // 

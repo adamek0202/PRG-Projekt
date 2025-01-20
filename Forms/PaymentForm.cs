@@ -83,5 +83,19 @@ namespace Projekt.Forms
                 PayedTextBox.Text = PayedTextBox.Text.Remove(PayedTextBox.Text.Length - 1); 
             }
         }
+
+        private void ExactCashButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void CardButton_Click(object sender, EventArgs e)
+        {
+            var cardProcess = new CardPaymentProcessForm();
+            cardProcess.ShowDialog();
+            DialogResult = DialogResult.OK;
+            Close();
+        }
     }
 }

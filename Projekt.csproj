@@ -104,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\BasicTheme.cs" />
+    <Compile Include="Forms\CardPaymentProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardPaymentProcessForm.Designer.cs">
+      <DependentUpon>CardPaymentProcessForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQLite_processing.cs" />
+    <EmbeddedResource Include="Forms\CardPaymentProcessForm.resx">
+      <DependentUpon>CardPaymentProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConfirmForm.resx">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
