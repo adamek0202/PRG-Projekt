@@ -42,7 +42,7 @@ namespace Projekt
             {
                 using (var command = new SQLiteCommand(querry, connection))
                 {
-                    command.Parameters.AddWithValue("@ProductsID", componentId);
+                    command.Parameters.AddWithValue("@ProductID", componentId);
                     using (var reader = command.ExecuteReader())
                     {
                         if (reader.Read())
@@ -55,7 +55,7 @@ namespace Projekt
             }
         }
 
-        private void HandleButtonPress(int buttonId)
+        private void HandleButtonPress(int buttonId, int times)
         {
             var connection = DatabaseConnection.Connection;
             var group = new ListViewGroup();
@@ -70,8 +70,8 @@ namespace Projekt
                         if (reader.Read())
                         {
                             string name = reader["Name"].ToString();
-                            int price = Convert.ToInt32(reader["Price"]);
-                            AddHeadItem(name, price, group);
+                            int price = Convert.ToInt32(reader["Price"]) * times;
+                            AddHeadItem(name, price, times, group);
                             //NativeFunctions.ForceShowScrollBar(listView1.Handle);
                         }
                         else
@@ -95,7 +95,7 @@ namespace Projekt
                             string name = reader["Name"].ToString();
                             try
                             {
-                                price = Convert.ToInt32(reader["Price"]);
+                                price = Convert.ToInt32(reader["Price"]) * times;
                             }
                             catch
                             {
@@ -104,7 +104,7 @@ namespace Projekt
                             }
                             string componentsJson = reader["Components"].ToString();
 
-                            AddHeadItem(name, price, group);
+                            AddHeadItem(name, price, times, group);
 
                             var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
                             AddMenuComponents(componentsIds, group);

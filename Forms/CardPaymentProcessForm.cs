@@ -30,7 +30,13 @@ namespace Projekt.Forms
             timer1.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = "Schváleno";
+            timer2.Start();
+        }
+
+        private void Timer2_Tick(object sender, EventArgs e)
         {
             Close();
         }

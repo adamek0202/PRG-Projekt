@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Projekt
@@ -12,6 +11,7 @@ namespace Projekt
     public partial class MainForm : Form
     {
         public int SumPrice;
+        private int Multiplier = 1;
 
         public bool replace = false;
         
@@ -28,7 +28,6 @@ namespace Projekt
                 List<ListViewItem> data = new List<ListViewItem>();
                 foreach (ListViewItem item in listView1.Items)
                 {
-                    // Klonování položky, aby se zachovalo formátování
                     data.Add((ListViewItem)item.Clone());
                 }
                 return data;
@@ -40,7 +39,7 @@ namespace Projekt
             DatabaseConnection.CloseConnection();
         }
 
-        #region
+        #region Pohyb
         private void SelectPreviousItem()
         {
             if (listView1.SelectedIndices.Count > 0)
@@ -78,11 +77,11 @@ namespace Projekt
                 listView1.Items[0].EnsureVisible();
             }
         }
-        #endregion
+        #endregion Posun
 
-        private void AddHeadItem(string name, int price, ListViewGroup group)
+        private void AddHeadItem(string name, int price, int times, ListViewGroup group)
         {
-            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + "Kč" , "1"}, group) { BackColor = Color.Orange });
+            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + "Kč" , times.ToString()}, group) { BackColor = Color.Orange });
             UpdateSumPrice(price);
         }
 
@@ -157,7 +156,9 @@ namespace Projekt
         private void ItemButton_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            HandleButtonPress(Convert.ToInt32(btn.Tag));
+            HandleButtonPress(Convert.ToInt32(btn.Tag), Multiplier);
+            Multiplier = 1;
+            multiplierLabel.Text = $"×{Multiplier}";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -182,6 +183,40 @@ namespace Projekt
                     UpdateSumPrice(-SumPrice);
                 }
             }
+        }
+
+        private void MultiplierButtons_Click(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if ((string)btn.Tag == "X")
+            {
+                Multiplier = 0;
+                multiplierLabel.Text = $"×{Multiplier}";
+                return;
+            }
+            
+            else if (Multiplier < 98)
+            {
+                try
+                {
+                    Multiplier = int.Parse(Multiplier.ToString() + btn.Tag);
+                    multiplierLabel.Text = $"×{Multiplier}";
+                    if(Multiplier > 99)
+                    {
+                        Multiplier = 0;
+                        multiplierLabel.Text = $"×{Multiplier}";
+                    }
+                }
+                catch
+                {
+
+                } 
+            }
+        }
+
+        private void BagButton_Click(object sender, EventArgs e)
+        {
+            AddHeadItem("Taska", 5, 1, new ListViewGroup());
         }
     }
 }

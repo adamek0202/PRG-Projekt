@@ -549,7 +549,7 @@
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(440, 688);
+            this.listView1.Size = new System.Drawing.Size(441, 688);
             this.listView1.TabIndex = 13;
             this.listView1.TileSize = new System.Drawing.Size(332, 40);
             this.listView1.UseCompatibleStateImageBehavior = false;
