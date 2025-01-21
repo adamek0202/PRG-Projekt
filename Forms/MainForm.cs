@@ -220,34 +220,35 @@ namespace Projekt
             AddHeadItem("Taska", 5, 1, new ListViewGroup());
         }
 
-        private void chickenButton_Click(object sender, EventArgs e)
+        private void ExternalFormsButtons_Click(object sender, EventArgs e)
         {
-            var cForm = new ChickenForm();
-            if (cForm.ShowDialog() == DialogResult.OK)
+            Form selectedForm = null;
+            var btn = sender as Button;
+            switch (btn.Tag)
+            {
+                case "Drinks":
+                    selectedForm = new DrinksForm();
+                    break;
+                case "Chicken":
+                    selectedForm = new ChickenForm();
+                    break;
+                case "Supplements":
+                    selectedForm = new SupplementsForm();
+                    break;
+                case "Desserts":
+                    selectedForm = new DessertsForm();
+                    break;
+                case "Others":
+                    selectedForm = new OthersForm();
+                    break;
+                default:
+                    return;
+            }
+            if(selectedForm.ShowDialog() == DialogResult.OK)
             {
                 HandleButtonPress(ExternalProduct, Multiplier);
                 Multiplier = 1;
                 multiplierLabel.Text = $"×{Multiplier}";
-            }
-        }
-
-        private void supplementsButton_Click(object sender, EventArgs e)
-        {
-            var supForm = new SupplementsForm();
-            if (supForm.ShowDialog() == DialogResult.OK)
-            {
-                HandleButtonPress(ExternalProduct, Multiplier);
-                Multiplier = 1;
-                multiplierLabel.Text = $"×{Multiplier}";
-            }
-        }
-
-        private void DrinksButton_Click(object sender, EventArgs e)
-        {
-            var dForm = new DrinksForm();
-            if(dForm.ShowDialog() == DialogResult.OK)
-            {
-
             }
         }
     }

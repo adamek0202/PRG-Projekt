@@ -952,9 +952,10 @@
             this.drinksButton.Name = "drinksButton";
             this.drinksButton.Size = new System.Drawing.Size(105, 77);
             this.drinksButton.TabIndex = 0;
+            this.drinksButton.Tag = "Drinks";
             this.drinksButton.Text = "Nápoje (studené i\r\nteplé)";
             this.drinksButton.UseVisualStyleBackColor = false;
-            this.drinksButton.Click += new System.EventHandler(this.DrinksButton_Click);
+            this.drinksButton.Click += new System.EventHandler(this.ExternalFormsButtons_Click);
             // 
             // chickenButton
             // 
@@ -970,9 +971,10 @@
             this.chickenButton.Name = "chickenButton";
             this.chickenButton.Size = new System.Drawing.Size(105, 77);
             this.chickenButton.TabIndex = 0;
+            this.chickenButton.Tag = "Chicken";
             this.chickenButton.Text = "Kuře";
             this.chickenButton.UseVisualStyleBackColor = false;
-            this.chickenButton.Click += new System.EventHandler(this.chickenButton_Click);
+            this.chickenButton.Click += new System.EventHandler(this.ExternalFormsButtons_Click);
             // 
             // supplementsButton
             // 
@@ -988,9 +990,10 @@
             this.supplementsButton.Name = "supplementsButton";
             this.supplementsButton.Size = new System.Drawing.Size(105, 77);
             this.supplementsButton.TabIndex = 0;
+            this.supplementsButton.Tag = "Supplements";
             this.supplementsButton.Text = "Přílohy";
             this.supplementsButton.UseVisualStyleBackColor = false;
-            this.supplementsButton.Click += new System.EventHandler(this.supplementsButton_Click);
+            this.supplementsButton.Click += new System.EventHandler(this.ExternalFormsButtons_Click);
             // 
             // dessersButton
             // 
@@ -1006,8 +1009,10 @@
             this.dessersButton.Name = "dessersButton";
             this.dessersButton.Size = new System.Drawing.Size(105, 77);
             this.dessersButton.TabIndex = 0;
+            this.dessersButton.Tag = "Desserts";
             this.dessersButton.Text = "Dezerty";
             this.dessersButton.UseVisualStyleBackColor = false;
+            this.dessersButton.Click += new System.EventHandler(this.ExternalFormsButtons_Click);
             // 
             // othersButton
             // 
@@ -1023,8 +1028,10 @@
             this.othersButton.Name = "othersButton";
             this.othersButton.Size = new System.Drawing.Size(105, 77);
             this.othersButton.TabIndex = 0;
+            this.othersButton.Tag = "Others";
             this.othersButton.Text = "Jiné";
             this.othersButton.UseVisualStyleBackColor = false;
+            this.othersButton.Click += new System.EventHandler(this.ExternalFormsButtons_Click);
             // 
             // bagButton
             // 

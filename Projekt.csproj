@@ -122,6 +122,12 @@
     <Compile Include="Forms\ConfirmForm.Designer.cs">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DessertsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DessertsForm.Designer.cs">
+      <DependentUpon>DessertsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DrinksForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OthersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OthersForm.Designer.cs">
+      <DependentUpon>OthersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PaymentForm.cs">
       <SubType>Form</SubType>
