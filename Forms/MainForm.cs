@@ -221,7 +221,14 @@ namespace Projekt
 
         private void chickenButton_Click(object sender, EventArgs e)
         {
+            var cForm = new ChickenForm();
+            cForm.ShowDialog();
+        }
 
+        private void supplementsButton_Click(object sender, EventArgs e)
+        {
+            var supForm = new SupplementsForm();
+            supForm.ShowDialog();
         }
     }
 }

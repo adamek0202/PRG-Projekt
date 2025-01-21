@@ -5,9 +5,9 @@ using static Projekt.BasicTheme;
 
 namespace Projekt.Forms
 {
-    public partial class ChickenForm : Form
+    public partial class SupplementsForm : Form
     {
-        public ChickenForm()
+        public SupplementsForm()
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
@@ -25,15 +25,10 @@ namespace Projekt.Forms
             }
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
-        }
-
-        private void ChickenButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
