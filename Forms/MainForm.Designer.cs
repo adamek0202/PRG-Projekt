@@ -666,7 +666,7 @@
             this.sTexasGranderButton.Name = "sTexasGranderButton";
             this.sTexasGranderButton.Size = new System.Drawing.Size(96, 85);
             this.sTexasGranderButton.TabIndex = 2;
-            this.sTexasGranderButton.Tag = "103";
+            this.sTexasGranderButton.Tag = "102";
             this.sTexasGranderButton.Text = "Texas Grander";
             this.sTexasGranderButton.UseVisualStyleBackColor = false;
             this.sTexasGranderButton.Click += new System.EventHandler(this.ItemButton_Click);
