@@ -218,5 +218,10 @@ namespace Projekt
         {
             AddHeadItem("Taska", 5, 1, new ListViewGroup());
         }
+
+        private void chickenButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.bTwisterButton = new System.Windows.Forms.Button();
             this.bZingerButton = new System.Windows.Forms.Button();
             this.RemoveItemButton = new System.Windows.Forms.Button();
@@ -738,7 +738,7 @@
             this.sQurritoButton.Name = "sQurritoButton";
             this.sQurritoButton.Size = new System.Drawing.Size(96, 85);
             this.sQurritoButton.TabIndex = 1;
-            this.sQurritoButton.Tag = "101";
+            this.sQurritoButton.Tag = "301";
             this.sQurritoButton.Text = "Qurrito";
             this.sQurritoButton.UseVisualStyleBackColor = false;
             this.sQurritoButton.Click += new System.EventHandler(this.ItemButton_Click);
@@ -930,6 +930,7 @@
             this.chickenButton.TabIndex = 0;
             this.chickenButton.Text = "Kuře";
             this.chickenButton.UseVisualStyleBackColor = false;
+            this.chickenButton.Click += new System.EventHandler(this.chickenButton_Click);
             // 
             // supplementsButton
             // 
@@ -1207,13 +1208,13 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup1.Header = "Menu 1";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "Menu 2";
-            listViewGroup2.Name = "listViewGroup2";
+            listViewGroup3.Header = "Menu 1";
+            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup4.Header = "Menu 2";
+            listViewGroup4.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
+            listViewGroup3,
+            listViewGroup4});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
