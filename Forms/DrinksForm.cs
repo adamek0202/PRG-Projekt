@@ -5,14 +5,13 @@ using static Projekt.BasicTheme;
 
 namespace Projekt.Forms
 {
-    public partial class SupplementsForm : Form
+    public partial class DrinksForm : Form
     {
-        public SupplementsForm()
+        public DrinksForm()
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
         }
-
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
@@ -23,20 +22,6 @@ namespace Projekt.Forms
             {
                 throw Marshal.GetExceptionForHR(hr);
             }
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            Close();
-        }
-
-        private void ItemButton_Click(object sender, EventArgs e)
-        {
-            var btn = sender as Button;
-            MainForm.ExternalProduct = int.Parse((string)btn.Tag);
-            DialogResult = DialogResult.OK;
-            Close();
         }
     }
 }

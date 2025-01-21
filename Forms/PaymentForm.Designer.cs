@@ -81,10 +81,10 @@
             this.keypad.Controls.Add(this.kThreeButton);
             this.keypad.Controls.Add(this.kTwoButton);
             this.keypad.Controls.Add(this.kOneButton);
-            this.keypad.Location = new System.Drawing.Point(477, 343);
+            this.keypad.Location = new System.Drawing.Point(477, 312);
             this.keypad.Margin = new System.Windows.Forms.Padding(4);
             this.keypad.Name = "keypad";
-            this.keypad.Size = new System.Drawing.Size(293, 400);
+            this.keypad.Size = new System.Drawing.Size(293, 431);
             this.keypad.TabIndex = 0;
             // 
             // kRemoveButton
@@ -94,9 +94,9 @@
             this.kRemoveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kRemoveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kRemoveButton.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kRemoveButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kRemoveButton.ForeColor = System.Drawing.Color.White;
-            this.kRemoveButton.Location = new System.Drawing.Point(199, 311);
+            this.kRemoveButton.Location = new System.Drawing.Point(200, 344);
             this.kRemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.kRemoveButton.Name = "kRemoveButton";
             this.kRemoveButton.Size = new System.Drawing.Size(90, 81);
@@ -112,9 +112,9 @@
             this.kDualZeroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kDualZeroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kDualZeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kDualZeroButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kDualZeroButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kDualZeroButton.ForeColor = System.Drawing.Color.White;
-            this.kDualZeroButton.Location = new System.Drawing.Point(3, 311);
+            this.kDualZeroButton.Location = new System.Drawing.Point(4, 344);
             this.kDualZeroButton.Margin = new System.Windows.Forms.Padding(4);
             this.kDualZeroButton.Name = "kDualZeroButton";
             this.kDualZeroButton.Size = new System.Drawing.Size(90, 81);
@@ -131,9 +131,9 @@
             this.kZeroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kZeroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kZeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kZeroButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kZeroButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kZeroButton.ForeColor = System.Drawing.Color.White;
-            this.kZeroButton.Location = new System.Drawing.Point(101, 311);
+            this.kZeroButton.Location = new System.Drawing.Point(102, 344);
             this.kZeroButton.Margin = new System.Windows.Forms.Padding(4);
             this.kZeroButton.Name = "kZeroButton";
             this.kZeroButton.Size = new System.Drawing.Size(90, 81);
@@ -150,9 +150,9 @@
             this.kNineButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kNineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kNineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kNineButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kNineButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kNineButton.ForeColor = System.Drawing.Color.White;
-            this.kNineButton.Location = new System.Drawing.Point(199, 222);
+            this.kNineButton.Location = new System.Drawing.Point(200, 255);
             this.kNineButton.Margin = new System.Windows.Forms.Padding(4);
             this.kNineButton.Name = "kNineButton";
             this.kNineButton.Size = new System.Drawing.Size(90, 81);
@@ -169,9 +169,9 @@
             this.kEightButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kEightButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kEightButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kEightButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kEightButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kEightButton.ForeColor = System.Drawing.Color.White;
-            this.kEightButton.Location = new System.Drawing.Point(101, 222);
+            this.kEightButton.Location = new System.Drawing.Point(102, 255);
             this.kEightButton.Margin = new System.Windows.Forms.Padding(4);
             this.kEightButton.Name = "kEightButton";
             this.kEightButton.Size = new System.Drawing.Size(90, 81);
@@ -183,10 +183,10 @@
             // 
             // PayedTextBox
             // 
-            this.PayedTextBox.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PayedTextBox.Location = new System.Drawing.Point(3, 3);
+            this.PayedTextBox.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PayedTextBox.Location = new System.Drawing.Point(3, 26);
             this.PayedTextBox.Name = "PayedTextBox";
-            this.PayedTextBox.Size = new System.Drawing.Size(286, 34);
+            this.PayedTextBox.Size = new System.Drawing.Size(287, 53);
             this.PayedTextBox.TabIndex = 11;
             // 
             // kSevenButton
@@ -196,9 +196,9 @@
             this.kSevenButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kSevenButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kSevenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kSevenButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kSevenButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kSevenButton.ForeColor = System.Drawing.Color.White;
-            this.kSevenButton.Location = new System.Drawing.Point(3, 222);
+            this.kSevenButton.Location = new System.Drawing.Point(4, 255);
             this.kSevenButton.Margin = new System.Windows.Forms.Padding(4);
             this.kSevenButton.Name = "kSevenButton";
             this.kSevenButton.Size = new System.Drawing.Size(90, 81);
@@ -215,9 +215,9 @@
             this.kSixButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kSixButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kSixButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kSixButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kSixButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kSixButton.ForeColor = System.Drawing.Color.White;
-            this.kSixButton.Location = new System.Drawing.Point(199, 133);
+            this.kSixButton.Location = new System.Drawing.Point(200, 166);
             this.kSixButton.Margin = new System.Windows.Forms.Padding(4);
             this.kSixButton.Name = "kSixButton";
             this.kSixButton.Size = new System.Drawing.Size(90, 81);
@@ -234,9 +234,9 @@
             this.kFiveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kFiveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kFiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kFiveButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kFiveButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kFiveButton.ForeColor = System.Drawing.Color.White;
-            this.kFiveButton.Location = new System.Drawing.Point(101, 133);
+            this.kFiveButton.Location = new System.Drawing.Point(102, 166);
             this.kFiveButton.Margin = new System.Windows.Forms.Padding(4);
             this.kFiveButton.Name = "kFiveButton";
             this.kFiveButton.Size = new System.Drawing.Size(90, 81);
@@ -253,9 +253,9 @@
             this.kFourButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kFourButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kFourButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kFourButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kFourButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kFourButton.ForeColor = System.Drawing.Color.White;
-            this.kFourButton.Location = new System.Drawing.Point(3, 133);
+            this.kFourButton.Location = new System.Drawing.Point(4, 166);
             this.kFourButton.Margin = new System.Windows.Forms.Padding(4);
             this.kFourButton.Name = "kFourButton";
             this.kFourButton.Size = new System.Drawing.Size(90, 81);
@@ -272,9 +272,9 @@
             this.kThreeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kThreeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kThreeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kThreeButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kThreeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kThreeButton.ForeColor = System.Drawing.Color.White;
-            this.kThreeButton.Location = new System.Drawing.Point(199, 44);
+            this.kThreeButton.Location = new System.Drawing.Point(200, 77);
             this.kThreeButton.Margin = new System.Windows.Forms.Padding(4);
             this.kThreeButton.Name = "kThreeButton";
             this.kThreeButton.Size = new System.Drawing.Size(90, 81);
@@ -291,9 +291,9 @@
             this.kTwoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kTwoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kTwoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kTwoButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kTwoButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kTwoButton.ForeColor = System.Drawing.Color.White;
-            this.kTwoButton.Location = new System.Drawing.Point(101, 44);
+            this.kTwoButton.Location = new System.Drawing.Point(102, 77);
             this.kTwoButton.Margin = new System.Windows.Forms.Padding(4);
             this.kTwoButton.Name = "kTwoButton";
             this.kTwoButton.Size = new System.Drawing.Size(90, 81);
@@ -310,9 +310,9 @@
             this.kOneButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kOneButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.kOneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kOneButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kOneButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kOneButton.ForeColor = System.Drawing.Color.White;
-            this.kOneButton.Location = new System.Drawing.Point(3, 44);
+            this.kOneButton.Location = new System.Drawing.Point(4, 77);
             this.kOneButton.Margin = new System.Windows.Forms.Padding(4);
             this.kOneButton.Name = "kOneButton";
             this.kOneButton.Size = new System.Drawing.Size(90, 81);
@@ -329,7 +329,7 @@
             this.cardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.cardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.cardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cardButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cardButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cardButton.ForeColor = System.Drawing.Color.White;
             this.cardButton.Location = new System.Drawing.Point(14, 151);
             this.cardButton.Margin = new System.Windows.Forms.Padding(4);
@@ -347,7 +347,7 @@
             this.foodCardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.foodCardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.foodCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.foodCardButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.foodCardButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.foodCardButton.ForeColor = System.Drawing.Color.White;
             this.foodCardButton.Location = new System.Drawing.Point(14, 285);
             this.foodCardButton.Margin = new System.Windows.Forms.Padding(4);
@@ -364,7 +364,7 @@
             this.PluxeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.PluxeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.PluxeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PluxeeButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PluxeeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PluxeeButton.ForeColor = System.Drawing.Color.White;
             this.PluxeeButton.Location = new System.Drawing.Point(191, 151);
             this.PluxeeButton.Margin = new System.Windows.Forms.Padding(4);
@@ -381,7 +381,7 @@
             this.ChequeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.ChequeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.ChequeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChequeButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ChequeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ChequeButton.ForeColor = System.Drawing.Color.White;
             this.ChequeButton.Location = new System.Drawing.Point(191, 218);
             this.ChequeButton.Margin = new System.Windows.Forms.Padding(4);
@@ -398,7 +398,7 @@
             this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button16.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button16.ForeColor = System.Drawing.Color.White;
             this.button16.Location = new System.Drawing.Point(191, 285);
             this.button16.Margin = new System.Windows.Forms.Padding(4);
@@ -415,7 +415,7 @@
             this.giftCardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.giftCardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.giftCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.giftCardButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.giftCardButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.giftCardButton.ForeColor = System.Drawing.Color.White;
             this.giftCardButton.Location = new System.Drawing.Point(38, 24);
             this.giftCardButton.Margin = new System.Windows.Forms.Padding(4);
@@ -433,7 +433,7 @@
             this.discountButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.discountButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.discountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.discountButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.discountButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.discountButton.ForeColor = System.Drawing.Color.White;
             this.discountButton.Location = new System.Drawing.Point(38, 88);
             this.discountButton.Margin = new System.Windows.Forms.Padding(4);
@@ -450,7 +450,7 @@
             this.cashButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.cashButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.cashButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cashButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cashButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cashButton.ForeColor = System.Drawing.Color.White;
             this.cashButton.Location = new System.Drawing.Point(13, 542);
             this.cashButton.Margin = new System.Windows.Forms.Padding(4);
@@ -468,7 +468,7 @@
             this.exactCashButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.exactCashButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.exactCashButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exactCashButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exactCashButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exactCashButton.ForeColor = System.Drawing.Color.White;
             this.exactCashButton.Location = new System.Drawing.Point(190, 542);
             this.exactCashButton.Margin = new System.Windows.Forms.Padding(4);
@@ -508,6 +508,7 @@
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Red;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.cancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -579,6 +580,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(1318, 755);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);

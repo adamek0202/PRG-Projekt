@@ -33,7 +33,10 @@ namespace Projekt.Forms
 
         private void ChickenButton_Click(object sender, EventArgs e)
         {
-
+            var btn = sender as Button;
+            MainForm.ExternalProduct = int.Parse((string)btn.Tag);
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

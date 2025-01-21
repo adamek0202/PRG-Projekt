@@ -10,8 +10,9 @@ namespace Projekt
 {
     public partial class MainForm : Form
     {
-        public int SumPrice;
+        internal int SumPrice;
         private int Multiplier = 1;
+        public static int ExternalProduct { get; set; }
 
         public bool replace = false;
         
@@ -222,13 +223,32 @@ namespace Projekt
         private void chickenButton_Click(object sender, EventArgs e)
         {
             var cForm = new ChickenForm();
-            cForm.ShowDialog();
+            if (cForm.ShowDialog() == DialogResult.OK)
+            {
+                HandleButtonPress(ExternalProduct, Multiplier);
+                Multiplier = 1;
+                multiplierLabel.Text = $"×{Multiplier}";
+            }
         }
 
         private void supplementsButton_Click(object sender, EventArgs e)
         {
             var supForm = new SupplementsForm();
-            supForm.ShowDialog();
+            if (supForm.ShowDialog() == DialogResult.OK)
+            {
+                HandleButtonPress(ExternalProduct, Multiplier);
+                Multiplier = 1;
+                multiplierLabel.Text = $"×{Multiplier}";
+            }
+        }
+
+        private void DrinksButton_Click(object sender, EventArgs e)
+        {
+            var dForm = new DrinksForm();
+            if(dForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
