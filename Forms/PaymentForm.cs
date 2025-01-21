@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
@@ -12,12 +13,20 @@ namespace Projekt.Forms
     {
         private int Price;
 
+        private PrintDocument printDocument;
+
         public PaymentForm(int price ,List<ListViewItem> data)
         {
             InitializeComponent();
             Price = price;
             LoadListViewData(data);
             ReallyCenterToScreen(this);
+        }
+
+        private void PrintReceipt()
+        {
+            var printer = new UsbEscPosPrinter("lpt1");
+            printer.PrintText("Pokladna");
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -70,6 +79,7 @@ namespace Projekt.Forms
         {
             if(Convert.ToInt32(PayedTextBox.Text) >= Price)
             {
+                PrintReceipt();
                 var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
                 returnBox.ShowDialog();
                 DialogResult = DialogResult.OK;

@@ -184,7 +184,7 @@
             // PayedTextBox
             // 
             this.PayedTextBox.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PayedTextBox.Location = new System.Drawing.Point(3, 26);
+            this.PayedTextBox.Location = new System.Drawing.Point(3, 17);
             this.PayedTextBox.Name = "PayedTextBox";
             this.PayedTextBox.Size = new System.Drawing.Size(287, 53);
             this.PayedTextBox.TabIndex = 11;
