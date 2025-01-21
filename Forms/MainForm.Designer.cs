@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.bTwisterButton = new System.Windows.Forms.Button();
             this.bZingerButton = new System.Windows.Forms.Button();
             this.RemoveItemButton = new System.Windows.Forms.Button();
@@ -884,7 +884,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1051, 517);
+            this.label4.Location = new System.Drawing.Point(1044, 517);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(211, 23);
             this.label4.TabIndex = 5;
@@ -1209,13 +1209,13 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup5.Header = "Menu 1";
-            listViewGroup5.Name = "listViewGroup1";
-            listViewGroup6.Header = "Menu 2";
-            listViewGroup6.Name = "listViewGroup2";
+            listViewGroup7.Header = "Menu 1";
+            listViewGroup7.Name = "listViewGroup1";
+            listViewGroup8.Header = "Menu 2";
+            listViewGroup8.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup7,
+            listViewGroup8});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
