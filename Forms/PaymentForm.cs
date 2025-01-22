@@ -89,13 +89,16 @@ namespace Projekt.Forms
             printer.AlignCenter();
             printer.Append("Pokladna");
             printer.AlignLeft();
-            printer.Separator();
+            for (int i = 0; i < 32; i++) printer.AppendWithoutLf("-");
+            printer.NewLine();
+            int padding;
             for (int i = 0; i < listView1.Items.Count; i++)
             {
                 if (listView1.Items[i].SubItems.Count > 1)
                 {
                     printer.AppendWithoutLf(listView1.Items[i].Text);
-                    printer.AlignRight();
+                    padding = 32 - (listView1.Items[i].Text.Length + listView1.Items[i].SubItems[1].Text.Length);
+                    for (int index = 0; index < padding; index++) printer.AppendWithoutLf(" ");
                     printer.Append(listView1.Items[i].SubItems[1].Text);
                     printer.AlignLeft();
                 }
@@ -104,33 +107,55 @@ namespace Projekt.Forms
                     printer.Append($"-{listView1.Items[i].Text}");
                 }
             }
-            printer.Separator();
+            for (int i = 0; i < 32; i++) printer.AppendWithoutLf("-");
+            printer.NewLine();
             printer.AppendWithoutLf("Celkem");
-            printer.AlignRight();
-            printer.Append($"{Price} Kč");
-            printer.AlignLeft();
+            padding = 32 - 8 - Price.ToString().Length;
+            for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
+            printer.Append($"{Price}Kč");
             switch (paymentType)
             {
-                case Payments.Cash | Payments.CashExact:
+                case Payments.Cash:
+                case Payments.CashExact:
                     printer.AppendWithoutLf("Hotově");
-                    printer.AlignRight();
-                    printer.Append($"{PayedTextBox.Text} Kč");
-                    printer.AlignLeft();
+                    if(paymentType == Payments.CashExact)
+                    {
+                        padding = 32 - 8 - Price.ToString().Length;
+                        for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
+                        printer.Append($"{Price}Kč");
+                    }
+                    else
+                    {
+                        padding = 32 - 6 - (PayedTextBox.Text.Length + 2);
+                        for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
+                        printer.Append($"{PayedTextBox.Text}Kč"); 
+                    }
                     printer.AppendWithoutLf("Vratit");
                     if (paymentType == Payments.Cash)
                     {
-                        printer.AlignRight();
-                        printer.Append($"{int.Parse(PayedTextBox.Text) - Price} Kč"); 
+                        padding = 32 - 8 - PayedTextBox.Text.Length;
+                        for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
+                        printer.Append($"{int.Parse(PayedTextBox.Text) - Price}Kč");
+                        break;
                     }
+                    padding = 32 - 6 - 3;
+                    for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
+                    printer.Append("0Kč");
                     break;
                 case Payments.Card:
+                    padding = 32 - 7 - Price.ToString().Length;
                     printer.AppendWithoutLf("Karta");
-                    printer.AlignRight();
-                    printer.Append($"{Price} Kč");
+                    for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
+                    printer.Append($"{Price}Kč");
                     break;
             }
-            printer.AlignLeft();
-            printer.Separator();
+            for (int i = 0; i < 32; i++) printer.AppendWithoutLf("-");
+            printer.NewLine();
+            printer.AlignCenter();
+            printer.Append("Dekujeme vam za vas nakup");
+            printer.NewLines(4);
+            printer.FullPaperCut();
+            printer.PrintDocument();
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -209,6 +234,7 @@ namespace Projekt.Forms
         {
             var cardProcess = new CardPaymentProcessForm();
             cardProcess.ShowDialog();
+            PrintReceipt(Payments.Card);
             DialogResult = DialogResult.OK;
             Close();
         }
