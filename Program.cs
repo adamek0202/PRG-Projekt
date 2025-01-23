@@ -20,6 +20,11 @@ namespace Projekt
                 }
             }
             Application.SetCompatibleTextRenderingDefault(false);
+            string errorMessage;
+            if(!GlobalPosPrinter.Initialize("PosPrinter" ,out errorMessage))
+            {
+                MessageBox.Show($"UPOS Chyba: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             Application.Run(new MainForm());
         }
     }

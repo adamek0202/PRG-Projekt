@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "HxeNfYZWZU8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Adam\\source\\repos\\adamek0202\\PRG-Projekt\\Projekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Adam\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.1\\microsoft.bcl.asyncinterfaces.9.0.1.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\objectlistview.official\\2.9.2-alpha2\\objectlistview.official.2.9.2-alpha2.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\posfordotnet.sdk\\1.14.1\\posfordotnet.sdk.1.14.1.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\stub.system.data.sqlite.core.netframework\\1.0.119\\stub.system.data.sqlite.core.netframework.1.0.119.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.data.sqlite\\1.0.119\\system.data.sqlite.1.0.119.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.data.sqlite.ef6\\1.0.119\\system.data.sqlite.ef6.1.0.119.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.data.sqlite.linq\\1.0.119\\system.data.sqlite.linq.1.0.119.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.drawing.common\\9.0.1\\system.drawing.common.9.0.1.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.io.pipelines\\9.0.1\\system.io.pipelines.9.0.1.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.memory\\4.6.0\\system.memory.4.6.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.numerics.vectors\\4.6.0\\system.numerics.vectors.4.6.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.1.0\\system.runtime.compilerservices.unsafe.6.1.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.text.encodings.web\\9.0.1\\system.text.encodings.web.9.0.1.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.text.json\\9.0.1\\system.text.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.threading.tasks.extensions\\4.6.0\\system.threading.tasks.extensions.4.6.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -4,9 +4,8 @@ using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
-using ESC_POS_USB_NET.Printer;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+using Microsoft.PointOfService;
+using static Projekt.GlobalPosPrinter;
 
 namespace Projekt.Forms
 {
@@ -14,14 +13,9 @@ namespace Projekt.Forms
     {
         private int Price;
 
-        private enum Payments
-        {
-            Cash,
-            CashExact,
-            Card
-        }
+        private PosPrinter printer;
 
-        private PrintDocument printDocument;
+        
 
         public PaymentForm(int price ,List<ListViewItem> data)
         {
@@ -60,7 +54,7 @@ namespace Projekt.Forms
             Console.WriteLine($"{Price} kč");
             switch (paymentType)
             {
-                case Payments.Cash | Payments.CashExact:
+                case Payments.Cash:
                     padding = 20;
                     Console.Write("Hotově");
                     for (int i = 0; i < padding; i++) Console.Write(" ");
@@ -85,77 +79,20 @@ namespace Projekt.Forms
         private void PrintReceipt(Payments paymentType)
         {
             ConsolePrint(paymentType);
-            Printer printer = new Printer("POS-58-Series");
-            printer.AlignCenter();
-            printer.Append("Pokladna");
-            printer.AlignLeft();
-            for (int i = 0; i < 32; i++) printer.AppendWithoutLf("-");
-            printer.NewLine();
-            int padding;
             for (int i = 0; i < listView1.Items.Count; i++)
             {
                 if (listView1.Items[i].SubItems.Count > 1)
                 {
-                    printer.AppendWithoutLf(listView1.Items[i].Text);
-                    padding = 32 - (listView1.Items[i].Text.Length + listView1.Items[i].SubItems[1].Text.Length);
-                    for (int index = 0; index < padding; index++) printer.AppendWithoutLf(" ");
-                    printer.Append(listView1.Items[i].SubItems[1].Text);
-                    printer.AlignLeft();
+                    PrintPricedItem(listView1.Items[i].Text, listView1.Items[i].SubItems[1].Text);
                 }
                 else
                 {
-                    printer.Append($"-{listView1.Items[i].Text}");
+                    UPrinter.PrintNormal(PrinterStation.Receipt, $"-{listView1.Items[i].Text}\r\n");
+                    Console.WriteLine();
                 }
             }
-            for (int i = 0; i < 32; i++) printer.AppendWithoutLf("-");
-            printer.NewLine();
-            printer.AppendWithoutLf("Celkem");
-            padding = 32 - 8 - Price.ToString().Length;
-            for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
-            printer.Append($"{Price}Kč");
-            switch (paymentType)
-            {
-                case Payments.Cash:
-                case Payments.CashExact:
-                    printer.AppendWithoutLf("Hotově");
-                    if(paymentType == Payments.CashExact)
-                    {
-                        padding = 32 - 8 - Price.ToString().Length;
-                        for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
-                        printer.Append($"{Price}Kč");
-                    }
-                    else
-                    {
-                        padding = 32 - 6 - (PayedTextBox.Text.Length + 2);
-                        for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
-                        printer.Append($"{PayedTextBox.Text}Kč"); 
-                    }
-                    printer.AppendWithoutLf("Vratit");
-                    if (paymentType == Payments.Cash)
-                    {
-                        padding = 32 - 8 - PayedTextBox.Text.Length;
-                        for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
-                        printer.Append($"{int.Parse(PayedTextBox.Text) - Price}Kč");
-                        break;
-                    }
-                    padding = 32 - 6 - 3;
-                    for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
-                    printer.Append("0Kč");
-                    break;
-                case Payments.Card:
-                    padding = 32 - 7 - Price.ToString().Length;
-                    printer.AppendWithoutLf("Karta");
-                    for (int i = 0; i < padding; i++) printer.AppendWithoutLf(" ");
-                    printer.Append($"{Price}Kč");
-                    break;
-            }
-            for (int i = 0; i < 32; i++) printer.AppendWithoutLf("-");
-            printer.NewLine();
-            printer.AlignCenter();
-            printer.Append("Dekujeme vam za vas nakup");
-            printer.NewLines(4);
-            printer.FullPaperCut();
-            printer.PrintDocument();
+            PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text) - Price : 0);
+            PrintSeparator();
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -225,7 +162,7 @@ namespace Projekt.Forms
 
         private void ExactCashButton_Click(object sender, EventArgs e)
         {
-            PrintReceipt(Payments.CashExact);
+            PrintReceipt(Payments.Cash);
             DialogResult = DialogResult.OK;
             Close();
         }

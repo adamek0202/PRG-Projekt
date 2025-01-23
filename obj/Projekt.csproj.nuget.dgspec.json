@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Adam\\source\\repos\\adamek0202\\PRG-Projekt\\Projekt.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Adam\\source\\repos\\adamek0202\\PRG-Projekt\\Projekt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Adam\\source\\repos\\adamek0202\\PRG-Projekt\\Projekt.csproj",
+        "projectName": "Projekt",
+        "projectPath": "C:\\Users\\Adam\\source\\repos\\adamek0202\\PRG-Projekt\\Projekt.csproj",
+        "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adam\\source\\repos\\adamek0202\\PRG-Projekt\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "ObjectListView.Official": {
+              "target": "Package",
+              "version": "[2.9.2-alpha2, )"
+            },
+            "POSForDotNet.SDK": {
+              "target": "Package",
+              "version": "[1.14.1, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.119, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
