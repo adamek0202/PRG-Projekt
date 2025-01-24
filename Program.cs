@@ -20,7 +20,7 @@ namespace Projekt
                 }
             }
             Application.SetCompatibleTextRenderingDefault(false);
-            if (!GlobalPosPrinter.InitPrinter(PrinterTypes.ESC, "Printer", out string errorMessage))
+            if (!GlobalPosPrinter.InitPrinter("BP-T3", out string errorMessage))
             {
                 MessageBox.Show($"UPOS: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

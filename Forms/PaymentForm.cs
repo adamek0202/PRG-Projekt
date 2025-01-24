@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
-using Microsoft.PointOfService;
 using static Projekt.GlobalPosPrinter;
-using ESC_POS_USB_NET.Printer;
+
 
 namespace Projekt.Forms
 {
@@ -61,7 +59,6 @@ namespace Projekt.Forms
                         padding = 20;
                         Console.Write("Vratit");
                         for (int i = 0; i < padding; i++) Console.Write(" ");
-                        Console.WriteLine($"{int.Parse(PayedTextBox.Text) - Price} Kč");
                     }
                     else
                     {
@@ -75,21 +72,44 @@ namespace Projekt.Forms
 
         private void PrintReceipt(Payments paymentType)
         {
-            ConsolePrint(paymentType);
-            if (CurrentPrinterType != PrinterTypes.None)
+            if (EPrinter != null)
             {
+                EPrinter.AlignCenter();
+                EPrinter.Append("Spoje Kolín");
+                EPrinter.Append("Jaselská 826, 280 12 Kolín");
+                EPrinter.Append("Provozovna: Spoje Kolín");
+                EPrinter.AlignLeft();
+                EPrinter.Append("Obsluha: Adam");
+                EPrinter.Separator();
+                EPrinter.Append(FormatTwoColumns("Uct: 00001", DateTime.UtcNow.ToString(), 48));
+                EPrinter.AlignCenter();
+                EPrinter.AlignLeft();
+                EPrinter.Separator();
+                EPrinter.AlignCenter();
+                EPrinter.DoubleWidth2();
+                EPrinter.Append("V restauraci");
+                EPrinter.NormalWidth();
+                EPrinter.NewLine();
+                EPrinter.AlignLeft();
                 for (int i = 0; i < listView1.Items.Count; i++)
                 {
                     if (listView1.Items[i].SubItems.Count > 1)
                     {
-                        PrintPricedItem(listView1.Items[i].Text, listView1.Items[i].SubItems[1].Text);
+                        EPrinter.Append(FormatTwoColumns(listView1.Items[i].Text, listView1.Items[i].SubItems[1].Text, 48));
                     }
-                    else
-                    {
-                        UPrinter.PrintNormal(PrinterStation.Receipt, $"-{listView1.Items[i].Text}\r\n");
+                    else {
+                        EPrinter.Append($"-{listView1.Items[i].Text}");
                     }
                 }
-                PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text) - Price : 0); 
+                PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text) - Price : 0);
+                EPrinter.NewLine();
+                EPrinter.AlignCenter();
+                EPrinter.Append("Děkujeme vám za váš nákup");
+                EPrinter.AlignLeft();
+                EPrinter.NewLines(2);
+                EPrinter.PartialPaperCut();
+                EPrinter.PrintDocument();
+                EPrinter.Clear();
             }
         }
 

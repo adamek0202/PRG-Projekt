@@ -599,7 +599,6 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Platba";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.PaymentForm_Load);
             this.keypad.ResumeLayout(false);
             this.keypad.PerformLayout();

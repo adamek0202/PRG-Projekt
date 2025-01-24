@@ -151,6 +151,9 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OthersForm.resx">
+      <DependentUpon>OthersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PaymentForm.cs-CZ.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
