@@ -199,8 +199,8 @@
     <PackageReference Include="EntityFramework">
       <Version>6.5.1</Version>
     </PackageReference>
-    <PackageReference Include="ObjectListView.Official">
-      <Version>2.9.2-alpha2</Version>
+    <PackageReference Include="ESC-POS-USB-NET">
+      <Version>1.1.3</Version>
     </PackageReference>
     <PackageReference Include="POSForDotNet.SDK">
       <Version>1.14.1</Version>

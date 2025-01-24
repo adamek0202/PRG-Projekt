@@ -1,19 +1,18 @@
-﻿using Microsoft.PointOfService;
+﻿using ESC_POS_USB_NET.Printer;
+using Microsoft.PointOfService;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Projekt
 {
     internal static class GlobalPosPrinter
     {
         public static PosPrinter UPrinter { get; private set; }
-        public static bool isInitialized => UPrinter != null;
 
-        public static bool Initialize(string printerName ,out string errorMessage)
+        public static PrinterTypes CurrentPrinterType { get; private set; }
+        public static Printer Printer { get; private set; }
+
+        public static bool InitUPOSPrinter(string printerName ,out string errorMessage)
         {
             errorMessage = string.Empty;
             
@@ -44,7 +43,32 @@ namespace Projekt
                 return false;
             }
 
+            CurrentPrinterType = PrinterTypes.OPOS;
             return true;
+        }
+
+        public static bool InitESCPrinter(string printerName)
+        {
+            Printer = new Printer(printerName);
+            CurrentPrinterType = PrinterTypes.ESC;
+            return true;
+        }
+
+        public static bool InitPrinter(PrinterTypes printerType, string printerName, out string errorMsg)
+        {
+            CurrentPrinterType = PrinterTypes.None;
+            switch (printerType)
+            {
+                case PrinterTypes.OPOS:
+                    return InitUPOSPrinter(printerName, out errorMsg);
+                case PrinterTypes.ESC:
+                    errorMsg = "";
+                    return InitESCPrinter(printerName);
+                default:
+                    break;
+            }
+            errorMsg = "Neplatný typ tiskárny";
+            return false;
         }
 
         public static void Dispose()
@@ -60,46 +84,58 @@ namespace Projekt
 
         public static void PrintSeparator(Alignment alignment = Alignment.Left)
         {
-            if (UPrinter == null)
+            if (CurrentPrinterType == PrinterTypes.OPOS)
             {
-                throw new InvalidOperationException("Tiskárna není inicializována.");
+                int lineWidth = UPrinter.RecLineChars > 0 ? UPrinter.RecLineChars : 48;
+                string separator = new string('-', lineWidth);
+
+                string alignedSeparator = UAlignText(separator, alignment);
+
+                UPrinter.PrintNormal(PrinterStation.Receipt, alignedSeparator + "\r\n");
+                return;
             }
-
-            if (!UPrinter.DeviceEnabled)
-            {
-                throw new InvalidOperationException("Tiskárna není povolena.");
-            }
-
-            // Určení maximální šířky řádku na základě vlastnosti RecLineChars
-            int lineWidth = UPrinter.RecLineChars > 0 ? UPrinter.RecLineChars : 48; // Pokud není známé, použije 40
-            string separator = new string('-', lineWidth);
-
-            // Zarovnání separátoru
-            string alignedSeparator = UAlignText(separator, alignment);
-
-            // Tisk oddělovače
-            UPrinter.PrintNormal(PrinterStation.Receipt, alignedSeparator + "\r\n");
+            Printer.Separator();
         }
 
         public static void PrintPricedItem(string text, string price)
         {
-            UPrinter.PrintNormal(PrinterStation.Receipt, text);
-            UPrinter.PrintNormal(PrinterStation.Receipt, UAlignText(price, Alignment.Right) + "\r\n");
+            if (CurrentPrinterType == PrinterTypes.OPOS)
+            {
+                UPrinter.PrintNormal(PrinterStation.Receipt, text);
+                UPrinter.PrintNormal(PrinterStation.Receipt, UAlignText(price, Alignment.Right) + "\r\n");
+                return;
+            }
+            Printer.AppendWithoutLf(text);
+            Printer.AlignRight();
+            Printer.Append(price);
+        }
+
+        public static void PrintNormalItem(string text)
+        {
+            switch (CurrentPrinterType)
+            {
+                case PrinterTypes.OPOS:
+                    UPrinter.PrintNormal(PrinterStation.Receipt, text);
+                    break;
+                case PrinterTypes.ESC:
+                    Printer.Append(text);
+                    break;
+            }
         }
 
         private static string UAlignText(string text, Alignment alignment)
         {
-            int lineWidth = UPrinter.RecLineChars > 0 ? UPrinter.RecLineChars : 40; // Výchozí šířka je 40
+            int lineWidth = UPrinter.RecLineChars > 0 ? UPrinter.RecLineChars : 48;
 
             switch (alignment)
             {
                 case Alignment.Left:
-                    return text.PadRight(lineWidth); // Zarovnání vlevo
+                    return text.PadRight(lineWidth);
                 case Alignment.Center:
                     int padding = (lineWidth - text.Length) / 2;
-                    return text.PadLeft(padding + text.Length).PadRight(lineWidth); // Zarovnání na střed
+                    return text.PadLeft(padding + text.Length).PadRight(lineWidth);
                 case Alignment.Right:
-                    return text.PadLeft(lineWidth); // Zarovnání vpravo
+                    return text.PadLeft(lineWidth);
                 default:
                     return text;
             }
@@ -119,6 +155,7 @@ namespace Projekt
                     PrintPricedItem("Karta", $"{price}");
                     break;
             }
+            PrintSeparator();
         }
     }
 
@@ -132,7 +169,8 @@ namespace Projekt
     public enum PrinterTypes
     {
         OPOS,
-        ESC
+        ESC,
+        None
     }
 
     public enum Payments

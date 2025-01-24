@@ -20,10 +20,9 @@ namespace Projekt
                 }
             }
             Application.SetCompatibleTextRenderingDefault(false);
-            string errorMessage;
-            if(!GlobalPosPrinter.Initialize("PosPrinter" ,out errorMessage))
+            if (!GlobalPosPrinter.InitPrinter(PrinterTypes.ESC, "Printer", out string errorMessage))
             {
-                MessageBox.Show($"UPOS Chyba: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"UPOS: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             Application.Run(new MainForm());
         }

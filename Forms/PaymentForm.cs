@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using static Projekt.BasicTheme;
 using Microsoft.PointOfService;
 using static Projekt.GlobalPosPrinter;
+using ESC_POS_USB_NET.Printer;
 
 namespace Projekt.Forms
 {
@@ -13,11 +14,7 @@ namespace Projekt.Forms
     {
         private int Price;
 
-        private PosPrinter printer;
-
-        
-
-        public PaymentForm(int price ,List<ListViewItem> data)
+        public PaymentForm(int price, List<ListViewItem> data)
         {
             InitializeComponent();
             Price = price;
@@ -64,7 +61,7 @@ namespace Projekt.Forms
                         padding = 20;
                         Console.Write("Vratit");
                         for (int i = 0; i < padding; i++) Console.Write(" ");
-                        Console.WriteLine($"{int.Parse(PayedTextBox.Text) - Price} Kč"); 
+                        Console.WriteLine($"{int.Parse(PayedTextBox.Text) - Price} Kč");
                     }
                     else
                     {
@@ -79,20 +76,21 @@ namespace Projekt.Forms
         private void PrintReceipt(Payments paymentType)
         {
             ConsolePrint(paymentType);
-            for (int i = 0; i < listView1.Items.Count; i++)
+            if (CurrentPrinterType != PrinterTypes.None)
             {
-                if (listView1.Items[i].SubItems.Count > 1)
+                for (int i = 0; i < listView1.Items.Count; i++)
                 {
-                    PrintPricedItem(listView1.Items[i].Text, listView1.Items[i].SubItems[1].Text);
+                    if (listView1.Items[i].SubItems.Count > 1)
+                    {
+                        PrintPricedItem(listView1.Items[i].Text, listView1.Items[i].SubItems[1].Text);
+                    }
+                    else
+                    {
+                        UPrinter.PrintNormal(PrinterStation.Receipt, $"-{listView1.Items[i].Text}\r\n");
+                    }
                 }
-                else
-                {
-                    UPrinter.PrintNormal(PrinterStation.Receipt, $"-{listView1.Items[i].Text}\r\n");
-                    Console.WriteLine();
-                }
+                PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text) - Price : 0); 
             }
-            PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text) - Price : 0);
-            PrintSeparator();
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -132,7 +130,7 @@ namespace Projekt.Forms
             if (PayedTextBox.Text.Length < 5)
             {
                 var btn = sender as System.Windows.Forms.Button;
-                PayedTextBox.Text += btn.Tag; 
+                PayedTextBox.Text += btn.Tag;
             }
         }
 
@@ -143,7 +141,7 @@ namespace Projekt.Forms
 
         private void cashButton_Click(object sender, EventArgs e)
         {
-            if(Convert.ToInt32(PayedTextBox.Text) >= Price)
+            if (Convert.ToInt32(PayedTextBox.Text) >= Price)
             {
                 PrintReceipt(Payments.Cash);
                 var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
@@ -156,7 +154,7 @@ namespace Projekt.Forms
         {
             if (PayedTextBox.Text.Length >= 1)
             {
-                PayedTextBox.Text = PayedTextBox.Text.Remove(PayedTextBox.Text.Length - 1); 
+                PayedTextBox.Text = PayedTextBox.Text.Remove(PayedTextBox.Text.Length - 1);
             }
         }
 
