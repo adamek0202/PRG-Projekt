@@ -31,7 +31,7 @@ namespace Projekt.Forms
                 EPrinter.AlignLeft();
                 EPrinter.Append("Obsluha: Adam");
                 EPrinter.Separator();
-                EPrinter.Append(FormatTwoColumns("Uct: 00001", DateTime.UtcNow.ToString(), 48));
+                EPrinter.Append(FormatTwoColumns(receiptId.ToString("D5"), DateTime.UtcNow.ToString(), 48));
                 EPrinter.AlignCenter();
                 EPrinter.AlignLeft();
                 EPrinter.Separator();
@@ -60,6 +60,7 @@ namespace Projekt.Forms
                 EPrinter.PartialPaperCut();
                 EPrinter.PrintDocument();
                 EPrinter.Clear();
+                receiptId++;
             }
         }
 

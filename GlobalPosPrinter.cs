@@ -7,6 +7,8 @@ namespace Projekt
     {
         public static Printer EPrinter;
 
+        public static int receiptId;
+
         public static bool InitESCPrinter(string printerName)
         {
             try
