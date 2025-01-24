@@ -20,56 +20,6 @@ namespace Projekt.Forms
             ReallyCenterToScreen(this);
         }
 
-        private void ConsolePrint(Payments paymentType)
-        {
-            Console.WriteLine("Vítejte");
-            for (int i = 0; i < 32; i++) Console.Write("-");
-            Console.WriteLine();
-            int padding;
-            for (int i = 0; i < listView1.Items.Count; i++)
-            {
-                if (listView1.Items[i].SubItems.Count > 1)
-                {
-                    Console.Write(listView1.Items[i].Text);
-                    padding = 32 - (listView1.Items[i].Text.Length + listView1.Items[i].SubItems[1].Text.Length);
-                    for (int index = 0; index < padding; index++) Console.Write(" ");
-                    Console.WriteLine(listView1.Items[i].SubItems[1].Text);
-                }
-                else
-                {
-                    Console.Write("-" + listView1.Items[i].Text);
-                    Console.WriteLine();
-                }
-            }
-            for (int i = 0; i < 32; i++) Console.Write("-");
-            Console.WriteLine();
-            padding = 23 - Price.ToString().Length;
-            Console.Write("Celkem");
-            for (int i = 0; i < padding; i++) Console.Write(" ");
-            Console.WriteLine($"{Price} kč");
-            switch (paymentType)
-            {
-                case Payments.Cash:
-                    padding = 20;
-                    Console.Write("Hotově");
-                    for (int i = 0; i < padding; i++) Console.Write(" ");
-                    if (paymentType == Payments.Cash)
-                    {
-                        Console.WriteLine($"{PayedTextBox.Text} Kč");
-                        padding = 20;
-                        Console.Write("Vratit");
-                        for (int i = 0; i < padding; i++) Console.Write(" ");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{Price} Kč");
-                    }
-                    break;
-            }
-            for (int i = 0; i < 32; i++) Console.Write("-");
-            Console.WriteLine();
-        }
-
         private void PrintReceipt(Payments paymentType)
         {
             if (EPrinter != null)
