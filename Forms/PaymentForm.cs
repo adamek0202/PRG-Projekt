@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
@@ -118,6 +119,7 @@ namespace Projekt.Forms
         {
             if (Convert.ToInt32(PayedTextBox.Text) >= Price)
             {
+                RecordSale();
                 PrintReceipt(Payments.Cash);
                 var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
                 returnBox.ShowDialog();
@@ -135,6 +137,7 @@ namespace Projekt.Forms
 
         private void ExactCashButton_Click(object sender, EventArgs e)
         {
+            RecordSale();
             PrintReceipt(Payments.Cash);
             DialogResult = DialogResult.OK;
             Close();
@@ -145,9 +148,27 @@ namespace Projekt.Forms
             var btn = sender as Button;
             var cardProcess = new CardPaymentProcessForm();
             cardProcess.ShowDialog();
+            RecordSale();
             PrintReceipt((string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card);
             DialogResult = DialogResult.OK;
             Close();
+        }
+
+        private void RecordSale()
+        {
+            var connection = DatabaseConnection.Connection;
+            string querry = "UPDATE Products SET Sold = sold + 1 WHERE Name = @name";
+
+            foreach(ListViewItem item in listView1.Items)
+            {
+                    string productName = item.Text;
+
+                    using (var command = new SQLiteCommand(querry, connection))
+                    {
+                        command.Parameters.AddWithValue("@name", productName);
+                        Console.WriteLine(command.ExecuteNonQuery());
+                    }
+            }
         }
     }
 }

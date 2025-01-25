@@ -1256,9 +1256,9 @@
             this.LocationLabel.ForeColor = System.Drawing.Color.White;
             this.LocationLabel.Location = new System.Drawing.Point(12, 775);
             this.LocationLabel.Name = "LocationLabel";
-            this.LocationLabel.Size = new System.Drawing.Size(207, 35);
+            this.LocationLabel.Size = new System.Drawing.Size(79, 35);
             this.LocationLabel.TabIndex = 6;
-            this.LocationLabel.Text = "Tady / s sebou";
+            this.LocationLabel.Text = "Tady";
             // 
             // multiplierLabel
             // 
