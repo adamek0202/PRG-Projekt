@@ -186,7 +186,7 @@
             this.PayedTextBox.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PayedTextBox.Location = new System.Drawing.Point(3, 17);
             this.PayedTextBox.Name = "PayedTextBox";
-            this.PayedTextBox.Size = new System.Drawing.Size(287, 53);
+            this.PayedTextBox.Size = new System.Drawing.Size(287, 44);
             this.PayedTextBox.TabIndex = 11;
             // 
             // kSevenButton
@@ -354,8 +354,10 @@
             this.foodCardButton.Name = "foodCardButton";
             this.foodCardButton.Size = new System.Drawing.Size(169, 126);
             this.foodCardButton.TabIndex = 4;
+            this.foodCardButton.Tag = "FoodCard";
             this.foodCardButton.Text = "Stravenková karta";
             this.foodCardButton.UseVisualStyleBackColor = false;
+            this.foodCardButton.Click += new System.EventHandler(this.CardButton_Click);
             // 
             // PluxeeButton
             // 
@@ -459,7 +461,7 @@
             this.cashButton.TabIndex = 9;
             this.cashButton.Text = "Hotovost";
             this.cashButton.UseVisualStyleBackColor = false;
-            this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
+            this.cashButton.Click += new System.EventHandler(this.CashButton_Click);
             // 
             // exactCashButton
             // 
@@ -485,7 +487,7 @@
             this.sumLabel.Font = new System.Drawing.Font("Arial", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sumLabel.Location = new System.Drawing.Point(12, 9);
             this.sumLabel.Name = "sumLabel";
-            this.sumLabel.Size = new System.Drawing.Size(211, 33);
+            this.sumLabel.Size = new System.Drawing.Size(166, 26);
             this.sumLabel.TabIndex = 12;
             this.sumLabel.Text = "Celkem: xxx Kč";
             // 
@@ -577,7 +579,7 @@
             // 
             // PaymentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.CancelButton = this.cancelButton;

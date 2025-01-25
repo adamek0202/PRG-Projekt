@@ -58,9 +58,13 @@ namespace Projekt
                 EPrinter.Append(FormatTwoColumns("Hotově", $"{price}Kč", 48));
                 EPrinter.Append(FormatTwoColumns("Vráceno", $"{tendered}Kč", 48));
             }
-            else
+            else if(payment == Payments.Card)
             {
                 EPrinter.Append(FormatTwoColumns("Karta", $"{price}Kč", 48));
+            }
+            else
+            {
+                EPrinter.Append(FormatTwoColumns("Stravenková karta", $"{price}Kč", 48));
             }
             EPrinter.Separator();
         }
@@ -69,6 +73,7 @@ namespace Projekt
     public enum Payments
     {
         Cash,
-        Card
+        Card,
+        FoodCard
     }
 }

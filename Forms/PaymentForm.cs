@@ -114,7 +114,7 @@ namespace Projekt.Forms
 
         }
 
-        private void cashButton_Click(object sender, EventArgs e)
+        private void CashButton_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(PayedTextBox.Text) >= Price)
             {
@@ -142,9 +142,10 @@ namespace Projekt.Forms
 
         private void CardButton_Click(object sender, EventArgs e)
         {
+            var btn = sender as Button;
             var cardProcess = new CardPaymentProcessForm();
             cardProcess.ShowDialog();
-            PrintReceipt(Payments.Card);
+            PrintReceipt((string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card);
             DialogResult = DialogResult.OK;
             Close();
         }
