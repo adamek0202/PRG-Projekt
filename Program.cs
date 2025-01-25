@@ -16,7 +16,7 @@ namespace Projekt
             {
                 if (MessageBox.Show("Databáze nebyla nenalezena\nPřejete si vytvořit novou?", "Chyba databáze", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
-                     return;
+                    return;
                 }
             }
             if (File.Exists("receiptNumber"))
@@ -25,7 +25,7 @@ namespace Projekt
                 {
                     GlobalPosPrinter.receiptId = int.Parse(File.ReadAllText("receiptNumber"));
                 }
-                catch(FormatException)
+                catch (FormatException)
                 {
                     MessageBox.Show("Data byla poškozena\nČíslování dokladů bude resetováno", "Chyba dat", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     File.Delete("receiptNumber");
@@ -46,4 +46,4 @@ namespace Projekt
             File.WriteAllText("receiptNumber", GlobalPosPrinter.receiptId.ToString());
         }
     }
-} 
+}

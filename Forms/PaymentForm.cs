@@ -47,7 +47,8 @@ namespace Projekt.Forms
                     {
                         EPrinter.Append(FormatTwoColumns(listView1.Items[i].Text, listView1.Items[i].SubItems[1].Text, 48));
                     }
-                    else {
+                    else
+                    {
                         EPrinter.Append($"-{listView1.Items[i].Text}");
                     }
                 }

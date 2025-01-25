@@ -83,7 +83,7 @@ namespace Projekt
 
         private void AddHeadItem(string name, int price, int times, ListViewGroup group)
         {
-            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + "Kč" , times.ToString()}, group) { BackColor = Color.Orange });
+            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + "Kč", times.ToString() }, group) { BackColor = Color.Orange });
             UpdateSumPrice(price);
         }
 
@@ -115,16 +115,16 @@ namespace Projekt
                     foreach (var item in listView1.SelectedItems[0].Group.Items)
                     {
                         listView1.Items.Remove((ListViewItem)item);
-                    } 
+                    }
                 }
             }
         }
-        
+
         private void DownButton_Click(object sender, EventArgs e)
         {
             SelectNextItem();
         }
-        
+
         private void UpButton_Click(object sender, EventArgs e)
         {
             SelectPreviousItem();
@@ -139,7 +139,7 @@ namespace Projekt
                     listView1.Items.Clear();
                     listView1.Groups.Clear();
                     UpdateSumPrice(-SumPrice);
-                } 
+                }
             }
             else
             {
@@ -149,7 +149,7 @@ namespace Projekt
 
         private void ReplaceButton_Click(object sender, EventArgs e)
         {
-            if(listView1.SelectedItems.Count == 1)
+            if (listView1.SelectedItems.Count == 1)
             {
                 replace = true;
             }
@@ -178,7 +178,7 @@ namespace Projekt
             if (listView1.Items.Count >= 1 && SumPrice != 0)
             {
                 var payForm = new PaymentForm(SumPrice, ListViewData);
-                if(payForm.ShowDialog() == DialogResult.OK)
+                if (payForm.ShowDialog() == DialogResult.OK)
                 {
                     listView1.Items.Clear();
                     listView1.Groups.Clear();
@@ -196,14 +196,14 @@ namespace Projekt
                 multiplierLabel.Text = $"×{Multiplier}";
                 return;
             }
-            
+
             else if (Multiplier < 98)
             {
                 try
                 {
                     Multiplier = int.Parse(Multiplier.ToString() + btn.Tag);
                     multiplierLabel.Text = $"×{Multiplier}";
-                    if(Multiplier > 99)
+                    if (Multiplier > 99)
                     {
                         Multiplier = 0;
                         multiplierLabel.Text = $"×{Multiplier}";
@@ -212,7 +212,7 @@ namespace Projekt
                 catch
                 {
 
-                } 
+                }
             }
         }
 
@@ -245,7 +245,7 @@ namespace Projekt
                 default:
                     return;
             }
-            if(selectedForm.ShowDialog() == DialogResult.OK)
+            if (selectedForm.ShowDialog() == DialogResult.OK)
             {
                 HandleButtonPress(ExternalProduct, Multiplier);
                 Multiplier = 1;
