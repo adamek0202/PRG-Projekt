@@ -28,8 +28,10 @@ namespace Projekt.Forms
                 EPrinter.Append("Spoje Kolín");
                 EPrinter.Append("Jaselská 826, 280 12 Kolín");
                 EPrinter.Append("Provozovna: Spoje Kolín");
+                EPrinter.Append("IČO: 12345678");
+                EPrinter.Append("DIČ: CZ12345678");
                 EPrinter.AlignLeft();
-                EPrinter.Append("Obsluha: Adam");
+                EPrinter.Append(FormatTwoColumns("Obsluha: Adam", "Pokladna: 1", 48));
                 EPrinter.Separator();
                 EPrinter.Append(FormatTwoColumns(receiptId.ToString("D5"), DateTime.UtcNow.ToString(), 48));
                 EPrinter.AlignCenter();
@@ -45,17 +47,18 @@ namespace Projekt.Forms
                 {
                     if (listView1.Items[i].SubItems.Count > 1)
                     {
-                        EPrinter.Append(FormatTwoColumns(listView1.Items[i].Text, listView1.Items[i].SubItems[1].Text, 48));
+                        EPrinter.Append(FormatTwoColumns($"{listView1.Items[i].SubItems[2].Text} {listView1.Items[i].Text}", listView1.Items[i].SubItems[1].Text, 48));
                     }
                     else
                     {
-                        EPrinter.Append($"-{listView1.Items[i].Text}");
+                        EPrinter.Append($"   -{listView1.Items[i].Text}");
                     }
                 }
                 PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text) - Price : 0);
                 EPrinter.NewLine();
                 EPrinter.AlignCenter();
                 EPrinter.Append("Děkujeme vám za váš nákup");
+                EPrinter.Append("Na shledanou");
                 EPrinter.AlignLeft();
                 EPrinter.NewLines(2);
                 EPrinter.PartialPaperCut();

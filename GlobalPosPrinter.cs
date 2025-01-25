@@ -48,7 +48,9 @@ namespace Projekt
         public static void PrintPayment(Payments payment, int price, int tendered)
         {
             EPrinter.Separator();
+            EPrinter.Append(FormatTwoColumns("Základ", $" {price - ((double)12 / 100 * price)}Kč", 48));
             EPrinter.Append(FormatTwoColumns("DPH 12%", $"{(double)12 / 100 * price}Kč", 48));
+            EPrinter.Separator();
             EPrinter.Append(FormatTwoColumns("Celkem", $"{price}Kč", 48));
             EPrinter.Separator('=');
             if (payment == Payments.Cash)
