@@ -37,7 +37,7 @@ namespace Projekt.Forms
                 EPrinter.Separator();
                 EPrinter.AlignCenter();
                 EPrinter.DoubleWidth2();
-                EPrinter.Append("V restauraci");
+                EPrinter.Append(MainForm.Here ? "V Restauraci" : "S sebou");
                 EPrinter.NormalWidth();
                 EPrinter.NewLine();
                 EPrinter.AlignLeft();

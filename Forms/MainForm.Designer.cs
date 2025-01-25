@@ -97,12 +97,13 @@
             this.nineButton = new System.Windows.Forms.Button();
             this.zeroButton = new System.Windows.Forms.Button();
             this.xButton = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LocationLabel = new System.Windows.Forms.Label();
             this.multiplierLabel = new System.Windows.Forms.Label();
             this.listView1 = new Projekt.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -190,7 +191,7 @@
             this.sumLabel.ForeColor = System.Drawing.Color.White;
             this.sumLabel.Location = new System.Drawing.Point(337, 775);
             this.sumLabel.Name = "sumLabel";
-            this.sumLabel.Size = new System.Drawing.Size(0, 42);
+            this.sumLabel.Size = new System.Drawing.Size(0, 35);
             this.sumLabel.TabIndex = 0;
             // 
             // DownButton
@@ -504,7 +505,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 27);
+            this.label1.Size = new System.Drawing.Size(94, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pokladní: ";
             // 
@@ -905,36 +906,40 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(985, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 23);
+            this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Menu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(1202, 322);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 23);
+            this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Boxy";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(1044, 517);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 23);
+            this.label4.Size = new System.Drawing.Size(168, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Sendviče (samostatně)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(1181, 711);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 23);
+            this.label5.Size = new System.Drawing.Size(56, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "Kyblíky";
             // 
@@ -1244,22 +1249,24 @@
             this.xButton.UseVisualStyleBackColor = false;
             this.xButton.Click += new System.EventHandler(this.MultiplierButtons_Click);
             // 
-            // label6
+            // LocationLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 22F);
-            this.label6.Location = new System.Drawing.Point(12, 775);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(254, 42);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Tady / s sebou";
+            this.LocationLabel.AutoSize = true;
+            this.LocationLabel.Font = new System.Drawing.Font("Arial", 22F);
+            this.LocationLabel.ForeColor = System.Drawing.Color.White;
+            this.LocationLabel.Location = new System.Drawing.Point(12, 775);
+            this.LocationLabel.Name = "LocationLabel";
+            this.LocationLabel.Size = new System.Drawing.Size(207, 35);
+            this.LocationLabel.TabIndex = 6;
+            this.LocationLabel.Text = "Tady / s sebou";
             // 
             // multiplierLabel
             // 
             this.multiplierLabel.AutoSize = true;
+            this.multiplierLabel.ForeColor = System.Drawing.Color.White;
             this.multiplierLabel.Location = new System.Drawing.Point(392, 9);
             this.multiplierLabel.Name = "multiplierLabel";
-            this.multiplierLabel.Size = new System.Drawing.Size(33, 23);
+            this.multiplierLabel.Size = new System.Drawing.Size(26, 18);
             this.multiplierLabel.TabIndex = 7;
             this.multiplierLabel.Text = "×1";
             // 
@@ -1314,14 +1321,32 @@
             this.Mnozstvi.Text = "";
             this.Mnozstvi.Width = 45;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1108, 906);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 77);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "S sebou";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1920, 1055);
             this.Controls.Add(this.multiplierLabel);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.LocationLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -1341,6 +1366,7 @@
             this.Controls.Add(this.dessersButton);
             this.Controls.Add(this.supplementsButton);
             this.Controls.Add(this.chickenButton);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.priceAskButton);
             this.Controls.Add(this.drinksButton);
             this.Controls.Add(this.CouponsButton);
@@ -1452,8 +1478,9 @@
         private System.Windows.Forms.Button nineButton;
         private System.Windows.Forms.Button zeroButton;
         private System.Windows.Forms.Button xButton;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LocationLabel;
         private System.Windows.Forms.Label multiplierLabel;
+        private System.Windows.Forms.Button button1;
     }
 }
 

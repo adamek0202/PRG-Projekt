@@ -15,7 +15,8 @@ namespace Projekt
         public static int ExternalProduct { get; set; }
 
         public bool replace = false;
-        
+        public static bool Here { get; private set; } = true;
+
         public MainForm()
         {
             InitializeComponent();
@@ -250,6 +251,22 @@ namespace Projekt
                 Multiplier = 1;
                 multiplierLabel.Text = $"×{Multiplier}";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (Here == true)
+            {
+                Here = false;
+                btn.Text = "Tady";
+            }
+            else
+            {
+                Here = true;
+                btn.Text = "S sebou";
+            }
+            LocationLabel.Text = Here ? "Tady" : "S sebou";
         }
     }
 }
