@@ -119,7 +119,7 @@ namespace Projekt.Forms
         {
             if (Convert.ToInt32(PayedTextBox.Text) >= Price)
             {
-                RecordSale();
+                RecordSale(Payments.Cash);
                 PrintReceipt(Payments.Cash);
                 var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
                 returnBox.ShowDialog();
@@ -137,7 +137,7 @@ namespace Projekt.Forms
 
         private void ExactCashButton_Click(object sender, EventArgs e)
         {
-            RecordSale();
+            RecordSale(Payments.Cash);
             PrintReceipt(Payments.Cash);
             DialogResult = DialogResult.OK;
             Close();
@@ -148,16 +148,16 @@ namespace Projekt.Forms
             var btn = sender as Button;
             var cardProcess = new CardPaymentProcessForm();
             cardProcess.ShowDialog();
-            RecordSale();
+            RecordSale(Payments.Card);
             PrintReceipt((string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card);
             DialogResult = DialogResult.OK;
             Close();
         }
 
-        private void RecordSale()
+        private void RecordSale(Payments payment)
         {
             var connection = DatabaseConnection.Connection;
-            string querry = "UPDATE Products SET Sold = sold + 1 WHERE Name = @name";
+            const string querry = "UPDATE Products SET Sold = sold + 1 WHERE Name = @name";
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -185,6 +185,15 @@ namespace Projekt.Forms
                         Console.WriteLine(command.ExecuteNonQuery());
                     }
                 }
+            }
+
+            const string query = "INSERT INTO Transactions (Date, Price, Payment) VALUES (@date, @price, @payment)";
+            using(var command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("date", DateTime.Now.ToShortDateString());
+                command.Parameters.AddWithValue("price", Price.ToString());
+                command.Parameters.AddWithValue("payment", payment.ToString());
+                command.ExecuteNonQuery();
             }
         }
     }
