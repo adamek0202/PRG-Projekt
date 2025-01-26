@@ -81,13 +81,13 @@ namespace Projekt
         }
         #endregion Posun
 
-        private void AddHeadItem(string name, int price, int times, ListViewGroup group)
+        public void AddHeadItem(string name, int price, int times, ListViewGroup group)
         {
             listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + "Kč", times.ToString() }, group) { BackColor = Color.Orange });
             UpdateSumPrice(price);
         }
 
-        private void AddSubItem(string[] names, ListViewGroup group)
+        public void AddSubItem(string[] names, ListViewGroup group)
         {
             foreach (var item in names)
             {
@@ -158,7 +158,7 @@ namespace Projekt
         private void ItemButton_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            HandleButtonPress(Convert.ToInt32(btn.Tag), Multiplier); 
+            DatabaseFunctions.HandleButtonPress(this, Convert.ToInt32(btn.Tag), Multiplier);
             Multiplier = 1;
             multiplierLabel.Text = $"×{Multiplier}";
         }
@@ -245,7 +245,7 @@ namespace Projekt
             }
             if (selectedForm.ShowDialog() == DialogResult.OK)
             {
-                HandleButtonPress(ExternalProduct, Multiplier);
+                DatabaseFunctions.HandleButtonPress(this, ExternalProduct, Multiplier);
                 Multiplier = 1;
                 multiplierLabel.Text = $"×{Multiplier}";
             }

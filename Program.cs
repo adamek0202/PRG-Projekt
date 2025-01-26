@@ -38,7 +38,8 @@ namespace Projekt
                 GlobalPosPrinter.receiptId = 1;
             }
             Application.SetCompatibleTextRenderingDefault(false);
-            if (!GlobalPosPrinter.InitPrinter("BP-T3", out string errorMessage))
+            string errorMessage = GlobalPosPrinter.InitPrinter("BP-T3");
+            if (errorMessage != string.Empty)
             {
                 MessageBox.Show($"UPOS: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

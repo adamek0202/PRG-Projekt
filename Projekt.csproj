@@ -125,7 +125,6 @@
       <DependentUpon>TenderedReturnForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalPosPrinter.cs" />
-    <Compile Include="Item.cs" />
     <Compile Include="NativeFunctions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,7 +132,7 @@
     <Compile Include="ScrollListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SQLite_processing.cs" />
+    <Compile Include="SQLiteFunctions.cs" />
     <EmbeddedResource Include="Forms\CardPaymentProcessForm.resx">
       <DependentUpon>CardPaymentProcessForm.cs</DependentUpon>
     </EmbeddedResource>

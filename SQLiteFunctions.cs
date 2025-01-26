@@ -31,9 +31,52 @@ namespace Projekt
         }
     }
 
-    public partial class MainForm : Form
+    internal static class DatabaseFunctions
     {
-        private void AddMenuComponents(int[] componentIds, ListViewGroup group)
+        public static void RecordSale(System.Windows.Forms.ListView listView, Payments payment, int price)
+        {
+            var connection = DatabaseConnection.Connection;
+            const string querry = "UPDATE Products SET Sold = sold + 1 WHERE Name = @name";
+
+            foreach (ListViewItem item in listView.Items)
+            {
+                // Zjisti počet podle pravidel
+                int count = 0;
+
+                if (item.SubItems.Count > 1) // Pokud má položka 2 subpoložky
+                {
+                    count = int.Parse(item.SubItems[2].Text); // Počet je v druhé subpoložce
+                }
+                else if (item.Group != null && item.Group.Items.Count > 0 && item.Group.Items[0].SubItems.Count > 1)
+                {
+                    // Pokud nemá subpoložky, vezmi počet z první položky skupiny
+                    count = int.Parse(item.Group.Items[0].SubItems[2].Text);
+                }
+
+                // Proveď SQL příkaz pro každý počet
+                for (int i = 0; i < count; i++)
+                {
+                    string productName = item.Text;
+
+                    using (var command = new SQLiteCommand(querry, connection))
+                    {
+                        command.Parameters.AddWithValue("@name", productName);
+                        Console.WriteLine(command.ExecuteNonQuery());
+                    }
+                }
+            }
+
+            const string query = "INSERT INTO Transactions (Date, Price, Payment) VALUES (@date, @price, @payment)";
+            using (var command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("date", DateTime.Now.ToShortDateString());
+                command.Parameters.AddWithValue("price", price.ToString());
+                command.Parameters.AddWithValue("payment", payment.ToString());
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private static void AddMenuComponents(MainForm form ,int[] componentIds, ListViewGroup group)
         {
             var connection = DatabaseConnection.Connection;
             string querry = "SELECT Name FROM Products WHERE ProductID = @ProductID";
@@ -48,14 +91,14 @@ namespace Projekt
                         if (reader.Read())
                         {
                             string componentName = reader["Name"].ToString();
-                            AddSubItem(new[] { componentName }, group);
+                            form.AddSubItem(new[] { componentName }, group);
                         }
                     }
                 }
             }
         }
 
-        private void HandleButtonPress(int buttonId, int times)
+        public static void HandleButtonPress(MainForm form ,int buttonId, int times)
         {
             if (times >= 1)
             {
@@ -66,15 +109,14 @@ namespace Projekt
                     string querry = "SELECT Name, Price FROM Products WHERE ProductID = @ProductID";
                     using (var command = new SQLiteCommand(querry, connection))
                     {
-                        command.Parameters.AddWithValue("@ProductID", buttonId); // Corrected parameter name
+                        command.Parameters.AddWithValue("@ProductID", buttonId);
                         using (var reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
                                 string name = reader["Name"].ToString();
                                 int price = Convert.ToInt32(reader["Price"]) * times;
-                                AddHeadItem(name, price, times, group);
-                                //NativeFunctions.ForceShowScrollBar(listView1.Handle);
+                                form.AddHeadItem(name, price, times, group);
                             }
                             else
                             {
@@ -106,10 +148,10 @@ namespace Projekt
                                 }
                                 string componentsJson = reader["Components"].ToString();
 
-                                AddHeadItem(name, price, times, group);
+                                form.AddHeadItem(name, price, times, group);
 
                                 var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
-                                AddMenuComponents(componentsIds, group);
+                                AddMenuComponents(form ,componentsIds, group);
                             }
                         }
                     }
