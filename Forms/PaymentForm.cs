@@ -159,8 +159,24 @@ namespace Projekt.Forms
             var connection = DatabaseConnection.Connection;
             string querry = "UPDATE Products SET Sold = sold + 1 WHERE Name = @name";
 
-            foreach(ListViewItem item in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
+                // Zjisti počet podle pravidel
+                int count = 0;
+
+                if (item.SubItems.Count > 1) // Pokud má položka 2 subpoložky
+                {
+                    count = int.Parse(item.SubItems[2].Text); // Počet je v druhé subpoložce
+                }
+                else if (item.Group != null && item.Group.Items.Count > 0 && item.Group.Items[0].SubItems.Count > 1)
+                {
+                    // Pokud nemá subpoložky, vezmi počet z první položky skupiny
+                    count = int.Parse(item.Group.Items[0].SubItems[2].Text);
+                }
+
+                // Proveď SQL příkaz pro každý počet
+                for (int i = 0; i < count; i++)
+                {
                     string productName = item.Text;
 
                     using (var command = new SQLiteCommand(querry, connection))
@@ -168,6 +184,7 @@ namespace Projekt.Forms
                         command.Parameters.AddWithValue("@name", productName);
                         Console.WriteLine(command.ExecuteNonQuery());
                     }
+                }
             }
         }
     }

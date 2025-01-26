@@ -230,11 +230,11 @@
             // 
             // ChickenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(506, 270);
+            this.ClientSize = new System.Drawing.Size(515, 273);
             this.ControlBox = false;
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button5);
