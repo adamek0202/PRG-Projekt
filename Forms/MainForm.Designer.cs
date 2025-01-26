@@ -293,6 +293,7 @@
             this.mQuritoButton.Name = "mQuritoButton";
             this.mQuritoButton.Size = new System.Drawing.Size(111, 85);
             this.mQuritoButton.TabIndex = 0;
+            this.mQuritoButton.Tag = "1002";
             this.mQuritoButton.Text = "Qurito Menu";
             this.mQuritoButton.UseVisualStyleBackColor = false;
             this.mQuritoButton.Click += new System.EventHandler(this.ItemButton_Click);

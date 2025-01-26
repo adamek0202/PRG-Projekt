@@ -57,61 +57,64 @@ namespace Projekt
 
         private void HandleButtonPress(int buttonId, int times)
         {
-            var connection = DatabaseConnection.Connection;
-            var group = new ListViewGroup();
-            if (buttonId < 1000)
+            if (times >= 1)
             {
-                string querry = "SELECT Name, Price FROM Products WHERE ProductID = @ProductID";
-                using (var command = new SQLiteCommand(querry, connection))
+                var connection = DatabaseConnection.Connection;
+                var group = new ListViewGroup();
+                if (buttonId < 1000)
                 {
-                    command.Parameters.AddWithValue("@ProductID", buttonId); // Corrected parameter name
-                    using (var reader = command.ExecuteReader())
+                    string querry = "SELECT Name, Price FROM Products WHERE ProductID = @ProductID";
+                    using (var command = new SQLiteCommand(querry, connection))
                     {
-                        if (reader.Read())
+                        command.Parameters.AddWithValue("@ProductID", buttonId); // Corrected parameter name
+                        using (var reader = command.ExecuteReader())
                         {
-                            string name = reader["Name"].ToString();
-                            int price = Convert.ToInt32(reader["Price"]) * times;
-                            AddHeadItem(name, price, times, group);
-                            //NativeFunctions.ForceShowScrollBar(listView1.Handle);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Produkt s ID {buttonId} nebyl v databázi nalezen\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            if (reader.Read())
+                            {
+                                string name = reader["Name"].ToString();
+                                int price = Convert.ToInt32(reader["Price"]) * times;
+                                AddHeadItem(name, price, times, group);
+                                //NativeFunctions.ForceShowScrollBar(listView1.Handle);
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Produkt s ID {buttonId} nebyl v databázi nalezen\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                     }
                 }
-            }
-            else if (buttonId >= 1000)
-            {
-                string querry = "SELECT Name, Price, Components FROM Menus WHERE MenuID = @MenuID";
-                using (var command = new SQLiteCommand(querry, connection))
+                else if (buttonId >= 1000)
                 {
-                    command.Parameters.AddWithValue("@MenuID", buttonId);
-                    using (var reader = command.ExecuteReader())
+                    string querry = "SELECT Name, Price, Components FROM Menus WHERE MenuID = @MenuID";
+                    using (var command = new SQLiteCommand(querry, connection))
                     {
-                        if (reader.Read())
+                        command.Parameters.AddWithValue("@MenuID", buttonId);
+                        using (var reader = command.ExecuteReader())
                         {
-                            int price;
-                            string name = reader["Name"].ToString();
-                            try
+                            if (reader.Read())
                             {
-                                price = Convert.ToInt32(reader["Price"]) * times;
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Nastala chyba při načítání položky z databáze\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return;
-                            }
-                            string componentsJson = reader["Components"].ToString();
+                                int price;
+                                string name = reader["Name"].ToString();
+                                try
+                                {
+                                    price = Convert.ToInt32(reader["Price"]) * times;
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Nastala chyba při načítání položky z databáze\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                string componentsJson = reader["Components"].ToString();
 
-                            AddHeadItem(name, price, times, group);
+                                AddHeadItem(name, price, times, group);
 
-                            var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
-                            AddMenuComponents(componentsIds, group);
+                                var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
+                                AddMenuComponents(componentsIds, group);
+                            }
                         }
                     }
                 }
-            }
+            } 
         }
     }
 }

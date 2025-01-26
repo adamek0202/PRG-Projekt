@@ -158,10 +158,7 @@ namespace Projekt
         private void ItemButton_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if (Multiplier >= 1)
-            {
-                HandleButtonPress(Convert.ToInt32(btn.Tag), Multiplier); 
-            }
+            HandleButtonPress(Convert.ToInt32(btn.Tag), Multiplier); 
             Multiplier = 1;
             multiplierLabel.Text = $"×{Multiplier}";
         }
@@ -213,9 +210,7 @@ namespace Projekt
                     }
                 }
                 catch
-                {
-
-                }
+                {}
             }
         }
 
