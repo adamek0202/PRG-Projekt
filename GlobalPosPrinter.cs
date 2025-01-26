@@ -55,8 +55,8 @@ namespace Projekt
             EPrinter.Separator('=');
             if (payment == Payments.Cash)
             {
-                EPrinter.Append(FormatTwoColumns("Hotově", $"{price}Kč", 48));
-                EPrinter.Append(FormatTwoColumns("Vráceno", $"{tendered}Kč", 48));
+                EPrinter.Append(FormatTwoColumns("Hotově", $"{tendered}Kč", 48));
+                EPrinter.Append(FormatTwoColumns("Vráceno", $"{tendered - price}Kč", 48));
             }
             else if(payment == Payments.Card)
             {

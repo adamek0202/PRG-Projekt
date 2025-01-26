@@ -55,7 +55,7 @@ namespace Projekt.Forms
                         EPrinter.Append($"   -{listView1.Items[i].Text}");
                     }
                 }
-                PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text) - Price : 0);
+                PrintPayment(paymentType, Price, PayedTextBox.Text.Length > 0 ? int.Parse(PayedTextBox.Text): 0);
                 EPrinter.NewLine();
                 EPrinter.AlignCenter();
                 EPrinter.Append("Děkujeme vám za váš nákup");
