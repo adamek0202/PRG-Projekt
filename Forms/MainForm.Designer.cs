@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.bTwisterButton = new System.Windows.Forms.Button();
             this.bZingerButton = new System.Windows.Forms.Button();
             this.RemoveItemButton = new System.Windows.Forms.Button();
@@ -99,11 +99,11 @@
             this.xButton = new System.Windows.Forms.Button();
             this.LocationLabel = new System.Windows.Forms.Label();
             this.multiplierLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new Projekt.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -562,9 +562,10 @@
             this.mBSmartsButton.Name = "mBSmartsButton";
             this.mBSmartsButton.Size = new System.Drawing.Size(126, 176);
             this.mBSmartsButton.TabIndex = 3;
-            this.mBSmartsButton.Tag = "100";
+            this.mBSmartsButton.Tag = "BSmarts";
             this.mBSmartsButton.Text = "B-Smarty";
             this.mBSmartsButton.UseVisualStyleBackColor = false;
+            this.mBSmartsButton.Click += new System.EventHandler(this.ExternalFormsButtons_Click);
             // 
             // panel2
             // 
@@ -1271,6 +1272,24 @@
             this.multiplierLabel.TabIndex = 7;
             this.multiplierLabel.Text = "×1";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1108, 925);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 59);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "S sebou";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.SteelBlue;
@@ -1282,13 +1301,13 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup5.Header = "Menu 1";
-            listViewGroup5.Name = "listViewGroup1";
-            listViewGroup6.Header = "Menu 2";
-            listViewGroup6.Name = "listViewGroup2";
+            listViewGroup1.Header = "Menu 1";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "Menu 2";
+            listViewGroup2.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
@@ -1321,24 +1340,6 @@
             this.Mnozstvi.DisplayIndex = 0;
             this.Mnozstvi.Text = "";
             this.Mnozstvi.Width = 45;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1108, 925);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "S sebou";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 

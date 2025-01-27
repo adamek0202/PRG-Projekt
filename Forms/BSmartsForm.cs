@@ -1,13 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
 
 namespace Projekt.Forms
 {
-    public partial class OthersForm : Form
+    public partial class BSmartsForm : Form
     {
-        public OthersForm()
+        public BSmartsForm()
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
@@ -25,12 +32,13 @@ namespace Projekt.Forms
             }
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
 
-        private void OtherButton_Click(object sender, EventArgs e)
+        private void BSmartButton_Click(object sender, EventArgs e)
         {
             var btn = sender as Button;
             MainForm.ExternalProduct = int.Parse((string)btn.Tag);

@@ -49,7 +49,7 @@
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 81);
+            this.button1.Size = new System.Drawing.Size(107, 81);
             this.button1.TabIndex = 1;
             this.button1.Tag = "400";
             this.button1.Text = "Běžné\r\nhranolky";
@@ -64,9 +64,9 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(112, 12);
+            this.button2.Location = new System.Drawing.Point(125, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 81);
+            this.button2.Size = new System.Drawing.Size(107, 81);
             this.button2.TabIndex = 1;
             this.button2.Tag = "401";
             this.button2.Text = "Velké\r\nhranolky";
@@ -81,12 +81,12 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(212, 12);
+            this.button3.Location = new System.Drawing.Point(238, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 81);
+            this.button3.Size = new System.Drawing.Size(107, 81);
             this.button3.TabIndex = 1;
             this.button3.Tag = "402";
-            this.button3.Text = "button1";
+            this.button3.Text = "Kyblík hranolek";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -98,12 +98,12 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(312, 12);
+            this.button4.Location = new System.Drawing.Point(351, 12);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 81);
+            this.button4.Size = new System.Drawing.Size(107, 81);
             this.button4.TabIndex = 1;
             this.button4.Tag = "403";
-            this.button4.Text = "button1";
+            this.button4.Text = "Lupínky";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -115,12 +115,12 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(312, 99);
+            this.button5.Location = new System.Drawing.Point(351, 99);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 81);
+            this.button5.Size = new System.Drawing.Size(107, 81);
             this.button5.TabIndex = 1;
             this.button5.Tag = "407";
-            this.button5.Text = "button1";
+            this.button5.Text = "Rýže s omáčkou";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -134,10 +134,10 @@
             this.button6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button6.Location = new System.Drawing.Point(12, 99);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 81);
+            this.button6.Size = new System.Drawing.Size(107, 81);
             this.button6.TabIndex = 1;
             this.button6.Tag = "404";
-            this.button6.Text = "button1";
+            this.button6.Text = "Kyblík lupínky";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -149,12 +149,12 @@
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(212, 99);
+            this.button7.Location = new System.Drawing.Point(238, 99);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 81);
+            this.button7.Size = new System.Drawing.Size(107, 81);
             this.button7.TabIndex = 1;
             this.button7.Tag = "406";
-            this.button7.Text = "button1";
+            this.button7.Text = "Coleslaw";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -166,12 +166,12 @@
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button8.Location = new System.Drawing.Point(112, 99);
+            this.button8.Location = new System.Drawing.Point(125, 99);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(94, 81);
+            this.button8.Size = new System.Drawing.Size(107, 81);
             this.button8.TabIndex = 1;
             this.button8.Tag = "405";
-            this.button8.Text = "button1";
+            this.button8.Text = "Cibulové kroužky";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -184,7 +184,7 @@
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(156, 186);
+            this.exitButton.Location = new System.Drawing.Point(189, 186);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(94, 81);
             this.exitButton.TabIndex = 2;
@@ -194,11 +194,11 @@
             // 
             // SupplementsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(411, 269);
+            this.ClientSize = new System.Drawing.Size(470, 278);
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button7);

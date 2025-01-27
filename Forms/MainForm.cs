@@ -83,7 +83,7 @@ namespace Projekt
 
         public void AddHeadItem(string name, int price, int times, ListViewGroup group)
         {
-            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + "Kč", times.ToString() }, group) { BackColor = Color.Orange });
+            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + " Kč", times.ToString() }, group) { BackColor = Color.Orange });
             UpdateSumPrice(price);
         }
 
@@ -225,6 +225,9 @@ namespace Projekt
             var btn = sender as Button;
             switch (btn.Tag)
             {
+                case "BSmarts":
+                    selectedForm = new BSmartsForm();
+                    break;
                 case "Drinks":
                     selectedForm = new DrinksForm();
                     break;

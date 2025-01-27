@@ -179,7 +179,8 @@ namespace Projekt
                             int categoryId = reader.GetInt32(0);
                             if (categoryIds.Contains(categoryId))
                             {
-                                await SendOrder(orderId);
+                                //await SendOrder(orderId);
+                                PrintOrder();
                                 if (orderId < 99)
                                 {
                                     orderId++;
@@ -213,6 +214,7 @@ namespace Projekt
             EPrinter.PartialPaperCut();
             EPrinter.NormalWidth();
             EPrinter.PrintDocument();
+            EPrinter.Clear();
         }
 
         private static readonly HttpClient httpClient = new HttpClient();
@@ -221,7 +223,7 @@ namespace Projekt
         {
             try
             {
-                string url = "http://192.168.0.2:8080/new-order"; // Cílová adresa
+                string url = "http://localhost:8080/new-order"; // Cílová adresa
                 var payload = new { orderId = orderId }; // JSON data
 
                 // Serializace JSON payloadu
@@ -240,7 +242,6 @@ namespace Projekt
                 if (response.IsSuccessStatusCode)
                 {
                     Console.WriteLine($"Objednávka {orderId} byla úspěšně odeslána.");
-                    PrintOrder();
                 }
                 else
                 {

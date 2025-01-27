@@ -83,23 +83,23 @@ namespace Projekt
         public static void PrintPayment(Payments payment, int tendered)
         {
             EPrinter.Separator();
-            EPrinter.Append(FormatTwoColumns("Základ", $" {PaymentForm.Price - ((double)12 / 100 * PaymentForm.Price)}Kč", 48));
-            EPrinter.Append(FormatTwoColumns("DPH 12%", $"{(double)12 / 100 * PaymentForm.Price}Kč", 48));
+            EPrinter.Append(FormatTwoColumns("Základ", $" {PaymentForm.Price - ((double)12 / 100 * PaymentForm.Price)} Kč", 48));
+            EPrinter.Append(FormatTwoColumns("DPH 12%", $"{(double)12 / 100 * PaymentForm.Price} Kč", 48));
             EPrinter.Separator();
-            EPrinter.Append(FormatTwoColumns("Celkem", $"{PaymentForm.Price}Kč", 48));
+            EPrinter.Append(FormatTwoColumns("Celkem", $"{PaymentForm.Price} Kč", 48));
             EPrinter.Separator('=');
             if (payment == Payments.Cash)
             {
-                EPrinter.Append(FormatTwoColumns("Hotově", $"{tendered}Kč", 48));
-                EPrinter.Append(FormatTwoColumns("Vráceno", $"{tendered - PaymentForm.Price}Kč", 48));
+                EPrinter.Append(FormatTwoColumns("Hotově", $"{tendered} Kč", 48));
+                EPrinter.Append(FormatTwoColumns("Vráceno", $"{tendered - PaymentForm.Price} Kč", 48));
             }
             else if (payment == Payments.Card)
             {
-                EPrinter.Append(FormatTwoColumns("Karta", $"{PaymentForm.Price}Kč", 48));
+                EPrinter.Append(FormatTwoColumns("Karta", $"{PaymentForm.Price} Kč", 48));
             }
             else
             {
-                EPrinter.Append(FormatTwoColumns("Stravenková karta", $"{PaymentForm.Price}Kč", 48));
+                EPrinter.Append(FormatTwoColumns("Stravenková karta", $"{PaymentForm.Price} Kč", 48));
             }
             EPrinter.Separator();
         }

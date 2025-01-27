@@ -72,8 +72,8 @@ namespace Projekt.Forms
             if (Convert.ToInt32(PayedTextBox.Text) >= Price)
             {
                 DatabaseFunctions.RecordSale(listView1, Payments.Cash, Price);
-                Receipt.PrintReceipt(listView1, Payments.Cash, int.Parse(PayedTextBox.Text));
                 DatabaseFunctions.SendOrderName(listView1, new int[4] { 1, 2, 3, 4 });
+                Receipt.PrintReceipt(listView1, Payments.Cash, int.Parse(PayedTextBox.Text));
                 var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
                 returnBox.ShowDialog();
                 DialogResult = DialogResult.OK;
@@ -91,8 +91,8 @@ namespace Projekt.Forms
         private void ExactCashButton_Click(object sender, EventArgs e)
         {
             DatabaseFunctions.RecordSale(listView1, Payments.Cash, Price);
-            Receipt.PrintReceipt(listView1, Payments.Cash, Price);
             DatabaseFunctions.SendOrderName(listView1, new int[4] { 1, 2, 3, 4 });
+            Receipt.PrintReceipt(listView1, Payments.Cash, Price);
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -103,8 +103,8 @@ namespace Projekt.Forms
             var cardProcess = new CardPaymentProcessForm();
             cardProcess.ShowDialog();
             DatabaseFunctions.RecordSale(listView1 ,Payments.Card, Price);
-            Receipt.PrintReceipt(listView1 ,(string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card, Price);
             DatabaseFunctions.SendOrderName(listView1, new int[4] { 1, 2, 3, 4});
+            Receipt.PrintReceipt(listView1, (string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card, Price);
             DialogResult = DialogResult.OK;
             Close();
         }
