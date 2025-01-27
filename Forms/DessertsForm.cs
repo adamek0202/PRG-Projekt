@@ -30,5 +30,14 @@ namespace Projekt.Forms
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void DessertsButton_Click(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            MainForm.ExternalProduct = int.Parse((string)btn.Tag);
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
     }
 }

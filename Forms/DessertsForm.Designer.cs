@@ -80,6 +80,7 @@
             this.button1.Tag = "700";
             this.button1.Text = "Brownie karamel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button2
             // 
@@ -96,6 +97,7 @@
             this.button2.Tag = "701";
             this.button2.Text = "Muffin čokoláda";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button3
             // 
@@ -112,6 +114,7 @@
             this.button3.Tag = "702";
             this.button3.Text = "Shake S čokoláda";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button4
             // 
@@ -128,6 +131,7 @@
             this.button4.Tag = "703";
             this.button4.Text = "Shake S karamel";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button5
             // 
@@ -144,6 +148,7 @@
             this.button5.Tag = "704";
             this.button5.Text = "Shake S burák";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button6
             // 
@@ -160,6 +165,7 @@
             this.button6.Tag = "705";
             this.button6.Text = "Shake S vanilka";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button7
             // 
@@ -176,6 +182,7 @@
             this.button7.Tag = "706";
             this.button7.Text = "Shake S jahoda";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button8
             // 
@@ -192,6 +199,7 @@
             this.button8.Tag = "711";
             this.button8.Text = "Shake M jahoda";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button9
             // 
@@ -208,6 +216,7 @@
             this.button9.Tag = "710";
             this.button9.Text = "Shake M vanilka";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button10
             // 
@@ -224,6 +233,7 @@
             this.button10.Tag = "709";
             this.button10.Text = "Shake M burák";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button11
             // 
@@ -240,6 +250,7 @@
             this.button11.Tag = "708";
             this.button11.Text = "Shake M karamel";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button12
             // 
@@ -256,6 +267,7 @@
             this.button12.Tag = "707";
             this.button12.Text = "Shake M čokoláda";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button13
             // 
@@ -272,6 +284,7 @@
             this.button13.Tag = "716";
             this.button13.Text = "Shake L jahoda";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button14
             // 
@@ -288,6 +301,7 @@
             this.button14.Tag = "715";
             this.button14.Text = "Shake L vanilka";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button15
             // 
@@ -304,6 +318,7 @@
             this.button15.Tag = "714";
             this.button15.Text = "Shake L burák";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button16
             // 
@@ -320,6 +335,7 @@
             this.button16.Tag = "713";
             this.button16.Text = "Shake L karamel";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // button17
             // 
@@ -336,6 +352,7 @@
             this.button17.Tag = "712";
             this.button17.Text = "Shake L čokoláda";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.DessertsButton_Click);
             // 
             // DessertsForm
             // 
