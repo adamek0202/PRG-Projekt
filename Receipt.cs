@@ -64,7 +64,7 @@ namespace Projekt
             }
         }
 
-        public static string FormatTwoColumns(string leftText, string rightText, int totalWidth)
+        private static string FormatTwoColumns(string leftText, string rightText, int totalWidth)
         {
             // Oříznutí textu, pokud je příliš dlouhý
             if (leftText.Length + rightText.Length > totalWidth)
@@ -104,6 +104,6 @@ namespace Projekt
             EPrinter.Separator();
         }
 
-        
+
     }
 }
