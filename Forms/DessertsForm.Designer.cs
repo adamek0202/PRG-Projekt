@@ -77,7 +77,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 81);
             this.button1.TabIndex = 2;
-            this.button1.Tag = "";
+            this.button1.Tag = "700";
             this.button1.Text = "Brownie karamel";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -93,7 +93,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 81);
             this.button2.TabIndex = 3;
-            this.button2.Tag = "";
+            this.button2.Tag = "701";
             this.button2.Text = "Muffin čokoláda";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -109,7 +109,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 81);
             this.button3.TabIndex = 4;
-            this.button3.Tag = "";
+            this.button3.Tag = "702";
             this.button3.Text = "Shake S čokoláda";
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -125,7 +125,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 81);
             this.button4.TabIndex = 5;
-            this.button4.Tag = "";
+            this.button4.Tag = "703";
             this.button4.Text = "Shake S karamel";
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -141,7 +141,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 81);
             this.button5.TabIndex = 6;
-            this.button5.Tag = "";
+            this.button5.Tag = "704";
             this.button5.Text = "Shake S burák";
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -157,7 +157,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(94, 81);
             this.button6.TabIndex = 7;
-            this.button6.Tag = "";
+            this.button6.Tag = "705";
             this.button6.Text = "Shake S vanilka";
             this.button6.UseVisualStyleBackColor = false;
             // 
@@ -173,7 +173,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 81);
             this.button7.TabIndex = 8;
-            this.button7.Tag = "";
+            this.button7.Tag = "706";
             this.button7.Text = "Shake S jahoda";
             this.button7.UseVisualStyleBackColor = false;
             // 
@@ -189,7 +189,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(94, 81);
             this.button8.TabIndex = 13;
-            this.button8.Tag = "";
+            this.button8.Tag = "711";
             this.button8.Text = "Shake M jahoda";
             this.button8.UseVisualStyleBackColor = false;
             // 
@@ -205,7 +205,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(94, 81);
             this.button9.TabIndex = 12;
-            this.button9.Tag = "";
+            this.button9.Tag = "710";
             this.button9.Text = "Shake M vanilka";
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -221,7 +221,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(94, 81);
             this.button10.TabIndex = 11;
-            this.button10.Tag = "";
+            this.button10.Tag = "709";
             this.button10.Text = "Shake M burák";
             this.button10.UseVisualStyleBackColor = false;
             // 
@@ -237,7 +237,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(94, 81);
             this.button11.TabIndex = 10;
-            this.button11.Tag = "";
+            this.button11.Tag = "708";
             this.button11.Text = "Shake M karamel";
             this.button11.UseVisualStyleBackColor = false;
             // 
@@ -253,7 +253,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(94, 81);
             this.button12.TabIndex = 9;
-            this.button12.Tag = "";
+            this.button12.Tag = "707";
             this.button12.Text = "Shake M čokoláda";
             this.button12.UseVisualStyleBackColor = false;
             // 
@@ -269,7 +269,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(94, 81);
             this.button13.TabIndex = 18;
-            this.button13.Tag = "";
+            this.button13.Tag = "716";
             this.button13.Text = "Shake L jahoda";
             this.button13.UseVisualStyleBackColor = false;
             // 
@@ -285,7 +285,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(94, 81);
             this.button14.TabIndex = 17;
-            this.button14.Tag = "";
+            this.button14.Tag = "715";
             this.button14.Text = "Shake L vanilka";
             this.button14.UseVisualStyleBackColor = false;
             // 
@@ -301,7 +301,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(94, 81);
             this.button15.TabIndex = 16;
-            this.button15.Tag = "";
+            this.button15.Tag = "714";
             this.button15.Text = "Shake L burák";
             this.button15.UseVisualStyleBackColor = false;
             // 
@@ -317,7 +317,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(94, 81);
             this.button16.TabIndex = 15;
-            this.button16.Tag = "";
+            this.button16.Tag = "713";
             this.button16.Text = "Shake L karamel";
             this.button16.UseVisualStyleBackColor = false;
             // 
@@ -333,7 +333,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(94, 81);
             this.button17.TabIndex = 14;
-            this.button17.Tag = "";
+            this.button17.Tag = "712";
             this.button17.Text = "Shake L čokoláda";
             this.button17.UseVisualStyleBackColor = false;
             // 
@@ -342,7 +342,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(518, 463);
+            this.ClientSize = new System.Drawing.Size(514, 459);
             this.ControlBox = false;
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button14);

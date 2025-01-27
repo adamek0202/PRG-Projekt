@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
-            this.bTwisterButton = new System.Windows.Forms.Button();
-            this.bZingerButton = new System.Windows.Forms.Button();
             this.RemoveItemButton = new System.Windows.Forms.Button();
             this.mZingerDoubleButton = new System.Windows.Forms.Button();
             this.sumLabel = new System.Windows.Forms.Label();
@@ -39,42 +37,63 @@
             this.UpButton = new System.Windows.Forms.Button();
             this.CancelReceiptButton = new System.Windows.Forms.Button();
             this.ExchangeButton = new System.Windows.Forms.Button();
-            this.mTwisterButton = new System.Windows.Forms.Button();
             this.mQuritoButton = new System.Windows.Forms.Button();
             this.mZingerButton = new System.Windows.Forms.Button();
-            this.mTwisterBaconButton = new System.Windows.Forms.Button();
-            this.mTwisterCheeseButton = new System.Windows.Forms.Button();
+            this.mTwisterCheeseBaconButton = new System.Windows.Forms.Button();
             this.mClassicButton = new System.Windows.Forms.Button();
             this.x = new System.Windows.Forms.Button();
             this.mStripsButton = new System.Windows.Forms.Button();
             this.mTexasGranderButton = new System.Windows.Forms.Button();
-            this.bZingerDoubleButton = new System.Windows.Forms.Button();
-            this.bClassicButton = new System.Windows.Forms.Button();
             this.CouponsButton = new System.Windows.Forms.Button();
             this.ManagerButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuNextButton = new System.Windows.Forms.Button();
+            this.mHalloumiTwisterButton = new System.Windows.Forms.Button();
+            this.mTwisterButton = new System.Windows.Forms.Button();
+            this.mKentuckyGoldWrapperButton = new System.Windows.Forms.Button();
+            this.mKentuckyGoldGranderButton = new System.Windows.Forms.Button();
             this.mBSmartsButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.boxesNextButton = new System.Windows.Forms.Button();
+            this.bTwisterCheeseBaconBox = new System.Windows.Forms.Button();
             this.bQurritoButton = new System.Windows.Forms.Button();
+            this.bTwisterButton = new System.Windows.Forms.Button();
+            this.bTexasGranderBoxButton = new System.Windows.Forms.Button();
+            this.bClassicButton = new System.Windows.Forms.Button();
+            this.bKentuckyGoldWrapperButton = new System.Windows.Forms.Button();
+            this.bZingerDoubleButton = new System.Windows.Forms.Button();
+            this.bStripsDeluxe = new System.Windows.Forms.Button();
+            this.bKentuckyGoldGranderButton = new System.Windows.Forms.Button();
+            this.bHalloumiTwisterButton = new System.Windows.Forms.Button();
+            this.bZingerButton = new System.Windows.Forms.Button();
+            this.bHotWingsButton = new System.Windows.Forms.Button();
+            this.boxesNextButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.paymentButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.sandwichesNextButton = new System.Windows.Forms.Button();
             this.sTexasGranderButton = new System.Windows.Forms.Button();
+            this.sLongerButton = new System.Windows.Forms.Button();
+            this.sKentuckyGoldGranderButton = new System.Windows.Forms.Button();
+            this.sCheeseburgerButton = new System.Windows.Forms.Button();
+            this.sKentuckyGoldWrapperButton = new System.Windows.Forms.Button();
+            this.sTwisterCheeseBaconButton = new System.Windows.Forms.Button();
+            this.sHalloumiTwisterButton = new System.Windows.Forms.Button();
+            this.sITwistButton = new System.Windows.Forms.Button();
             this.sTwisterButton = new System.Windows.Forms.Button();
             this.sZingerButton = new System.Windows.Forms.Button();
             this.sZingerDoubleButton = new System.Windows.Forms.Button();
             this.sQurritoButton = new System.Windows.Forms.Button();
+            this.sandwichesNextButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bucketsNextButton = new System.Windows.Forms.Button();
-            this.kStripsBitesButton = new System.Windows.Forms.Button();
+            this.kStripsAndBitesFor2Button = new System.Windows.Forms.Button();
+            this.kStripsAndBitesXLButton = new System.Windows.Forms.Button();
+            this.k11And11Button = new System.Windows.Forms.Button();
+            this.k15StripsButton = new System.Windows.Forms.Button();
+            this.k30StripsButton = new System.Windows.Forms.Button();
             this.k15HotWingsButton = new System.Windows.Forms.Button();
             this.k30HotWingsButton = new System.Windows.Forms.Button();
-            this.k11_11Button = new System.Windows.Forms.Button();
-            this.kClassicButton = new System.Windows.Forms.Button();
+            this.kClassicFor2Button = new System.Windows.Forms.Button();
+            this.kClassicXLButtonButton = new System.Windows.Forms.Button();
+            this.bucketsNextButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -100,6 +119,9 @@
             this.LocationLabel = new System.Windows.Forms.Label();
             this.multiplierLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.kClassicFor1Button = new System.Windows.Forms.Button();
+            this.kHotWingsFor1Button = new System.Windows.Forms.Button();
+            this.kBitesFor1Button = new System.Windows.Forms.Button();
             this.listView1 = new Projekt.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -109,44 +131,6 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bTwisterButton
-            // 
-            this.bTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.bTwisterButton.FlatAppearance.BorderSize = 0;
-            this.bTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bTwisterButton.Location = new System.Drawing.Point(10, 3);
-            this.bTwisterButton.Name = "bTwisterButton";
-            this.bTwisterButton.Size = new System.Drawing.Size(96, 85);
-            this.bTwisterButton.TabIndex = 1;
-            this.bTwisterButton.Tag = "400";
-            this.bTwisterButton.Text = "Twister\r\nBox\r\n";
-            this.bTwisterButton.UseVisualStyleBackColor = false;
-            this.bTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
-            // 
-            // bZingerButton
-            // 
-            this.bZingerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.bZingerButton.FlatAppearance.BorderSize = 0;
-            this.bZingerButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bZingerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bZingerButton.Location = new System.Drawing.Point(112, 3);
-            this.bZingerButton.Name = "bZingerButton";
-            this.bZingerButton.Size = new System.Drawing.Size(96, 85);
-            this.bZingerButton.TabIndex = 1;
-            this.bZingerButton.Tag = "401";
-            this.bZingerButton.Text = "Zinger\r\nBox\r\n";
-            this.bZingerButton.UseVisualStyleBackColor = false;
-            this.bZingerButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // RemoveItemButton
             // 
@@ -189,7 +173,7 @@
             this.sumLabel.AutoSize = true;
             this.sumLabel.Font = new System.Drawing.Font("Arial", 22F);
             this.sumLabel.ForeColor = System.Drawing.Color.White;
-            this.sumLabel.Location = new System.Drawing.Point(337, 775);
+            this.sumLabel.Location = new System.Drawing.Point(203, 1014);
             this.sumLabel.Name = "sumLabel";
             this.sumLabel.Size = new System.Drawing.Size(0, 35);
             this.sumLabel.TabIndex = 0;
@@ -261,24 +245,6 @@
             this.ExchangeButton.UseVisualStyleBackColor = false;
             this.ExchangeButton.Click += new System.EventHandler(this.ReplaceButton_Click);
             // 
-            // mTwisterButton
-            // 
-            this.mTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.mTwisterButton.FlatAppearance.BorderSize = 0;
-            this.mTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mTwisterButton.Location = new System.Drawing.Point(361, 13);
-            this.mTwisterButton.Name = "mTwisterButton";
-            this.mTwisterButton.Size = new System.Drawing.Size(111, 85);
-            this.mTwisterButton.TabIndex = 0;
-            this.mTwisterButton.Text = "Twister\r\nMenu\r\nSýr";
-            this.mTwisterButton.UseVisualStyleBackColor = false;
-            this.mTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
-            // 
             // mQuritoButton
             // 
             this.mQuritoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -289,11 +255,11 @@
             this.mQuritoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mQuritoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mQuritoButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mQuritoButton.Location = new System.Drawing.Point(244, 13);
+            this.mQuritoButton.Location = new System.Drawing.Point(127, 103);
             this.mQuritoButton.Name = "mQuritoButton";
             this.mQuritoButton.Size = new System.Drawing.Size(111, 85);
             this.mQuritoButton.TabIndex = 0;
-            this.mQuritoButton.Tag = "1002";
+            this.mQuritoButton.Tag = "1007";
             this.mQuritoButton.Text = "Qurito Menu";
             this.mQuritoButton.UseVisualStyleBackColor = false;
             this.mQuritoButton.Click += new System.EventHandler(this.ItemButton_Click);
@@ -317,41 +283,24 @@
             this.mZingerButton.UseVisualStyleBackColor = false;
             this.mZingerButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
-            // mTwisterBaconButton
+            // mTwisterCheeseBaconButton
             // 
-            this.mTwisterBaconButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterBaconButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.mTwisterBaconButton.FlatAppearance.BorderSize = 0;
-            this.mTwisterBaconButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterBaconButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterBaconButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterBaconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mTwisterBaconButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mTwisterBaconButton.Location = new System.Drawing.Point(478, 12);
-            this.mTwisterBaconButton.Name = "mTwisterBaconButton";
-            this.mTwisterBaconButton.Size = new System.Drawing.Size(111, 85);
-            this.mTwisterBaconButton.TabIndex = 0;
-            this.mTwisterBaconButton.Text = "Twister\r\nMenu\r\nSlanina";
-            this.mTwisterBaconButton.UseVisualStyleBackColor = false;
-            this.mTwisterBaconButton.Click += new System.EventHandler(this.ItemButton_Click);
-            // 
-            // mTwisterCheeseButton
-            // 
-            this.mTwisterCheeseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterCheeseButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.mTwisterCheeseButton.FlatAppearance.BorderSize = 0;
-            this.mTwisterCheeseButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterCheeseButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterCheeseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.mTwisterCheeseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mTwisterCheeseButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mTwisterCheeseButton.Location = new System.Drawing.Point(478, 103);
-            this.mTwisterCheeseButton.Name = "mTwisterCheeseButton";
-            this.mTwisterCheeseButton.Size = new System.Drawing.Size(111, 85);
-            this.mTwisterCheeseButton.TabIndex = 0;
-            this.mTwisterCheeseButton.Text = "Twister\r\nMenu\r\nSýr";
-            this.mTwisterCheeseButton.UseVisualStyleBackColor = false;
-            this.mTwisterCheeseButton.Click += new System.EventHandler(this.ItemButton_Click);
+            this.mTwisterCheeseBaconButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterCheeseBaconButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.mTwisterCheeseBaconButton.FlatAppearance.BorderSize = 0;
+            this.mTwisterCheeseBaconButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterCheeseBaconButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterCheeseBaconButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterCheeseBaconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mTwisterCheeseBaconButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mTwisterCheeseBaconButton.Location = new System.Drawing.Point(10, 103);
+            this.mTwisterCheeseBaconButton.Name = "mTwisterCheeseBaconButton";
+            this.mTwisterCheeseBaconButton.Size = new System.Drawing.Size(111, 85);
+            this.mTwisterCheeseBaconButton.TabIndex = 0;
+            this.mTwisterCheeseBaconButton.Tag = "1006";
+            this.mTwisterCheeseBaconButton.Text = "Twister Sýr Slanina Menu";
+            this.mTwisterCheeseBaconButton.UseVisualStyleBackColor = false;
+            this.mTwisterCheeseBaconButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // mClassicButton
             // 
@@ -363,10 +312,11 @@
             this.mClassicButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mClassicButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mClassicButton.Location = new System.Drawing.Point(127, 104);
+            this.mClassicButton.Location = new System.Drawing.Point(595, 103);
             this.mClassicButton.Name = "mClassicButton";
-            this.mClassicButton.Size = new System.Drawing.Size(111, 84);
+            this.mClassicButton.Size = new System.Drawing.Size(111, 85);
             this.mClassicButton.TabIndex = 0;
+            this.mClassicButton.Tag = "1011";
             this.mClassicButton.Text = "Classic\r\nMenu";
             this.mClassicButton.UseVisualStyleBackColor = false;
             this.mClassicButton.Click += new System.EventHandler(this.ItemButton_Click);
@@ -381,10 +331,11 @@
             this.x.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.x.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.x.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.x.Location = new System.Drawing.Point(10, 103);
+            this.x.Location = new System.Drawing.Point(361, 103);
             this.x.Name = "x";
             this.x.Size = new System.Drawing.Size(111, 85);
             this.x.TabIndex = 0;
+            this.x.Tag = "1009";
             this.x.Text = "Hot Wings\r\nMenu";
             this.x.UseVisualStyleBackColor = false;
             this.x.Click += new System.EventHandler(this.ItemButton_Click);
@@ -399,10 +350,11 @@
             this.mStripsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mStripsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mStripsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mStripsButton.Location = new System.Drawing.Point(244, 103);
+            this.mStripsButton.Location = new System.Drawing.Point(478, 103);
             this.mStripsButton.Name = "mStripsButton";
             this.mStripsButton.Size = new System.Drawing.Size(111, 85);
             this.mStripsButton.TabIndex = 0;
+            this.mStripsButton.Tag = "1010";
             this.mStripsButton.Text = "Strips\r\nMenu";
             this.mStripsButton.UseVisualStyleBackColor = false;
             this.mStripsButton.Click += new System.EventHandler(this.ItemButton_Click);
@@ -417,51 +369,14 @@
             this.mTexasGranderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mTexasGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mTexasGranderButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mTexasGranderButton.Location = new System.Drawing.Point(361, 104);
+            this.mTexasGranderButton.Location = new System.Drawing.Point(244, 12);
             this.mTexasGranderButton.Name = "mTexasGranderButton";
-            this.mTexasGranderButton.Size = new System.Drawing.Size(111, 84);
+            this.mTexasGranderButton.Size = new System.Drawing.Size(111, 85);
             this.mTexasGranderButton.TabIndex = 0;
+            this.mTexasGranderButton.Tag = "1002";
             this.mTexasGranderButton.Text = "Texas\r\nGrander\r\nMenu";
             this.mTexasGranderButton.UseVisualStyleBackColor = false;
             this.mTexasGranderButton.Click += new System.EventHandler(this.ItemButton_Click);
-            // 
-            // bZingerDoubleButton
-            // 
-            this.bZingerDoubleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerDoubleButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.bZingerDoubleButton.FlatAppearance.BorderSize = 0;
-            this.bZingerDoubleButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerDoubleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerDoubleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bZingerDoubleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bZingerDoubleButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bZingerDoubleButton.Location = new System.Drawing.Point(214, 3);
-            this.bZingerDoubleButton.Name = "bZingerDoubleButton";
-            this.bZingerDoubleButton.Size = new System.Drawing.Size(96, 85);
-            this.bZingerDoubleButton.TabIndex = 1;
-            this.bZingerDoubleButton.Tag = "402";
-            this.bZingerDoubleButton.Text = "Zinger\r\nDouble Box\r\n";
-            this.bZingerDoubleButton.UseVisualStyleBackColor = false;
-            this.bZingerDoubleButton.Click += new System.EventHandler(this.ItemButton_Click);
-            // 
-            // bClassicButton
-            // 
-            this.bClassicButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bClassicButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.bClassicButton.FlatAppearance.BorderSize = 0;
-            this.bClassicButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bClassicButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bClassicButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bClassicButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bClassicButton.Location = new System.Drawing.Point(316, 3);
-            this.bClassicButton.Name = "bClassicButton";
-            this.bClassicButton.Size = new System.Drawing.Size(96, 85);
-            this.bClassicButton.TabIndex = 1;
-            this.bClassicButton.Tag = "101";
-            this.bClassicButton.Text = "Classic Box";
-            this.bClassicButton.UseVisualStyleBackColor = false;
-            this.bClassicButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // CouponsButton
             // 
@@ -513,40 +428,98 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Controls.Add(this.menuNextButton);
-            this.panel1.Controls.Add(this.mBSmartsButton);
             this.panel1.Controls.Add(this.mQuritoButton);
-            this.panel1.Controls.Add(this.mTwisterButton);
-            this.panel1.Controls.Add(this.mTwisterBaconButton);
-            this.panel1.Controls.Add(this.mTwisterCheeseButton);
+            this.panel1.Controls.Add(this.mTwisterCheeseBaconButton);
             this.panel1.Controls.Add(this.mClassicButton);
             this.panel1.Controls.Add(this.mZingerDoubleButton);
             this.panel1.Controls.Add(this.mZingerButton);
             this.panel1.Controls.Add(this.x);
+            this.panel1.Controls.Add(this.mHalloumiTwisterButton);
+            this.panel1.Controls.Add(this.mTwisterButton);
+            this.panel1.Controls.Add(this.mKentuckyGoldWrapperButton);
+            this.panel1.Controls.Add(this.mKentuckyGoldGranderButton);
             this.panel1.Controls.Add(this.mStripsButton);
             this.panel1.Controls.Add(this.mTexasGranderButton);
-            this.panel1.Location = new System.Drawing.Point(1047, 6);
+            this.panel1.Location = new System.Drawing.Point(592, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 205);
+            this.panel1.Size = new System.Drawing.Size(711, 194);
             this.panel1.TabIndex = 2;
             // 
-            // menuNextButton
+            // mHalloumiTwisterButton
             // 
-            this.menuNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.menuNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.menuNextButton.FlatAppearance.BorderSize = 0;
-            this.menuNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.menuNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.menuNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.menuNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.menuNextButton.Location = new System.Drawing.Point(727, 12);
-            this.menuNextButton.Name = "menuNextButton";
-            this.menuNextButton.Size = new System.Drawing.Size(126, 176);
-            this.menuNextButton.TabIndex = 3;
-            this.menuNextButton.Tag = "100";
-            this.menuNextButton.Text = ">>";
-            this.menuNextButton.UseVisualStyleBackColor = false;
+            this.mHalloumiTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mHalloumiTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.mHalloumiTwisterButton.FlatAppearance.BorderSize = 0;
+            this.mHalloumiTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mHalloumiTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mHalloumiTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mHalloumiTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mHalloumiTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mHalloumiTwisterButton.Location = new System.Drawing.Point(595, 10);
+            this.mHalloumiTwisterButton.Name = "mHalloumiTwisterButton";
+            this.mHalloumiTwisterButton.Size = new System.Drawing.Size(111, 85);
+            this.mHalloumiTwisterButton.TabIndex = 0;
+            this.mHalloumiTwisterButton.Tag = "1005";
+            this.mHalloumiTwisterButton.Text = "Halloumi Twister Menu";
+            this.mHalloumiTwisterButton.UseVisualStyleBackColor = false;
+            this.mHalloumiTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // mTwisterButton
+            // 
+            this.mTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.mTwisterButton.FlatAppearance.BorderSize = 0;
+            this.mTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mTwisterButton.Location = new System.Drawing.Point(478, 12);
+            this.mTwisterButton.Name = "mTwisterButton";
+            this.mTwisterButton.Size = new System.Drawing.Size(111, 85);
+            this.mTwisterButton.TabIndex = 0;
+            this.mTwisterButton.Tag = "1004";
+            this.mTwisterButton.Text = "Twister Menu";
+            this.mTwisterButton.UseVisualStyleBackColor = false;
+            this.mTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // mKentuckyGoldWrapperButton
+            // 
+            this.mKentuckyGoldWrapperButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldWrapperButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.mKentuckyGoldWrapperButton.FlatAppearance.BorderSize = 0;
+            this.mKentuckyGoldWrapperButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldWrapperButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldWrapperButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldWrapperButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mKentuckyGoldWrapperButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mKentuckyGoldWrapperButton.Location = new System.Drawing.Point(244, 103);
+            this.mKentuckyGoldWrapperButton.Name = "mKentuckyGoldWrapperButton";
+            this.mKentuckyGoldWrapperButton.Size = new System.Drawing.Size(111, 85);
+            this.mKentuckyGoldWrapperButton.TabIndex = 0;
+            this.mKentuckyGoldWrapperButton.Tag = "1008";
+            this.mKentuckyGoldWrapperButton.Text = "Kentucky Wrapper Menu";
+            this.mKentuckyGoldWrapperButton.UseVisualStyleBackColor = false;
+            this.mKentuckyGoldWrapperButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // mKentuckyGoldGranderButton
+            // 
+            this.mKentuckyGoldGranderButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldGranderButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.mKentuckyGoldGranderButton.FlatAppearance.BorderSize = 0;
+            this.mKentuckyGoldGranderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldGranderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldGranderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mKentuckyGoldGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mKentuckyGoldGranderButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mKentuckyGoldGranderButton.Location = new System.Drawing.Point(361, 12);
+            this.mKentuckyGoldGranderButton.Name = "mKentuckyGoldGranderButton";
+            this.mKentuckyGoldGranderButton.Size = new System.Drawing.Size(111, 85);
+            this.mKentuckyGoldGranderButton.TabIndex = 0;
+            this.mKentuckyGoldGranderButton.Tag = "1003";
+            this.mKentuckyGoldGranderButton.Text = "Kentucky Grander Menu";
+            this.mKentuckyGoldGranderButton.UseVisualStyleBackColor = false;
+            this.mKentuckyGoldGranderButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // mBSmartsButton
             // 
@@ -558,7 +531,7 @@
             this.mBSmartsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mBSmartsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mBSmartsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mBSmartsButton.Location = new System.Drawing.Point(595, 12);
+            this.mBSmartsButton.Location = new System.Drawing.Point(1773, 37);
             this.mBSmartsButton.Name = "mBSmartsButton";
             this.mBSmartsButton.Size = new System.Drawing.Size(126, 176);
             this.mBSmartsButton.TabIndex = 3;
@@ -569,34 +542,41 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.boxesNextButton);
+            this.panel2.Controls.Add(this.bTwisterCheeseBaconBox);
             this.panel2.Controls.Add(this.bQurritoButton);
             this.panel2.Controls.Add(this.bTwisterButton);
-            this.panel2.Controls.Add(this.bZingerButton);
-            this.panel2.Controls.Add(this.bZingerDoubleButton);
+            this.panel2.Controls.Add(this.bKentuckyGoldWrapperButton);
+            this.panel2.Controls.Add(this.bTexasGranderBoxButton);
             this.panel2.Controls.Add(this.bClassicButton);
-            this.panel2.Location = new System.Drawing.Point(1250, 243);
+            this.panel2.Controls.Add(this.bZingerDoubleButton);
+            this.panel2.Controls.Add(this.bStripsDeluxe);
+            this.panel2.Controls.Add(this.bKentuckyGoldGranderButton);
+            this.panel2.Controls.Add(this.bHalloumiTwisterButton);
+            this.panel2.Controls.Add(this.bZingerButton);
+            this.panel2.Controls.Add(this.bHotWingsButton);
+            this.panel2.Location = new System.Drawing.Point(592, 208);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(659, 188);
+            this.panel2.Size = new System.Drawing.Size(711, 199);
             this.panel2.TabIndex = 3;
             // 
-            // boxesNextButton
+            // bTwisterCheeseBaconBox
             // 
-            this.boxesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.boxesNextButton.FlatAppearance.BorderSize = 0;
-            this.boxesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxesNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.boxesNextButton.Location = new System.Drawing.Point(520, 0);
-            this.boxesNextButton.Name = "boxesNextButton";
-            this.boxesNextButton.Size = new System.Drawing.Size(126, 176);
-            this.boxesNextButton.TabIndex = 4;
-            this.boxesNextButton.Tag = "100";
-            this.boxesNextButton.Text = ">>";
-            this.boxesNextButton.UseVisualStyleBackColor = false;
+            this.bTwisterCheeseBaconBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterCheeseBaconBox.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bTwisterCheeseBaconBox.FlatAppearance.BorderSize = 0;
+            this.bTwisterCheeseBaconBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterCheeseBaconBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterCheeseBaconBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterCheeseBaconBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTwisterCheeseBaconBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bTwisterCheeseBaconBox.Location = new System.Drawing.Point(10, 103);
+            this.bTwisterCheeseBaconBox.Name = "bTwisterCheeseBaconBox";
+            this.bTwisterCheeseBaconBox.Size = new System.Drawing.Size(111, 85);
+            this.bTwisterCheeseBaconBox.TabIndex = 0;
+            this.bTwisterCheeseBaconBox.Tag = "1106";
+            this.bTwisterCheeseBaconBox.Text = "Twister Sýr Slanina Box";
+            this.bTwisterCheeseBaconBox.UseVisualStyleBackColor = false;
+            this.bTwisterCheeseBaconBox.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // bQurritoButton
             // 
@@ -608,14 +588,222 @@
             this.bQurritoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bQurritoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bQurritoButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bQurritoButton.Location = new System.Drawing.Point(418, 3);
+            this.bQurritoButton.Location = new System.Drawing.Point(127, 103);
             this.bQurritoButton.Name = "bQurritoButton";
-            this.bQurritoButton.Size = new System.Drawing.Size(96, 85);
-            this.bQurritoButton.TabIndex = 2;
-            this.bQurritoButton.Tag = "101";
+            this.bQurritoButton.Size = new System.Drawing.Size(111, 85);
+            this.bQurritoButton.TabIndex = 0;
+            this.bQurritoButton.Tag = "1107";
             this.bQurritoButton.Text = "Qurrito Box";
             this.bQurritoButton.UseVisualStyleBackColor = false;
             this.bQurritoButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bTwisterButton
+            // 
+            this.bTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bTwisterButton.FlatAppearance.BorderSize = 0;
+            this.bTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bTwisterButton.Location = new System.Drawing.Point(478, 11);
+            this.bTwisterButton.Name = "bTwisterButton";
+            this.bTwisterButton.Size = new System.Drawing.Size(111, 85);
+            this.bTwisterButton.TabIndex = 0;
+            this.bTwisterButton.Tag = "1104";
+            this.bTwisterButton.Text = "Twister Box";
+            this.bTwisterButton.UseVisualStyleBackColor = false;
+            this.bTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bTexasGranderBoxButton
+            // 
+            this.bTexasGranderBoxButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTexasGranderBoxButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bTexasGranderBoxButton.FlatAppearance.BorderSize = 0;
+            this.bTexasGranderBoxButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTexasGranderBoxButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTexasGranderBoxButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTexasGranderBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTexasGranderBoxButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bTexasGranderBoxButton.Location = new System.Drawing.Point(244, 11);
+            this.bTexasGranderBoxButton.Name = "bTexasGranderBoxButton";
+            this.bTexasGranderBoxButton.Size = new System.Drawing.Size(111, 85);
+            this.bTexasGranderBoxButton.TabIndex = 0;
+            this.bTexasGranderBoxButton.Tag = "1102";
+            this.bTexasGranderBoxButton.Text = "Texas Grander Box";
+            this.bTexasGranderBoxButton.UseVisualStyleBackColor = false;
+            this.bTexasGranderBoxButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bClassicButton
+            // 
+            this.bClassicButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bClassicButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bClassicButton.FlatAppearance.BorderSize = 0;
+            this.bClassicButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bClassicButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bClassicButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bClassicButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bClassicButton.Location = new System.Drawing.Point(595, 103);
+            this.bClassicButton.Name = "bClassicButton";
+            this.bClassicButton.Size = new System.Drawing.Size(111, 85);
+            this.bClassicButton.TabIndex = 0;
+            this.bClassicButton.Tag = "1111";
+            this.bClassicButton.Text = "Classic Box";
+            this.bClassicButton.UseVisualStyleBackColor = false;
+            this.bClassicButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bKentuckyGoldWrapperButton
+            // 
+            this.bKentuckyGoldWrapperButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldWrapperButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bKentuckyGoldWrapperButton.FlatAppearance.BorderSize = 0;
+            this.bKentuckyGoldWrapperButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldWrapperButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldWrapperButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldWrapperButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKentuckyGoldWrapperButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bKentuckyGoldWrapperButton.Location = new System.Drawing.Point(244, 103);
+            this.bKentuckyGoldWrapperButton.Name = "bKentuckyGoldWrapperButton";
+            this.bKentuckyGoldWrapperButton.Size = new System.Drawing.Size(111, 85);
+            this.bKentuckyGoldWrapperButton.TabIndex = 0;
+            this.bKentuckyGoldWrapperButton.Tag = "1108";
+            this.bKentuckyGoldWrapperButton.Text = "Kentucky Wrapper Box";
+            this.bKentuckyGoldWrapperButton.UseVisualStyleBackColor = false;
+            this.bKentuckyGoldWrapperButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bZingerDoubleButton
+            // 
+            this.bZingerDoubleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerDoubleButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bZingerDoubleButton.FlatAppearance.BorderSize = 0;
+            this.bZingerDoubleButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerDoubleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerDoubleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerDoubleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bZingerDoubleButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bZingerDoubleButton.Location = new System.Drawing.Point(127, 11);
+            this.bZingerDoubleButton.Name = "bZingerDoubleButton";
+            this.bZingerDoubleButton.Size = new System.Drawing.Size(111, 85);
+            this.bZingerDoubleButton.TabIndex = 0;
+            this.bZingerDoubleButton.Tag = "1101";
+            this.bZingerDoubleButton.Text = "Zinger Double Box";
+            this.bZingerDoubleButton.UseVisualStyleBackColor = false;
+            this.bZingerDoubleButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bStripsDeluxe
+            // 
+            this.bStripsDeluxe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bStripsDeluxe.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bStripsDeluxe.FlatAppearance.BorderSize = 0;
+            this.bStripsDeluxe.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bStripsDeluxe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bStripsDeluxe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bStripsDeluxe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bStripsDeluxe.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bStripsDeluxe.Location = new System.Drawing.Point(478, 103);
+            this.bStripsDeluxe.Name = "bStripsDeluxe";
+            this.bStripsDeluxe.Size = new System.Drawing.Size(111, 85);
+            this.bStripsDeluxe.TabIndex = 0;
+            this.bStripsDeluxe.Tag = "1110";
+            this.bStripsDeluxe.Text = "Strips Deluxe Box";
+            this.bStripsDeluxe.UseVisualStyleBackColor = false;
+            this.bStripsDeluxe.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bKentuckyGoldGranderButton
+            // 
+            this.bKentuckyGoldGranderButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldGranderButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bKentuckyGoldGranderButton.FlatAppearance.BorderSize = 0;
+            this.bKentuckyGoldGranderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldGranderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldGranderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bKentuckyGoldGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKentuckyGoldGranderButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bKentuckyGoldGranderButton.Location = new System.Drawing.Point(361, 11);
+            this.bKentuckyGoldGranderButton.Name = "bKentuckyGoldGranderButton";
+            this.bKentuckyGoldGranderButton.Size = new System.Drawing.Size(111, 85);
+            this.bKentuckyGoldGranderButton.TabIndex = 0;
+            this.bKentuckyGoldGranderButton.Tag = "1103";
+            this.bKentuckyGoldGranderButton.Text = "Kentucky Grander Box";
+            this.bKentuckyGoldGranderButton.UseVisualStyleBackColor = false;
+            this.bKentuckyGoldGranderButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bHalloumiTwisterButton
+            // 
+            this.bHalloumiTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHalloumiTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bHalloumiTwisterButton.FlatAppearance.BorderSize = 0;
+            this.bHalloumiTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHalloumiTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHalloumiTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHalloumiTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bHalloumiTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bHalloumiTwisterButton.Location = new System.Drawing.Point(595, 11);
+            this.bHalloumiTwisterButton.Name = "bHalloumiTwisterButton";
+            this.bHalloumiTwisterButton.Size = new System.Drawing.Size(111, 85);
+            this.bHalloumiTwisterButton.TabIndex = 0;
+            this.bHalloumiTwisterButton.Tag = "1105";
+            this.bHalloumiTwisterButton.Text = "Halloumi Twister VegeBox";
+            this.bHalloumiTwisterButton.UseVisualStyleBackColor = false;
+            this.bHalloumiTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bZingerButton
+            // 
+            this.bZingerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bZingerButton.FlatAppearance.BorderSize = 0;
+            this.bZingerButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bZingerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bZingerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bZingerButton.Location = new System.Drawing.Point(10, 11);
+            this.bZingerButton.Name = "bZingerButton";
+            this.bZingerButton.Size = new System.Drawing.Size(111, 85);
+            this.bZingerButton.TabIndex = 0;
+            this.bZingerButton.Tag = "1100";
+            this.bZingerButton.Text = "Zinger Box";
+            this.bZingerButton.UseVisualStyleBackColor = false;
+            this.bZingerButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bHotWingsButton
+            // 
+            this.bHotWingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHotWingsButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bHotWingsButton.FlatAppearance.BorderSize = 0;
+            this.bHotWingsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHotWingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHotWingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bHotWingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bHotWingsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bHotWingsButton.Location = new System.Drawing.Point(361, 103);
+            this.bHotWingsButton.Name = "bHotWingsButton";
+            this.bHotWingsButton.Size = new System.Drawing.Size(111, 85);
+            this.bHotWingsButton.TabIndex = 0;
+            this.bHotWingsButton.Tag = "1109";
+            this.bHotWingsButton.Text = "Hot Wings Box";
+            this.bHotWingsButton.UseVisualStyleBackColor = false;
+            this.bHotWingsButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // boxesNextButton
+            // 
+            this.boxesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.boxesNextButton.FlatAppearance.BorderSize = 0;
+            this.boxesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.boxesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxesNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.boxesNextButton.Location = new System.Drawing.Point(1773, 250);
+            this.boxesNextButton.Name = "boxesNextButton";
+            this.boxesNextButton.Size = new System.Drawing.Size(126, 176);
+            this.boxesNextButton.TabIndex = 4;
+            this.boxesNextButton.Tag = "100";
+            this.boxesNextButton.Text = ">>";
+            this.boxesNextButton.UseVisualStyleBackColor = false;
             // 
             // exitButton
             // 
@@ -655,34 +843,22 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.sandwichesNextButton);
             this.panel3.Controls.Add(this.sTexasGranderButton);
+            this.panel3.Controls.Add(this.sLongerButton);
+            this.panel3.Controls.Add(this.sKentuckyGoldGranderButton);
+            this.panel3.Controls.Add(this.sCheeseburgerButton);
+            this.panel3.Controls.Add(this.sKentuckyGoldWrapperButton);
+            this.panel3.Controls.Add(this.sTwisterCheeseBaconButton);
+            this.panel3.Controls.Add(this.sHalloumiTwisterButton);
+            this.panel3.Controls.Add(this.sITwistButton);
             this.panel3.Controls.Add(this.sTwisterButton);
             this.panel3.Controls.Add(this.sZingerButton);
             this.panel3.Controls.Add(this.sZingerDoubleButton);
             this.panel3.Controls.Add(this.sQurritoButton);
-            this.panel3.Location = new System.Drawing.Point(1250, 437);
+            this.panel3.Location = new System.Drawing.Point(592, 413);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(658, 188);
+            this.panel3.Size = new System.Drawing.Size(626, 188);
             this.panel3.TabIndex = 4;
-            // 
-            // sandwichesNextButton
-            // 
-            this.sandwichesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.sandwichesNextButton.FlatAppearance.BorderSize = 0;
-            this.sandwichesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sandwichesNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sandwichesNextButton.Location = new System.Drawing.Point(523, 3);
-            this.sandwichesNextButton.Name = "sandwichesNextButton";
-            this.sandwichesNextButton.Size = new System.Drawing.Size(126, 176);
-            this.sandwichesNextButton.TabIndex = 4;
-            this.sandwichesNextButton.Tag = "100";
-            this.sandwichesNextButton.Text = ">>";
-            this.sandwichesNextButton.UseVisualStyleBackColor = false;
             // 
             // sTexasGranderButton
             // 
@@ -694,7 +870,7 @@
             this.sTexasGranderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sTexasGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sTexasGranderButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sTexasGranderButton.Location = new System.Drawing.Point(418, 3);
+            this.sTexasGranderButton.Location = new System.Drawing.Point(214, 4);
             this.sTexasGranderButton.Name = "sTexasGranderButton";
             this.sTexasGranderButton.Size = new System.Drawing.Size(96, 85);
             this.sTexasGranderButton.TabIndex = 2;
@@ -702,6 +878,139 @@
             this.sTexasGranderButton.Text = "Texas Grander";
             this.sTexasGranderButton.UseVisualStyleBackColor = false;
             this.sTexasGranderButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // sLongerButton
+            // 
+            this.sLongerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sLongerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sLongerButton.FlatAppearance.BorderSize = 0;
+            this.sLongerButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sLongerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sLongerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sLongerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sLongerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sLongerButton.Location = new System.Drawing.Point(418, 3);
+            this.sLongerButton.Name = "sLongerButton";
+            this.sLongerButton.Size = new System.Drawing.Size(96, 85);
+            this.sLongerButton.TabIndex = 1;
+            this.sLongerButton.Tag = "104";
+            this.sLongerButton.Text = "Longer";
+            this.sLongerButton.UseVisualStyleBackColor = false;
+            this.sLongerButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // sKentuckyGoldGranderButton
+            // 
+            this.sKentuckyGoldGranderButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldGranderButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sKentuckyGoldGranderButton.FlatAppearance.BorderSize = 0;
+            this.sKentuckyGoldGranderButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldGranderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldGranderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldGranderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sKentuckyGoldGranderButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sKentuckyGoldGranderButton.Location = new System.Drawing.Point(520, 3);
+            this.sKentuckyGoldGranderButton.Name = "sKentuckyGoldGranderButton";
+            this.sKentuckyGoldGranderButton.Size = new System.Drawing.Size(96, 85);
+            this.sKentuckyGoldGranderButton.TabIndex = 1;
+            this.sKentuckyGoldGranderButton.Tag = "105";
+            this.sKentuckyGoldGranderButton.Text = "KentuckyGold Grander";
+            this.sKentuckyGoldGranderButton.UseVisualStyleBackColor = false;
+            this.sKentuckyGoldGranderButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // sCheeseburgerButton
+            // 
+            this.sCheeseburgerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sCheeseburgerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sCheeseburgerButton.FlatAppearance.BorderSize = 0;
+            this.sCheeseburgerButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sCheeseburgerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sCheeseburgerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sCheeseburgerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sCheeseburgerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sCheeseburgerButton.Location = new System.Drawing.Point(316, 3);
+            this.sCheeseburgerButton.Name = "sCheeseburgerButton";
+            this.sCheeseburgerButton.Size = new System.Drawing.Size(96, 85);
+            this.sCheeseburgerButton.TabIndex = 1;
+            this.sCheeseburgerButton.Tag = "103";
+            this.sCheeseburgerButton.Text = "Cheese burger";
+            this.sCheeseburgerButton.UseVisualStyleBackColor = false;
+            this.sCheeseburgerButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // sKentuckyGoldWrapperButton
+            // 
+            this.sKentuckyGoldWrapperButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldWrapperButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sKentuckyGoldWrapperButton.FlatAppearance.BorderSize = 0;
+            this.sKentuckyGoldWrapperButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldWrapperButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldWrapperButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sKentuckyGoldWrapperButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sKentuckyGoldWrapperButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sKentuckyGoldWrapperButton.Location = new System.Drawing.Point(520, 94);
+            this.sKentuckyGoldWrapperButton.Name = "sKentuckyGoldWrapperButton";
+            this.sKentuckyGoldWrapperButton.Size = new System.Drawing.Size(96, 85);
+            this.sKentuckyGoldWrapperButton.TabIndex = 1;
+            this.sKentuckyGoldWrapperButton.Tag = "205";
+            this.sKentuckyGoldWrapperButton.Text = "Kentucky Gold Wrapper";
+            this.sKentuckyGoldWrapperButton.UseVisualStyleBackColor = false;
+            this.sKentuckyGoldWrapperButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // sTwisterCheeseBaconButton
+            // 
+            this.sTwisterCheeseBaconButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTwisterCheeseBaconButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sTwisterCheeseBaconButton.FlatAppearance.BorderSize = 0;
+            this.sTwisterCheeseBaconButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTwisterCheeseBaconButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTwisterCheeseBaconButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sTwisterCheeseBaconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sTwisterCheeseBaconButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sTwisterCheeseBaconButton.Location = new System.Drawing.Point(316, 94);
+            this.sTwisterCheeseBaconButton.Name = "sTwisterCheeseBaconButton";
+            this.sTwisterCheeseBaconButton.Size = new System.Drawing.Size(96, 85);
+            this.sTwisterCheeseBaconButton.TabIndex = 1;
+            this.sTwisterCheeseBaconButton.Tag = "203";
+            this.sTwisterCheeseBaconButton.Text = "Twister Sýr Slanina";
+            this.sTwisterCheeseBaconButton.UseVisualStyleBackColor = false;
+            this.sTwisterCheeseBaconButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // sHalloumiTwisterButton
+            // 
+            this.sHalloumiTwisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sHalloumiTwisterButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sHalloumiTwisterButton.FlatAppearance.BorderSize = 0;
+            this.sHalloumiTwisterButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sHalloumiTwisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sHalloumiTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sHalloumiTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sHalloumiTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sHalloumiTwisterButton.Location = new System.Drawing.Point(214, 95);
+            this.sHalloumiTwisterButton.Name = "sHalloumiTwisterButton";
+            this.sHalloumiTwisterButton.Size = new System.Drawing.Size(96, 85);
+            this.sHalloumiTwisterButton.TabIndex = 1;
+            this.sHalloumiTwisterButton.Tag = "202";
+            this.sHalloumiTwisterButton.Text = "Halloumi Twister";
+            this.sHalloumiTwisterButton.UseVisualStyleBackColor = false;
+            this.sHalloumiTwisterButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // sITwistButton
+            // 
+            this.sITwistButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sITwistButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sITwistButton.FlatAppearance.BorderSize = 0;
+            this.sITwistButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sITwistButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sITwistButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sITwistButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sITwistButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sITwistButton.Location = new System.Drawing.Point(112, 95);
+            this.sITwistButton.Name = "sITwistButton";
+            this.sITwistButton.Size = new System.Drawing.Size(96, 85);
+            this.sITwistButton.TabIndex = 1;
+            this.sITwistButton.Tag = "201";
+            this.sITwistButton.Text = "iTwist";
+            this.sITwistButton.UseVisualStyleBackColor = false;
+            this.sITwistButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // sTwisterButton
             // 
@@ -713,7 +1022,7 @@
             this.sTwisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sTwisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sTwisterButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sTwisterButton.Location = new System.Drawing.Point(10, 3);
+            this.sTwisterButton.Location = new System.Drawing.Point(10, 94);
             this.sTwisterButton.Name = "sTwisterButton";
             this.sTwisterButton.Size = new System.Drawing.Size(96, 85);
             this.sTwisterButton.TabIndex = 1;
@@ -732,7 +1041,7 @@
             this.sZingerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sZingerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sZingerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sZingerButton.Location = new System.Drawing.Point(112, 3);
+            this.sZingerButton.Location = new System.Drawing.Point(10, 3);
             this.sZingerButton.Name = "sZingerButton";
             this.sZingerButton.Size = new System.Drawing.Size(96, 85);
             this.sZingerButton.TabIndex = 1;
@@ -751,7 +1060,7 @@
             this.sZingerDoubleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sZingerDoubleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sZingerDoubleButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sZingerDoubleButton.Location = new System.Drawing.Point(214, 3);
+            this.sZingerDoubleButton.Location = new System.Drawing.Point(112, 4);
             this.sZingerDoubleButton.Name = "sZingerDoubleButton";
             this.sZingerDoubleButton.Size = new System.Drawing.Size(96, 85);
             this.sZingerDoubleButton.TabIndex = 1;
@@ -770,64 +1079,146 @@
             this.sQurritoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sQurritoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sQurritoButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sQurritoButton.Location = new System.Drawing.Point(316, 3);
+            this.sQurritoButton.Location = new System.Drawing.Point(418, 94);
             this.sQurritoButton.Name = "sQurritoButton";
             this.sQurritoButton.Size = new System.Drawing.Size(96, 85);
             this.sQurritoButton.TabIndex = 1;
-            this.sQurritoButton.Tag = "201";
+            this.sQurritoButton.Tag = "204";
             this.sQurritoButton.Text = "Qurrito";
             this.sQurritoButton.UseVisualStyleBackColor = false;
             this.sQurritoButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
+            // sandwichesNextButton
+            // 
+            this.sandwichesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.sandwichesNextButton.FlatAppearance.BorderSize = 0;
+            this.sandwichesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sandwichesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sandwichesNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sandwichesNextButton.Location = new System.Drawing.Point(1773, 437);
+            this.sandwichesNextButton.Name = "sandwichesNextButton";
+            this.sandwichesNextButton.Size = new System.Drawing.Size(126, 176);
+            this.sandwichesNextButton.TabIndex = 4;
+            this.sandwichesNextButton.Tag = "100";
+            this.sandwichesNextButton.Text = ">>";
+            this.sandwichesNextButton.UseVisualStyleBackColor = false;
+            // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.bucketsNextButton);
-            this.panel4.Controls.Add(this.kStripsBitesButton);
+            this.panel4.Controls.Add(this.kBitesFor1Button);
+            this.panel4.Controls.Add(this.kHotWingsFor1Button);
+            this.panel4.Controls.Add(this.kClassicFor1Button);
+            this.panel4.Controls.Add(this.kStripsAndBitesFor2Button);
+            this.panel4.Controls.Add(this.kStripsAndBitesXLButton);
+            this.panel4.Controls.Add(this.k11And11Button);
+            this.panel4.Controls.Add(this.k15StripsButton);
+            this.panel4.Controls.Add(this.k30StripsButton);
             this.panel4.Controls.Add(this.k15HotWingsButton);
             this.panel4.Controls.Add(this.k30HotWingsButton);
-            this.panel4.Controls.Add(this.k11_11Button);
-            this.panel4.Controls.Add(this.kClassicButton);
-            this.panel4.Location = new System.Drawing.Point(1250, 631);
+            this.panel4.Controls.Add(this.kClassicFor2Button);
+            this.panel4.Controls.Add(this.kClassicXLButtonButton);
+            this.panel4.Location = new System.Drawing.Point(592, 607);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(658, 188);
+            this.panel4.Size = new System.Drawing.Size(671, 212);
             this.panel4.TabIndex = 5;
             // 
-            // bucketsNextButton
+            // kStripsAndBitesFor2Button
             // 
-            this.bucketsNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.bucketsNextButton.FlatAppearance.BorderSize = 0;
-            this.bucketsNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bucketsNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bucketsNextButton.Location = new System.Drawing.Point(520, 3);
-            this.bucketsNextButton.Name = "bucketsNextButton";
-            this.bucketsNextButton.Size = new System.Drawing.Size(126, 176);
-            this.bucketsNextButton.TabIndex = 4;
-            this.bucketsNextButton.Tag = "100";
-            this.bucketsNextButton.Text = ">>";
-            this.bucketsNextButton.UseVisualStyleBackColor = false;
+            this.kStripsAndBitesFor2Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesFor2Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.kStripsAndBitesFor2Button.FlatAppearance.BorderSize = 0;
+            this.kStripsAndBitesFor2Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesFor2Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesFor2Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesFor2Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kStripsAndBitesFor2Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kStripsAndBitesFor2Button.Location = new System.Drawing.Point(450, 3);
+            this.kStripsAndBitesFor2Button.Name = "kStripsAndBitesFor2Button";
+            this.kStripsAndBitesFor2Button.Size = new System.Drawing.Size(104, 98);
+            this.kStripsAndBitesFor2Button.TabIndex = 1;
+            this.kStripsAndBitesFor2Button.Tag = "1204";
+            this.kStripsAndBitesFor2Button.Text = "Kyblík Stripsy a Bites p. 2";
+            this.kStripsAndBitesFor2Button.UseVisualStyleBackColor = false;
+            this.kStripsAndBitesFor2Button.Click += new System.EventHandler(this.ItemButton_Click);
             // 
-            // kStripsBitesButton
+            // kStripsAndBitesXLButton
             // 
-            this.kStripsBitesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kStripsBitesButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.kStripsBitesButton.FlatAppearance.BorderSize = 0;
-            this.kStripsBitesButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kStripsBitesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kStripsBitesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kStripsBitesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kStripsBitesButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kStripsBitesButton.Location = new System.Drawing.Point(418, 3);
-            this.kStripsBitesButton.Name = "kStripsBitesButton";
-            this.kStripsBitesButton.Size = new System.Drawing.Size(96, 85);
-            this.kStripsBitesButton.TabIndex = 2;
-            this.kStripsBitesButton.Tag = "101";
-            this.kStripsBitesButton.Text = "Stripsy a Bites pro 2";
-            this.kStripsBitesButton.UseVisualStyleBackColor = false;
-            this.kStripsBitesButton.Click += new System.EventHandler(this.ItemButton_Click);
+            this.kStripsAndBitesXLButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesXLButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.kStripsAndBitesXLButton.FlatAppearance.BorderSize = 0;
+            this.kStripsAndBitesXLButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesXLButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesXLButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kStripsAndBitesXLButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kStripsAndBitesXLButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kStripsAndBitesXLButton.Location = new System.Drawing.Point(340, 107);
+            this.kStripsAndBitesXLButton.Name = "kStripsAndBitesXLButton";
+            this.kStripsAndBitesXLButton.Size = new System.Drawing.Size(104, 98);
+            this.kStripsAndBitesXLButton.TabIndex = 1;
+            this.kStripsAndBitesXLButton.Tag = "1209";
+            this.kStripsAndBitesXLButton.Text = "Kyblík Stripsy a Bites XL";
+            this.kStripsAndBitesXLButton.UseVisualStyleBackColor = false;
+            this.kStripsAndBitesXLButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // k11And11Button
+            // 
+            this.k11And11Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k11And11Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.k11And11Button.FlatAppearance.BorderSize = 0;
+            this.k11And11Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k11And11Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k11And11Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k11And11Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.k11And11Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k11And11Button.Location = new System.Drawing.Point(340, 3);
+            this.k11And11Button.Name = "k11And11Button";
+            this.k11And11Button.Size = new System.Drawing.Size(104, 98);
+            this.k11And11Button.TabIndex = 1;
+            this.k11And11Button.Tag = "1203";
+            this.k11And11Button.Text = "Kyblík 11/11";
+            this.k11And11Button.UseVisualStyleBackColor = false;
+            this.k11And11Button.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // k15StripsButton
+            // 
+            this.k15StripsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k15StripsButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.k15StripsButton.FlatAppearance.BorderSize = 0;
+            this.k15StripsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k15StripsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k15StripsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k15StripsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.k15StripsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k15StripsButton.Location = new System.Drawing.Point(230, 107);
+            this.k15StripsButton.Name = "k15StripsButton";
+            this.k15StripsButton.Size = new System.Drawing.Size(104, 98);
+            this.k15StripsButton.TabIndex = 1;
+            this.k15StripsButton.Tag = "1208";
+            this.k15StripsButton.Text = "Kyblík 15 Stripsů";
+            this.k15StripsButton.UseVisualStyleBackColor = false;
+            this.k15StripsButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // k30StripsButton
+            // 
+            this.k30StripsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k30StripsButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.k30StripsButton.FlatAppearance.BorderSize = 0;
+            this.k30StripsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k30StripsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k30StripsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.k30StripsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.k30StripsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k30StripsButton.Location = new System.Drawing.Point(230, 3);
+            this.k30StripsButton.Name = "k30StripsButton";
+            this.k30StripsButton.Size = new System.Drawing.Size(104, 98);
+            this.k30StripsButton.TabIndex = 1;
+            this.k30StripsButton.Tag = "1202";
+            this.k30StripsButton.Text = "Kyblík 30 Stripsů";
+            this.k30StripsButton.UseVisualStyleBackColor = false;
+            this.k30StripsButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
             // k15HotWingsButton
             // 
@@ -839,12 +1230,12 @@
             this.k15HotWingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.k15HotWingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.k15HotWingsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.k15HotWingsButton.Location = new System.Drawing.Point(10, 3);
+            this.k15HotWingsButton.Location = new System.Drawing.Point(120, 107);
             this.k15HotWingsButton.Name = "k15HotWingsButton";
-            this.k15HotWingsButton.Size = new System.Drawing.Size(96, 85);
+            this.k15HotWingsButton.Size = new System.Drawing.Size(104, 98);
             this.k15HotWingsButton.TabIndex = 1;
-            this.k15HotWingsButton.Tag = "400";
-            this.k15HotWingsButton.Text = "15 Hot Wings";
+            this.k15HotWingsButton.Tag = "1207";
+            this.k15HotWingsButton.Text = "Kyblík 15 Hot Wings";
             this.k15HotWingsButton.UseVisualStyleBackColor = false;
             this.k15HotWingsButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -858,58 +1249,76 @@
             this.k30HotWingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.k30HotWingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.k30HotWingsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.k30HotWingsButton.Location = new System.Drawing.Point(112, 3);
+            this.k30HotWingsButton.Location = new System.Drawing.Point(120, 3);
             this.k30HotWingsButton.Name = "k30HotWingsButton";
-            this.k30HotWingsButton.Size = new System.Drawing.Size(96, 85);
+            this.k30HotWingsButton.Size = new System.Drawing.Size(104, 98);
             this.k30HotWingsButton.TabIndex = 1;
-            this.k30HotWingsButton.Tag = "401";
-            this.k30HotWingsButton.Text = "30 Hot Wings";
+            this.k30HotWingsButton.Tag = "1201";
+            this.k30HotWingsButton.Text = "Kyblík 30 Hot Wings";
             this.k30HotWingsButton.UseVisualStyleBackColor = false;
             this.k30HotWingsButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
-            // k11_11Button
+            // kClassicFor2Button
             // 
-            this.k11_11Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.k11_11Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.k11_11Button.FlatAppearance.BorderSize = 0;
-            this.k11_11Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.k11_11Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.k11_11Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.k11_11Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.k11_11Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.k11_11Button.Location = new System.Drawing.Point(214, 3);
-            this.k11_11Button.Name = "k11_11Button";
-            this.k11_11Button.Size = new System.Drawing.Size(96, 85);
-            this.k11_11Button.TabIndex = 1;
-            this.k11_11Button.Tag = "402";
-            this.k11_11Button.Text = "Kyblík 11/11";
-            this.k11_11Button.UseVisualStyleBackColor = false;
-            this.k11_11Button.Click += new System.EventHandler(this.ItemButton_Click);
+            this.kClassicFor2Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor2Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.kClassicFor2Button.FlatAppearance.BorderSize = 0;
+            this.kClassicFor2Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor2Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor2Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor2Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kClassicFor2Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kClassicFor2Button.Location = new System.Drawing.Point(10, 107);
+            this.kClassicFor2Button.Name = "kClassicFor2Button";
+            this.kClassicFor2Button.Size = new System.Drawing.Size(104, 98);
+            this.kClassicFor2Button.TabIndex = 1;
+            this.kClassicFor2Button.Tag = "1206";
+            this.kClassicFor2Button.Text = "Kyblík Classic Pro 2";
+            this.kClassicFor2Button.UseVisualStyleBackColor = false;
+            this.kClassicFor2Button.Click += new System.EventHandler(this.ItemButton_Click);
             // 
-            // kClassicButton
+            // kClassicXLButtonButton
             // 
-            this.kClassicButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kClassicButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.kClassicButton.FlatAppearance.BorderSize = 0;
-            this.kClassicButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kClassicButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kClassicButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kClassicButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kClassicButton.Location = new System.Drawing.Point(316, 3);
-            this.kClassicButton.Name = "kClassicButton";
-            this.kClassicButton.Size = new System.Drawing.Size(96, 85);
-            this.kClassicButton.TabIndex = 1;
-            this.kClassicButton.Tag = "101";
-            this.kClassicButton.Text = "Kyblík Classic Pro 2";
-            this.kClassicButton.UseVisualStyleBackColor = false;
-            this.kClassicButton.Click += new System.EventHandler(this.ItemButton_Click);
+            this.kClassicXLButtonButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicXLButtonButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.kClassicXLButtonButton.FlatAppearance.BorderSize = 0;
+            this.kClassicXLButtonButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicXLButtonButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicXLButtonButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicXLButtonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kClassicXLButtonButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kClassicXLButtonButton.Location = new System.Drawing.Point(10, 3);
+            this.kClassicXLButtonButton.Name = "kClassicXLButtonButton";
+            this.kClassicXLButtonButton.Size = new System.Drawing.Size(104, 98);
+            this.kClassicXLButtonButton.TabIndex = 1;
+            this.kClassicXLButtonButton.Tag = "1200";
+            this.kClassicXLButtonButton.Text = "Kyblík Classic XL";
+            this.kClassicXLButtonButton.UseVisualStyleBackColor = false;
+            this.kClassicXLButtonButton.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // bucketsNextButton
+            // 
+            this.bucketsNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.bucketsNextButton.FlatAppearance.BorderSize = 0;
+            this.bucketsNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bucketsNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bucketsNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bucketsNextButton.Location = new System.Drawing.Point(1773, 619);
+            this.bucketsNextButton.Name = "bucketsNextButton";
+            this.bucketsNextButton.Size = new System.Drawing.Size(126, 176);
+            this.bucketsNextButton.TabIndex = 4;
+            this.bucketsNextButton.Tag = "100";
+            this.bucketsNextButton.Text = ">>";
+            this.bucketsNextButton.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(985, 97);
+            this.label2.Location = new System.Drawing.Point(540, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 5;
@@ -919,7 +1328,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1202, 322);
+            this.label3.Location = new System.Drawing.Point(544, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 5;
@@ -929,17 +1338,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1044, 517);
+            this.label4.Location = new System.Drawing.Point(531, 495);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 18);
+            this.label4.Size = new System.Drawing.Size(55, 18);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Sendviče (samostatně)";
+            this.label4.Text = "Sendv.";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1181, 711);
+            this.label5.Location = new System.Drawing.Point(531, 692);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 18);
             this.label5.TabIndex = 5;
@@ -1290,6 +1699,63 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // kClassicFor1Button
+            // 
+            this.kClassicFor1Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor1Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.kClassicFor1Button.FlatAppearance.BorderSize = 0;
+            this.kClassicFor1Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor1Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor1Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kClassicFor1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kClassicFor1Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kClassicFor1Button.Location = new System.Drawing.Point(450, 107);
+            this.kClassicFor1Button.Name = "kClassicFor1Button";
+            this.kClassicFor1Button.Size = new System.Drawing.Size(104, 98);
+            this.kClassicFor1Button.TabIndex = 1;
+            this.kClassicFor1Button.Tag = "1210";
+            this.kClassicFor1Button.Text = "Kyblík pro 1 Classic";
+            this.kClassicFor1Button.UseVisualStyleBackColor = false;
+            this.kClassicFor1Button.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // kHotWingsFor1Button
+            // 
+            this.kHotWingsFor1Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kHotWingsFor1Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.kHotWingsFor1Button.FlatAppearance.BorderSize = 0;
+            this.kHotWingsFor1Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kHotWingsFor1Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kHotWingsFor1Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kHotWingsFor1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kHotWingsFor1Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kHotWingsFor1Button.Location = new System.Drawing.Point(560, 3);
+            this.kHotWingsFor1Button.Name = "kHotWingsFor1Button";
+            this.kHotWingsFor1Button.Size = new System.Drawing.Size(104, 98);
+            this.kHotWingsFor1Button.TabIndex = 1;
+            this.kHotWingsFor1Button.Tag = "1205";
+            this.kHotWingsFor1Button.Text = "Kyblík pro 1 HotWings";
+            this.kHotWingsFor1Button.UseVisualStyleBackColor = false;
+            this.kHotWingsFor1Button.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // kBitesFor1Button
+            // 
+            this.kBitesFor1Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kBitesFor1Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.kBitesFor1Button.FlatAppearance.BorderSize = 0;
+            this.kBitesFor1Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kBitesFor1Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kBitesFor1Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.kBitesFor1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kBitesFor1Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kBitesFor1Button.Location = new System.Drawing.Point(560, 107);
+            this.kBitesFor1Button.Name = "kBitesFor1Button";
+            this.kBitesFor1Button.Size = new System.Drawing.Size(104, 98);
+            this.kBitesFor1Button.TabIndex = 1;
+            this.kBitesFor1Button.Tag = "1211";
+            this.kBitesFor1Button.Text = "Kyblík pro 1 Bites";
+            this.kBitesFor1Button.UseVisualStyleBackColor = false;
+            this.kBitesFor1Button.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.SteelBlue;
@@ -1347,6 +1813,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1920, 1055);
+            this.Controls.Add(this.bucketsNextButton);
+            this.Controls.Add(this.sandwichesNextButton);
+            this.Controls.Add(this.boxesNextButton);
+            this.Controls.Add(this.mBSmartsButton);
             this.Controls.Add(this.multiplierLabel);
             this.Controls.Add(this.LocationLabel);
             this.Controls.Add(this.label5);
@@ -1412,8 +1882,6 @@
         private ListViewWithScrollBar listView1;
         private System.Windows.Forms.ColumnHeader Produkt;
         private System.Windows.Forms.ColumnHeader Cena;
-        private System.Windows.Forms.Button bTwisterButton;
-        private System.Windows.Forms.Button bZingerButton;
         private System.Windows.Forms.Button RemoveItemButton;
         private System.Windows.Forms.Button mZingerDoubleButton;
         private System.Windows.Forms.Label sumLabel;
@@ -1422,17 +1890,13 @@
         private System.Windows.Forms.ColumnHeader Mnozstvi;
         private System.Windows.Forms.Button CancelReceiptButton;
         private System.Windows.Forms.Button ExchangeButton;
-        private System.Windows.Forms.Button mTwisterButton;
         private System.Windows.Forms.Button mQuritoButton;
         private System.Windows.Forms.Button mZingerButton;
-        private System.Windows.Forms.Button mTwisterBaconButton;
-        private System.Windows.Forms.Button mTwisterCheeseButton;
+        private System.Windows.Forms.Button mTwisterCheeseBaconButton;
         private System.Windows.Forms.Button mClassicButton;
         private System.Windows.Forms.Button x;
         private System.Windows.Forms.Button mStripsButton;
         private System.Windows.Forms.Button mTexasGranderButton;
-        private System.Windows.Forms.Button bZingerDoubleButton;
-        private System.Windows.Forms.Button bClassicButton;
         private System.Windows.Forms.Button CouponsButton;
         private System.Windows.Forms.Button ManagerButton;
         private System.Windows.Forms.Label label1;
@@ -1441,8 +1905,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button paymentButton;
-        private System.Windows.Forms.Button bQurritoButton;
-        private System.Windows.Forms.Button menuNextButton;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button sTexasGranderButton;
         private System.Windows.Forms.Button sTwisterButton;
@@ -1450,11 +1912,7 @@
         private System.Windows.Forms.Button sZingerDoubleButton;
         private System.Windows.Forms.Button sQurritoButton;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button kStripsBitesButton;
-        private System.Windows.Forms.Button k15HotWingsButton;
-        private System.Windows.Forms.Button k30HotWingsButton;
-        private System.Windows.Forms.Button k11_11Button;
-        private System.Windows.Forms.Button kClassicButton;
+        private System.Windows.Forms.Button kClassicXLButtonButton;
         private System.Windows.Forms.Button boxesNextButton;
         private System.Windows.Forms.Button sandwichesNextButton;
         private System.Windows.Forms.Button bucketsNextButton;
@@ -1483,6 +1941,40 @@
         private System.Windows.Forms.Label LocationLabel;
         private System.Windows.Forms.Label multiplierLabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button mHalloumiTwisterButton;
+        private System.Windows.Forms.Button mTwisterButton;
+        private System.Windows.Forms.Button mKentuckyGoldWrapperButton;
+        private System.Windows.Forms.Button mKentuckyGoldGranderButton;
+        private System.Windows.Forms.Button bTwisterCheeseBaconBox;
+        private System.Windows.Forms.Button bQurritoButton;
+        private System.Windows.Forms.Button bTwisterButton;
+        private System.Windows.Forms.Button bTexasGranderBoxButton;
+        private System.Windows.Forms.Button bClassicButton;
+        private System.Windows.Forms.Button bKentuckyGoldWrapperButton;
+        private System.Windows.Forms.Button bZingerDoubleButton;
+        private System.Windows.Forms.Button bStripsDeluxe;
+        private System.Windows.Forms.Button bKentuckyGoldGranderButton;
+        private System.Windows.Forms.Button bHalloumiTwisterButton;
+        private System.Windows.Forms.Button bHotWingsButton;
+        private System.Windows.Forms.Button bZingerButton;
+        private System.Windows.Forms.Button sLongerButton;
+        private System.Windows.Forms.Button sKentuckyGoldGranderButton;
+        private System.Windows.Forms.Button sCheeseburgerButton;
+        private System.Windows.Forms.Button sKentuckyGoldWrapperButton;
+        private System.Windows.Forms.Button sTwisterCheeseBaconButton;
+        private System.Windows.Forms.Button sHalloumiTwisterButton;
+        private System.Windows.Forms.Button sITwistButton;
+        private System.Windows.Forms.Button kClassicFor2Button;
+        private System.Windows.Forms.Button kStripsAndBitesXLButton;
+        private System.Windows.Forms.Button k11And11Button;
+        private System.Windows.Forms.Button k15StripsButton;
+        private System.Windows.Forms.Button k30StripsButton;
+        private System.Windows.Forms.Button k15HotWingsButton;
+        private System.Windows.Forms.Button k30HotWingsButton;
+        private System.Windows.Forms.Button kStripsAndBitesFor2Button;
+        private System.Windows.Forms.Button kBitesFor1Button;
+        private System.Windows.Forms.Button kHotWingsFor1Button;
+        private System.Windows.Forms.Button kClassicFor1Button;
     }
 }
 

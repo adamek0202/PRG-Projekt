@@ -104,7 +104,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 81);
             this.button4.TabIndex = 0;
-            this.button4.Tag = "303";
+            this.button4.Tag = "306";
             this.button4.Text = "1 Kuře Kentucky";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.ChickenButton_Click);
@@ -121,7 +121,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(102, 81);
             this.button5.TabIndex = 0;
-            this.button5.Tag = "304";
+            this.button5.Tag = "308";
             this.button5.Text = "Bites Standard";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.ChickenButton_Click);
@@ -138,7 +138,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(102, 81);
             this.button6.TabIndex = 0;
-            this.button6.Tag = "305";
+            this.button6.Tag = "303";
             this.button6.Text = "3 Stripsy";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.ChickenButton_Click);
@@ -155,7 +155,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(102, 81);
             this.button7.TabIndex = 0;
-            this.button7.Tag = "306";
+            this.button7.Tag = "304";
             this.button7.Text = "5 Stripsů";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.ChickenButton_Click);
@@ -172,7 +172,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(102, 81);
             this.button8.TabIndex = 0;
-            this.button8.Tag = "307";
+            this.button8.Tag = "305";
             this.button8.Text = "8 Stripsů";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.ChickenButton_Click);
@@ -189,7 +189,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(102, 81);
             this.button9.TabIndex = 0;
-            this.button9.Tag = "308";
+            this.button9.Tag = "307";
             this.button9.Text = "2 Kuřata Kentucky";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.ChickenButton_Click);
@@ -234,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(560, 280);
+            this.ClientSize = new System.Drawing.Size(556, 276);
             this.ControlBox = false;
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button5);

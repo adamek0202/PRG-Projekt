@@ -42,7 +42,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(11, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 81);
             this.button1.TabIndex = 2;
@@ -59,7 +59,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(112, 12);
+            this.button2.Location = new System.Drawing.Point(111, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 81);
             this.button2.TabIndex = 2;
@@ -76,7 +76,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(212, 12);
+            this.button3.Location = new System.Drawing.Point(211, 7);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 81);
             this.button3.TabIndex = 2;
@@ -94,7 +94,7 @@
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(112, 99);
+            this.exitButton.Location = new System.Drawing.Point(111, 94);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(94, 81);
             this.exitButton.TabIndex = 3;
@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(312, 187);
+            this.ClientSize = new System.Drawing.Size(317, 183);
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button3);

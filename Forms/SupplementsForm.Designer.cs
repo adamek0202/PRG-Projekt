@@ -37,6 +37,11 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -86,7 +91,7 @@
             this.button3.Size = new System.Drawing.Size(107, 81);
             this.button3.TabIndex = 1;
             this.button3.Tag = "402";
-            this.button3.Text = "Kyblík hranolek";
+            this.button3.Text = "Kyblík hranolků";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -137,7 +142,7 @@
             this.button6.Size = new System.Drawing.Size(107, 81);
             this.button6.TabIndex = 1;
             this.button6.Tag = "404";
-            this.button6.Text = "Kyblík lupínky";
+            this.button6.Text = "Kyblík lupínků";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.ItemButton_Click);
             // 
@@ -184,7 +189,7 @@
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(189, 186);
+            this.exitButton.Location = new System.Drawing.Point(190, 356);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(94, 81);
             this.exitButton.TabIndex = 2;
@@ -192,13 +197,98 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button9.Location = new System.Drawing.Point(12, 186);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(107, 81);
+            this.button9.TabIndex = 1;
+            this.button9.Tag = "600";
+            this.button9.Text = "BBQ";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button10.Location = new System.Drawing.Point(125, 186);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(107, 81);
+            this.button10.TabIndex = 1;
+            this.button10.Tag = "601";
+            this.button10.Text = "Sweet Chilli";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button11.Location = new System.Drawing.Point(238, 186);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(107, 81);
+            this.button11.TabIndex = 1;
+            this.button11.Tag = "602";
+            this.button11.Text = "Česneková";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button12.Location = new System.Drawing.Point(351, 186);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(107, 81);
+            this.button12.TabIndex = 1;
+            this.button12.Tag = "603";
+            this.button12.Text = "Kečup";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button13.Location = new System.Drawing.Point(12, 273);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(107, 81);
+            this.button13.TabIndex = 1;
+            this.button13.Tag = "604";
+            this.button13.Text = "Tatarka";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.ItemButton_Click);
+            // 
             // SupplementsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(470, 278);
+            this.ClientSize = new System.Drawing.Size(466, 449);
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button7);
@@ -206,6 +296,11 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button8);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -235,5 +330,10 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
