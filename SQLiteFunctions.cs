@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Projekt.GlobalPosPrinter;
+using static Projekt.Receipt;
 using System.Data.SqlClient;
 
 //Databázová logika
@@ -207,9 +208,13 @@ namespace Projekt
             EPrinter.AlignCenter();
             EPrinter.DoubleWidth3();
             EPrinter.Append(orderId.ToString());
-
             EPrinter.AlignLeft();
             EPrinter.Separator();
+            //Info text na spodku
+            EPrinter.AlignCenter();
+            EPrinter.Append("Sledujte stav vasí objednávky na ");
+            EPrinter.Append("obrazovce nad výdejem.");
+            EPrinter.AlignLeft();
             EPrinter.NewLines(2);
             EPrinter.PartialPaperCut();
             EPrinter.NormalWidth();
@@ -225,7 +230,7 @@ namespace Projekt
             {
                 string url = "http://localhost:8080/new-order"; // Cílová adresa
                 var payload = new { orderId = orderId }; // JSON data
-
+                //jebat 
                 // Serializace JSON payloadu
                 string json = JsonSerializer.Serialize(payload);
 

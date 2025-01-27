@@ -47,7 +47,7 @@
             this.button1.Size = new System.Drawing.Size(94, 81);
             this.button1.TabIndex = 2;
             this.button1.Tag = "800";
-            this.button1.Text = "button1";
+            this.button1.Text = "WC kupon";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.OtherButton_Click);
             // 
@@ -64,7 +64,7 @@
             this.button2.Size = new System.Drawing.Size(94, 81);
             this.button2.TabIndex = 2;
             this.button2.Tag = "801";
-            this.button2.Text = "button1";
+            this.button2.Text = "Držák na nápoj";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.OtherButton_Click);
             // 
@@ -81,7 +81,7 @@
             this.button3.Size = new System.Drawing.Size(94, 81);
             this.button3.TabIndex = 2;
             this.button3.Tag = "802";
-            this.button3.Text = "button1";
+            this.button3.Text = "Hračka";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.OtherButton_Click);
             // 

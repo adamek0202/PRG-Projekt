@@ -49,7 +49,7 @@
             this.button1.Size = new System.Drawing.Size(94, 81);
             this.button1.TabIndex = 1;
             this.button1.Tag = "1200";
-            this.button1.Text = "button1";
+            this.button1.Text = "iTwist";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.BSmartButton_Click);
             // 
@@ -66,7 +66,7 @@
             this.button2.Size = new System.Drawing.Size(94, 81);
             this.button2.TabIndex = 1;
             this.button2.Tag = "1201";
-            this.button2.Text = "button1";
+            this.button2.Text = "Stripsy";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.BSmartButton_Click);
             // 
@@ -83,7 +83,7 @@
             this.button3.Size = new System.Drawing.Size(94, 81);
             this.button3.TabIndex = 1;
             this.button3.Tag = "1202";
-            this.button3.Text = "button1";
+            this.button3.Text = "Kentucky";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.BSmartButton_Click);
             // 
@@ -100,7 +100,7 @@
             this.button4.Size = new System.Drawing.Size(94, 81);
             this.button4.TabIndex = 1;
             this.button4.Tag = "1203";
-            this.button4.Text = "button1";
+            this.button4.Text = "Longer";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.BSmartButton_Click);
             // 
@@ -117,7 +117,7 @@
             this.button5.Size = new System.Drawing.Size(94, 81);
             this.button5.TabIndex = 1;
             this.button5.Tag = "1204";
-            this.button5.Text = "button1";
+            this.button5.Text = "Cheeseburger";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.BSmartButton_Click);
             // 
@@ -143,7 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(314, 199);
+            this.ClientSize = new System.Drawing.Size(310, 195);
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button5);

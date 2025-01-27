@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.bTwisterButton = new System.Windows.Forms.Button();
             this.bZingerButton = new System.Windows.Forms.Button();
             this.RemoveItemButton = new System.Windows.Forms.Button();
@@ -1256,7 +1256,7 @@
             this.LocationLabel.AutoSize = true;
             this.LocationLabel.Font = new System.Drawing.Font("Arial", 22F);
             this.LocationLabel.ForeColor = System.Drawing.Color.White;
-            this.LocationLabel.Location = new System.Drawing.Point(12, 775);
+            this.LocationLabel.Location = new System.Drawing.Point(12, 1011);
             this.LocationLabel.Name = "LocationLabel";
             this.LocationLabel.Size = new System.Drawing.Size(79, 35);
             this.LocationLabel.TabIndex = 6;
@@ -1301,13 +1301,13 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup1.Header = "Menu 1";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "Menu 2";
-            listViewGroup2.Name = "listViewGroup2";
+            listViewGroup5.Header = "Menu 1";
+            listViewGroup5.Name = "listViewGroup1";
+            listViewGroup6.Header = "Menu 2";
+            listViewGroup6.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
+            listViewGroup5,
+            listViewGroup6});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
@@ -1316,7 +1316,7 @@
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(441, 726);
+            this.listView1.Size = new System.Drawing.Size(441, 970);
             this.listView1.TabIndex = 0;
             this.listView1.TileSize = new System.Drawing.Size(332, 40);
             this.listView1.UseCompatibleStateImageBehavior = false;

@@ -64,7 +64,7 @@ namespace Projekt
             }
         }
 
-        private static string FormatTwoColumns(string leftText, string rightText, int totalWidth)
+        public static string FormatTwoColumns(string leftText, string rightText, int totalWidth)
         {
             // Oříznutí textu, pokud je příliš dlouhý
             if (leftText.Length + rightText.Length > totalWidth)
