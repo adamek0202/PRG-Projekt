@@ -1,5 +1,9 @@
 ﻿using Projekt.Forms;
+using Projekt.Properties;
 using System;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Resources;
 using System.Windows.Forms;
 using static Projekt.GlobalPosPrinter;
 
@@ -20,7 +24,23 @@ namespace Projekt
         {
             if (EPrinter != null)
             {
+                PrintDocument pd = new PrintDocument();
+                pd.PrintPage += (sender, args) =>
+                {
+                    Image img = Image.FromFile("logo.png");
+                    Rectangle marginBorders = args.PageBounds;
+
+                    float scale = Math.Min((float)marginBorders.Width / img.Width, (float)marginBorders.Height / img.Height);
+                    int width = (int)(img.Width * scale / 2);
+                    int height = (int)(img.Height * scale / 2);
+                    int offsetX = args.MarginBounds.X + (args.MarginBounds.Width - width) / 2;
+
+                    args.Graphics.DrawImage(img, offsetX, marginBorders.Y, width, height);
+                };
+
+                pd.Print();
                 EPrinter.AlignCenter();
+                EPrinter.SetLineHeight(50);
                 EPrinter.Append("Spoje Kolín");
                 EPrinter.Append("Jaselská 826, 280 12 Kolín");
                 EPrinter.Append("Provozovna: Spoje Kolín");

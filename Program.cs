@@ -39,6 +39,7 @@ namespace Projekt
             }
             Application.SetCompatibleTextRenderingDefault(false);
             string errorMessage = GlobalPosPrinter.InitPrinter("BP-T3");
+            DatabaseFunctions.orderId = 1;
             if (errorMessage != string.Empty)
             {
                 MessageBox.Show($"UPOS: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
