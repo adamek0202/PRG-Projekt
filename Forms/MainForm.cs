@@ -21,7 +21,8 @@ namespace Projekt
         {
             InitializeComponent();
             Height = 1080;
-        }
+			this.Icon = new Icon("ikona.ico");
+		}
 
         public List<ListViewItem> ListViewData
         {
