@@ -19,8 +19,6 @@ namespace Projekt.Forms
             ReallyCenterToScreen(this);
         }
 
-        
-
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
@@ -37,7 +35,6 @@ namespace Projekt.Forms
         {
             foreach (var item in data)
             {
-                // Přidání položky včetně jejího formátování
                 listView1.Items.Add((ListViewItem)item.Clone());
             }
         }

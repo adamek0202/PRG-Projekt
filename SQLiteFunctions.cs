@@ -180,7 +180,7 @@ namespace Projekt
                             int categoryId = reader.GetInt32(0);
                             if (categoryIds.Contains(categoryId))
                             {
-                                //await SendOrder(orderId);
+                                await SendOrder(orderId);
                                 PrintOrder();
                                 if (orderId < 99)
                                 {
@@ -229,21 +229,14 @@ namespace Projekt
             try
             {
                 string url = "http://localhost:8080/new-order"; // Cílová adresa
-                var payload = new { orderId = orderId }; // JSON data
-                //jebat 
-                // Serializace JSON payloadu
+                var payload = new { orderId = orderId };
                 string json = JsonSerializer.Serialize(payload);
 
                 Console.WriteLine("Odesílám JSON:");
                 Console.WriteLine(json);
 
-                // Vytvoření obsahu POST požadavku
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                // Odeslání POST požadavku
                 HttpResponseMessage response = await httpClient.PostAsync(url, content);
-
-                // Kontrola výsledku
                 if (response.IsSuccessStatusCode)
                 {
                     Console.WriteLine($"Objednávka {orderId} byla úspěšně odeslána.");
