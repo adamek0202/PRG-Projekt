@@ -269,5 +269,11 @@ namespace Projekt
             }
             LocationLabel.Text = Here ? "Tady" : "S sebou";
         }
+
+        private void ManagerButton_Click(object sender, EventArgs e)
+        {
+            ManagerForm mf = new ManagerForm();
+            mf.ShowDialog();
+        }
     }
 }

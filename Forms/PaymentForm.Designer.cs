@@ -89,7 +89,7 @@
             // 
             // kRemoveButton
             // 
-            this.kRemoveButton.BackColor = System.Drawing.Color.Black;
+            this.kRemoveButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kRemoveButton.FlatAppearance.BorderSize = 0;
             this.kRemoveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kRemoveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -107,7 +107,7 @@
             // 
             // kDualZeroButton
             // 
-            this.kDualZeroButton.BackColor = System.Drawing.Color.Black;
+            this.kDualZeroButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kDualZeroButton.FlatAppearance.BorderSize = 0;
             this.kDualZeroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kDualZeroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -126,7 +126,7 @@
             // 
             // kZeroButton
             // 
-            this.kZeroButton.BackColor = System.Drawing.Color.Black;
+            this.kZeroButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kZeroButton.FlatAppearance.BorderSize = 0;
             this.kZeroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kZeroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -145,7 +145,7 @@
             // 
             // kNineButton
             // 
-            this.kNineButton.BackColor = System.Drawing.Color.Black;
+            this.kNineButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kNineButton.FlatAppearance.BorderSize = 0;
             this.kNineButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kNineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -164,7 +164,7 @@
             // 
             // kEightButton
             // 
-            this.kEightButton.BackColor = System.Drawing.Color.Black;
+            this.kEightButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kEightButton.FlatAppearance.BorderSize = 0;
             this.kEightButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kEightButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -191,7 +191,7 @@
             // 
             // kSevenButton
             // 
-            this.kSevenButton.BackColor = System.Drawing.Color.Black;
+            this.kSevenButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kSevenButton.FlatAppearance.BorderSize = 0;
             this.kSevenButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kSevenButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -210,7 +210,7 @@
             // 
             // kSixButton
             // 
-            this.kSixButton.BackColor = System.Drawing.Color.Black;
+            this.kSixButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kSixButton.FlatAppearance.BorderSize = 0;
             this.kSixButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kSixButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -229,7 +229,7 @@
             // 
             // kFiveButton
             // 
-            this.kFiveButton.BackColor = System.Drawing.Color.Black;
+            this.kFiveButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kFiveButton.FlatAppearance.BorderSize = 0;
             this.kFiveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kFiveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -248,7 +248,7 @@
             // 
             // kFourButton
             // 
-            this.kFourButton.BackColor = System.Drawing.Color.Black;
+            this.kFourButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kFourButton.FlatAppearance.BorderSize = 0;
             this.kFourButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kFourButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -267,7 +267,7 @@
             // 
             // kThreeButton
             // 
-            this.kThreeButton.BackColor = System.Drawing.Color.Black;
+            this.kThreeButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kThreeButton.FlatAppearance.BorderSize = 0;
             this.kThreeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kThreeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -286,7 +286,7 @@
             // 
             // kTwoButton
             // 
-            this.kTwoButton.BackColor = System.Drawing.Color.Black;
+            this.kTwoButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kTwoButton.FlatAppearance.BorderSize = 0;
             this.kTwoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kTwoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -305,7 +305,7 @@
             // 
             // kOneButton
             // 
-            this.kOneButton.BackColor = System.Drawing.Color.Black;
+            this.kOneButton.BackColor = System.Drawing.Color.DarkBlue;
             this.kOneButton.FlatAppearance.BorderSize = 0;
             this.kOneButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.kOneButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -324,7 +324,7 @@
             // 
             // cardButton
             // 
-            this.cardButton.BackColor = System.Drawing.Color.Black;
+            this.cardButton.BackColor = System.Drawing.Color.DarkBlue;
             this.cardButton.FlatAppearance.BorderSize = 0;
             this.cardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.cardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -342,7 +342,7 @@
             // 
             // foodCardButton
             // 
-            this.foodCardButton.BackColor = System.Drawing.Color.Black;
+            this.foodCardButton.BackColor = System.Drawing.Color.DarkBlue;
             this.foodCardButton.FlatAppearance.BorderSize = 0;
             this.foodCardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.foodCardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -361,7 +361,7 @@
             // 
             // PluxeeButton
             // 
-            this.PluxeeButton.BackColor = System.Drawing.Color.Black;
+            this.PluxeeButton.BackColor = System.Drawing.Color.DarkBlue;
             this.PluxeeButton.FlatAppearance.BorderSize = 0;
             this.PluxeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.PluxeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -378,7 +378,7 @@
             // 
             // ChequeButton
             // 
-            this.ChequeButton.BackColor = System.Drawing.Color.Black;
+            this.ChequeButton.BackColor = System.Drawing.Color.DarkBlue;
             this.ChequeButton.FlatAppearance.BorderSize = 0;
             this.ChequeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.ChequeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -395,7 +395,7 @@
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.Color.Black;
+            this.button16.BackColor = System.Drawing.Color.DarkBlue;
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -412,7 +412,7 @@
             // 
             // giftCardButton
             // 
-            this.giftCardButton.BackColor = System.Drawing.Color.Black;
+            this.giftCardButton.BackColor = System.Drawing.Color.DarkBlue;
             this.giftCardButton.FlatAppearance.BorderSize = 0;
             this.giftCardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.giftCardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -430,7 +430,7 @@
             // 
             // discountButton
             // 
-            this.discountButton.BackColor = System.Drawing.Color.Black;
+            this.discountButton.BackColor = System.Drawing.Color.DarkBlue;
             this.discountButton.FlatAppearance.BorderSize = 0;
             this.discountButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.discountButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -447,7 +447,7 @@
             // 
             // cashButton
             // 
-            this.cashButton.BackColor = System.Drawing.Color.Black;
+            this.cashButton.BackColor = System.Drawing.Color.DarkBlue;
             this.cashButton.FlatAppearance.BorderSize = 0;
             this.cashButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.cashButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -465,7 +465,7 @@
             // 
             // exactCashButton
             // 
-            this.exactCashButton.BackColor = System.Drawing.Color.Black;
+            this.exactCashButton.BackColor = System.Drawing.Color.DarkBlue;
             this.exactCashButton.FlatAppearance.BorderSize = 0;
             this.exactCashButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.exactCashButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -528,7 +528,7 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.SteelBlue;
+            this.listView1.BackColor = System.Drawing.Color.DodgerBlue;
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Produkt,

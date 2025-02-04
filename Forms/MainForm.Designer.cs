@@ -67,7 +67,6 @@
             this.bHalloumiTwisterButton = new System.Windows.Forms.Button();
             this.bZingerButton = new System.Windows.Forms.Button();
             this.bHotWingsButton = new System.Windows.Forms.Button();
-            this.boxesNextButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.paymentButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -83,7 +82,6 @@
             this.sZingerButton = new System.Windows.Forms.Button();
             this.sZingerDoubleButton = new System.Windows.Forms.Button();
             this.sQurritoButton = new System.Windows.Forms.Button();
-            this.sandwichesNextButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.kBitesFor1Button = new System.Windows.Forms.Button();
             this.kHotWingsFor1Button = new System.Windows.Forms.Button();
@@ -97,7 +95,6 @@
             this.k30HotWingsButton = new System.Windows.Forms.Button();
             this.kClassicFor2Button = new System.Windows.Forms.Button();
             this.kClassicXLButtonButton = new System.Windows.Forms.Button();
-            this.bucketsNextButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -142,7 +139,7 @@
             this.RemoveItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveItemButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RemoveItemButton.ForeColor = System.Drawing.Color.White;
-            this.RemoveItemButton.Location = new System.Drawing.Point(1207, 964);
+            this.RemoveItemButton.Location = new System.Drawing.Point(714, 964);
             this.RemoveItemButton.Name = "RemoveItemButton";
             this.RemoveItemButton.Size = new System.Drawing.Size(93, 85);
             this.RemoveItemButton.TabIndex = 0;
@@ -220,7 +217,7 @@
             this.CancelReceiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelReceiptButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CancelReceiptButton.ForeColor = System.Drawing.Color.White;
-            this.CancelReceiptButton.Location = new System.Drawing.Point(1108, 990);
+            this.CancelReceiptButton.Location = new System.Drawing.Point(615, 990);
             this.CancelReceiptButton.Name = "CancelReceiptButton";
             this.CancelReceiptButton.Size = new System.Drawing.Size(93, 59);
             this.CancelReceiptButton.TabIndex = 0;
@@ -238,7 +235,7 @@
             this.ExchangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExchangeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ExchangeButton.ForeColor = System.Drawing.Color.Black;
-            this.ExchangeButton.Location = new System.Drawing.Point(1405, 964);
+            this.ExchangeButton.Location = new System.Drawing.Point(912, 964);
             this.ExchangeButton.Name = "ExchangeButton";
             this.ExchangeButton.Size = new System.Drawing.Size(93, 85);
             this.ExchangeButton.TabIndex = 0;
@@ -389,13 +386,12 @@
             this.CouponsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CouponsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CouponsButton.ForeColor = System.Drawing.Color.Black;
-            this.CouponsButton.Location = new System.Drawing.Point(1504, 964);
+            this.CouponsButton.Location = new System.Drawing.Point(1011, 964);
             this.CouponsButton.Name = "CouponsButton";
             this.CouponsButton.Size = new System.Drawing.Size(105, 85);
             this.CouponsButton.TabIndex = 0;
             this.CouponsButton.Text = "Kupóny";
             this.CouponsButton.UseVisualStyleBackColor = false;
-            this.CouponsButton.Click += new System.EventHandler(this.ReplaceButton_Click);
             // 
             // ManagerButton
             // 
@@ -407,13 +403,13 @@
             this.ManagerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManagerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ManagerButton.ForeColor = System.Drawing.Color.Black;
-            this.ManagerButton.Location = new System.Drawing.Point(1615, 964);
+            this.ManagerButton.Location = new System.Drawing.Point(1122, 964);
             this.ManagerButton.Name = "ManagerButton";
             this.ManagerButton.Size = new System.Drawing.Size(105, 85);
             this.ManagerButton.TabIndex = 0;
             this.ManagerButton.Text = "Manažer\r\nFunkce";
             this.ManagerButton.UseVisualStyleBackColor = false;
-            this.ManagerButton.Click += new System.EventHandler(this.ReplaceButton_Click);
+            this.ManagerButton.Click += new System.EventHandler(this.ManagerButton_Click);
             // 
             // label1
             // 
@@ -428,7 +424,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.mQuritoButton);
             this.panel1.Controls.Add(this.mTwisterCheeseBaconButton);
             this.panel1.Controls.Add(this.mClassicButton);
@@ -532,7 +528,7 @@
             this.mBSmartsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mBSmartsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mBSmartsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mBSmartsButton.Location = new System.Drawing.Point(1773, 37);
+            this.mBSmartsButton.Location = new System.Drawing.Point(1391, 19);
             this.mBSmartsButton.Name = "mBSmartsButton";
             this.mBSmartsButton.Size = new System.Drawing.Size(126, 176);
             this.mBSmartsButton.TabIndex = 3;
@@ -788,24 +784,6 @@
             this.bHotWingsButton.UseVisualStyleBackColor = false;
             this.bHotWingsButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
-            // boxesNextButton
-            // 
-            this.boxesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.boxesNextButton.FlatAppearance.BorderSize = 0;
-            this.boxesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.boxesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxesNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.boxesNextButton.Location = new System.Drawing.Point(1773, 250);
-            this.boxesNextButton.Name = "boxesNextButton";
-            this.boxesNextButton.Size = new System.Drawing.Size(126, 176);
-            this.boxesNextButton.TabIndex = 4;
-            this.boxesNextButton.Tag = "100";
-            this.boxesNextButton.Text = ">>";
-            this.boxesNextButton.UseVisualStyleBackColor = false;
-            // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Yellow;
@@ -816,7 +794,7 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exitButton.ForeColor = System.Drawing.Color.Black;
-            this.exitButton.Location = new System.Drawing.Point(1306, 964);
+            this.exitButton.Location = new System.Drawing.Point(813, 964);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(93, 85);
             this.exitButton.TabIndex = 0;
@@ -834,7 +812,7 @@
             this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.paymentButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.paymentButton.ForeColor = System.Drawing.Color.Black;
-            this.paymentButton.Location = new System.Drawing.Point(1726, 925);
+            this.paymentButton.Location = new System.Drawing.Point(1233, 925);
             this.paymentButton.Name = "paymentButton";
             this.paymentButton.Size = new System.Drawing.Size(183, 124);
             this.paymentButton.TabIndex = 0;
@@ -1089,24 +1067,6 @@
             this.sQurritoButton.UseVisualStyleBackColor = false;
             this.sQurritoButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
-            // sandwichesNextButton
-            // 
-            this.sandwichesNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.sandwichesNextButton.FlatAppearance.BorderSize = 0;
-            this.sandwichesNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sandwichesNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sandwichesNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sandwichesNextButton.Location = new System.Drawing.Point(1773, 437);
-            this.sandwichesNextButton.Name = "sandwichesNextButton";
-            this.sandwichesNextButton.Size = new System.Drawing.Size(126, 176);
-            this.sandwichesNextButton.TabIndex = 4;
-            this.sandwichesNextButton.Tag = "100";
-            this.sandwichesNextButton.Text = ">>";
-            this.sandwichesNextButton.UseVisualStyleBackColor = false;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.kBitesFor1Button);
@@ -1354,24 +1314,6 @@
             this.kClassicXLButtonButton.UseVisualStyleBackColor = false;
             this.kClassicXLButtonButton.Click += new System.EventHandler(this.ItemButton_Click);
             // 
-            // bucketsNextButton
-            // 
-            this.bucketsNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.bucketsNextButton.FlatAppearance.BorderSize = 0;
-            this.bucketsNextButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bucketsNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bucketsNextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bucketsNextButton.Location = new System.Drawing.Point(1773, 619);
-            this.bucketsNextButton.Name = "bucketsNextButton";
-            this.bucketsNextButton.Size = new System.Drawing.Size(126, 176);
-            this.bucketsNextButton.TabIndex = 4;
-            this.bucketsNextButton.Tag = "100";
-            this.bucketsNextButton.Text = ">>";
-            this.bucketsNextButton.UseVisualStyleBackColor = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1422,7 +1364,7 @@
             this.drinksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.drinksButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.drinksButton.ForeColor = System.Drawing.Color.Black;
-            this.drinksButton.Location = new System.Drawing.Point(1248, 825);
+            this.drinksButton.Location = new System.Drawing.Point(1391, 320);
             this.drinksButton.Name = "drinksButton";
             this.drinksButton.Size = new System.Drawing.Size(105, 77);
             this.drinksButton.TabIndex = 0;
@@ -1441,7 +1383,7 @@
             this.chickenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chickenButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.chickenButton.ForeColor = System.Drawing.Color.Black;
-            this.chickenButton.Location = new System.Drawing.Point(1359, 825);
+            this.chickenButton.Location = new System.Drawing.Point(1391, 403);
             this.chickenButton.Name = "chickenButton";
             this.chickenButton.Size = new System.Drawing.Size(105, 77);
             this.chickenButton.TabIndex = 0;
@@ -1460,7 +1402,7 @@
             this.supplementsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.supplementsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.supplementsButton.ForeColor = System.Drawing.Color.Black;
-            this.supplementsButton.Location = new System.Drawing.Point(1470, 825);
+            this.supplementsButton.Location = new System.Drawing.Point(1391, 486);
             this.supplementsButton.Name = "supplementsButton";
             this.supplementsButton.Size = new System.Drawing.Size(105, 77);
             this.supplementsButton.TabIndex = 0;
@@ -1479,7 +1421,7 @@
             this.dessersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dessersButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dessersButton.ForeColor = System.Drawing.Color.Black;
-            this.dessersButton.Location = new System.Drawing.Point(1581, 825);
+            this.dessersButton.Location = new System.Drawing.Point(1391, 569);
             this.dessersButton.Name = "dessersButton";
             this.dessersButton.Size = new System.Drawing.Size(105, 77);
             this.dessersButton.TabIndex = 0;
@@ -1498,7 +1440,7 @@
             this.othersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.othersButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.othersButton.ForeColor = System.Drawing.Color.Black;
-            this.othersButton.Location = new System.Drawing.Point(1692, 825);
+            this.othersButton.Location = new System.Drawing.Point(1391, 652);
             this.othersButton.Name = "othersButton";
             this.othersButton.Size = new System.Drawing.Size(105, 77);
             this.othersButton.TabIndex = 0;
@@ -1517,7 +1459,7 @@
             this.bagButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bagButton.ForeColor = System.Drawing.Color.Black;
-            this.bagButton.Location = new System.Drawing.Point(1803, 825);
+            this.bagButton.Location = new System.Drawing.Point(1391, 735);
             this.bagButton.Name = "bagButton";
             this.bagButton.Size = new System.Drawing.Size(105, 77);
             this.bagButton.TabIndex = 0;
@@ -1535,7 +1477,7 @@
             this.priceAskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.priceAskButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.priceAskButton.ForeColor = System.Drawing.Color.Black;
-            this.priceAskButton.Location = new System.Drawing.Point(1138, 825);
+            this.priceAskButton.Location = new System.Drawing.Point(1122, 881);
             this.priceAskButton.Name = "priceAskButton";
             this.priceAskButton.Size = new System.Drawing.Size(105, 77);
             this.priceAskButton.TabIndex = 0;
@@ -1749,7 +1691,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1108, 925);
+            this.button1.Location = new System.Drawing.Point(615, 925);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 59);
             this.button1.TabIndex = 0;
@@ -1812,11 +1754,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1920, 1055);
-            this.Controls.Add(this.bucketsNextButton);
-            this.Controls.Add(this.sandwichesNextButton);
-            this.Controls.Add(this.boxesNextButton);
             this.Controls.Add(this.mBSmartsButton);
             this.Controls.Add(this.multiplierLabel);
             this.Controls.Add(this.LocationLabel);
@@ -1915,9 +1854,6 @@
         private System.Windows.Forms.Button sQurritoButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button kClassicXLButtonButton;
-        private System.Windows.Forms.Button boxesNextButton;
-        private System.Windows.Forms.Button sandwichesNextButton;
-        private System.Windows.Forms.Button bucketsNextButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using static Projekt.GlobalPosPrinter;
 using static Projekt.Receipt;
 using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.ComponentModel;
 
 //Databázová logika
 //Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
@@ -228,7 +231,7 @@ namespace Projekt
         {
             try
             {
-                string url = "http://localhost:8080/new-order"; // Cílová adresa
+                string url = "http://192.168.9.220:8080/new-order"; // Cílová adresa
                 var payload = new { orderId = orderId };
                 string json = JsonSerializer.Serialize(payload);
 
@@ -254,5 +257,135 @@ namespace Projekt
                 Console.WriteLine($"Chyba při odesílání objednávky {orderId}: {ex.Message}");
             }
         }
+
+        public static async Task ProcessListViewAndSend(ListView listView, string ipAddress)
+        {
+            var itemsList = new List<object>();
+            foreach(ListViewItem item in listView.Items)
+            {
+                string itemName = item.Text;
+                if (IsNormalProduct(itemName))
+                {
+                    itemsList.Add(new { type = "normal", name = itemName });
+                }
+                else
+                {
+                    var components = GetMenuComponents(itemName);
+                    itemsList.Add(new { type = "composite", name = itemName, components });
+                }
+            }
+
+            var jsonPayload = JsonSerializer.Serialize(new { location = "here", items = itemsList }, new JsonSerializerOptions { WriteIndented = true });
+            await SendHttpPost(ipAddress, jsonPayload);
+        }
+
+        private static bool IsNormalProduct(string name)
+        {
+            using (var command = new SQLiteCommand("SELECT COUNT(*) FROM products WHERE Name = @name", DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("@name", name);
+                return Convert.ToInt32(command.ExecuteScalar()) > 0;
+            }
+        }
+
+        private static List<object> GetMenuComponents(string menuName)
+        {
+            var components = new List<object>();
+
+            try
+            {
+                using (var command = new SQLiteCommand("SELECT components FROM menus WHERE Name = @menuName", DatabaseConnection.Connection))
+                {
+                    command.Parameters.AddWithValue("@menuName", menuName);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string jsonComponents = reader.GetString(0);
+                            Console.WriteLine($"🔍 Načtený JSON komponent pro '{menuName}': {jsonComponents}");
+
+                            if (!string.IsNullOrEmpty(jsonComponents))
+                            {
+                                try
+                                {
+                                    // 🛠 Parsování ID produktů
+                                    var componentIds = JsonSerializer.Deserialize<List<int>>(jsonComponents);
+
+                                    foreach (var componentId in componentIds)
+                                    {
+                                        string productName = GetProductNameById(componentId);
+                                        if (!string.IsNullOrEmpty(productName))
+                                        {
+                                            Console.WriteLine($"✅ Přidávám komponentu: {productName} (ID: {componentId})");
+                                            components.Add(new { count = 1, name = productName });
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine($"⚠️ Upozornění: Produkt s ID {componentId} nebyl nalezen!");
+                                        }
+                                    }
+                                }
+                                catch (JsonException jsonEx)
+                                {
+                                    Console.WriteLine($"❌ Chyba při parsování JSON komponent pro '{menuName}': {jsonEx.Message}");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine($"⚠️ Varování: Žádné komponenty pro '{menuName}'");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"⚠️ Varování: Menu '{menuName}' nebylo nalezeno v databázi!");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Chyba při získávání komponent pro '{menuName}': {ex.Message}");
+            }
+
+            return components;
+        }
+
+
+        private static string GetProductNameById(int productId)
+        {
+            using (var command = new SQLiteCommand("SELECT Name FROM products WHERE ProductId = @id", DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("@id", productId);
+                var result = command.ExecuteScalar();
+                return result != null ? result.ToString() : null;
+            }
+        }
+
+
+
+        private static async Task SendHttpPost(string ipAddress, string jsonPayload)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+                    var response = await client.PostAsync($"http://{ipAddress}:9000/order", content);
+
+                    Console.WriteLine($"Odpověď serveru: {await response.Content.ReadAsStringAsync()}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Chyba při odesílání HTTP požadavku: {ex.Message}");
+            }
+        }
     }
+
+    class Component
+    {
+        public int count { get; set; }
+        public string name { get; set; }
+    }
+
 }

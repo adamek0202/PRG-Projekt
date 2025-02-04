@@ -66,14 +66,21 @@ namespace Projekt.Forms
 
         private void CashButton_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(PayedTextBox.Text) >= Price)
+            try
             {
-                DatabaseFunctions.RecordSale(listView1, Payments.Cash, Price);
-                DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4 , 7});
-                Receipt.PrintReceipt(listView1, Payments.Cash, int.Parse(PayedTextBox.Text));
-                var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
-                returnBox.ShowDialog();
-                DialogResult = DialogResult.OK;
+                if (Convert.ToInt32(PayedTextBox.Text) >= Price)
+                {
+                    DatabaseFunctions.RecordSale(listView1, Payments.Cash, Price);
+                    DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4, 7 });
+                    //await DatabaseFunctions.ProcessListViewAndSend(listView1, "192.168.4.132");
+                    Receipt.PrintReceipt(listView1, Payments.Cash, int.Parse(PayedTextBox.Text));
+                    var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
+                    returnBox.ShowDialog();
+                    DialogResult = DialogResult.OK;
+                }
+            }
+            catch (Exception)
+            {
             }
         }
 
@@ -89,6 +96,7 @@ namespace Projekt.Forms
         {
             DatabaseFunctions.RecordSale(listView1, Payments.Cash, Price);
             DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4 , 7});
+            //await DatabaseFunctions.ProcessListViewAndSend(listView1, "127.0.0.1");
             Receipt.PrintReceipt(listView1, Payments.Cash, Price);
             DialogResult = DialogResult.OK;
             Close();
@@ -101,6 +109,7 @@ namespace Projekt.Forms
             cardProcess.ShowDialog();
             DatabaseFunctions.RecordSale(listView1 ,Payments.Card, Price);
             DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4, 7});
+            //await DatabaseFunctions.ProcessListViewAndSend(listView1, "192.168.4.132");
             Receipt.PrintReceipt(listView1, (string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card, Price);
             DialogResult = DialogResult.OK;
             Close();
