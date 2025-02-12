@@ -124,10 +124,14 @@
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.numpadPanel = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.numpadPanel.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // RemoveItemButton
@@ -437,7 +441,7 @@
             this.panel1.Controls.Add(this.mKentuckyGoldGranderButton);
             this.panel1.Controls.Add(this.mStripsButton);
             this.panel1.Controls.Add(this.mTexasGranderButton);
-            this.panel1.Location = new System.Drawing.Point(674, 9);
+            this.panel1.Location = new System.Drawing.Point(693, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(711, 194);
             this.panel1.TabIndex = 2;
@@ -528,7 +532,7 @@
             this.mBSmartsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.mBSmartsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mBSmartsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mBSmartsButton.Location = new System.Drawing.Point(1391, 19);
+            this.mBSmartsButton.Location = new System.Drawing.Point(1410, 19);
             this.mBSmartsButton.Name = "mBSmartsButton";
             this.mBSmartsButton.Size = new System.Drawing.Size(126, 176);
             this.mBSmartsButton.TabIndex = 3;
@@ -551,7 +555,7 @@
             this.panel2.Controls.Add(this.bHalloumiTwisterButton);
             this.panel2.Controls.Add(this.bZingerButton);
             this.panel2.Controls.Add(this.bHotWingsButton);
-            this.panel2.Location = new System.Drawing.Point(674, 208);
+            this.panel2.Location = new System.Drawing.Point(693, 208);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(711, 199);
             this.panel2.TabIndex = 3;
@@ -834,7 +838,7 @@
             this.panel3.Controls.Add(this.sZingerButton);
             this.panel3.Controls.Add(this.sZingerDoubleButton);
             this.panel3.Controls.Add(this.sQurritoButton);
-            this.panel3.Location = new System.Drawing.Point(674, 413);
+            this.panel3.Location = new System.Drawing.Point(693, 413);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(711, 188);
             this.panel3.TabIndex = 4;
@@ -1081,7 +1085,7 @@
             this.panel4.Controls.Add(this.k30HotWingsButton);
             this.panel4.Controls.Add(this.kClassicFor2Button);
             this.panel4.Controls.Add(this.kClassicXLButtonButton);
-            this.panel4.Location = new System.Drawing.Point(674, 607);
+            this.panel4.Location = new System.Drawing.Point(693, 607);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(711, 212);
             this.panel4.TabIndex = 5;
@@ -1318,7 +1322,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(622, 99);
+            this.label2.Location = new System.Drawing.Point(641, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 5;
@@ -1328,7 +1332,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(626, 307);
+            this.label3.Location = new System.Drawing.Point(645, 311);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 5;
@@ -1338,7 +1342,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(595, 484);
+            this.label4.Location = new System.Drawing.Point(614, 484);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 5;
@@ -1348,7 +1352,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(612, 690);
+            this.label5.Location = new System.Drawing.Point(631, 690);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 18);
             this.label5.TabIndex = 5;
@@ -1364,7 +1368,7 @@
             this.drinksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.drinksButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.drinksButton.ForeColor = System.Drawing.Color.Black;
-            this.drinksButton.Location = new System.Drawing.Point(1391, 320);
+            this.drinksButton.Location = new System.Drawing.Point(3, 10);
             this.drinksButton.Name = "drinksButton";
             this.drinksButton.Size = new System.Drawing.Size(105, 77);
             this.drinksButton.TabIndex = 0;
@@ -1383,7 +1387,7 @@
             this.chickenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chickenButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.chickenButton.ForeColor = System.Drawing.Color.Black;
-            this.chickenButton.Location = new System.Drawing.Point(1391, 403);
+            this.chickenButton.Location = new System.Drawing.Point(3, 93);
             this.chickenButton.Name = "chickenButton";
             this.chickenButton.Size = new System.Drawing.Size(105, 77);
             this.chickenButton.TabIndex = 0;
@@ -1402,7 +1406,7 @@
             this.supplementsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.supplementsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.supplementsButton.ForeColor = System.Drawing.Color.Black;
-            this.supplementsButton.Location = new System.Drawing.Point(1391, 486);
+            this.supplementsButton.Location = new System.Drawing.Point(3, 176);
             this.supplementsButton.Name = "supplementsButton";
             this.supplementsButton.Size = new System.Drawing.Size(105, 77);
             this.supplementsButton.TabIndex = 0;
@@ -1421,7 +1425,7 @@
             this.dessersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dessersButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dessersButton.ForeColor = System.Drawing.Color.Black;
-            this.dessersButton.Location = new System.Drawing.Point(1391, 569);
+            this.dessersButton.Location = new System.Drawing.Point(3, 259);
             this.dessersButton.Name = "dessersButton";
             this.dessersButton.Size = new System.Drawing.Size(105, 77);
             this.dessersButton.TabIndex = 0;
@@ -1440,7 +1444,7 @@
             this.othersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.othersButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.othersButton.ForeColor = System.Drawing.Color.Black;
-            this.othersButton.Location = new System.Drawing.Point(1391, 652);
+            this.othersButton.Location = new System.Drawing.Point(3, 342);
             this.othersButton.Name = "othersButton";
             this.othersButton.Size = new System.Drawing.Size(105, 77);
             this.othersButton.TabIndex = 0;
@@ -1459,7 +1463,7 @@
             this.bagButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bagButton.ForeColor = System.Drawing.Color.Black;
-            this.bagButton.Location = new System.Drawing.Point(1391, 735);
+            this.bagButton.Location = new System.Drawing.Point(3, 425);
             this.bagButton.Name = "bagButton";
             this.bagButton.Size = new System.Drawing.Size(105, 77);
             this.bagButton.TabIndex = 0;
@@ -1491,7 +1495,7 @@
             this.oneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oneButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.oneButton.ForeColor = System.Drawing.Color.Black;
-            this.oneButton.Location = new System.Drawing.Point(515, 37);
+            this.oneButton.Location = new System.Drawing.Point(8, 9);
             this.oneButton.Name = "oneButton";
             this.oneButton.Size = new System.Drawing.Size(74, 66);
             this.oneButton.TabIndex = 0;
@@ -1507,7 +1511,7 @@
             this.twoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.twoButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.twoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.twoButton.Location = new System.Drawing.Point(515, 111);
+            this.twoButton.Location = new System.Drawing.Point(8, 83);
             this.twoButton.Name = "twoButton";
             this.twoButton.Size = new System.Drawing.Size(74, 66);
             this.twoButton.TabIndex = 0;
@@ -1523,7 +1527,7 @@
             this.threeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.threeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.threeButton.ForeColor = System.Drawing.Color.Black;
-            this.threeButton.Location = new System.Drawing.Point(515, 185);
+            this.threeButton.Location = new System.Drawing.Point(8, 157);
             this.threeButton.Name = "threeButton";
             this.threeButton.Size = new System.Drawing.Size(74, 66);
             this.threeButton.TabIndex = 0;
@@ -1539,7 +1543,7 @@
             this.fourButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fourButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fourButton.ForeColor = System.Drawing.Color.Black;
-            this.fourButton.Location = new System.Drawing.Point(515, 259);
+            this.fourButton.Location = new System.Drawing.Point(8, 231);
             this.fourButton.Name = "fourButton";
             this.fourButton.Size = new System.Drawing.Size(74, 66);
             this.fourButton.TabIndex = 0;
@@ -1555,7 +1559,7 @@
             this.fiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fiveButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fiveButton.ForeColor = System.Drawing.Color.Black;
-            this.fiveButton.Location = new System.Drawing.Point(515, 333);
+            this.fiveButton.Location = new System.Drawing.Point(8, 305);
             this.fiveButton.Name = "fiveButton";
             this.fiveButton.Size = new System.Drawing.Size(74, 66);
             this.fiveButton.TabIndex = 0;
@@ -1571,7 +1575,7 @@
             this.sixButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sixButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sixButton.ForeColor = System.Drawing.Color.Black;
-            this.sixButton.Location = new System.Drawing.Point(515, 407);
+            this.sixButton.Location = new System.Drawing.Point(8, 379);
             this.sixButton.Name = "sixButton";
             this.sixButton.Size = new System.Drawing.Size(74, 66);
             this.sixButton.TabIndex = 0;
@@ -1587,7 +1591,7 @@
             this.sevenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sevenButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sevenButton.ForeColor = System.Drawing.Color.Black;
-            this.sevenButton.Location = new System.Drawing.Point(515, 481);
+            this.sevenButton.Location = new System.Drawing.Point(8, 453);
             this.sevenButton.Name = "sevenButton";
             this.sevenButton.Size = new System.Drawing.Size(74, 66);
             this.sevenButton.TabIndex = 0;
@@ -1603,7 +1607,7 @@
             this.eightButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eightButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.eightButton.ForeColor = System.Drawing.Color.Black;
-            this.eightButton.Location = new System.Drawing.Point(515, 555);
+            this.eightButton.Location = new System.Drawing.Point(8, 527);
             this.eightButton.Name = "eightButton";
             this.eightButton.Size = new System.Drawing.Size(74, 66);
             this.eightButton.TabIndex = 0;
@@ -1619,7 +1623,7 @@
             this.nineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nineButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nineButton.ForeColor = System.Drawing.Color.Black;
-            this.nineButton.Location = new System.Drawing.Point(515, 629);
+            this.nineButton.Location = new System.Drawing.Point(8, 601);
             this.nineButton.Name = "nineButton";
             this.nineButton.Size = new System.Drawing.Size(74, 66);
             this.nineButton.TabIndex = 0;
@@ -1635,7 +1639,7 @@
             this.zeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zeroButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.zeroButton.ForeColor = System.Drawing.Color.Black;
-            this.zeroButton.Location = new System.Drawing.Point(515, 703);
+            this.zeroButton.Location = new System.Drawing.Point(8, 675);
             this.zeroButton.Name = "zeroButton";
             this.zeroButton.Size = new System.Drawing.Size(74, 66);
             this.zeroButton.TabIndex = 0;
@@ -1651,7 +1655,7 @@
             this.xButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.xButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.xButton.ForeColor = System.Drawing.Color.Black;
-            this.xButton.Location = new System.Drawing.Point(515, 777);
+            this.xButton.Location = new System.Drawing.Point(8, 749);
             this.xButton.Name = "xButton";
             this.xButton.Size = new System.Drawing.Size(74, 66);
             this.xButton.TabIndex = 0;
@@ -1750,12 +1754,45 @@
             this.Mnozstvi.Text = "";
             this.Mnozstvi.Width = 45;
             // 
+            // numpadPanel
+            // 
+            this.numpadPanel.Controls.Add(this.oneButton);
+            this.numpadPanel.Controls.Add(this.twoButton);
+            this.numpadPanel.Controls.Add(this.threeButton);
+            this.numpadPanel.Controls.Add(this.fourButton);
+            this.numpadPanel.Controls.Add(this.fiveButton);
+            this.numpadPanel.Controls.Add(this.sixButton);
+            this.numpadPanel.Controls.Add(this.sevenButton);
+            this.numpadPanel.Controls.Add(this.eightButton);
+            this.numpadPanel.Controls.Add(this.nineButton);
+            this.numpadPanel.Controls.Add(this.zeroButton);
+            this.numpadPanel.Controls.Add(this.xButton);
+            this.numpadPanel.Location = new System.Drawing.Point(515, 37);
+            this.numpadPanel.Name = "numpadPanel";
+            this.numpadPanel.Size = new System.Drawing.Size(93, 825);
+            this.numpadPanel.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.drinksButton);
+            this.panel6.Controls.Add(this.chickenButton);
+            this.panel6.Controls.Add(this.supplementsButton);
+            this.panel6.Controls.Add(this.dessersButton);
+            this.panel6.Controls.Add(this.othersButton);
+            this.panel6.Controls.Add(this.bagButton);
+            this.panel6.Location = new System.Drawing.Point(1410, 299);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(112, 520);
+            this.panel6.TabIndex = 9;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1920, 1055);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.numpadPanel);
             this.Controls.Add(this.mBSmartsButton);
             this.Controls.Add(this.multiplierLabel);
             this.Controls.Add(this.LocationLabel);
@@ -1773,28 +1810,11 @@
             this.Controls.Add(this.UpButton);
             this.Controls.Add(this.DownButton);
             this.Controls.Add(this.ManagerButton);
-            this.Controls.Add(this.bagButton);
-            this.Controls.Add(this.othersButton);
-            this.Controls.Add(this.dessersButton);
-            this.Controls.Add(this.supplementsButton);
-            this.Controls.Add(this.chickenButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.priceAskButton);
-            this.Controls.Add(this.drinksButton);
             this.Controls.Add(this.CouponsButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.ExchangeButton);
-            this.Controls.Add(this.xButton);
-            this.Controls.Add(this.zeroButton);
-            this.Controls.Add(this.nineButton);
-            this.Controls.Add(this.eightButton);
-            this.Controls.Add(this.sevenButton);
-            this.Controls.Add(this.sixButton);
-            this.Controls.Add(this.fiveButton);
-            this.Controls.Add(this.fourButton);
-            this.Controls.Add(this.threeButton);
-            this.Controls.Add(this.twoButton);
-            this.Controls.Add(this.oneButton);
             this.Controls.Add(this.CancelReceiptButton);
             this.Controls.Add(this.RemoveItemButton);
             this.Controls.Add(this.listView1);
@@ -1813,6 +1833,8 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.numpadPanel.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1913,6 +1935,8 @@
         private System.Windows.Forms.Button kBitesFor1Button;
         private System.Windows.Forms.Button kHotWingsFor1Button;
         private System.Windows.Forms.Button kClassicFor1Button;
+        private System.Windows.Forms.Panel numpadPanel;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 

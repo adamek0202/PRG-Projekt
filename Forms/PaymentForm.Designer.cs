@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
-            this.keypad = new System.Windows.Forms.Panel();
+            this.keypadPanel = new System.Windows.Forms.Panel();
             this.kRemoveButton = new System.Windows.Forms.Button();
             this.kDualZeroButton = new System.Windows.Forms.Button();
             this.kZeroButton = new System.Windows.Forms.Button();
@@ -62,30 +62,30 @@
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.keypad.SuspendLayout();
+            this.keypadPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // keypad
+            // keypadPanel
             // 
-            this.keypad.Controls.Add(this.kRemoveButton);
-            this.keypad.Controls.Add(this.kDualZeroButton);
-            this.keypad.Controls.Add(this.kZeroButton);
-            this.keypad.Controls.Add(this.kNineButton);
-            this.keypad.Controls.Add(this.kEightButton);
-            this.keypad.Controls.Add(this.PayedTextBox);
-            this.keypad.Controls.Add(this.kSevenButton);
-            this.keypad.Controls.Add(this.kSixButton);
-            this.keypad.Controls.Add(this.kFiveButton);
-            this.keypad.Controls.Add(this.kFourButton);
-            this.keypad.Controls.Add(this.kThreeButton);
-            this.keypad.Controls.Add(this.kTwoButton);
-            this.keypad.Controls.Add(this.kOneButton);
-            this.keypad.Location = new System.Drawing.Point(477, 312);
-            this.keypad.Margin = new System.Windows.Forms.Padding(4);
-            this.keypad.Name = "keypad";
-            this.keypad.Size = new System.Drawing.Size(293, 431);
-            this.keypad.TabIndex = 0;
+            this.keypadPanel.Controls.Add(this.kRemoveButton);
+            this.keypadPanel.Controls.Add(this.kDualZeroButton);
+            this.keypadPanel.Controls.Add(this.kZeroButton);
+            this.keypadPanel.Controls.Add(this.kNineButton);
+            this.keypadPanel.Controls.Add(this.kEightButton);
+            this.keypadPanel.Controls.Add(this.PayedTextBox);
+            this.keypadPanel.Controls.Add(this.kSevenButton);
+            this.keypadPanel.Controls.Add(this.kSixButton);
+            this.keypadPanel.Controls.Add(this.kFiveButton);
+            this.keypadPanel.Controls.Add(this.kFourButton);
+            this.keypadPanel.Controls.Add(this.kThreeButton);
+            this.keypadPanel.Controls.Add(this.kTwoButton);
+            this.keypadPanel.Controls.Add(this.kOneButton);
+            this.keypadPanel.Location = new System.Drawing.Point(477, 312);
+            this.keypadPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.keypadPanel.Name = "keypadPanel";
+            this.keypadPanel.Size = new System.Drawing.Size(293, 431);
+            this.keypadPanel.TabIndex = 0;
             // 
             // kRemoveButton
             // 
@@ -588,7 +588,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.sumLabel);
-            this.Controls.Add(this.keypad);
+            this.Controls.Add(this.keypadPanel);
             this.Controls.Add(this.cancelButton);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -602,8 +602,8 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Platba";
             this.Load += new System.EventHandler(this.PaymentForm_Load);
-            this.keypad.ResumeLayout(false);
-            this.keypad.PerformLayout();
+            this.keypadPanel.ResumeLayout(false);
+            this.keypadPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -612,7 +612,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel keypad;
+        private System.Windows.Forms.Panel keypadPanel;
         private System.Windows.Forms.Button kTwoButton;
         private System.Windows.Forms.Button kZeroButton;
         private System.Windows.Forms.Button kNineButton;

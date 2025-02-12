@@ -45,7 +45,7 @@
             this.button1.Location = new System.Drawing.Point(11, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 81);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 0;
             this.button1.Tag = "800";
             this.button1.Text = "WC kupon";
             this.button1.UseVisualStyleBackColor = false;
@@ -62,7 +62,7 @@
             this.button2.Location = new System.Drawing.Point(111, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 81);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 0;
             this.button2.Tag = "801";
             this.button2.Text = "Držák na nápoj";
             this.button2.UseVisualStyleBackColor = false;
@@ -79,7 +79,7 @@
             this.button3.Location = new System.Drawing.Point(211, 7);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 81);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 0;
             this.button3.Tag = "802";
             this.button3.Text = "Hračka";
             this.button3.UseVisualStyleBackColor = false;
@@ -97,7 +97,7 @@
             this.exitButton.Location = new System.Drawing.Point(111, 94);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(94, 81);
-            this.exitButton.TabIndex = 3;
+            this.exitButton.TabIndex = 0;
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(317, 183);
+            this.ClientSize = new System.Drawing.Size(313, 179);
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button3);
