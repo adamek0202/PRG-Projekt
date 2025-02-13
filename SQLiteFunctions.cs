@@ -298,13 +298,12 @@ namespace Projekt
                         if (reader.Read())
                         {
                             string jsonComponents = reader.GetString(0);
-                            Console.WriteLine($"🔍 Načtený JSON komponent pro '{menuName}': {jsonComponents}");
+                            Console.WriteLine($"Načtený JSON komponent pro '{menuName}': {jsonComponents}");
 
                             if (!string.IsNullOrEmpty(jsonComponents))
                             {
                                 try
                                 {
-                                    // 🛠 Parsování ID produktů
                                     var componentIds = JsonSerializer.Deserialize<List<int>>(jsonComponents);
 
                                     foreach (var componentId in componentIds)
@@ -312,35 +311,35 @@ namespace Projekt
                                         string productName = GetProductNameById(componentId);
                                         if (!string.IsNullOrEmpty(productName))
                                         {
-                                            Console.WriteLine($"✅ Přidávám komponentu: {productName} (ID: {componentId})");
+                                            Console.WriteLine($"Přidávám komponentu: {productName} (ID: {componentId})");
                                             components.Add(new { count = 1, name = productName });
                                         }
                                         else
                                         {
-                                            Console.WriteLine($"⚠️ Upozornění: Produkt s ID {componentId} nebyl nalezen!");
+                                            Console.WriteLine($"Upozornění: Produkt s ID {componentId} nebyl nalezen!");
                                         }
                                     }
                                 }
                                 catch (JsonException jsonEx)
                                 {
-                                    Console.WriteLine($"❌ Chyba při parsování JSON komponent pro '{menuName}': {jsonEx.Message}");
+                                    Console.WriteLine($"Chyba při parsování JSON komponent pro '{menuName}': {jsonEx.Message}");
                                 }
                             }
                             else
                             {
-                                Console.WriteLine($"⚠️ Varování: Žádné komponenty pro '{menuName}'");
+                                Console.WriteLine($"Varování: Žádné komponenty pro '{menuName}'");
                             }
                         }
                         else
                         {
-                            Console.WriteLine($"⚠️ Varování: Menu '{menuName}' nebylo nalezeno v databázi!");
+                            Console.WriteLine($"Varování: Menu '{menuName}' nebylo nalezeno v databázi!");
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"❌ Chyba při získávání komponent pro '{menuName}': {ex.Message}");
+                Console.WriteLine($"Chyba při získávání komponent pro '{menuName}': {ex.Message}");
             }
 
             return components;
