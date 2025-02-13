@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using static Projekt.BasicTheme;
 
 namespace Projekt.Forms
@@ -9,6 +11,8 @@ namespace Projekt.Forms
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
+            timer2.Interval = 1000;
+            timer2.Start();
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -21,6 +25,11 @@ namespace Projekt.Forms
             {
                 throw Marshal.GetExceptionForHR(hr);
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            label4.Text = DateTime.Now.ToString("dd.M.yyyy HH:mm:ss");
         }
     }
 }
