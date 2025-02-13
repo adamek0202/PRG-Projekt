@@ -8,8 +8,6 @@ namespace Projekt.Forms
 {
     public partial class LoginForm : Form
     {
-        private string connectionString = $"Data Source={AppDomain.CurrentDomain.BaseDirectory}users.db;Version=3;";
-
         // Uchováváme informaci o tom, jaké tlačítko bylo stisknuto
         private string roleRequired = "";
 
@@ -72,24 +70,19 @@ namespace Projekt.Forms
         {
             fullName = null;
             role = null;
+            string query = "SELECT FullName, Position FROM Users WHERE Password = @password";
 
-            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            using (SQLiteCommand cmd = new SQLiteCommand(query, DatabaseConnection.Connection))
             {
-                conn.Open();
-                string query = "SELECT FullName, Position FROM Users WHERE Password = @password";
+                cmd.Parameters.AddWithValue("@password", password);
 
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
-                    cmd.Parameters.AddWithValue("@password", password);
-
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    if (reader.Read())
                     {
-                        if (reader.Read())
-                        {
-                            fullName = reader.GetString(0);
-                            role = reader.GetString(1); // Předpokládáme, že tabulka Users má sloupec "Role"
-                            return true;
-                        }
+                        fullName = reader.GetString(0);
+                        role = reader.GetString(1); // Předpokládáme, že tabulka Users má sloupec "Role"
+                        return true;
                     }
                 }
             }

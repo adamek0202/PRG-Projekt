@@ -34,7 +34,7 @@ namespace Projekt.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // Otevře LoginForm pro přihlášení jak pro kasíra, tak pro manažera
+            // Otevře LoginForm pro přihlášení jak pro pokladního, tak pro manažera
             new LoginForm().ShowDialog();
         }
 
