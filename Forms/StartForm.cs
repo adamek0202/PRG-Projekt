@@ -34,8 +34,12 @@ namespace Projekt.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MainForm form = new MainForm();
-            form.Show();
+            new LoginForm().ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ManagerForm().ShowDialog();
         }
     }
 }

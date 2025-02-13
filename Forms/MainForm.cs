@@ -18,6 +18,7 @@ namespace Projekt
 
         public bool replace = false;
         public static bool Here { get; private set; } = true;
+        public static string Cashier { get; set; }
 
         public MainForm()
         {
@@ -164,6 +165,7 @@ namespace Projekt
         private void MainForm_Load(object sender, EventArgs e)
         {
             NativeFunctions.DisableVisualStyles(listView1);
+            label1.Text += Cashier;
         }
 
         private void button3_Click(object sender, EventArgs e)
