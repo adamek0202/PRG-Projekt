@@ -48,7 +48,7 @@ namespace Projekt
                 EPrinter.Append("IČO: 12345678");
                 EPrinter.Append("DIČ: CZ12345678");
                 EPrinter.AlignLeft();
-                EPrinter.Append(FormatTwoColumns("Obsluha: Adam", "Pokladna: 1", 48));
+                EPrinter.Append(FormatTwoColumns($"Obsluha: {MainForm.Cashier}", "Pokladna: 1", 48));
                 EPrinter.Separator();
                 EPrinter.Append(FormatTwoColumns(receiptId.ToString("D5"), DateTime.UtcNow.ToString(), 48));
                 EPrinter.AlignCenter();
