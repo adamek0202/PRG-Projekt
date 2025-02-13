@@ -105,7 +105,7 @@ namespace Projekt
         {
             if (listView1.SelectedItems.Count > 0 && listView1.SelectedItems[0].Group != null)
             {
-                if (MessageBox.Show("Opravdu chctete tuto položku stornovat?", "Potvrzení", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (new ConfirmForm("tuto položku").ShowDialog() == DialogResult.OK)
                 {
                     if (listView1.SelectedItems[0].Group.Items.Count > 0)
                     {
@@ -134,16 +134,12 @@ namespace Projekt
         {
             if (listView1.Items.Count > 0)
             {
-                if (MessageBox.Show("Opravdu chcete tento účet stornovat?", "Potvrzení", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (new ConfirmForm("tento účet").ShowDialog() == DialogResult.OK)
                 {
                     listView1.Items.Clear();
                     listView1.Groups.Clear();
                     UpdateSumPrice(-SumPrice);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Není co stornovat", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

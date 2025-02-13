@@ -7,8 +7,11 @@ namespace Projekt.Forms
 {
     public partial class ConfirmForm : Form
     {
-        public ConfirmForm()
+        private string What;
+
+        public ConfirmForm(string what)
         {
+            What = what;
             InitializeComponent();
             ReallyCenterToScreen(this);
         }
@@ -23,6 +26,23 @@ namespace Projekt.Forms
             {
                 throw Marshal.GetExceptionForHR(hr);
             }
+        }
+
+        private void ConfirmForm_Load(object sender, EventArgs e)
+        {
+            label1.Text = $"Chcete {What} stornovat?";
+        }
+
+        private void YesButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void noButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
     }
 }
