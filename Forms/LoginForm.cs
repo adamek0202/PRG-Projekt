@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+using System.Data.SQLite;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
 
@@ -14,18 +9,21 @@ namespace Projekt.Forms
 {
     public partial class LoginForm : Form
     {
+        private string connectionString = $"Data Source={AppDomain.CurrentDomain.BaseDirectory}users.db;Version=3;";
+
         public LoginForm()
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
+            textBox1.Focus();
         }
+       
 
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
             DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr;
-            hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
+            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
             if (hr != 0)
             {
                 throw Marshal.GetExceptionForHR(hr);
@@ -34,30 +32,50 @@ namespace Projekt.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            switch (textBox1.Text)
+            string password = textBox1.Text;
+            if (AuthenticateUser(password, out string fullName))
             {
-                case "chalupnicek":
-                    MainForm.Cashier = "Jakub Chalupníček";
-                    new MainForm().Show();
-                    break;
+                MainForm.Cashier = fullName;
+                new MainForm().ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Zadali jste špatné heslo.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-                case "karoch":
-                    MainForm.Cashier = "Štěpán Karoch";
-                    new MainForm().Show();
-                    break;
+        private bool AuthenticateUser(string password, out string fullName)
+        {
+            fullName = null;
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT FullName FROM Users WHERE Password = @password";
 
-                case "benda":
-                    MainForm.Cashier = "Adam Benda";
-                    new MainForm().Show();
-                    break;
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@password", password);
 
-                case "manazer":
-                    MainForm.Cashier = "Květa Prosová";
-                    new MainForm().Show();
-                    break;
-                default: MessageBox.Show("Zadali jste špatné heslo.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-            };
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            fullName = reader.GetString(0);
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
         }
     }
 }
