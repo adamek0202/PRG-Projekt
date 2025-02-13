@@ -31,5 +31,11 @@ namespace Projekt.Forms
         {
             label4.Text = DateTime.Now.ToString("dd.M.yyyy HH:mm:ss");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MainForm form = new MainForm();
+            form.Show();
+        }
     }
 }

@@ -120,7 +120,15 @@ namespace Projekt
                             {
                                 string name = reader["Name"].ToString();
                                 int price = Convert.ToInt32(reader["Price"]) * times;
-                                form.AddHeadItem(name, price, times, group);
+                                if (!MainForm.PriceCheck)
+                                {
+                                    form.AddHeadItem(name, price, times, group); 
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"Cena položky {name} je {price} Kč", "Cena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MainForm.PriceCheck = false;
+                                }
                             }
                             else
                             {
@@ -152,9 +160,17 @@ namespace Projekt
                                 }
                                 string componentsJson = reader["Components"].ToString();
 
-                                form.AddHeadItem(name, price, times, group);
-                                var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
-                                AddMenuComponents(form, componentsIds, group);
+                                if (!MainForm.PriceCheck)
+                                {
+                                    form.AddHeadItem(name, price, times, group);
+                                    var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
+                                    AddMenuComponents(form, componentsIds, group); 
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"Cena položky {name} je {price} Kč", "Cena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MainForm.PriceCheck = false;
+                                }
                             }
                         }
                     }

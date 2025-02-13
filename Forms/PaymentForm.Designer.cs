@@ -373,7 +373,7 @@
             this.PluxeeButton.Name = "PluxeeButton";
             this.PluxeeButton.Size = new System.Drawing.Size(145, 59);
             this.PluxeeButton.TabIndex = 4;
-            this.PluxeeButton.Text = "Pluxee";
+            this.PluxeeButton.Text = "Pluxee*";
             this.PluxeeButton.UseVisualStyleBackColor = false;
             // 
             // ChequeButton
@@ -390,7 +390,7 @@
             this.ChequeButton.Name = "ChequeButton";
             this.ChequeButton.Size = new System.Drawing.Size(145, 59);
             this.ChequeButton.TabIndex = 5;
-            this.ChequeButton.Text = "Cheque";
+            this.ChequeButton.Text = "Cheque*";
             this.ChequeButton.UseVisualStyleBackColor = false;
             // 
             // button16
@@ -407,7 +407,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(145, 59);
             this.button16.TabIndex = 6;
-            this.button16.Text = "Ticket Restaurant";
+            this.button16.Text = "Ticket Restaurant*";
             this.button16.UseVisualStyleBackColor = false;
             // 
             // giftCardButton
@@ -424,7 +424,7 @@
             this.giftCardButton.Name = "giftCardButton";
             this.giftCardButton.Size = new System.Drawing.Size(145, 59);
             this.giftCardButton.TabIndex = 7;
-            this.giftCardButton.Text = "Dárková karta";
+            this.giftCardButton.Text = "Dárková karta*";
             this.giftCardButton.UseVisualStyleBackColor = false;
             this.giftCardButton.Click += new System.EventHandler(this.GiftCardButton_Click);
             // 
@@ -442,7 +442,7 @@
             this.discountButton.Name = "discountButton";
             this.discountButton.Size = new System.Drawing.Size(169, 59);
             this.discountButton.TabIndex = 8;
-            this.discountButton.Text = "Sleva (%)";
+            this.discountButton.Text = "Sleva (%)*";
             this.discountButton.UseVisualStyleBackColor = false;
             // 
             // cashButton

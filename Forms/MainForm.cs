@@ -14,6 +14,8 @@ namespace Projekt
         private int Multiplier = 1;
         public static int ExternalProduct { get; set; }
 
+        internal static bool PriceCheck { get; set; } = false;
+
         public bool replace = false;
         public static bool Here { get; private set; } = true;
 
@@ -269,6 +271,11 @@ namespace Projekt
         {
             ManagerForm mf = new ManagerForm();
             mf.ShowDialog();
+        }
+
+        private void priceAskButton_Click(object sender, EventArgs e)
+        {
+            PriceCheck = true;
         }
     }
 }

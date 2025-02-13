@@ -245,7 +245,7 @@
             this.ExchangeButton.Name = "ExchangeButton";
             this.ExchangeButton.Size = new System.Drawing.Size(93, 85);
             this.ExchangeButton.TabIndex = 0;
-            this.ExchangeButton.Text = "Výměna";
+            this.ExchangeButton.Text = "Výměna*";
             this.ExchangeButton.UseVisualStyleBackColor = false;
             this.ExchangeButton.Click += new System.EventHandler(this.ReplaceButton_Click);
             // 
@@ -396,7 +396,7 @@
             this.CouponsButton.Name = "CouponsButton";
             this.CouponsButton.Size = new System.Drawing.Size(105, 85);
             this.CouponsButton.TabIndex = 0;
-            this.CouponsButton.Text = "Kupóny";
+            this.CouponsButton.Text = "Kupóny*";
             this.CouponsButton.UseVisualStyleBackColor = false;
             // 
             // ManagerButton
@@ -1492,6 +1492,7 @@
             this.priceAskButton.TabIndex = 0;
             this.priceAskButton.Text = "Dotaz na cenu";
             this.priceAskButton.UseVisualStyleBackColor = false;
+            this.priceAskButton.Click += new System.EventHandler(this.priceAskButton_Click);
             // 
             // oneButton
             // 
