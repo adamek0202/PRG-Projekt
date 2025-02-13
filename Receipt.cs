@@ -47,6 +47,7 @@ namespace Projekt
                 EPrinter.Append("Provozovna: Spoje Kolín");
                 EPrinter.Append("IČO: 12345678");
                 EPrinter.Append("DIČ: CZ12345678");
+                EPrinter.NewLine();
                 EPrinter.AlignLeft();
                 EPrinter.Append(FormatTwoColumns($"Obsluha: {MainForm.Cashier}", "Pokladna: 1", 48));
                 EPrinter.Separator();
