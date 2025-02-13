@@ -444,6 +444,7 @@
             this.discountButton.TabIndex = 8;
             this.discountButton.Text = "Sleva (%)*";
             this.discountButton.UseVisualStyleBackColor = false;
+            this.discountButton.Click += new System.EventHandler(this.discountButton_Click);
             // 
             // cashButton
             // 

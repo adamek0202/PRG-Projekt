@@ -5,6 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{04F27761-AA68-4172-AAC2-B4CB9B1A84CE}</ProjectGuid>
+    <LangVersion>9</LangVersion>
     <OutputType>Exe</OutputType>
     <RootNamespace>Projekt</RootNamespace>
     <AssemblyName>Projekt</AssemblyName>
@@ -64,6 +65,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,6 +107,12 @@
     </Compile>
     <Compile Include="Forms\DessertsForm.Designer.cs">
       <DependentUpon>DessertsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DiscountForm.Designer.cs">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DrinksForm.cs">
       <SubType>Form</SubType>
@@ -188,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DessertsForm.resx">
       <DependentUpon>DessertsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DiscountForm.resx">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DrinksForm.resx">
       <DependentUpon>DrinksForm.cs</DependentUpon>

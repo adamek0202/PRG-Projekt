@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
@@ -112,6 +113,17 @@ namespace Projekt.Forms
             Receipt.PrintReceipt(listView1, (string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card, Price);
             DialogResult = DialogResult.OK;
             Close();
+        }
+
+        private void discountButton_Click(object sender, EventArgs e)
+        {
+            var df = new DiscountForm();
+            if(df.ShowDialog() == DialogResult.OK)
+            {
+                listView1.Items.Add(new ListViewItem(new string[] { "Sleva", Math.Round((double)df.Discount / 100 * Price).ToString() + " Kč" }) { BackColor = Color.Lime});
+                Price -= (int)Math.Round((double)df.Discount / 100 * Price);
+                sumLabel.Text = $"Celkem: {Price} Kč";
+            }
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using Projekt.Forms;
-using Projekt.Properties;
 using System;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Resources;
+using System.Printing;
 using System.Windows.Forms;
 using static Projekt.GlobalPosPrinter;
 
@@ -22,7 +21,7 @@ namespace Projekt
 
         public static void PrintReceipt(ListView listView, Payments paymentType, int paid)
         {
-            if (EPrinter != null)
+            if (EPrinter != null && !new LocalPrintServer().GetPrintQueue("BP-T3").IsOffline)
             {
                 PrintDocument pd = new PrintDocument();
                 pd.PrinterSettings.PrinterName = "BP-T3";
@@ -60,15 +59,18 @@ namespace Projekt
                 EPrinter.NormalWidth();
                 EPrinter.NewLine();
                 EPrinter.AlignLeft();
-                for (int i = 0; i < listView.Items.Count; i++)
+                foreach (ListViewItem item in listView.Items)
                 {
-                    if (listView.Items[i].SubItems.Count > 1)
+                    if (item.Text != "Sleva")
                     {
-                        EPrinter.Append(FormatTwoColumns($"{listView.Items[i].SubItems[2].Text} {listView.Items[i].Text}", listView.Items[i].SubItems[1].Text, 48));
-                    }
-                    else
-                    {
-                        EPrinter.Append($"   -{listView.Items[i].Text}");
+                        if (item.SubItems.Count > 1)
+                        {
+                            EPrinter.Append(FormatTwoColumns($"{item.SubItems[2].Text} {item.Text}", item.SubItems[1].Text, 48));
+                        }
+                        else
+                        {
+                            EPrinter.Append($"   -{item.Text}");
+                        } 
                     }
                 }
                 PrintPayment(paymentType, paid.ToString().Length > 0 ? paid : 0);

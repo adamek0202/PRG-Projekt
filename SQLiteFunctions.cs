@@ -48,26 +48,29 @@ namespace Projekt
 
             foreach (ListViewItem item in listView.Items)
             {
-                int count = 0;
-
-                if (item.SubItems.Count > 1)
+                if (item.Text != "Sleva")
                 {
-                    count = int.Parse(item.SubItems[2].Text);
-                }
-                else if (item.Group != null && item.Group.Items.Count > 0 && item.Group.Items[0].SubItems.Count > 1)
-                {
-                    count = int.Parse(item.Group.Items[0].SubItems[2].Text);
-                }
+                    int count = 0;
 
-                for (int i = 0; i < count; i++)
-                {
-                    string productName = item.Text;
-
-                    using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                    if (item.SubItems.Count > 1)
                     {
-                        command.Parameters.AddWithValue("@name", productName);
-                        Console.WriteLine(command.ExecuteNonQuery());
+                        count = int.Parse(item.SubItems[2].Text);
                     }
+                    else if (item.Group != null && item.Group.Items.Count > 0 && item.Group.Items[0].SubItems.Count > 1)
+                    {
+                        count = int.Parse(item.Group.Items[0].SubItems[2].Text);
+                    }
+
+                    for (int i = 0; i < count; i++)
+                    {
+                        string productName = item.Text;
+
+                        using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                        {
+                            command.Parameters.AddWithValue("@name", productName);
+                            Console.WriteLine(command.ExecuteNonQuery());
+                        }
+                    } 
                 }
             }
 
