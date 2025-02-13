@@ -272,9 +272,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OrdersDisplay\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ikona.ico" />
   </ItemGroup>
