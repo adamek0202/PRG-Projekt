@@ -37,22 +37,22 @@ namespace Projekt.Forms
             switch (textBox1.Text)
             {
                 case "chalupnicek":
-                    MainForm.Cashier = "Jakub Ch.";
+                    MainForm.Cashier = "Jakub Chalupníček";
                     new MainForm().Show();
                     break;
 
                 case "karoch":
-                    MainForm.Cashier = "Štěpán K.";
+                    MainForm.Cashier = "Štěpán Karoch";
                     new MainForm().Show();
                     break;
 
                 case "benda":
-                    MainForm.Cashier = "Adam B.";
+                    MainForm.Cashier = "Adam Benda";
                     new MainForm().Show();
                     break;
 
                 case "manazer":
-                    MainForm.Cashier = "Květa P.";
+                    MainForm.Cashier = "Květa Prosová";
                     new MainForm().Show();
                     break;
                 default: MessageBox.Show("Zadali jste špatné heslo.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);

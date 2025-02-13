@@ -45,8 +45,8 @@ namespace Projekt
                 EPrinter.Append("Spoje Kolín");
                 EPrinter.Append("Jaselská 826, 280 12 Kolín");
                 EPrinter.Append("Provozovna: Spoje Kolín");
-                EPrinter.Append("IČO: 12345678");
-                EPrinter.Append("DIČ: CZ12345678");
+                EPrinter.Append("IČO: 85142396");
+                EPrinter.Append("DIČ: CZ74128942");
                 EPrinter.AlignLeft();
                 EPrinter.Append(FormatTwoColumns($"Obsluha: {MainForm.Cashier}", "Pokladna: 1", 48));
                 EPrinter.Separator();
