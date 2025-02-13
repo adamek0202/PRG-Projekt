@@ -376,11 +376,4 @@ namespace Projekt
             }
         }
     }
-
-    class Component
-    {
-        public int count { get; set; }
-        public string name { get; set; }
-    }
-
 }
