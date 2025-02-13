@@ -356,8 +356,6 @@ namespace Projekt
             }
         }
 
-
-
         private static async Task SendHttpPost(string ipAddress, string jsonPayload)
         {
             try
