@@ -9,7 +9,6 @@ namespace Projekt
 {
     internal class NativeFunctions
     {
-
         // Konstanty pro specifikaci stylů a scrollbarů
         public const int GWL_STYLE = -16;
         public const int WS_VSCROLL = 0x00200000; // Styl pro vertikální scrollbar

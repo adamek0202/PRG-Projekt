@@ -7,11 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Projekt.GlobalPosPrinter;
-using static Projekt.Receipt;
-using System.Data.SqlClient;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.ComponentModel;
 
 //Databázová logika
 //Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
@@ -48,7 +44,7 @@ namespace Projekt
 
         public static void RecordSale(System.Windows.Forms.ListView listView, Payments payment, int price)
         {
-            const string querry = "UPDATE Products SET Sold = sold + 1 WHERE Name = @name";
+            const string querry = "UPDATE Products SET Sold = Sold + 1 WHERE Name = @name";
 
             foreach (ListViewItem item in listView.Items)
             {

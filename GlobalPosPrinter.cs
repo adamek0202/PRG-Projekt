@@ -1,5 +1,4 @@
 ﻿using ESC_POS_USB_NET.Printer;
-using Projekt.Forms;
 using System;
 
 namespace Projekt
