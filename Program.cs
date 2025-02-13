@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt.Forms;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -44,7 +45,7 @@ namespace Projekt
             {
                 MessageBox.Show($"UPOS: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            Application.Run(new MainForm());
+            Application.Run(new StartForm());
             File.WriteAllText("receiptNumber", GlobalPosPrinter.receiptId.ToString());
         }
     }
