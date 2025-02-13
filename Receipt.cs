@@ -25,6 +25,7 @@ namespace Projekt
             if (EPrinter != null)
             {
                 PrintDocument pd = new PrintDocument();
+                pd.PrinterSettings.PrinterName = "BP-T3";
                 pd.PrintPage += (sender, args) =>
                 {
                     Image img = Image.FromFile("logo.png");
