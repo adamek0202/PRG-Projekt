@@ -173,8 +173,7 @@ namespace Projekt
         {
             if (listView1.Items.Count >= 1 && SumPrice != 0)
             {
-                var payForm = new PaymentForm(SumPrice, ListViewData);
-                if (payForm.ShowDialog() == DialogResult.OK)
+                if (new PaymentForm(SumPrice, ListViewData).ShowDialog() == DialogResult.OK)
                 {
                     listView1.Items.Clear();
                     listView1.Groups.Clear();

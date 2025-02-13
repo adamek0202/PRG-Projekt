@@ -74,8 +74,7 @@ namespace Projekt.Forms
                     DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4, 7 });
                     //await DatabaseFunctions.ProcessListViewAndSend(listView1, "192.168.4.132");
                     Receipt.PrintReceipt(listView1, Payments.Cash, int.Parse(PayedTextBox.Text));
-                    var returnBox = new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price);
-                    returnBox.ShowDialog();
+                    new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price).ShowDialog();
                     DialogResult = DialogResult.OK;
                 }
             }
