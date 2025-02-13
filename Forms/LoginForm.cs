@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SQLite;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Projekt.BasicTheme;
@@ -11,13 +10,16 @@ namespace Projekt.Forms
     {
         private string connectionString = $"Data Source={AppDomain.CurrentDomain.BaseDirectory}users.db;Version=3;";
 
-        public LoginForm()
+        // Uchováváme informaci o tom, jaké tlačítko bylo stisknuto
+        private string roleRequired = "";
+
+        public LoginForm(string roleRequired = "")
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
             textBox1.Focus();
+            this.roleRequired = roleRequired; // Určujeme požadovanou roli
         }
-       
 
         protected override void OnHandleCreated(EventArgs e)
         {
@@ -33,10 +35,30 @@ namespace Projekt.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             string password = textBox1.Text;
-            if (AuthenticateUser(password, out string fullName))
+            string fullName;
+            string role;
+
+            if (AuthenticateUser(password, out fullName, out role))
             {
+                if (roleRequired == "manager" && role != "manager")
+                {
+                    MessageBox.Show("Nemáte dostatečná oprávnění k přístupu do manažerské sekce.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 MainForm.Cashier = fullName;
-                new MainForm().ShowDialog();
+
+                if (role == "manager" && roleRequired == "manager")
+                {
+                    // Pokud je to manažer a tlačítko je pro manažera
+                    new ManagerForm().ShowDialog();
+                }
+                else
+                {
+                    // Otevře se MainForm pro kasíra i manažera
+                    new MainForm().ShowDialog();
+                }
+
                 this.Close();
             }
             else
@@ -45,13 +67,16 @@ namespace Projekt.Forms
             }
         }
 
-        private bool AuthenticateUser(string password, out string fullName)
+        // Metoda pro autentizaci a vrácení role uživatele
+        private bool AuthenticateUser(string password, out string fullName, out string role)
         {
             fullName = null;
+            role = null;
+
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT FullName FROM Users WHERE Password = @password";
+                string query = "SELECT FullName, Position FROM Users WHERE Password = @password";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -62,6 +87,7 @@ namespace Projekt.Forms
                         if (reader.Read())
                         {
                             fullName = reader.GetString(0);
+                            role = reader.GetString(1); // Předpokládáme, že tabulka Users má sloupec "Role"
                             return true;
                         }
                     }

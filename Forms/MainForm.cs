@@ -271,8 +271,7 @@ namespace Projekt
 
         private void ManagerButton_Click(object sender, EventArgs e)
         {
-            ManagerForm mf = new ManagerForm();
-            mf.ShowDialog();
+            new LoginForm("manager").ShowDialog();
         }
 
         private void priceAskButton_Click(object sender, EventArgs e)

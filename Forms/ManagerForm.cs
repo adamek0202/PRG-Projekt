@@ -12,8 +12,11 @@ using static Projekt.BasicTheme;
 
 namespace Projekt.Forms
 {
+
     public partial class ManagerForm : Form
     {
+
+
         public ManagerForm()
         {
             InitializeComponent();

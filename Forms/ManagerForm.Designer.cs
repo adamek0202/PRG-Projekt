@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.SuspendLayout();
-			// 
-			// ManagerForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-			this.ClientSize = new System.Drawing.Size(716, 417);
-			this.ControlBox = false;
-			this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-			this.MaximizeBox = false;
-			this.MinimizeBox = false;
-			this.Name = "ManagerForm";
-			this.ShowIcon = false;
-			this.ShowInTaskbar = false;
-			this.Text = " ";
-			this.TopMost = true;
-			this.ResumeLayout(false);
+            this.SuspendLayout();
+            // 
+            // ManagerForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
+            this.ClientSize = new System.Drawing.Size(716, 417);
+            this.ControlBox = false;
+            this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ManagerForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Text = " ";
+            this.TopMost = true;
+            this.ResumeLayout(false);
 
         }
 

@@ -34,12 +34,14 @@ namespace Projekt.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Otevře LoginForm pro přihlášení jak pro kasíra, tak pro manažera
             new LoginForm().ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new ManagerForm().ShowDialog();
+            // Otevře LoginForm pouze pro manažera
+            new LoginForm("manager").ShowDialog();
         }
     }
 }
