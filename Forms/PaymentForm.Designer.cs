@@ -426,7 +426,6 @@
             this.giftCardButton.TabIndex = 7;
             this.giftCardButton.Text = "Dárková karta*";
             this.giftCardButton.UseVisualStyleBackColor = false;
-            this.giftCardButton.Click += new System.EventHandler(this.GiftCardButton_Click);
             // 
             // discountButton
             // 

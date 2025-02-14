@@ -181,7 +181,7 @@ namespace Projekt
             }
         }
 
-        public static async void SendOrderName(ListView listView, int[] categoryIds)
+        public static async void SendOrderName(ListView listView)
         {
             foreach (ListViewItem item in listView.Items)
             {
@@ -196,7 +196,7 @@ namespace Projekt
                         while (reader.Read())
                         {
                             int categoryId = reader.GetInt32(0);
-                            if (categoryIds.Contains(categoryId))
+                            if (new int[] { 1, 2, 3, 4, 7 }.Contains(categoryId))
                             {
                                 await SendOrder(orderId);
                                 PrintOrder();

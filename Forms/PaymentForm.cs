@@ -24,8 +24,7 @@ namespace Projekt.Forms
         {
             base.OnHandleCreated(e);
             DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr;
-            hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
+            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
             if (hr != 0)
             {
                 throw Marshal.GetExceptionForHR(hr);
@@ -60,30 +59,6 @@ namespace Projekt.Forms
             }
         }
 
-        private void GiftCardButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CashButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (Convert.ToInt32(PayedTextBox.Text) >= Price)
-                {
-                    DatabaseFunctions.RecordSale(listView1, Payments.Cash, Price);
-                    DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4, 7 });
-                    //await DatabaseFunctions.ProcessListViewAndSend(listView1, "192.168.4.132");
-                    Receipt.PrintReceipt(listView1, Payments.Cash, int.Parse(PayedTextBox.Text));
-                    new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price).ShowDialog();
-                    DialogResult = DialogResult.OK;
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
-
         private void KRemoveButton_Click(object sender, EventArgs e)
         {
             if (PayedTextBox.Text.Length >= 1)
@@ -92,12 +67,23 @@ namespace Projekt.Forms
             }
         }
 
+        private void CashButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Convert.ToInt32(PayedTextBox.Text) >= Price)
+                {
+                    PostPayment(Payments.Cash);
+                    new TenderedReturnForm(Convert.ToInt32(PayedTextBox.Text) - Price).ShowDialog();
+                    DialogResult = DialogResult.OK;
+                }
+            }
+            catch (Exception) {}
+        }
+
         private void ExactCashButton_Click(object sender, EventArgs e)
         {
-            DatabaseFunctions.RecordSale(listView1, Payments.Cash, Price);
-            DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4 , 7});
-            //await DatabaseFunctions.ProcessListViewAndSend(listView1, "127.0.0.1");
-            Receipt.PrintReceipt(listView1, Payments.Cash, Price);
+            PostPayment(Payments.Cash);
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -105,14 +91,18 @@ namespace Projekt.Forms
         private void CardButton_Click(object sender, EventArgs e)
         {
             var btn = sender as Button;
-            var cardProcess = new CardPaymentProcessForm();
-            cardProcess.ShowDialog();
-            DatabaseFunctions.RecordSale(listView1 ,Payments.Card, Price);
-            DatabaseFunctions.SendOrderName(listView1, new int[5] { 1, 2, 3, 4, 7});
-            //await DatabaseFunctions.ProcessListViewAndSend(listView1, "192.168.4.132");
-            Receipt.PrintReceipt(listView1, (string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card, Price);
+            new CardPaymentProcessForm().ShowDialog();
+            PostPayment((string)btn.Tag == "FoodCard" ? Payments.FoodCard : Payments.Card);
             DialogResult = DialogResult.OK;
             Close();
+        }
+
+        private void PostPayment(Payments payment)
+        {
+            DatabaseFunctions.RecordSale(listView1, payment, Price);
+            DatabaseFunctions.SendOrderName(listView1);
+            //await DatabaseFunctions.ProcessListViewAndSend(listView1, "127.0.0.1");
+            Receipt.PrintReceipt(listView1, payment, Price);
         }
 
         private void discountButton_Click(object sender, EventArgs e)
