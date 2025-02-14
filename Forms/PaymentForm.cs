@@ -120,7 +120,7 @@ namespace Projekt.Forms
             var df = new DiscountForm();
             if(df.ShowDialog() == DialogResult.OK)
             {
-                listView1.Items.Add(new ListViewItem(new string[] { "Sleva", Math.Round((double)df.Discount / 100 * Price).ToString() + " Kč" }) { BackColor = Color.Lime});
+                listView1.Items.Add(new ListViewItem(new string[] { "Sleva", $"-{Math.Round((double)df.Discount / 100 * Price).ToString()} Kč" }) { BackColor = Color.Lime});
                 Price -= (int)Math.Round((double)df.Discount / 100 * Price);
                 sumLabel.Text = $"Celkem: {Price} Kč";
             }

@@ -442,7 +442,7 @@
             this.discountButton.Name = "discountButton";
             this.discountButton.Size = new System.Drawing.Size(169, 59);
             this.discountButton.TabIndex = 8;
-            this.discountButton.Text = "Sleva (%)*";
+            this.discountButton.Text = "Sleva (%)";
             this.discountButton.UseVisualStyleBackColor = false;
             this.discountButton.Click += new System.EventHandler(this.discountButton_Click);
             // 
