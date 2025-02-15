@@ -28,7 +28,7 @@ namespace Pokladna
                 pd.PrinterSettings.PrinterName = "BP-T3";
                 pd.PrintPage += (sender, args) =>
                 {
-                    Image img = LoadEmbeddedImage("logo_do_tiskarny.png");
+                    Image img = LoadImageFromResources("Projekt.Resources.logo_do_tiskarny.png");
                     Rectangle marginBorders = args.PageBounds;
 
                     float scale = Math.Min((float)marginBorders.Width / img.Width, (float)marginBorders.Height / img.Height);
@@ -134,12 +134,23 @@ namespace Pokladna
             EPrinter.Separator();
         }
 
-        private static Image LoadEmbeddedImage(string resourceName)
+        private static Image LoadImageFromResources(string resourceName)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
+
+            // Výpis dostupných resources pro kontrolu
+            Console.WriteLine("Dostupné resources:");
+            foreach (var res in assembly.GetManifestResourceNames())
+                Console.WriteLine(res);
+
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
-                return stream != null ? Image.FromStream(stream) : null;
+                if (stream == null)
+                {
+                    MessageBox.Show("Resource nebyl nalezen: " + resourceName);
+                    return null;
+                }
+                return Image.FromStream(stream);
             }
         }
     }
