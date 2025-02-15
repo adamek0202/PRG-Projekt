@@ -5,7 +5,7 @@ using System.Windows.Forms;
 //Implementace nativních funkcí WinAPI
 //Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
 
-namespace Projekt
+namespace Pokladna
 {
     internal class NativeFunctions
     {

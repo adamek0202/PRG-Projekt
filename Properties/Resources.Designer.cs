@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Projekt.Properties {
+namespace Pokladna.Properties {
     using System;
     
     

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static Projekt.BasicTheme;
+using static Pokladna.BasicTheme;
 
-namespace Projekt.Forms
+namespace Pokladna.Forms
 {
     public partial class CardPaymentProcessForm : Form
     {

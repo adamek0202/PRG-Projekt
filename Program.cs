@@ -1,9 +1,10 @@
-﻿using Projekt.Forms;
+﻿using Pokladna.Forms;
 using System;
 using System.IO;
+using System.Printing;
 using System.Windows.Forms;
 
-namespace Projekt
+namespace Pokladna
 {
     internal static class Program
     {
@@ -20,6 +21,7 @@ namespace Projekt
                     return;
                 }
             }
+
             if (File.Exists("receiptNumber"))
             {
                 try

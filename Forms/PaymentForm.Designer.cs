@@ -1,4 +1,4 @@
-﻿namespace Projekt.Forms
+﻿namespace Pokladna.Forms
 {
     partial class PaymentForm
     {
@@ -58,7 +58,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.listView1 = new Projekt.ListViewWithScrollBar();
+            this.listView1 = new Pokladna.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));

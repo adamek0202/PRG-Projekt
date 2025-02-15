@@ -6,13 +6,13 @@ using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Projekt.GlobalPosPrinter;
+using static Pokladna.GlobalPosPrinter;
 using System.Collections.Generic;
 
 //Databázová logika
 //Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
 
-namespace Projekt
+namespace Pokladna
 {
     public static class DatabaseConnection
     {
@@ -74,12 +74,13 @@ namespace Projekt
                 }
             }
 
-            const string query = "INSERT INTO Transactions (Date, Price, Payment) VALUES (@date, @price, @payment)";
+            const string query = "INSERT INTO Transactions (Date, Price, Payment, User) VALUES (@date, @price, @payment, @user)";
             using (var command = new SQLiteCommand(query, DatabaseConnection.Connection))
             {
                 command.Parameters.AddWithValue("date", DateTime.Now.ToShortDateString());
                 command.Parameters.AddWithValue("price", price.ToString());
                 command.Parameters.AddWithValue("payment", payment.ToString());
+                command.Parameters.AddWithValue("user", MainForm.Cashier);
                 command.ExecuteNonQuery();
             }
         }
@@ -246,7 +247,7 @@ namespace Projekt
         {
             try
             {
-                string url = "http://192.168.9.220:8080/new-order"; // Cílová adresa
+                string url = "http://127.0.0.1:8080/new-order"; // Cílová adresa
                 var payload = new { orderId = orderId };
                 string json = JsonSerializer.Serialize(payload);
 

@@ -1,4 +1,4 @@
-﻿namespace Projekt
+﻿namespace Pokladna
 {
     partial class MainForm
     {
@@ -122,7 +122,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.numpadPanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.listView1 = new Projekt.ListViewWithScrollBar();
+            this.listView1 = new Pokladna.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));

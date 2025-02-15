@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static Projekt.BasicTheme;
+using static Pokladna.BasicTheme;
 
 
-namespace Projekt.Forms
+namespace Pokladna.Forms
 {
     public partial class PaymentForm : Form
     {
         public static int Price { get; private set; }
+        private static int Discount { get; set; } = 0;
 
         public PaymentForm(int price, List<ListViewItem> data)
         {
@@ -102,7 +103,7 @@ namespace Projekt.Forms
             DatabaseFunctions.RecordSale(listView1, payment, Price);
             DatabaseFunctions.SendOrderName(listView1);
             //await DatabaseFunctions.ProcessListViewAndSend(listView1, "127.0.0.1");
-            Receipt.PrintReceipt(listView1, payment, Price);
+            Receipt.PrintReceipt(listView1, payment, Price, Discount);
         }
 
         private void discountButton_Click(object sender, EventArgs e)
@@ -112,6 +113,7 @@ namespace Projekt.Forms
             {
                 listView1.Items.Add(new ListViewItem(new string[] { "Sleva", $"-{Math.Round((double)df.Discount / 100 * Price).ToString()} Kč" }) { BackColor = Color.Lime});
                 Price -= (int)Math.Round((double)df.Discount / 100 * Price);
+                Discount = (int)Math.Round((double)df.Discount / 100 * Price);
                 sumLabel.Text = $"Celkem: {Price} Kč";
             }
         }

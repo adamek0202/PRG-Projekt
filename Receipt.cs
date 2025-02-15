@@ -1,12 +1,14 @@
-﻿using Projekt.Forms;
+﻿using Pokladna.Forms;
 using System;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Printing;
+using System.Reflection;
 using System.Windows.Forms;
-using static Projekt.GlobalPosPrinter;
+using static Pokladna.GlobalPosPrinter;
 
-namespace Projekt
+namespace Pokladna
 {
     public enum Payments
     {
@@ -18,8 +20,7 @@ namespace Projekt
     internal static class Receipt
     {
         private static int receiptId;
-
-        public static void PrintReceipt(ListView listView, Payments paymentType, int paid)
+        public static void PrintReceipt(ListView listView, Payments paymentType, int paid, int discount = 0)
         {
             if (EPrinter != null && !new LocalPrintServer().GetPrintQueue("BP-T3").IsOffline)
             {
@@ -27,7 +28,7 @@ namespace Projekt
                 pd.PrinterSettings.PrinterName = "BP-T3";
                 pd.PrintPage += (sender, args) =>
                 {
-                    Image img = Image.FromFile("logo.png");
+                    Image img = LoadEmbeddedImage("logo_do_tiskarny.png");
                     Rectangle marginBorders = args.PageBounds;
 
                     float scale = Math.Min((float)marginBorders.Width / img.Width, (float)marginBorders.Height / img.Height);
@@ -46,6 +47,7 @@ namespace Projekt
                 EPrinter.Append("Provozovna: Spoje Kolín");
                 EPrinter.Append("IČO: 85142396");
                 EPrinter.Append("DIČ: CZ74128942");
+                EPrinter.NewLine();
                 EPrinter.AlignLeft();
                 EPrinter.Append(FormatTwoColumns($"Obsluha: {MainForm.Cashier}", "Pokladna: 1", 48));
                 EPrinter.Separator();
@@ -73,7 +75,7 @@ namespace Projekt
                         } 
                     }
                 }
-                PrintPayment(paymentType, paid.ToString().Length > 0 ? paid : 0);
+                PrintPayment(paymentType, paid.ToString().Length > 0 ? paid : 0, discount);
                 EPrinter.NewLine();
                 EPrinter.AlignCenter();
                 EPrinter.Append("Děkujeme vám za váš nákup");
@@ -103,9 +105,14 @@ namespace Projekt
             return leftText + new string(' ', spaces) + rightText;
         }
 
-        public static void PrintPayment(Payments payment, int tendered)
+        public static void PrintPayment(Payments payment, int tendered, int discount = 0)
         {
             EPrinter.Separator();
+            if(discount > 0)
+            {
+                EPrinter.Append(FormatTwoColumns("Mezisoučet", $"{(PaymentForm.Price + discount).ToString()} Kč", 48));
+                EPrinter.Append(FormatTwoColumns("Sleva", $"-{discount} Kč", 48));
+            }
             EPrinter.Append(FormatTwoColumns("Základ", $" {PaymentForm.Price - ((double)12 / 100 * PaymentForm.Price)} Kč", 48));
             EPrinter.Append(FormatTwoColumns("DPH 12%", $"{(double)12 / 100 * PaymentForm.Price} Kč", 48));
             EPrinter.Separator();
@@ -127,6 +134,13 @@ namespace Projekt
             EPrinter.Separator();
         }
 
-
+        private static Image LoadEmbeddedImage(string resourceName)
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                return stream != null ? Image.FromStream(stream) : null;
+            }
+        }
     }
 }
