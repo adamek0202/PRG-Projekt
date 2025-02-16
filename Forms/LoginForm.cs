@@ -49,11 +49,13 @@ namespace Pokladna.Forms
                 if (role == "manager" && roleRequired == "manager")
                 {
                     // Pokud je to manažer a tlačítko je pro manažera
+                    Visible = false;
                     new ManagerForm().ShowDialog();
                 }
                 else
                 {
                     // Otevře se MainForm pro kasíra i manažera
+                    Visible = false;
                     new MainForm().ShowDialog();
                 }
 

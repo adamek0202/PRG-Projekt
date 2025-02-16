@@ -83,7 +83,6 @@
             this.MinimizeBox = false;
             this.Name = "StartForm";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 

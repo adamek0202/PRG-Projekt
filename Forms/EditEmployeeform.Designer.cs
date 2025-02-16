@@ -38,27 +38,31 @@ namespace Pokladna.Forms
             // 
             // textBoxFullName
             // 
-            this.textBoxFullName.Location = new System.Drawing.Point(53, 43);
+            this.textBoxFullName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxFullName.Location = new System.Drawing.Point(12, 22);
             this.textBoxFullName.Name = "textBoxFullName";
-            this.textBoxFullName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFullName.Size = new System.Drawing.Size(192, 29);
             this.textBoxFullName.TabIndex = 0;
             // 
             // comboBoxPosition
             // 
+            this.comboBoxPosition.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxPosition.FormattingEnabled = true;
             this.comboBoxPosition.Items.AddRange(new object[] {
             "crew",
             "manager"});
-            this.comboBoxPosition.Location = new System.Drawing.Point(53, 69);
+            this.comboBoxPosition.Location = new System.Drawing.Point(51, 64);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxPosition.Size = new System.Drawing.Size(118, 30);
             this.comboBoxPosition.TabIndex = 1;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(53, 96);
+            this.buttonSave.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSave.ForeColor = System.Drawing.Color.White;
+            this.buttonSave.Location = new System.Drawing.Point(12, 114);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.Size = new System.Drawing.Size(93, 42);
             this.buttonSave.TabIndex = 2;
             this.buttonSave.Text = "Uložit";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -66,9 +70,11 @@ namespace Pokladna.Forms
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(53, 125);
+            this.buttonCancel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonCancel.ForeColor = System.Drawing.Color.White;
+            this.buttonCancel.Location = new System.Drawing.Point(111, 114);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(93, 42);
             this.buttonCancel.TabIndex = 2;
             this.buttonCancel.Text = "Zrušit";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -79,7 +85,8 @@ namespace Pokladna.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(207, 191);
+            this.ClientSize = new System.Drawing.Size(216, 167);
+            this.ControlBox = false;
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.comboBoxPosition);
@@ -89,9 +96,9 @@ namespace Pokladna.Forms
             this.MinimizeBox = false;
             this.Name = "EditEmployeeForm";
             this.ShowIcon = false;
-            this.Text = "EditEmployeeform";
+            this.ShowInTaskbar = false;
+            this.Text = "Úprava zaměstnance";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.EditEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

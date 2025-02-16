@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.SQLite;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
@@ -9,7 +11,19 @@ namespace Pokladna.Forms
         public ManagerForm()
         {
             InitializeComponent();
+            ReallyCenterToScreen(this);
             LoadEmployees();
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
+            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
+            if (hr != 0)
+            {
+                throw Marshal.GetExceptionForHR(hr);
+            }
         }
 
         // Načtení zaměstnanců do ListBoxu
@@ -87,6 +101,11 @@ namespace Pokladna.Forms
             }
 
             return employee;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

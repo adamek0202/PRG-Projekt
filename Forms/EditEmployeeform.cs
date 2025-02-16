@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.SQLite;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
@@ -12,6 +14,7 @@ namespace Pokladna.Forms
         public EditEmployeeForm(Employee employee, ManagerForm managerForm)
         {
             InitializeComponent();
+            ReallyCenterToScreen(this);
             _employee = employee;
             _managerForm = managerForm;
 
@@ -20,10 +23,16 @@ namespace Pokladna.Forms
             comboBoxPosition.Text = _employee.Position;
         }
 
-        private void EditEmployeeForm_Load(object sender, EventArgs e)
+        protected override void OnHandleCreated(EventArgs e)
         {
+            base.OnHandleCreated(e);
+            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
+            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
+            if (hr != 0)
+            {
+                throw Marshal.GetExceptionForHR(hr);
+            }
         }
-
 
         // Kliknutí na tlačítko "Uložit"
         private void buttonSave_Click(object sender, EventArgs e)
