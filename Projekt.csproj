@@ -302,7 +302,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="ikona.ico" />
     <Content Include="Resources\ikona.ico" />
     <EmbeddedResource Include="Resources\logo_do_tiskarny.png" />
   </ItemGroup>
