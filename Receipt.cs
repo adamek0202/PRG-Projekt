@@ -78,7 +78,7 @@ namespace Pokladna
                 PrintPayment(paymentType, paid.ToString().Length > 0 ? paid : 0, discount);
                 EPrinter.NewLine();
                 EPrinter.AlignCenter();
-                EPrinter.Append("Děkujeme vám za váš nákup");
+                EPrinter.Append("Děkujeme za vas nákup.");
                 EPrinter.Append("Na shledanou");
                 EPrinter.AlignLeft();
                 EPrinter.NewLines(2);

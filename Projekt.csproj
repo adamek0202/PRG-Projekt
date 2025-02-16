@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
     <Compile Include="Forms\BasicTheme.cs" />
     <Compile Include="Forms\BSmartsForm.cs">
       <SubType>Form</SubType>
@@ -120,6 +121,12 @@
     </Compile>
     <Compile Include="Forms\DrinksForm.Designer.cs">
       <DependentUpon>DrinksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditEmployeeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditEmployeeform.Designer.cs">
+      <DependentUpon>EditEmployeeform.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -203,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DrinksForm.resx">
       <DependentUpon>DrinksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditEmployeeform.resx">
+      <DependentUpon>EditEmployeeform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
