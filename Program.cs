@@ -1,7 +1,6 @@
 ﻿using Pokladna.Forms;
 using System;
 using System.IO;
-using System.Printing;
 using System.Windows.Forms;
 
 namespace Pokladna

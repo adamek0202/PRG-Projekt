@@ -80,10 +80,10 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <Compile Include="Forms\BasicTheme.cs" />
-    <Compile Include="Forms\BSmartsForm.cs">
+    <Compile Include="Forms\ProductsForms\BSmartsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BSmartsForm.Designer.cs">
+    <Compile Include="Forms\ProductsForms\BSmartsForm.Designer.cs">
       <DependentUpon>BSmartsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CardPaymentProcessForm.cs">
@@ -92,10 +92,10 @@
     <Compile Include="Forms\CardPaymentProcessForm.Designer.cs">
       <DependentUpon>CardPaymentProcessForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ChickenForm.cs">
+    <Compile Include="Forms\ProductsForms\ChickenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ChickenForm.Designer.cs">
+    <Compile Include="Forms\ProductsForms\ChickenForm.Designer.cs">
       <DependentUpon>ChickenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ConfirmForm.cs">
@@ -104,10 +104,10 @@
     <Compile Include="Forms\ConfirmForm.Designer.cs">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DessertsForm.cs">
+    <Compile Include="Forms\ProductsForms\DessertsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DessertsForm.Designer.cs">
+    <Compile Include="Forms\ProductsForms\DessertsForm.Designer.cs">
       <DependentUpon>DessertsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DiscountForm.cs">
@@ -116,10 +116,10 @@
     <Compile Include="Forms\DiscountForm.Designer.cs">
       <DependentUpon>DiscountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DrinksForm.cs">
+    <Compile Include="Forms\ProductsForms\DrinksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DrinksForm.Designer.cs">
+    <Compile Include="Forms\ProductsForms\DrinksForm.Designer.cs">
       <DependentUpon>DrinksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditEmployeeform.cs">
@@ -146,10 +146,10 @@
     <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OthersForm.cs">
+    <Compile Include="Forms\ProductsForms\OthersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OthersForm.Designer.cs">
+    <Compile Include="Forms\ProductsForms\OthersForm.Designer.cs">
       <DependentUpon>OthersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PaymentForm.cs">
@@ -164,10 +164,10 @@
     <Compile Include="Forms\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SupplementsForm.cs">
+    <Compile Include="Forms\ProductsForms\SupplementsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SupplementsForm.Designer.cs">
+    <Compile Include="Forms\ProductsForms\SupplementsForm.Designer.cs">
       <DependentUpon>SupplementsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TenderedReturnForm.cs">
@@ -190,25 +190,25 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQLiteFunctions.cs" />
-    <EmbeddedResource Include="Forms\BSmartsForm.resx">
+    <EmbeddedResource Include="Forms\ProductsForms\BSmartsForm.resx">
       <DependentUpon>BSmartsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CardPaymentProcessForm.resx">
       <DependentUpon>CardPaymentProcessForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ChickenForm.resx">
+    <EmbeddedResource Include="Forms\ProductsForms\ChickenForm.resx">
       <DependentUpon>ChickenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConfirmForm.resx">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DessertsForm.resx">
+    <EmbeddedResource Include="Forms\ProductsForms\DessertsForm.resx">
       <DependentUpon>DessertsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DiscountForm.resx">
       <DependentUpon>DiscountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DrinksForm.resx">
+    <EmbeddedResource Include="Forms\ProductsForms\DrinksForm.resx">
       <DependentUpon>DrinksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditEmployeeform.resx">
@@ -227,7 +227,7 @@
     <EmbeddedResource Include="Forms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OthersForm.resx">
+    <EmbeddedResource Include="Forms\ProductsForms\OthersForm.resx">
       <DependentUpon>OthersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PaymentForm.cs-CZ.resx">
@@ -242,7 +242,7 @@
     <EmbeddedResource Include="Forms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SupplementsForm.resx">
+    <EmbeddedResource Include="Forms\ProductsForms\SupplementsForm.resx">
       <DependentUpon>SupplementsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TenderedReturnForm.resx">
