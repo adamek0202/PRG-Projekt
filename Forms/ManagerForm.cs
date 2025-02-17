@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt.Forms;
+using System;
 using System.Data.SQLite;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -110,7 +111,7 @@ namespace Pokladna.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            new SalesForm().Show();
         }
     }
 }

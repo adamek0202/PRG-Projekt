@@ -87,12 +87,11 @@ namespace Pokladna
 
         private static void AddMenuComponents(MainForm form, int[] componentIds, ListViewGroup group)
         {
-            var connection = DatabaseConnection.Connection;
             string querry = "SELECT Name FROM Products WHERE ProductID = @ProductID";
 
             foreach (var componentId in componentIds)
             {
-                using (var command = new SQLiteCommand(querry, connection))
+                using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
                 {
                     command.Parameters.AddWithValue("@ProductID", componentId);
                     using (var reader = command.ExecuteReader())

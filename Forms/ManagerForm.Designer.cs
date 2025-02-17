@@ -85,7 +85,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 57);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Výpis prodeje";
+            this.button2.Text = "Výpis prodeje*";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -94,7 +94,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(796, 352);
+            this.ClientSize = new System.Drawing.Size(792, 348);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonAdd);

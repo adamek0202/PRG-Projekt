@@ -165,6 +165,7 @@ namespace Pokladna
         private void MainForm_Load(object sender, EventArgs e)
         {
             NativeFunctions.DisableVisualStyles(listView1);
+            TopLevel = true;
             label1.Text += Cashier;
         }
 

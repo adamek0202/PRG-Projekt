@@ -46,20 +46,20 @@ namespace Pokladna.Forms
 
                 MainForm.Cashier = fullName;
 
+
+
                 if (role == "manager" && roleRequired == "manager")
                 {
-                    // Pokud je to manažer a tlačítko je pro manažera
-                    Visible = false;
-                    new ManagerForm().ShowDialog();
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+                    new ManagerForm().Show();
                 }
                 else
                 {
-                    // Otevře se MainForm pro kasíra i manažera
-                    Visible = false;
-                    new MainForm().ShowDialog();
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+                    new MainForm().Show();
                 }
-
-                this.Close();
             }
             else
             {
