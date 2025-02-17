@@ -1,5 +1,6 @@
 ﻿using ESC_POS_USB_NET.Printer;
 using System;
+using System.Drawing.Printing;
 using System.Management;
 
 namespace Pokladna
@@ -12,6 +13,16 @@ namespace Pokladna
 
         public static string InitPrinter(string printerName)
         {
+            if (!PrinterExists(printerName))
+            {
+                EPrinter = null;
+                return $"Chyba při tiskárny: Tiskárna neexistuje";
+            }
+            if (!CheckPrinterStatus(printerName))
+            {
+                EPrinter = null;
+                return $"Chyba při tiskárny: Tiskárna je offline";
+            }
             try
             {
                 EPrinter = new Printer(printerName);
@@ -19,11 +30,12 @@ namespace Pokladna
             }
             catch (Exception ex)
             {
+                EPrinter = null;
                 return $"Chyba při tiskárny: {ex.Message}";
             }
         }
 
-        public static void CheckPrinterStatus(string printerName)
+        public static bool CheckPrinterStatus(string printerName)
         {
             string query = $"SELECT Name, PrinterStatus, WorkOffline FROM Win32_Printer WHERE Name = '{printerName.Replace("\\", "\\\\")}'";
             using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
@@ -40,13 +52,28 @@ namespace Pokladna
                     if (workOffline || printerStatus == 7) // 7 = Printer Offline
                     {
                         Console.WriteLine("Tiskárna je offline.");
+                        return false;
                     }
                     else
                     {
                         Console.WriteLine("Tiskárna je online.");
+                        return true;
                     }
                 }
+                return false;
             }
+        }
+
+        public static bool PrinterExists(string name)
+        {
+            foreach(string printerName in PrinterSettings.InstalledPrinters)
+            {
+                if(printerName == name)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

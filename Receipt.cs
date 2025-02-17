@@ -3,7 +3,6 @@ using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-using System.Printing;
 using System.Reflection;
 using System.Windows.Forms;
 using static Pokladna.GlobalPosPrinter;
@@ -22,7 +21,7 @@ namespace Pokladna
         private static int receiptId;
         public static void PrintReceipt(ListView listView, Payments paymentType, int paid, int discount = 0)
         {
-            if (EPrinter != null && !new LocalPrintServer().GetPrintQueue("BP-T3").IsOffline)
+            if (EPrinter != null)
             {
                 PrintDocument pd = new PrintDocument();
                 pd.PrinterSettings.PrinterName = "BP-T3";
@@ -137,12 +136,6 @@ namespace Pokladna
         private static Image LoadImageFromResources(string resourceName)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
-
-            // Výpis dostupných resources pro kontrolu
-            Console.WriteLine("Dostupné resources:");
-            foreach (var res in assembly.GetManifestResourceNames())
-                Console.WriteLine(res);
-
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
                 if (stream == null)

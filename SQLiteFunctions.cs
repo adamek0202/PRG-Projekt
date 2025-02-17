@@ -68,7 +68,7 @@ namespace Pokladna
                         using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
                         {
                             command.Parameters.AddWithValue("@name", productName);
-                            Console.WriteLine(command.ExecuteNonQuery());
+                            command.ExecuteNonQuery();
                         }
                     } 
                 }
@@ -219,26 +219,29 @@ namespace Pokladna
 
         private static void PrintOrder()
         {
-            EPrinter.AlignCenter();
-            EPrinter.DoubleWidth3();
-            EPrinter.Append("VASE OBJEDNAVKA");
-            EPrinter.AlignLeft();
-            EPrinter.Separator();
-            EPrinter.AlignCenter();
-            EPrinter.DoubleWidth3();
-            EPrinter.Append(orderId.ToString());
-            EPrinter.AlignLeft();
-            EPrinter.Separator();
-            //Info text na spodku
-            EPrinter.AlignCenter();
-            EPrinter.Append("Sledujte stav vasí objednávky na ");
-            EPrinter.Append("obrazovce nad výdejem.");
-            EPrinter.AlignLeft();
-            EPrinter.NewLines(2);
-            EPrinter.PartialPaperCut();
-            EPrinter.NormalWidth();
-            EPrinter.PrintDocument();
-            EPrinter.Clear();
+            if (EPrinter != null)
+            {
+                EPrinter.AlignCenter();
+                EPrinter.DoubleWidth3();
+                EPrinter.Append("VASE OBJEDNAVKA");
+                EPrinter.AlignLeft();
+                EPrinter.Separator();
+                EPrinter.AlignCenter();
+                EPrinter.DoubleWidth3();
+                EPrinter.Append(orderId.ToString());
+                EPrinter.AlignLeft();
+                EPrinter.Separator();
+                //Info text na spodku
+                EPrinter.AlignCenter();
+                EPrinter.Append("Sledujte stav vasí objednávky na ");
+                EPrinter.Append("obrazovce nad výdejem.");
+                EPrinter.AlignLeft();
+                EPrinter.NewLines(2);
+                EPrinter.PartialPaperCut();
+                EPrinter.NormalWidth();
+                EPrinter.PrintDocument();
+                EPrinter.Clear(); 
+            }
         }
 
         private static readonly HttpClient httpClient = new HttpClient();
