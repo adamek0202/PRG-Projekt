@@ -80,7 +80,10 @@ namespace Projekt.Forms
 
         private void printToolStripButton_Click(object sender, EventArgs e)
         {
-
+            if(Sales.Count > 0)
+            {
+                //new PrintPreviewForm().ShowDialog();
+            }
         }
     }
 
