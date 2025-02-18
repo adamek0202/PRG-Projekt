@@ -1,7 +1,11 @@
-﻿using Pokladna;
+﻿using CsvHelper;
+using CsvHelper.Configuration;
+using Pokladna;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Globalization;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Pokladna.BasicTheme;
@@ -38,7 +42,7 @@ namespace Projekt.Forms
             {
                 using (var reader = command.ExecuteReader())
                 {
-                    if (reader.Read())
+                    while (reader.Read())
                     {
                         Sales.Add(new Sale(
                             reader["Date"].ToString(),
@@ -59,14 +63,22 @@ namespace Projekt.Forms
             }
         }
 
-        
-
-        private void SalesForm_Load(object sender, EventArgs e)
+        private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
-
+            if (Sales.Count > 0)
+            {
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    using (var writer = new StreamWriter(saveFileDialog1.FileName))
+                    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                    {
+                        csv.WriteRecords(Sales);
+                    }
+                } 
+            }
         }
 
-        private void SaveToolStripButton_Click(object sender, EventArgs e)
+        private void printToolStripButton_Click(object sender, EventArgs e)
         {
 
         }

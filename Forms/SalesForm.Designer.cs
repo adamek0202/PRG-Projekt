@@ -28,65 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "24.12.2024",
             "250Kč",
             "Stravenková karta",
             "Květa prosová"}, -1);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
-            this.listViewWithScrollBar1 = new Pokladna.ListViewWithScrollBar();
-            this.dateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.priceHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.paymentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.userHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.dateStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.listViewWithScrollBar1 = new Pokladna.ListViewWithScrollBar();
+            this.dateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.priceHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.paymentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.userHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listViewWithScrollBar1
-            // 
-            this.listViewWithScrollBar1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.dateHeader,
-            this.priceHeader,
-            this.paymentHeader,
-            this.userHeader});
-            this.listViewWithScrollBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewWithScrollBar1.FullRowSelect = true;
-            this.listViewWithScrollBar1.GridLines = true;
-            this.listViewWithScrollBar1.HideSelection = false;
-            this.listViewWithScrollBar1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listViewWithScrollBar1.Location = new System.Drawing.Point(0, 25);
-            this.listViewWithScrollBar1.Margin = new System.Windows.Forms.Padding(4);
-            this.listViewWithScrollBar1.Name = "listViewWithScrollBar1";
-            this.listViewWithScrollBar1.Size = new System.Drawing.Size(719, 527);
-            this.listViewWithScrollBar1.TabIndex = 0;
-            this.listViewWithScrollBar1.UseCompatibleStateImageBehavior = false;
-            this.listViewWithScrollBar1.View = System.Windows.Forms.View.Details;
-            // 
-            // dateHeader
-            // 
-            this.dateHeader.Text = "Datum";
-            this.dateHeader.Width = 95;
-            // 
-            // priceHeader
-            // 
-            this.priceHeader.Text = "Cena";
-            this.priceHeader.Width = 73;
-            // 
-            // paymentHeader
-            // 
-            this.paymentHeader.Text = "Platba";
-            this.paymentHeader.Width = 148;
-            // 
-            // userHeader
-            // 
-            this.userHeader.Text = "Uživatel";
-            this.userHeader.Width = 128;
             // 
             // toolStrip1
             // 
@@ -122,8 +82,8 @@
             this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(66, 22);
-            this.saveToolStripButton.Text = "Uložit*";
+            this.saveToolStripButton.Size = new System.Drawing.Size(88, 22);
+            this.saveToolStripButton.Text = "Uložit CSV";
             this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
             // 
             // printToolStripButton
@@ -133,6 +93,53 @@
             this.printToolStripButton.Name = "printToolStripButton";
             this.printToolStripButton.Size = new System.Drawing.Size(55, 22);
             this.printToolStripButton.Text = "Tisk*";
+            this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "csv";
+            this.saveFileDialog1.Filter = "Comma sepated value|*.csv";
+            // 
+            // listViewWithScrollBar1
+            // 
+            this.listViewWithScrollBar1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dateHeader,
+            this.priceHeader,
+            this.paymentHeader,
+            this.userHeader});
+            this.listViewWithScrollBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewWithScrollBar1.FullRowSelect = true;
+            this.listViewWithScrollBar1.GridLines = true;
+            this.listViewWithScrollBar1.HideSelection = false;
+            this.listViewWithScrollBar1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem2});
+            this.listViewWithScrollBar1.Location = new System.Drawing.Point(0, 25);
+            this.listViewWithScrollBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.listViewWithScrollBar1.Name = "listViewWithScrollBar1";
+            this.listViewWithScrollBar1.Size = new System.Drawing.Size(719, 527);
+            this.listViewWithScrollBar1.TabIndex = 0;
+            this.listViewWithScrollBar1.UseCompatibleStateImageBehavior = false;
+            this.listViewWithScrollBar1.View = System.Windows.Forms.View.Details;
+            // 
+            // dateHeader
+            // 
+            this.dateHeader.Text = "Datum";
+            this.dateHeader.Width = 95;
+            // 
+            // priceHeader
+            // 
+            this.priceHeader.Text = "Cena";
+            this.priceHeader.Width = 73;
+            // 
+            // paymentHeader
+            // 
+            this.paymentHeader.Text = "Platba";
+            this.paymentHeader.Width = 148;
+            // 
+            // userHeader
+            // 
+            this.userHeader.Text = "Uživatel";
+            this.userHeader.Width = 128;
             // 
             // SalesForm
             // 
@@ -148,7 +155,6 @@
             this.ShowIcon = false;
             this.Text = "Výpis transakcí";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.SalesForm_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -168,5 +174,6 @@
         private System.Windows.Forms.ColumnHeader userHeader;
         private System.Windows.Forms.ToolStripButton dateStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
