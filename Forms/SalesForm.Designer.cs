@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "24.12.2024",
             "250Kč",
             "Stravenková karta",
             "Květa prosová"}, -1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.dateStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.listViewWithScrollBar1 = new Pokladna.ListViewWithScrollBar();
             this.dateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.priceHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.paymentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.userHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dateStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.dateStripButton,
             this.toolStripSeparator1,
             this.saveToolStripButton,
+            this.toolStripSeparator2,
             this.printToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -64,36 +66,10 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // dateStripButton
-            // 
-            this.dateStripButton.Image = ((System.Drawing.Image)(resources.GetObject("dateStripButton.Image")));
-            this.dateStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.dateStripButton.Name = "dateStripButton";
-            this.dateStripButton.Size = new System.Drawing.Size(71, 22);
-            this.dateStripButton.Text = "Datum*";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // saveToolStripButton
-            // 
-            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
-            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(88, 22);
-            this.saveToolStripButton.Text = "Uložit CSV";
-            this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
-            // 
-            // printToolStripButton
-            // 
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(55, 22);
-            this.printToolStripButton.Text = "Tisk*";
-            this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
             // 
             // saveFileDialog1
             // 
@@ -112,7 +88,7 @@
             this.listViewWithScrollBar1.GridLines = true;
             this.listViewWithScrollBar1.HideSelection = false;
             this.listViewWithScrollBar1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listViewWithScrollBar1.Location = new System.Drawing.Point(0, 25);
             this.listViewWithScrollBar1.Margin = new System.Windows.Forms.Padding(4);
             this.listViewWithScrollBar1.Name = "listViewWithScrollBar1";
@@ -140,6 +116,37 @@
             // 
             this.userHeader.Text = "Uživatel";
             this.userHeader.Width = 128;
+            // 
+            // dateStripButton
+            // 
+            this.dateStripButton.Image = global::Projekt.Properties.Resources.calendar;
+            this.dateStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dateStripButton.Name = "dateStripButton";
+            this.dateStripButton.Size = new System.Drawing.Size(71, 22);
+            this.dateStripButton.Text = "Datum*";
+            // 
+            // saveToolStripButton
+            // 
+            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
+            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton.Name = "saveToolStripButton";
+            this.saveToolStripButton.Size = new System.Drawing.Size(88, 22);
+            this.saveToolStripButton.Text = "Uložit CSV";
+            this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
+            // 
+            // printToolStripButton
+            // 
+            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
+            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripButton.Name = "printToolStripButton";
+            this.printToolStripButton.Size = new System.Drawing.Size(55, 22);
+            this.printToolStripButton.Text = "Tisk*";
+            this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // SalesForm
             // 
@@ -175,5 +182,6 @@
         private System.Windows.Forms.ToolStripButton dateStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

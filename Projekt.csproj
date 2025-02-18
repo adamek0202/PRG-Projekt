@@ -317,6 +317,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resources\calendar.png" />
     <Content Include="Resources\ikona.ico" />
     <EmbeddedResource Include="Resources\logo_do_tiskarny.png" />
   </ItemGroup>
