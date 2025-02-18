@@ -272,7 +272,10 @@ namespace Pokladna
 
         private void ManagerButton_Click(object sender, EventArgs e)
         {
-            new LoginForm("manager").ShowDialog();
+            if (new LoginForm("manager").ShowDialog() == DialogResult.OK)
+            {
+                new ManagerForm().ShowDialog();
+            }
         }
 
         private void priceAskButton_Click(object sender, EventArgs e)

@@ -52,18 +52,17 @@ namespace Pokladna.Forms
                 {
                     DialogResult = DialogResult.OK;
                     this.Close();
-                    new ManagerForm().Show();
                 }
                 else
                 {
                     DialogResult = DialogResult.OK;
                     this.Close();
-                    new MainForm().Show();
                 }
             }
             else
             {
                 MessageBox.Show("Zadali jste špatné heslo.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Text = string.Empty;
             }
         }
 
@@ -89,14 +88,6 @@ namespace Pokladna.Forms
                 }
             }
             return false;
-        }
-
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                button1.PerformClick();
-            }
         }
     }
 }

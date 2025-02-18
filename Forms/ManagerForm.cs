@@ -111,7 +111,7 @@ namespace Pokladna.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new SalesForm().Show();
+            new SalesForm().ShowDialog();
         }
     }
 }

@@ -32,6 +32,7 @@ namespace Projekt.Forms
 
         private void LoadItems()
         {
+            Sales = new List<Sale>();
             string querry = "SELECT Date, Price, Payment, User FROM Transactions";
             using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
@@ -48,6 +49,14 @@ namespace Projekt.Forms
                     }
                 }
             }
+
+            if (Sales.Count > 0)
+            {
+                foreach (var item in Sales)
+                {
+                    listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] { item.Date, item.Price.ToString() + " Kč", item.Payment, item.User }));
+                } 
+            }
         }
 
         
@@ -57,7 +66,7 @@ namespace Projekt.Forms
 
         }
 
-        private void uložitToolStripButton_Click(object sender, EventArgs e)
+        private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
 
         }

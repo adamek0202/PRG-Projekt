@@ -34,20 +34,23 @@ namespace Pokladna.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             // Otevře LoginForm pro přihlášení jak pro pokladního, tak pro manažera
-            if(new LoginForm().ShowDialog() == DialogResult.OK)
+            if (new LoginForm().ShowDialog() == DialogResult.OK)
             {
                 Visible = false;
-            }
-            else
-            {
-
+                new MainForm().ShowDialog();
+                Visible = true;
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             // Otevře LoginForm pouze pro manažera
-            new LoginForm("manager").ShowDialog();
+            if (new LoginForm("manager").ShowDialog() == DialogResult.OK)
+            {
+                Visible = false;
+                new ManagerForm().ShowDialog();
+                Visible = true;
+            }
         }
     }
 }
