@@ -15,7 +15,7 @@ namespace Pokladna
         {
             if (!File.Exists(Environment.CurrentDirectory + "\\pokladna.db"))
             {
-                if (MessageBox.Show("Databáze nebyla nenalezena\nPřejete si vytvořit novou?", "Chyba databáze", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                if (MessageBox.Show("Databáze nebyla nenalezena", "Chyba databáze", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.No)
                 {
                     return;
                 }
@@ -46,6 +46,7 @@ namespace Pokladna
             {
                 MessageBox.Show($"UPOS: {errorMessage}", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
             Application.Run(new StartForm());
             File.WriteAllText("receiptNumber", GlobalPosPrinter.receiptId.ToString());
         }

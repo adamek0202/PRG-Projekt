@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "24.12.2024",
-            "250Kč",
-            "Stravenková karta",
-            "Květa prosová"}, -1);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.dateStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -98,8 +93,8 @@
             this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
             this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(55, 22);
-            this.printToolStripButton.Text = "Tisk*";
+            this.printToolStripButton.Size = new System.Drawing.Size(50, 22);
+            this.printToolStripButton.Text = "Tisk";
             this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
             // 
             // saveFileDialog1
@@ -118,8 +113,6 @@
             this.listViewWithScrollBar1.FullRowSelect = true;
             this.listViewWithScrollBar1.GridLines = true;
             this.listViewWithScrollBar1.HideSelection = false;
-            this.listViewWithScrollBar1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
             this.listViewWithScrollBar1.Location = new System.Drawing.Point(0, 25);
             this.listViewWithScrollBar1.Margin = new System.Windows.Forms.Padding(4);
             this.listViewWithScrollBar1.Name = "listViewWithScrollBar1";

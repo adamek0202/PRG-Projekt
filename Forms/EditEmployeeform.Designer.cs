@@ -50,7 +50,8 @@ namespace Pokladna.Forms
             this.comboBoxPosition.FormattingEnabled = true;
             this.comboBoxPosition.Items.AddRange(new object[] {
             "crew",
-            "manager"});
+            "manager",
+            "uklizecka"});
             this.comboBoxPosition.Location = new System.Drawing.Point(51, 64);
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(118, 30);
@@ -85,7 +86,7 @@ namespace Pokladna.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(216, 167);
+            this.ClientSize = new System.Drawing.Size(212, 163);
             this.ControlBox = false;
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);

@@ -82,7 +82,7 @@ namespace Projekt.Forms
         {
             if(Sales.Count > 0)
             {
-                //new PrintPreviewForm().ShowDialog();
+                new PrintPreviewForm(Sales).ShowDialog();
             }
         }
     }

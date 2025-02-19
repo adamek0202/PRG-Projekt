@@ -34,7 +34,7 @@ namespace Pokladna.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             // Otevře LoginForm pro přihlášení jak pro pokladního, tak pro manažera
-            if (new LoginForm().ShowDialog() == DialogResult.OK)
+            if (new LoginForm("cashier").ShowDialog() == DialogResult.OK)
             {
                 Visible = false;
                 new MainForm().ShowDialog();

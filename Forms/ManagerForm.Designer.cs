@@ -63,7 +63,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 35);
             this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Přidej";
+            this.buttonAdd.Text = "Přidej*";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 

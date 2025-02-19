@@ -249,7 +249,7 @@ namespace Pokladna
         {
             try
             {
-                string url = "http://192.0.0.2:8080/order"; // Cílová adresa
+                string url = "http://192.168.0.2:8080/order"; // Cílová adresa
                 var payload = new { OrderId = orderId };
                 string json = System.Text.Json.JsonSerializer.Serialize(payload);
 

@@ -33,36 +33,39 @@ namespace Pokladna.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             string password = textBox1.Text;
-            string fullName;
-            string role;
 
-            if (AuthenticateUser(password, out fullName, out role))
+            if (AuthenticateUser(password, out string fullName, out string role))
             {
                 if (roleRequired == "manager" && role != "manager")
                 {
-                    MessageBox.Show("Nemáte dostatečná oprávnění k přístupu do manažerské sekce.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Zaměstnanec {fullName} s pozicí {role} nemá přístup do manažerské sekce. Pro přístup přiřaďte správnou pozici.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 MainForm.Cashier = fullName;
-
-
 
                 if (role == "manager" && roleRequired == "manager")
                 {
                     DialogResult = DialogResult.OK;
                     this.Close();
                 }
-                else
+                else if (role == "crew")
                 {
                     DialogResult = DialogResult.OK;
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show($"Zaměstnanec {fullName} s pozicí {role} nemá práva pro vstup do kasy. Pro vstup přiřaďte správnou pozici.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Text = string.Empty;
+                }
+
             }
             else
             {
                 MessageBox.Show("Zadali jste špatné heslo.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox1.Text = string.Empty;
+
             }
         }
 
