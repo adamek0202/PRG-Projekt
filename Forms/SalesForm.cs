@@ -3,6 +3,7 @@ using CsvHelper.Configuration;
 using Pokladna;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.SQLite;
 using System.Globalization;
 using System.IO;
@@ -45,6 +46,7 @@ namespace Projekt.Forms
                     while (reader.Read())
                     {
                         Sales.Add(new Sale(
+                            2,
                             reader["Date"].ToString(),
                             int.Parse(reader["Price"].ToString()),
                             reader["Payment"].ToString(),
@@ -58,7 +60,7 @@ namespace Projekt.Forms
             {
                 foreach (var item in Sales)
                 {
-                    listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] { item.Date, item.Price.ToString() + " Kč", item.Payment, item.User }));
+                    listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] { item.Number.ToString() ,item.Date, item.Price.ToString() + " Kč", item.Payment, item.User }));
                 } 
             }
         }
@@ -89,14 +91,29 @@ namespace Projekt.Forms
 
     internal class Sale
     {
-        public Sale(string date, int price, string payment, string user)
+        public Sale(int number, string date, int price, string payment, string user)
         {
+            Number = number;
             Date = date;
             Price = price;
-            Payment = payment;
+            switch (payment)
+            {
+                case "Cash":
+                    Payment = "Hotovost";
+                    break;
+                case "Card":
+                    Payment = "Platební karta";
+                    break;
+                case "FoodCard":
+                    Payment = "Stravenková karta";
+                    break;
+                default:
+                    break;
+            }
             User = user;
         }
 
+        public int Number { get; set; }
         public string Date { get; set; }
         public int Price { get; set; }
         public string Payment { get; set; }

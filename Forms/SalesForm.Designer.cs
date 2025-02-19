@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.dateStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.listViewWithScrollBar1 = new Pokladna.ListViewWithScrollBar();
+            this.numberHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.priceHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.paymentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,6 +52,7 @@
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateStripButton,
+            this.toolStripButton1,
             this.toolStripSeparator1,
             this.saveToolStripButton,
             this.toolStripSeparator2,
@@ -68,6 +71,14 @@
             this.dateStripButton.Name = "dateStripButton";
             this.dateStripButton.Size = new System.Drawing.Size(71, 22);
             this.dateStripButton.Text = "Datum*";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(54, 22);
+            this.toolStripButton1.Text = "Filtr*";
             // 
             // toolStripSeparator1
             // 
@@ -90,10 +101,11 @@
             // 
             // printToolStripButton
             // 
+            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
             this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(50, 22);
+            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.printToolStripButton.Text = "Tisk";
             this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
             // 
@@ -105,6 +117,7 @@
             // listViewWithScrollBar1
             // 
             this.listViewWithScrollBar1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.numberHeader,
             this.dateHeader,
             this.priceHeader,
             this.paymentHeader,
@@ -120,6 +133,10 @@
             this.listViewWithScrollBar1.TabIndex = 0;
             this.listViewWithScrollBar1.UseCompatibleStateImageBehavior = false;
             this.listViewWithScrollBar1.View = System.Windows.Forms.View.Details;
+            // 
+            // numberHeader
+            // 
+            this.numberHeader.Text = "Číslo";
             // 
             // dateHeader
             // 
@@ -176,5 +193,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ColumnHeader numberHeader;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
