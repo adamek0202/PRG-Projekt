@@ -69,7 +69,7 @@
             // 
             // dateStripButton
             // 
-            this.dateStripButton.Image = global::Projekt.Properties.Resources.calendar;
+            this.dateStripButton.Image = global::Pokladna.Properties.Resources.calendar;
             this.dateStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dateStripButton.Name = "dateStripButton";
             this.dateStripButton.Size = new System.Drawing.Size(71, 22);
