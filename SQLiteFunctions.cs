@@ -200,8 +200,8 @@ namespace Pokladna
                             int categoryId = reader.GetInt32(0);
                             if (new int[] { 1, 2, 3, 4, 7 }.Contains(categoryId))
                             {
-                                await SendOrder(orderId);
                                 PrintOrder();
+                                await SendOrder(orderId);
                                 if (orderId < 99)
                                 {
                                     orderId++;

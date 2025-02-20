@@ -49,7 +49,7 @@ namespace Pokladna.Forms
                     DialogResult = DialogResult.OK;
                     this.Close();
                 }
-                else if (role == "crew")
+                else if (role == "crew" || role == "manager")
                 {
                     DialogResult = DialogResult.OK;
                     this.Close();

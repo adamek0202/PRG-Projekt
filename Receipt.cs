@@ -26,7 +26,7 @@ namespace Pokladna
                 pd.PrinterSettings.PrinterName = "BP-T3";
                 pd.PrintPage += (sender, args) =>
                 {
-                    Image img = LoadImageFromResources("Projekt.Resources.logo_do_tiskarny.png");
+                    Image img = LoadImageFromResources("Pokladna.Resources.logo_do_tiskarny.png");
                     Rectangle marginBorders = args.PageBounds;
 
                     float scale = Math.Min((float)marginBorders.Width / img.Width, (float)marginBorders.Height / img.Height);
@@ -49,7 +49,7 @@ namespace Pokladna
                 EPrinter.AlignLeft();
                 EPrinter.Append(FormatTwoColumns($"Obsluha: {MainForm.Cashier}", "Pokladna: 1", 48));
                 EPrinter.Separator();
-                EPrinter.Append(FormatTwoColumns(receiptId.ToString("D5"), DateTime.UtcNow.ToString(), 48));
+                EPrinter.Append(FormatTwoColumns(receiptId.ToString("D5"), DateTime.Now.ToString(), 48));
                 EPrinter.AlignCenter();
                 EPrinter.AlignLeft();
                 EPrinter.Separator();

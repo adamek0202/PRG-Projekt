@@ -46,7 +46,7 @@ namespace Projekt
                                     header.Cell().PaddingBottom(3).BorderBottom(3).Text("Číslo").Bold();
                                     header.Cell().PaddingBottom(3).BorderBottom(3).Text("Datum").Bold();
                                     header.Cell().PaddingBottom(3).BorderBottom(3).Text("Čas").Bold();
-                                    header.Cell().PaddingBottom(3).BorderBottom(3).Text("Uživatel").Bold();
+                                    header.Cell().PaddingBottom(3).BorderBottom(3).Text("Pokladní").Bold();
                                     header.Cell().PaddingBottom(3).BorderBottom(3).Text("Platba").Bold();
                                     header.Cell().PaddingBottom(3).BorderBottom(3).Text("Cena").Bold().AlignRight();
                                 });

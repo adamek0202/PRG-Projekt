@@ -36,7 +36,7 @@ namespace Projekt.Forms
         {
             if(comboBox1.Text != string.Empty)
             {
-                User = comboBox1.SelectedText;
+                User = comboBox1.Text;
                 DialogResult = DialogResult.OK;
                 Close();
             }
