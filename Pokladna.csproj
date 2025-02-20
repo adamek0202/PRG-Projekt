@@ -8,8 +8,8 @@
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <LangVersion>9</LangVersion>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Projekt</RootNamespace>
-    <AssemblyName>Projekt</AssemblyName>
+    <RootNamespace>Pokladna</RootNamespace>
+    <AssemblyName>Pokladna</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
