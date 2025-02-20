@@ -40,6 +40,7 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
             this.buttonCancel.Location = new System.Drawing.Point(111, 112);
@@ -68,7 +69,8 @@
             this.comboBoxPosition.FormattingEnabled = true;
             this.comboBoxPosition.Items.AddRange(new object[] {
             "crew",
-            "manager"});
+            "manager",
+            "uklizecka"});
             this.comboBoxPosition.Location = new System.Drawing.Point(86, 41);
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(118, 30);
@@ -123,10 +125,12 @@
             // 
             // AddEmployeeForm
             // 
+            this.AcceptButton = this.buttonSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(288, 165);
+            this.CancelButton = this.buttonCancel;
+            this.ClientSize = new System.Drawing.Size(284, 161);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

@@ -42,8 +42,11 @@ namespace Projekt.Forms
                     DialogResult = DialogResult.OK;
                     Close();
                 }
-                MessageBox.Show("Nepodařilo se přídat zaměstnance\nTento zaměstnanec již v systému existuje", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Close();
+                else
+                {
+                    MessageBox.Show("Nepodařilo se přídat zaměstnance\nTento zaměstnanec již v systému existuje", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close(); 
+                }
             }
         }
 

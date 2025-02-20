@@ -29,14 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemSalesForm));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "101",
-            "Kentucky Gold Wrapper"}, -1);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.dateStripButton = new System.Windows.Forms.ToolStripButton();
-            this.filterButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.uživatelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.platbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,7 +52,6 @@
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateStripButton,
-            this.filterButton,
             this.toolStripSeparator1,
             this.saveToolStripButton,
             this.toolStripSeparator2,
@@ -66,7 +59,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(607, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -78,29 +71,6 @@
             this.dateStripButton.Name = "dateStripButton";
             this.dateStripButton.Size = new System.Drawing.Size(71, 22);
             this.dateStripButton.Text = "Datum*";
-            // 
-            // filterButton
-            // 
-            this.filterButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uživatelToolStripMenuItem,
-            this.platbaToolStripMenuItem});
-            this.filterButton.Image = ((System.Drawing.Image)(resources.GetObject("filterButton.Image")));
-            this.filterButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(83, 22);
-            this.filterButton.Text = "Filtrovat";
-            // 
-            // uživatelToolStripMenuItem
-            // 
-            this.uživatelToolStripMenuItem.Name = "uživatelToolStripMenuItem";
-            this.uživatelToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.uživatelToolStripMenuItem.Text = "Uživatel*";
-            // 
-            // platbaToolStripMenuItem
-            // 
-            this.platbaToolStripMenuItem.Name = "platbaToolStripMenuItem";
-            this.platbaToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.platbaToolStripMenuItem.Text = "Druh platby*";
             // 
             // toolStripSeparator1
             // 
@@ -143,11 +113,9 @@
             this.listViewWithScrollBar1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listViewWithScrollBar1.GridLines = true;
             this.listViewWithScrollBar1.HideSelection = false;
-            this.listViewWithScrollBar1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
             this.listViewWithScrollBar1.Location = new System.Drawing.Point(0, 25);
             this.listViewWithScrollBar1.Name = "listViewWithScrollBar1";
-            this.listViewWithScrollBar1.Size = new System.Drawing.Size(800, 425);
+            this.listViewWithScrollBar1.Size = new System.Drawing.Size(607, 425);
             this.listViewWithScrollBar1.TabIndex = 3;
             this.listViewWithScrollBar1.UseCompatibleStateImageBehavior = false;
             this.listViewWithScrollBar1.View = System.Windows.Forms.View.Details;
@@ -185,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(607, 450);
             this.Controls.Add(this.listViewWithScrollBar1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -204,9 +172,6 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton dateStripButton;
-        private System.Windows.Forms.ToolStripDropDownButton filterButton;
-        private System.Windows.Forms.ToolStripMenuItem uživatelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem platbaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;

@@ -74,6 +74,7 @@
             this.dateStripButton.Name = "dateStripButton";
             this.dateStripButton.Size = new System.Drawing.Size(71, 22);
             this.dateStripButton.Text = "Datum*";
+            this.dateStripButton.Click += new System.EventHandler(this.dateStripButton_Click);
             // 
             // filterButton
             // 
@@ -91,6 +92,7 @@
             this.uživatelToolStripMenuItem.Name = "uživatelToolStripMenuItem";
             this.uživatelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.uživatelToolStripMenuItem.Text = "Uživatel*";
+            this.uživatelToolStripMenuItem.Click += new System.EventHandler(this.uživatelToolStripMenuItem_Click);
             // 
             // platbaToolStripMenuItem
             // 

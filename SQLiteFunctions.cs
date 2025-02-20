@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Pokladna.GlobalPosPrinter;
 using System.Collections.Generic;
+using Projekt.Forms;
 
 //Databázová logika
 //Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
@@ -239,10 +240,69 @@ namespace Pokladna
                     command.Parameters.AddWithValue("position", position);
                     command.ExecuteNonQuery();
                 }
-
                 return true;
             }
             return false;
+        }
+
+        public static string[] GetEmployees(string position)
+        {
+            List<string> values = new List<string>();
+
+            string querry = "SELECT FullName from Users WHERE Position = @position";
+            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("position", position);
+                using(var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        values.Add(reader["FullName"].ToString());
+                    }
+                }
+            }
+            return values.ToArray();
+        }
+
+        public static bool RemoveEmployee(string name)
+        {
+            string querry = "DELETE FROM Users WHERE FullName = @name";
+            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("name", name);
+                return command.ExecuteNonQuery() > 0;
+            }
+        }
+
+        public static List<Sale> LoadTransactions(string user = "")
+        {
+            List<Sale> sales = new List<Sale>();
+            string querry = "SELECT Number, DateTime, Price, Payment, User FROM Transactions";
+            if(user != string.Empty)
+            {
+                querry += " WHERE User = @user";
+            }
+            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                if(user != string.Empty)
+                {
+                    command.Parameters.AddWithValue("user", user);
+                }
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        sales.Add(new Sale(
+                            int.Parse(reader["number"].ToString()),
+                            DateTime.Parse(reader["DateTime"].ToString()),
+                            int.Parse(reader["Price"].ToString()),
+                            reader["Payment"].ToString(),
+                            reader["User"].ToString()
+                        ));
+                    }
+                }
+            }
+            return sales;
         }
 
         private static void PrintOrder()

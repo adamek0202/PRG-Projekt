@@ -1,10 +1,7 @@
 ﻿using CsvHelper;
-using CsvHelper.Configuration;
 using Pokladna;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity.Core.Common.CommandTrees;
-using System.Data.SQLite;
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -35,33 +32,16 @@ namespace Projekt.Forms
             }
         }
 
-        private void LoadItems()
+        private void LoadItems(string user = "")
         {
-            Sales = new List<Sale>();
-            string querry = "SELECT Number, DateTime, Price, Payment, User FROM Transactions";
-            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
-            {
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Sales.Add(new Sale(
-                            int.Parse(reader["number"].ToString()),
-                            DateTime.Parse(reader["DateTime"].ToString()),
-                            int.Parse(reader["Price"].ToString()),
-                            reader["Payment"].ToString(),
-                            reader["User"].ToString()
-                        ));
-                    }
-                }
-            }
-
+            listViewWithScrollBar1.Items.Clear();
+            Sales = DatabaseFunctions.LoadTransactions(user);
             if (Sales.Count > 0)
             {
                 foreach (var item in Sales)
                 {
                     listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] { item.Number.ToString(), item.DateAndTime.Date.ToShortDateString(), $"{item.DateAndTime.Hour}:{item.DateAndTime.Minute}",item.Price.ToString() + " Kč", item.Payment, item.User }));
-                } 
+                }
             }
         }
 
@@ -85,6 +65,23 @@ namespace Projekt.Forms
             if(Sales.Count > 0)
             {
                 new PrintPreviewForm(PDFGeneration.GenerateTransactionsPdf(Sales)).ShowDialog();
+            }
+        }
+
+        private void dateStripButton_Click(object sender, EventArgs e)
+        {
+            if(new DateSelectForm().ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void uživatelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserFilterForm uf = new UserFilterForm();
+            if (uf.ShowDialog() == DialogResult.OK)
+            {
+                LoadItems(uf.User);
             }
         }
     }

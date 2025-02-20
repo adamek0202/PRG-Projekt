@@ -2,6 +2,7 @@
 using System;
 using System.Data.SQLite;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static Pokladna.BasicTheme;
 
@@ -13,6 +14,7 @@ namespace Pokladna.Forms
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
+            NativeFunctions.DisableVisualStyles(listBoxEmployees);
             LoadEmployees();
         }
 
@@ -111,9 +113,34 @@ namespace Pokladna.Forms
             Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ItemsSalesButton_Click(object sender, EventArgs e)
         {
             new ItemSalesForm().ShowDialog();
+        }
+
+        private void TransactionsButton_Click(object sender, EventArgs e)
+        {
+            new SalesForm().ShowDialog();
+        }
+
+        private void RemoveUserButton_Click(object sender, EventArgs e)
+        {
+            if (listBoxEmployees.SelectedItems.Count >= 1)
+            {
+                if (MessageBox.Show($"Opravdu chcete smazat zaměstnance {RemoveTextInParentheses(listBoxEmployees.SelectedItem.ToString())}?", "Dotaz", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (DatabaseFunctions.RemoveEmployee(RemoveTextInParentheses(listBoxEmployees.SelectedItem.ToString())))
+                    {
+                        MessageBox.Show("Zaměstnanec byl úspěšně smazán", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    LoadEmployees();  
+                }
+            }
+        }
+
+        private string RemoveTextInParentheses(string input)
+        {
+            return Regex.Replace(input, @"\s*\(.*?\)", "");
         }
     }
 }
