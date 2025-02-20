@@ -48,6 +48,7 @@
             this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Zrušit";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click_1);
             // 
             // buttonSave
             // 
@@ -56,7 +57,7 @@
             this.buttonSave.Location = new System.Drawing.Point(12, 112);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(93, 42);
-            this.buttonSave.TabIndex = 6;
+            this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Uložit";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click_1);
@@ -71,7 +72,7 @@
             this.comboBoxPosition.Location = new System.Drawing.Point(86, 41);
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(118, 30);
-            this.comboBoxPosition.TabIndex = 4;
+            this.comboBoxPosition.TabIndex = 2;
             // 
             // textBoxFullName
             // 
@@ -79,7 +80,7 @@
             this.textBoxFullName.Location = new System.Drawing.Point(86, 6);
             this.textBoxFullName.Name = "textBoxFullName";
             this.textBoxFullName.Size = new System.Drawing.Size(192, 29);
-            this.textBoxFullName.TabIndex = 3;
+            this.textBoxFullName.TabIndex = 1;
             // 
             // label1
             // 
@@ -88,7 +89,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 22);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Jméno";
             // 
             // label2
@@ -98,7 +99,7 @@
             this.label2.Location = new System.Drawing.Point(12, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 22);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Pozice";
             // 
             // label3
@@ -108,7 +109,7 @@
             this.label3.Location = new System.Drawing.Point(21, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 22);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Heslo";
             // 
             // passwordTextBox
@@ -116,6 +117,7 @@
             this.passwordTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.passwordTextBox.Location = new System.Drawing.Point(86, 77);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(118, 29);
             this.passwordTextBox.TabIndex = 3;
             // 
@@ -135,6 +137,7 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.textBoxFullName);
             this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -142,6 +145,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Přidat zaměstnance";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

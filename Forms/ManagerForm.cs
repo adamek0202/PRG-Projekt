@@ -47,8 +47,10 @@ namespace Pokladna.Forms
         // Kliknutí na tlačítko "Přidat zaměstnance"
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            //AddEmployeeForm addForm = new AddEmployeeForm(this);
-            //addForm.ShowDialog();
+            if(new AddEmployeeForm().ShowDialog() == DialogResult.OK)
+            {
+                LoadEmployees();
+            }
         }
 
         // Kliknutí na tlačítko "Upravit zaměstnance"
@@ -111,7 +113,7 @@ namespace Pokladna.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new SalesForm().ShowDialog();
+            new ItemSalesForm().ShowDialog();
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Projekt.Forms
         private void LoadItems()
         {
             Sales = new List<Sale>();
-            string querry = "SELECT Date, Price, Payment, User FROM Transactions";
+            string querry = "SELECT Number, DateTime, Price, Payment, User FROM Transactions";
             using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
                 using (var reader = command.ExecuteReader())
@@ -46,8 +46,8 @@ namespace Projekt.Forms
                     while (reader.Read())
                     {
                         Sales.Add(new Sale(
-                            2,
-                            reader["Date"].ToString(),
+                            int.Parse(reader["number"].ToString()),
+                            DateTime.Parse(reader["DateTime"].ToString()),
                             int.Parse(reader["Price"].ToString()),
                             reader["Payment"].ToString(),
                             reader["User"].ToString()
@@ -60,7 +60,7 @@ namespace Projekt.Forms
             {
                 foreach (var item in Sales)
                 {
-                    listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] { item.Number.ToString() ,item.Date, item.Price.ToString() + " Kč", item.Payment, item.User }));
+                    listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] { item.Number.ToString(), item.DateAndTime.Date.ToShortDateString(), $"{item.DateAndTime.Hour}:{item.DateAndTime.Minute}",item.Price.ToString() + " Kč", item.Payment, item.User }));
                 } 
             }
         }
@@ -72,7 +72,7 @@ namespace Projekt.Forms
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     using (var writer = new StreamWriter(saveFileDialog1.FileName))
-                    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                    using (var csv = new CsvWriter(writer, CultureInfo.CurrentCulture))
                     {
                         csv.WriteRecords(Sales);
                     }
@@ -84,17 +84,17 @@ namespace Projekt.Forms
         {
             if(Sales.Count > 0)
             {
-                new PrintPreviewForm(Sales).ShowDialog();
+                new PrintPreviewForm(PDFGeneration.GenerateTransactionsPdf(Sales)).ShowDialog();
             }
         }
     }
 
     internal class Sale
     {
-        public Sale(int number, string date, int price, string payment, string user)
+        public Sale(int number, DateTime dateAndTime, int price, string payment, string user)
         {
             Number = number;
-            Date = date;
+            DateAndTime = dateAndTime;
             Price = price;
             switch (payment)
             {
@@ -114,7 +114,7 @@ namespace Projekt.Forms
         }
 
         public int Number { get; set; }
-        public string Date { get; set; }
+        public DateTime DateAndTime { get; set; }
         public int Price { get; set; }
         public string Payment { get; set; }
         public string User { get; set; }

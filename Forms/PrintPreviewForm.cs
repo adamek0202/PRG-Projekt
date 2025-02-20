@@ -13,15 +13,14 @@ namespace Projekt.Forms
 {
     internal partial class PrintPreviewForm : Form
     {
-        private List<Sale> Sales;
-
+        private MemoryStream Stream;
         private PdfDocument pdfDocument;
         
-        public PrintPreviewForm(List<Sale> sales)
+        public PrintPreviewForm(MemoryStream stream)
         {
             InitializeComponent();
             ReallyCenterToScreen(this);
-            Sales = sales;
+            Stream = stream;
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -37,8 +36,7 @@ namespace Projekt.Forms
 
         private void PrintPreviewForm_Load(object sender, EventArgs e)
         {
-            MemoryStream pdfStream = PDFGeneration.GenerateTransactionsPdf(Sales);
-            LoadPdfFromStream(pdfStream);
+            LoadPdfFromStream(Stream);
         }
 
         private void LoadPdfFromStream(MemoryStream stream)

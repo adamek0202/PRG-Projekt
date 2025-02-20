@@ -18,7 +18,6 @@ namespace Pokladna
 
     internal static class Receipt
     {
-        private static int receiptId;
         public static void PrintReceipt(ListView listView, Payments paymentType, int paid, int discount = 0)
         {
             if (EPrinter != null)

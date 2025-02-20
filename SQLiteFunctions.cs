@@ -74,10 +74,11 @@ namespace Pokladna
                 }
             }
 
-            const string query = "INSERT INTO Transactions (Date, Price, Payment, User) VALUES (@date, @price, @payment, @user)";
+            const string query = "INSERT INTO Transactions (Number, DateTime, Price, Payment, User) VALUES (@number, @datetime, @price, @payment, @user)";
             using (var command = new SQLiteCommand(query, DatabaseConnection.Connection))
             {
-                command.Parameters.AddWithValue("date", DateTime.Now.ToShortDateString());
+                command.Parameters.AddWithValue("number", receiptId);
+                command.Parameters.AddWithValue("datetime", DateTime.Now);
                 command.Parameters.AddWithValue("price", price.ToString());
                 command.Parameters.AddWithValue("payment", payment.ToString());
                 command.Parameters.AddWithValue("user", MainForm.Cashier);
@@ -214,6 +215,34 @@ namespace Pokladna
                     }
                 }
             }
+        }
+
+        public static bool CheckEmployeeExistence(string password)
+        {
+            string querry = $"SELECT EXISTS(SELECT 1 FROM Users WHERE Password = @password LIMIT 1)";
+            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("password", password);
+                return Convert.ToBoolean(command.ExecuteScalar());
+            }
+        }
+
+        public static bool CreateEmployee(string name, string password, string position)
+        {
+            if (!CheckEmployeeExistence(password))
+            {
+                string querry = "INSERT INTO Users (Password, FullName, Position) VALUES (@password, @fullname, @position)";
+                using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                {
+                    command.Parameters.AddWithValue("password", password);
+                    command.Parameters.AddWithValue("fullname", name);
+                    command.Parameters.AddWithValue("position", position);
+                    command.ExecuteNonQuery();
+                }
+
+                return true;
+            }
+            return false;
         }
 
         private static void PrintOrder()

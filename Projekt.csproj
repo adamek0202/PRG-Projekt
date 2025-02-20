@@ -87,6 +87,12 @@
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\BasicTheme.cs" />
+    <Compile Include="Forms\ItemSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemSalesForm.Designer.cs">
+      <DependentUpon>ItemSalesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PrintPreviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     <Compile Include="SQLiteFunctions.cs" />
     <EmbeddedResource Include="Forms\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemSalesForm.resx">
+      <DependentUpon>ItemSalesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrintPreviewForm.resx">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>

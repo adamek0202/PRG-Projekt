@@ -76,7 +76,7 @@ namespace Pokladna.Forms
             this.buttonCancel.Location = new System.Drawing.Point(111, 114);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(93, 42);
-            this.buttonCancel.TabIndex = 2;
+            this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Zrušit";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -86,7 +86,7 @@ namespace Pokladna.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(212, 163);
+            this.ClientSize = new System.Drawing.Size(215, 162);
             this.ControlBox = false;
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
