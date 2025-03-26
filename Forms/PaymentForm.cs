@@ -117,5 +117,10 @@ namespace Pokladna.Forms
                 sumLabel.Text = $"Celkem: {Price} Kč";
             }
         }
+
+        private void giftCardButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

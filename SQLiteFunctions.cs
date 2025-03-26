@@ -167,7 +167,7 @@ namespace Pokladna
 
                                 if (!MainForm.PriceCheck)
                                 {
-                                    form.AddHeadItem(name, price, times, group);
+                                    form.AddHeadItem(name, price, times, group, true);
                                     var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
                                     AddMenuComponents(form, componentsIds, group); 
                                 }
@@ -249,7 +249,7 @@ namespace Pokladna
         {
             List<string> values = new List<string>();
 
-            string querry = "SELECT FullName from Users WHERE Position = @position";
+            string querry = "SELECT FullName from Users WHERE Position = @position OR Position = manager";
             using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
                 command.Parameters.AddWithValue("position", position);
@@ -338,7 +338,7 @@ namespace Pokladna
         {
             try
             {
-                string url = "http://192.168.0.2:8080/order"; // Cílová adresa
+                string url = "http://192.168.0.2:8080/new-order"; // Cílová adresa
                 var payload = new { OrderId = orderId };
                 string json = System.Text.Json.JsonSerializer.Serialize(payload);
 

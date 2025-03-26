@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.keypadPanel = new System.Windows.Forms.Panel();
             this.kRemoveButton = new System.Windows.Forms.Button();
             this.kDualZeroButton = new System.Windows.Forms.Button();
@@ -426,6 +426,7 @@
             this.giftCardButton.TabIndex = 7;
             this.giftCardButton.Text = "Dárková karta*";
             this.giftCardButton.UseVisualStyleBackColor = false;
+            this.giftCardButton.Click += new System.EventHandler(this.giftCardButton_Click);
             // 
             // discountButton
             // 
@@ -440,7 +441,7 @@
             this.discountButton.Margin = new System.Windows.Forms.Padding(4);
             this.discountButton.Name = "discountButton";
             this.discountButton.Size = new System.Drawing.Size(169, 59);
-            this.discountButton.TabIndex = 8;
+            this.discountButton.TabIndex = 0;
             this.discountButton.Text = "Sleva (%)";
             this.discountButton.UseVisualStyleBackColor = false;
             this.discountButton.Click += new System.EventHandler(this.discountButton_Click);
@@ -538,13 +539,13 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup1.Header = "Menu 1";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "Menu 2";
-            listViewGroup2.Name = "listViewGroup2";
+            listViewGroup3.Header = "Menu 1";
+            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup4.Header = "Menu 2";
+            listViewGroup4.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
+            listViewGroup3,
+            listViewGroup4});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;

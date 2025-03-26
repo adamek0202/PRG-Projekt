@@ -126,6 +126,7 @@
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1793,6 +1794,24 @@
             this.Mnozstvi.Text = "";
             this.Mnozstvi.Width = 45;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(1003, 881);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 77);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Poznámka\r\npoložka";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -1820,6 +1839,7 @@
             this.Controls.Add(this.ManagerButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.priceAskButton);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.CouponsButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.ExchangeButton);
@@ -1945,6 +1965,7 @@
         private System.Windows.Forms.Button kClassicFor1Button;
         private System.Windows.Forms.Panel numpadPanel;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button2;
     }
 }
 

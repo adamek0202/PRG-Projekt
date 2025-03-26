@@ -7,7 +7,7 @@
     <ProjectGuid>{04F27761-AA68-4172-AAC2-B4CB9B1A84CE}</ProjectGuid>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <LangVersion>9</LangVersion>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Pokladna</RootNamespace>
     <AssemblyName>Pokladna</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -93,11 +93,23 @@
     <Compile Include="Forms\DateSelectForm.Designer.cs">
       <DependentUpon>DateSelectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemNotesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemNotesForm.Designer.cs">
+      <DependentUpon>ItemNotesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemSalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ItemSalesForm.Designer.cs">
       <DependentUpon>ItemSalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KeyboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KeyboardForm.Designer.cs">
+      <DependentUpon>KeyboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PrintPreviewForm.cs">
       <SubType>Form</SubType>
@@ -214,6 +226,12 @@
       <DependentUpon>UserFilterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalPosPrinter.cs" />
+    <Compile Include="Keypad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Keypad.Designer.cs">
+      <DependentUpon>Keypad.cs</DependentUpon>
+    </Compile>
     <Compile Include="NativeFunctions.cs" />
     <Compile Include="PDFGeneration.cs" />
     <Compile Include="Program.cs" />
@@ -234,8 +252,14 @@
     <EmbeddedResource Include="Forms\DateSelectForm.resx">
       <DependentUpon>DateSelectForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemNotesForm.resx">
+      <DependentUpon>ItemNotesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemSalesForm.resx">
       <DependentUpon>ItemSalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KeyboardForm.resx">
+      <DependentUpon>KeyboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrintPreviewForm.resx">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
@@ -303,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserFilterForm.resx">
       <DependentUpon>UserFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keypad.resx">
+      <DependentUpon>Keypad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

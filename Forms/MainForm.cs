@@ -84,9 +84,9 @@ namespace Pokladna
         }
         #endregion Posun
 
-        public void AddHeadItem(string name, int price, int times, ListViewGroup group)
+        public void AddHeadItem(string name, int price, int times, ListViewGroup group, bool root = false)
         {
-            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + " Kč", times.ToString() }, group) { BackColor = Color.Orange });
+            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + " Kč", times.ToString() }, group) { BackColor = Color.Orange, Tag = (root ? "root" : "") });
             UpdateSumPrice(price);
         }
 
@@ -216,7 +216,7 @@ namespace Pokladna
 
         private void BagButton_Click(object sender, EventArgs e)
         {
-            AddHeadItem("Taska", 5, 1, new ListViewGroup());
+            AddHeadItem("Taska", 5, 1, new ListViewGroup(), true);
         }
 
         private void ExternalFormsButtons_Click(object sender, EventArgs e)
@@ -278,9 +278,18 @@ namespace Pokladna
             }
         }
 
-        private void priceAskButton_Click(object sender, EventArgs e)
+        private void priceAskButton_Click(object sender, EventArgs e) { PriceCheck = true; }
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            PriceCheck = true;
+            if(listView1.SelectedItems.Count == 1 && !(new string[] { "root", "note" }.Contains(listView1.SelectedItems[0].Tag)))
+            {
+                var noteForm = new ItemNotesForm();
+                if(noteForm.ShowDialog() == DialogResult.OK)
+                {
+                    listView1.Items.Insert(listView1.SelectedItems[0].Index + 1, new ListViewItem(noteForm.Note, listView1.SelectedItems[0].Group) { BackColor = Color.Lime, Tag = "note"});
+                }
+            }
         }
     }
 }
