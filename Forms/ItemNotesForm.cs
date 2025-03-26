@@ -9,7 +9,7 @@ namespace Pokladna.Forms
     {
         public string Note { get; private set; }
 
-        private string[] Notes = {"Extra majoneza", "Bez rajcat", "Bez mjonezy", "Extra sul", "Bez salatu", "Extra omacka", "Bez soli", "Bez omacky"};
+        private string[] Notes = {"Extra majoneza", "Bez rajcat", "Bez majonezy", "Extra sul", "Bez salatu", "Extra omacka", "Bez soli", "Bez omacky"};
 
         public ItemNotesForm()
         {

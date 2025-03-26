@@ -287,7 +287,7 @@ namespace Pokladna
                 var noteForm = new ItemNotesForm();
                 if(noteForm.ShowDialog() == DialogResult.OK)
                 {
-                    listView1.Items.Insert(listView1.SelectedItems[0].Index + 1, new ListViewItem(noteForm.Note, listView1.SelectedItems[0].Group) { BackColor = Color.Lime, Tag = "note"});
+                    listView1.Items.Insert(listView1.SelectedItems[0].Index + 1, new ListViewItem(noteForm.Note, listView1.SelectedItems[0].Group) { BackColor = Color.SpringGreen, Tag = "note"});
                 }
             }
         }
