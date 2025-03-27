@@ -304,7 +304,7 @@ namespace Pokladna
 
         private void CouponsButton_Click(object sender, EventArgs e)
         {
-
+            new CouponsForm().ShowDialog();
         }
     }
 }

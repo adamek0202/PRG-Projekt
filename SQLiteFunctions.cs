@@ -183,6 +183,8 @@ namespace Pokladna
             }
         }
 
+        
+
         public static async void SendOrderName(ListView listView)
         {
             foreach (ListViewItem item in listView.Items)

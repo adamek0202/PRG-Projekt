@@ -153,11 +153,11 @@
     <Compile Include="Forms\ProductsForms\DessertsForm.Designer.cs">
       <DependentUpon>DessertsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DiscountForm.cs">
+    <Compile Include="Forms\KeypadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DiscountForm.Designer.cs">
-      <DependentUpon>DiscountForm.cs</DependentUpon>
+    <Compile Include="Forms\KeypadForm.Designer.cs">
+      <DependentUpon>KeypadForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProductsForms\DrinksForm.cs">
       <SubType>Form</SubType>
@@ -288,8 +288,8 @@
     <EmbeddedResource Include="Forms\ProductsForms\DessertsForm.resx">
       <DependentUpon>DessertsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DiscountForm.resx">
-      <DependentUpon>DiscountForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\KeypadForm.resx">
+      <DependentUpon>KeypadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductsForms\DrinksForm.resx">
       <DependentUpon>DrinksForm.cs</DependentUpon>

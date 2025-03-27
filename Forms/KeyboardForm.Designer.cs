@@ -170,7 +170,7 @@
             // 
             this.textBox.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox.Location = new System.Drawing.Point(12, 12);
-            this.textBox.MaxLength = 400;
+            this.textBox.MaxLength = 50;
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(941, 63);
             this.textBox.TabIndex = 3;
@@ -845,7 +845,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(968, 521);
+            this.ClientSize = new System.Drawing.Size(960, 521);
             this.ControlBox = false;
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.button26);
