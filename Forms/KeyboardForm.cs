@@ -54,5 +54,10 @@ namespace Pokladna.Forms
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void backspaceButton_Click(object sender, EventArgs e)
+        {
+            textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1, 1);
+        }
     }
 }

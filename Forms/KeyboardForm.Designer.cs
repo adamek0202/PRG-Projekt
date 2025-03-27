@@ -68,6 +68,7 @@
             this.button36 = new System.Windows.Forms.Button();
             this.enterButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.backspaceButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sZingerButton
@@ -820,12 +821,31 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_click);
             // 
+            // backspaceButton
+            // 
+            this.backspaceButton.BackColor = System.Drawing.Color.Red;
+            this.backspaceButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.backspaceButton.FlatAppearance.BorderSize = 0;
+            this.backspaceButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.backspaceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.backspaceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.backspaceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backspaceButton.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.backspaceButton.ForeColor = System.Drawing.Color.White;
+            this.backspaceButton.Location = new System.Drawing.Point(727, 433);
+            this.backspaceButton.Name = "backspaceButton";
+            this.backspaceButton.Size = new System.Drawing.Size(86, 82);
+            this.backspaceButton.TabIndex = 2;
+            this.backspaceButton.Text = "<-";
+            this.backspaceButton.UseVisualStyleBackColor = false;
+            this.backspaceButton.Click += new System.EventHandler(this.backspaceButton_Click);
+            // 
             // KeyboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(962, 524);
+            this.ClientSize = new System.Drawing.Size(968, 521);
             this.ControlBox = false;
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.button26);
@@ -843,6 +863,7 @@
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.enterButton);
+            this.Controls.Add(this.backspaceButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button31);
@@ -924,5 +945,6 @@
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button enterButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button backspaceButton;
     }
 }

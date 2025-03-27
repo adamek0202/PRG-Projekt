@@ -35,14 +35,15 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 9);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 27);
+            this.label1.Size = new System.Drawing.Size(392, 131);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chcete stornovat tuto položku?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // yesButton
             // 
@@ -51,6 +52,7 @@
             this.yesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.yesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.yesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yesButton.ForeColor = System.Drawing.Color.Black;
             this.yesButton.Location = new System.Drawing.Point(58, 38);
             this.yesButton.Name = "yesButton";
             this.yesButton.Size = new System.Drawing.Size(132, 86);
@@ -66,6 +68,7 @@
             this.noButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.noButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.noButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.noButton.ForeColor = System.Drawing.Color.White;
             this.noButton.Location = new System.Drawing.Point(208, 39);
             this.noButton.Name = "noButton";
             this.noButton.Size = new System.Drawing.Size(132, 86);
@@ -79,7 +82,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(396, 132);
+            this.ClientSize = new System.Drawing.Size(392, 131);
             this.ControlBox = false;
             this.Controls.Add(this.noButton);
             this.Controls.Add(this.yesButton);
@@ -98,7 +101,6 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ConfirmForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -29,7 +29,7 @@ namespace Pokladna.Forms
 
         private void ConfirmForm_Load(object sender, EventArgs e)
         {
-            label1.Text = $"Chcete {What} stornovat?";
+            label1.Text = $"Chcete {What}?";
         }
 
         private void YesButton_Click(object sender, EventArgs e)

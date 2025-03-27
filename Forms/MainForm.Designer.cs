@@ -122,11 +122,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.numpadPanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.listView1 = new Pokladna.ListViewWithScrollBar();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listView = new Pokladna.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -144,9 +144,9 @@
             this.RemoveItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveItemButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RemoveItemButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.RemoveItemButton.Location = new System.Drawing.Point(714, 964);
+            this.RemoveItemButton.Location = new System.Drawing.Point(734, 964);
             this.RemoveItemButton.Name = "RemoveItemButton";
-            this.RemoveItemButton.Size = new System.Drawing.Size(93, 85);
+            this.RemoveItemButton.Size = new System.Drawing.Size(113, 85);
             this.RemoveItemButton.TabIndex = 0;
             this.RemoveItemButton.Text = "Storno\r\npoložky";
             this.RemoveItemButton.UseVisualStyleBackColor = false;
@@ -226,7 +226,7 @@
             this.CancelReceiptButton.ForeColor = System.Drawing.SystemColors.Control;
             this.CancelReceiptButton.Location = new System.Drawing.Point(615, 990);
             this.CancelReceiptButton.Name = "CancelReceiptButton";
-            this.CancelReceiptButton.Size = new System.Drawing.Size(93, 59);
+            this.CancelReceiptButton.Size = new System.Drawing.Size(113, 59);
             this.CancelReceiptButton.TabIndex = 0;
             this.CancelReceiptButton.Text = "Storno\r\núčtu";
             this.CancelReceiptButton.UseVisualStyleBackColor = false;
@@ -242,9 +242,9 @@
             this.ExchangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExchangeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ExchangeButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ExchangeButton.Location = new System.Drawing.Point(912, 964);
+            this.ExchangeButton.Location = new System.Drawing.Point(972, 964);
             this.ExchangeButton.Name = "ExchangeButton";
-            this.ExchangeButton.Size = new System.Drawing.Size(93, 85);
+            this.ExchangeButton.Size = new System.Drawing.Size(113, 85);
             this.ExchangeButton.TabIndex = 0;
             this.ExchangeButton.Text = "Výměna*";
             this.ExchangeButton.UseVisualStyleBackColor = false;
@@ -393,12 +393,13 @@
             this.CouponsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CouponsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CouponsButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.CouponsButton.Location = new System.Drawing.Point(1011, 964);
+            this.CouponsButton.Location = new System.Drawing.Point(1091, 964);
             this.CouponsButton.Name = "CouponsButton";
-            this.CouponsButton.Size = new System.Drawing.Size(105, 85);
+            this.CouponsButton.Size = new System.Drawing.Size(113, 85);
             this.CouponsButton.TabIndex = 0;
             this.CouponsButton.Text = "Kupóny*";
             this.CouponsButton.UseVisualStyleBackColor = false;
+            this.CouponsButton.Click += new System.EventHandler(this.CouponsButton_Click);
             // 
             // ManagerButton
             // 
@@ -410,9 +411,9 @@
             this.ManagerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManagerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ManagerButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ManagerButton.Location = new System.Drawing.Point(1122, 964);
+            this.ManagerButton.Location = new System.Drawing.Point(1210, 964);
             this.ManagerButton.Name = "ManagerButton";
-            this.ManagerButton.Size = new System.Drawing.Size(105, 85);
+            this.ManagerButton.Size = new System.Drawing.Size(113, 85);
             this.ManagerButton.TabIndex = 0;
             this.ManagerButton.Text = "Manažer\r\nFunkce";
             this.ManagerButton.UseVisualStyleBackColor = false;
@@ -802,9 +803,9 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.exitButton.Location = new System.Drawing.Point(813, 964);
+            this.exitButton.Location = new System.Drawing.Point(853, 964);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(93, 85);
+            this.exitButton.Size = new System.Drawing.Size(113, 85);
             this.exitButton.TabIndex = 0;
             this.exitButton.Text = "Konec";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -820,7 +821,7 @@
             this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.paymentButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.paymentButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.paymentButton.Location = new System.Drawing.Point(1233, 925);
+            this.paymentButton.Location = new System.Drawing.Point(1329, 925);
             this.paymentButton.Name = "paymentButton";
             this.paymentButton.Size = new System.Drawing.Size(183, 124);
             this.paymentButton.TabIndex = 0;
@@ -1417,7 +1418,7 @@
             this.supplementsButton.Size = new System.Drawing.Size(105, 77);
             this.supplementsButton.TabIndex = 0;
             this.supplementsButton.Tag = "Supplements";
-            this.supplementsButton.Text = "Přílohy";
+            this.supplementsButton.Text = "Přílohy\r\nOmáčky";
             this.supplementsButton.UseVisualStyleBackColor = false;
             this.supplementsButton.Click += new System.EventHandler(this.ExternalFormsButtons_Click);
             // 
@@ -1487,9 +1488,9 @@
             this.priceAskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.priceAskButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.priceAskButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.priceAskButton.Location = new System.Drawing.Point(1122, 881);
+            this.priceAskButton.Location = new System.Drawing.Point(1210, 881);
             this.priceAskButton.Name = "priceAskButton";
-            this.priceAskButton.Size = new System.Drawing.Size(105, 77);
+            this.priceAskButton.Size = new System.Drawing.Size(113, 77);
             this.priceAskButton.TabIndex = 0;
             this.priceAskButton.Text = "Dotaz na cenu";
             this.priceAskButton.UseVisualStyleBackColor = false;
@@ -1704,7 +1705,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Location = new System.Drawing.Point(615, 925);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 59);
+            this.button1.Size = new System.Drawing.Size(113, 59);
             this.button1.TabIndex = 0;
             this.button1.Text = "S sebou";
             this.button1.UseVisualStyleBackColor = false;
@@ -1743,37 +1744,55 @@
             this.panel6.Size = new System.Drawing.Size(112, 508);
             this.panel6.TabIndex = 9;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(1091, 881);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 77);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Poznámka\r\npoložka";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(61)))), ((int)(((byte)(70)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(61)))), ((int)(((byte)(70)))));
+            this.listView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Produkt,
             this.Cena,
             this.Mnozstvi});
-            this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
+            this.listView.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listView.FullRowSelect = true;
+            this.listView.GridLines = true;
             listViewGroup1.Header = "Menu 1";
             listViewGroup1.Name = "listViewGroup1";
             listViewGroup2.Header = "Menu 2";
             listViewGroup2.Name = "listViewGroup2";
-            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            this.listView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2});
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.HideSelection = false;
-            this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(13, 37);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(495, 970);
-            this.listView1.TabIndex = 0;
-            this.listView1.TileSize = new System.Drawing.Size(332, 40);
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView.HideSelection = false;
+            this.listView.LabelWrap = false;
+            this.listView.Location = new System.Drawing.Point(13, 37);
+            this.listView.Margin = new System.Windows.Forms.Padding(4);
+            this.listView.MultiSelect = false;
+            this.listView.Name = "listView1";
+            this.listView.ShowGroups = false;
+            this.listView.Size = new System.Drawing.Size(495, 970);
+            this.listView.TabIndex = 0;
+            this.listView.TileSize = new System.Drawing.Size(332, 40);
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
             // 
             // Produkt
             // 
@@ -1793,24 +1812,6 @@
             this.Mnozstvi.DisplayIndex = 0;
             this.Mnozstvi.Text = "";
             this.Mnozstvi.Width = 45;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(1003, 881);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 77);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Poznámka\r\npoložka";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MainForm
             // 
@@ -1845,7 +1846,7 @@
             this.Controls.Add(this.ExchangeButton);
             this.Controls.Add(this.CancelReceiptButton);
             this.Controls.Add(this.RemoveItemButton);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listView);
             this.Font = new System.Drawing.Font("Arial", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1870,7 +1871,7 @@
 
         #endregion
 
-        private ListViewWithScrollBar listView1;
+        private ListViewWithScrollBar listView;
         private System.Windows.Forms.ColumnHeader Produkt;
         private System.Windows.Forms.ColumnHeader Cena;
         private System.Windows.Forms.Button RemoveItemButton;

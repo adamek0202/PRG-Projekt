@@ -80,17 +80,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
-    <Compile Include="Forms\AddEmployeeForm.cs">
+    <Compile Include="Forms\CouponsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddEmployeeForm.Designer.cs">
+    <Compile Include="Forms\CouponsForm.Designer.cs">
+      <DependentUpon>CouponsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\BasicTheme.cs" />
-    <Compile Include="Forms\DateSelectForm.cs">
+    <Compile Include="Forms\ManagementForms\DateSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DateSelectForm.Designer.cs">
+    <Compile Include="Forms\ManagementForms\DateSelectForm.Designer.cs">
       <DependentUpon>DateSelectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ItemNotesForm.cs">
@@ -99,10 +105,10 @@
     <Compile Include="Forms\ItemNotesForm.Designer.cs">
       <DependentUpon>ItemNotesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemSalesForm.cs">
+    <Compile Include="Forms\ManagementForms\ItemSalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemSalesForm.Designer.cs">
+    <Compile Include="Forms\ManagementForms\ItemSalesForm.Designer.cs">
       <DependentUpon>ItemSalesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KeyboardForm.cs">
@@ -111,10 +117,10 @@
     <Compile Include="Forms\KeyboardForm.Designer.cs">
       <DependentUpon>KeyboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PrintPreviewForm.cs">
+    <Compile Include="Forms\ManagementForms\PrintPreviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\PrintPreviewForm.Designer.cs">
+    <Compile Include="Forms\ManagementForms\PrintPreviewForm.Designer.cs">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProductsForms\BSmartsForm.cs">
@@ -159,16 +165,16 @@
     <Compile Include="Forms\ProductsForms\DrinksForm.Designer.cs">
       <DependentUpon>DrinksForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditEmployeeform.cs">
+    <Compile Include="Forms\ManagementForms\EditEmployeeform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EditEmployeeform.Designer.cs">
+    <Compile Include="Forms\ManagementForms\EditEmployeeform.Designer.cs">
       <DependentUpon>EditEmployeeform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.cs">
+    <Compile Include="Forms\SpecialForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
+    <Compile Include="Forms\SpecialForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
@@ -177,10 +183,10 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManagerForm.cs">
+    <Compile Include="Forms\ManagementForms\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManagerForm.Designer.cs">
+    <Compile Include="Forms\ManagementForms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProductsForms\OthersForm.cs">
@@ -195,16 +201,16 @@
     <Compile Include="Forms\PaymentForm.Designer.cs">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SalesForm.cs">
+    <Compile Include="Forms\ManagementForms\SalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SalesForm.Designer.cs">
+    <Compile Include="Forms\ManagementForms\SalesForm.Designer.cs">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StartForm.cs">
+    <Compile Include="Forms\SpecialForms\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StartForm.Designer.cs">
+    <Compile Include="Forms\SpecialForms\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProductsForms\SupplementsForm.cs">
@@ -219,10 +225,10 @@
     <Compile Include="Forms\TenderedReturnForm.Designer.cs">
       <DependentUpon>TenderedReturnForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserFilterForm.cs">
+    <Compile Include="Forms\ManagementForms\UserFilterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserFilterForm.Designer.cs">
+    <Compile Include="Forms\ManagementForms\UserFilterForm.Designer.cs">
       <DependentUpon>UserFilterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalPosPrinter.cs" />
@@ -246,22 +252,25 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQLiteFunctions.cs" />
-    <EmbeddedResource Include="Forms\AddEmployeeForm.resx">
+    <EmbeddedResource Include="Forms\CouponsForm.resx">
+      <DependentUpon>CouponsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementForms\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DateSelectForm.resx">
+    <EmbeddedResource Include="Forms\ManagementForms\DateSelectForm.resx">
       <DependentUpon>DateSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemNotesForm.resx">
       <DependentUpon>ItemNotesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemSalesForm.resx">
+    <EmbeddedResource Include="Forms\ManagementForms\ItemSalesForm.resx">
       <DependentUpon>ItemSalesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KeyboardForm.resx">
       <DependentUpon>KeyboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PrintPreviewForm.resx">
+    <EmbeddedResource Include="Forms\ManagementForms\PrintPreviewForm.resx">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductsForms\BSmartsForm.resx">
@@ -285,10 +294,10 @@
     <EmbeddedResource Include="Forms\ProductsForms\DrinksForm.resx">
       <DependentUpon>DrinksForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditEmployeeform.resx">
+    <EmbeddedResource Include="Forms\ManagementForms\EditEmployeeform.resx">
       <DependentUpon>EditEmployeeform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
+    <EmbeddedResource Include="Forms\SpecialForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.cs-CZ.resx">
@@ -298,7 +307,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManagerForm.resx">
+    <EmbeddedResource Include="Forms\ManagementForms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductsForms\OthersForm.resx">
@@ -310,13 +319,13 @@
     <EmbeddedResource Include="Forms\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SalesForm.resx">
+    <EmbeddedResource Include="Forms\ManagementForms\SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StartForm.cs-CZ.resx">
+    <EmbeddedResource Include="Forms\SpecialForms\StartForm.cs-CZ.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StartForm.resx">
+    <EmbeddedResource Include="Forms\SpecialForms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductsForms\SupplementsForm.resx">
@@ -325,7 +334,7 @@
     <EmbeddedResource Include="Forms\TenderedReturnForm.resx">
       <DependentUpon>TenderedReturnForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserFilterForm.resx">
+    <EmbeddedResource Include="Forms\ManagementForms\UserFilterForm.resx">
       <DependentUpon>UserFilterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keypad.resx">

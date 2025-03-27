@@ -12,13 +12,13 @@ namespace Pokladna
     {
         internal int SumPrice;
         private int Multiplier = 1;
-        public static int ExternalProduct { get; set; }
+        internal static int ExternalProduct { get; set; }
 
         internal static bool PriceCheck { get; set; } = false;
 
-        public bool replace = false;
-        public static bool Here { get; private set; } = true;
-        public static string Cashier { get; set; }
+        internal bool replace = false;
+        internal static bool Here { get; private set; } = true;
+        internal static string Cashier { get; set; }
 
         public MainForm()
         {
@@ -31,7 +31,7 @@ namespace Pokladna
             get
             {
                 List<ListViewItem> data = new List<ListViewItem>();
-                foreach (ListViewItem item in listView1.Items)
+                foreach (ListViewItem item in listView.Items)
                 {
                     data.Add((ListViewItem)item.Clone());
                 }
@@ -47,46 +47,46 @@ namespace Pokladna
         #region Pohyb
         private void SelectPreviousItem()
         {
-            if (listView1.SelectedIndices.Count > 0)
+            if (listView.SelectedIndices.Count > 0)
             {
-                int currentIndex = listView1.SelectedIndices[0];
+                int currentIndex = listView.SelectedIndices[0];
                 if (currentIndex > 0)
                 {
-                    listView1.Items[currentIndex].Selected = false;
-                    listView1.Items[currentIndex - 1].Selected = true;
-                    listView1.Items[currentIndex - 1].EnsureVisible();
+                    listView.Items[currentIndex].Selected = false;
+                    listView.Items[currentIndex - 1].Selected = true;
+                    listView.Items[currentIndex - 1].EnsureVisible();
                 }
             }
-            else if (listView1.Items.Count > 0)
+            else if (listView.Items.Count > 0)
             {
-                listView1.Items[listView1.Items.Count - 1].Selected = true;
-                listView1.Items[listView1.Items.Count - 1].EnsureVisible();
+                listView.Items[listView.Items.Count - 1].Selected = true;
+                listView.Items[listView.Items.Count - 1].EnsureVisible();
             }
         }
 
         private void SelectNextItem()
         {
-            if (listView1.SelectedIndices.Count > 0)
+            if (listView.SelectedIndices.Count > 0)
             {
-                int currentIndex = listView1.SelectedIndices[0];
-                if (currentIndex < listView1.Items.Count - 1)
+                int currentIndex = listView.SelectedIndices[0];
+                if (currentIndex < listView.Items.Count - 1)
                 {
-                    listView1.Items[currentIndex].Selected = false;
-                    listView1.Items[currentIndex + 1].Selected = true;
-                    listView1.Items[currentIndex + 1].EnsureVisible();
+                    listView.Items[currentIndex].Selected = false;
+                    listView.Items[currentIndex + 1].Selected = true;
+                    listView.Items[currentIndex + 1].EnsureVisible();
                 }
             }
-            else if (listView1.Items.Count > 0)
+            else if (listView.Items.Count > 0)
             {
-                listView1.Items[0].Selected = true;
-                listView1.Items[0].EnsureVisible();
+                listView.Items[0].Selected = true;
+                listView.Items[0].EnsureVisible();
             }
         }
         #endregion Posun
 
         public void AddHeadItem(string name, int price, int times, ListViewGroup group, bool root = false)
         {
-            listView1.Items.Add(new ListViewItem(new string[] { name, price.ToString() + " Kč", times.ToString() }, group) { BackColor = Color.Orange, Tag = (root ? "root" : "") });
+            listView.Items.Add(new ListViewItem(new string[] { name, price.ToString() + " Kč", times.ToString() }, group) { BackColor = Color.Orange, Tag = (root ? "root" : "") });
             UpdateSumPrice(price);
         }
 
@@ -94,7 +94,7 @@ namespace Pokladna
         {
             foreach (var item in names)
             {
-                listView1.Items.Add(new ListViewItem(item, group) { BackColor = Color.Yellow });
+                listView.Items.Add(new ListViewItem(item, group) { BackColor = Color.Yellow });
             }
         }
 
@@ -106,18 +106,18 @@ namespace Pokladna
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0 && listView1.SelectedItems[0].Group != null)
+            if (listView.SelectedItems.Count > 0 && listView.SelectedItems[0].Group != null)
             {
-                if (new ConfirmForm("tuto položku").ShowDialog() == DialogResult.OK)
+                if (new ConfirmForm("tuto položku stornovat").ShowDialog() == DialogResult.OK)
                 {
-                    if (listView1.SelectedItems[0].Group.Items.Count > 0)
+                    if (listView.SelectedItems[0].Group.Items.Count > 0)
                     {
-                        UpdateSumPrice(-Convert.ToInt32(new string(listView1.SelectedItems[0].Group.Items[0].SubItems[1].Text.Where(char.IsDigit).ToArray())));
+                        UpdateSumPrice(-Convert.ToInt32(new string(listView.SelectedItems[0].Group.Items[0].SubItems[1].Text.Where(char.IsDigit).ToArray())));
 
                     }
-                    foreach (var item in listView1.SelectedItems[0].Group.Items)
+                    foreach (var item in listView.SelectedItems[0].Group.Items)
                     {
-                        listView1.Items.Remove((ListViewItem)item);
+                        listView.Items.Remove((ListViewItem)item);
                     }
                 }
             }
@@ -135,12 +135,12 @@ namespace Pokladna
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            if (listView1.Items.Count > 0)
+            if (listView.Items.Count > 0)
             {
-                if (new ConfirmForm("tento účet").ShowDialog() == DialogResult.OK)
+                if (new ConfirmForm("tento účet stornovat").ShowDialog() == DialogResult.OK)
                 {
-                    listView1.Items.Clear();
-                    listView1.Groups.Clear();
+                    listView.Items.Clear();
+                    listView.Groups.Clear();
                     UpdateSumPrice(-SumPrice);
                 }
             }
@@ -148,7 +148,7 @@ namespace Pokladna
 
         private void ReplaceButton_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count == 1)
+            if (listView.SelectedItems.Count == 1)
             {
                 replace = true;
             }
@@ -164,24 +164,27 @@ namespace Pokladna
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            NativeFunctions.DisableVisualStyles(listView1);
+            NativeFunctions.DisableVisualStyles(listView);
             TopLevel = true;
             label1.Text += Cashier;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Close();
+            if(new ConfirmForm("skončit").ShowDialog() == DialogResult.OK)
+            {
+                Close();
+            }
         }
 
         private void PaymentButton_Click(object sender, EventArgs e)
         {
-            if (listView1.Items.Count >= 1 && SumPrice != 0)
+            if (listView.Items.Count >= 1 && SumPrice != 0)
             {
                 if (new PaymentForm(SumPrice, ListViewData).ShowDialog() == DialogResult.OK)
                 {
-                    listView1.Items.Clear();
-                    listView1.Groups.Clear();
+                    listView.Items.Clear();
+                    listView.Groups.Clear();
                     UpdateSumPrice(-SumPrice);
                 }
             }
@@ -282,14 +285,26 @@ namespace Pokladna
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(listView1.SelectedItems.Count == 1 && !(new string[] { "root", "note" }.Contains(listView1.SelectedItems[0].Tag)))
+            if(listView.SelectedItems.Count == 1 && !(new string[] { "root", "note" }.Contains(listView.SelectedItems[0].Tag)))
             {
                 var noteForm = new ItemNotesForm();
                 if(noteForm.ShowDialog() == DialogResult.OK)
                 {
-                    listView1.Items.Insert(listView1.SelectedItems[0].Index + 1, new ListViewItem(noteForm.Note, listView1.SelectedItems[0].Group) { BackColor = Color.SpringGreen, Tag = "note"});
+                    listView.Items.Insert(listView.SelectedItems[0].Index + 1, new ListViewItem(noteForm.Note, listView.SelectedItems[0].Group) { BackColor = Color.SpringGreen, Tag = "note"});
                 }
             }
+            else if (listView.SelectedItems.Count == 1 && (string)listView.SelectedItems[0].Tag == "note")
+            {
+                if(new ConfirmForm("tuto poznámku odstranit").ShowDialog() == DialogResult.OK)
+                {
+                    listView.Items.RemoveAt(listView.SelectedItems[0].Index);
+                }
+            }
+        } 
+
+        private void CouponsButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
