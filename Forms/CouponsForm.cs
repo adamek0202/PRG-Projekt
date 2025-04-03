@@ -81,5 +81,13 @@ namespace Pokladna.Forms
                 textBox.Text += (string)btn.Tag; 
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(listViewWithScrollBar1.SelectedItems.Count == 1)
+            {
+                listViewWithScrollBar1.Items.Remove(listViewWithScrollBar1.SelectedItems[0]);
+            }
+        }
     }
 }

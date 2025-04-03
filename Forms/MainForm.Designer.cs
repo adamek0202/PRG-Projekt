@@ -127,12 +127,15 @@
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.giftCardButton = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.numpadPanel.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // RemoveItemButton
@@ -144,7 +147,7 @@
             this.RemoveItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveItemButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RemoveItemButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.RemoveItemButton.Location = new System.Drawing.Point(734, 964);
+            this.RemoveItemButton.Location = new System.Drawing.Point(222, 95);
             this.RemoveItemButton.Name = "RemoveItemButton";
             this.RemoveItemButton.Size = new System.Drawing.Size(113, 85);
             this.RemoveItemButton.TabIndex = 0;
@@ -190,7 +193,7 @@
             this.DownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DownButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DownButton.ForeColor = System.Drawing.Color.White;
-            this.DownButton.Location = new System.Drawing.Point(515, 990);
+            this.DownButton.Location = new System.Drawing.Point(3, 121);
             this.DownButton.Name = "DownButton";
             this.DownButton.Size = new System.Drawing.Size(93, 59);
             this.DownButton.TabIndex = 0;
@@ -207,7 +210,7 @@
             this.UpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.UpButton.ForeColor = System.Drawing.Color.White;
-            this.UpButton.Location = new System.Drawing.Point(515, 925);
+            this.UpButton.Location = new System.Drawing.Point(3, 56);
             this.UpButton.Name = "UpButton";
             this.UpButton.Size = new System.Drawing.Size(93, 59);
             this.UpButton.TabIndex = 0;
@@ -224,7 +227,7 @@
             this.CancelReceiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelReceiptButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CancelReceiptButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.CancelReceiptButton.Location = new System.Drawing.Point(615, 990);
+            this.CancelReceiptButton.Location = new System.Drawing.Point(103, 121);
             this.CancelReceiptButton.Name = "CancelReceiptButton";
             this.CancelReceiptButton.Size = new System.Drawing.Size(113, 59);
             this.CancelReceiptButton.TabIndex = 0;
@@ -242,7 +245,7 @@
             this.ExchangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExchangeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ExchangeButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ExchangeButton.Location = new System.Drawing.Point(972, 964);
+            this.ExchangeButton.Location = new System.Drawing.Point(460, 95);
             this.ExchangeButton.Name = "ExchangeButton";
             this.ExchangeButton.Size = new System.Drawing.Size(113, 85);
             this.ExchangeButton.TabIndex = 0;
@@ -393,7 +396,7 @@
             this.CouponsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CouponsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CouponsButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.CouponsButton.Location = new System.Drawing.Point(1091, 964);
+            this.CouponsButton.Location = new System.Drawing.Point(579, 95);
             this.CouponsButton.Name = "CouponsButton";
             this.CouponsButton.Size = new System.Drawing.Size(113, 85);
             this.CouponsButton.TabIndex = 0;
@@ -411,7 +414,7 @@
             this.ManagerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManagerButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ManagerButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ManagerButton.Location = new System.Drawing.Point(1210, 964);
+            this.ManagerButton.Location = new System.Drawing.Point(698, 95);
             this.ManagerButton.Name = "ManagerButton";
             this.ManagerButton.Size = new System.Drawing.Size(113, 85);
             this.ManagerButton.TabIndex = 0;
@@ -803,7 +806,7 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.exitButton.Location = new System.Drawing.Point(853, 964);
+            this.exitButton.Location = new System.Drawing.Point(341, 95);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(113, 85);
             this.exitButton.TabIndex = 0;
@@ -821,9 +824,9 @@
             this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.paymentButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.paymentButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.paymentButton.Location = new System.Drawing.Point(1329, 925);
+            this.paymentButton.Location = new System.Drawing.Point(817, 12);
             this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Size = new System.Drawing.Size(183, 124);
+            this.paymentButton.Size = new System.Drawing.Size(183, 168);
             this.paymentButton.TabIndex = 0;
             this.paymentButton.Text = "Platba";
             this.paymentButton.UseVisualStyleBackColor = false;
@@ -1488,7 +1491,7 @@
             this.priceAskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.priceAskButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.priceAskButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.priceAskButton.Location = new System.Drawing.Point(1210, 881);
+            this.priceAskButton.Location = new System.Drawing.Point(698, 12);
             this.priceAskButton.Name = "priceAskButton";
             this.priceAskButton.Size = new System.Drawing.Size(113, 77);
             this.priceAskButton.TabIndex = 0;
@@ -1703,7 +1706,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(615, 925);
+            this.button1.Location = new System.Drawing.Point(103, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 59);
             this.button1.TabIndex = 0;
@@ -1754,7 +1757,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(1091, 881);
+            this.button2.Location = new System.Drawing.Point(579, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 77);
             this.button2.TabIndex = 0;
@@ -1762,7 +1765,7 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // listView1
+            // listView
             // 
             this.listView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(61)))), ((int)(((byte)(70)))));
             this.listView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1786,7 +1789,7 @@
             this.listView.Location = new System.Drawing.Point(13, 37);
             this.listView.Margin = new System.Windows.Forms.Padding(4);
             this.listView.MultiSelect = false;
-            this.listView.Name = "listView1";
+            this.listView.Name = "listView";
             this.listView.ShowGroups = false;
             this.listView.Size = new System.Drawing.Size(495, 970);
             this.listView.TabIndex = 0;
@@ -1813,12 +1816,51 @@
             this.Mnozstvi.Text = "";
             this.Mnozstvi.Width = 45;
             // 
+            // giftCardButton
+            // 
+            this.giftCardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.giftCardButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.giftCardButton.FlatAppearance.BorderSize = 0;
+            this.giftCardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.giftCardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.giftCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.giftCardButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.giftCardButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.giftCardButton.Location = new System.Drawing.Point(460, 12);
+            this.giftCardButton.Name = "giftCardButton";
+            this.giftCardButton.Size = new System.Drawing.Size(113, 77);
+            this.giftCardButton.TabIndex = 0;
+            this.giftCardButton.Text = "Dárková\r\nkarta";
+            this.giftCardButton.UseVisualStyleBackColor = false;
+            this.giftCardButton.Click += new System.EventHandler(this.giftCardButton_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.DownButton);
+            this.panel5.Controls.Add(this.RemoveItemButton);
+            this.panel5.Controls.Add(this.CancelReceiptButton);
+            this.panel5.Controls.Add(this.ExchangeButton);
+            this.panel5.Controls.Add(this.exitButton);
+            this.panel5.Controls.Add(this.CouponsButton);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.giftCardButton);
+            this.panel5.Controls.Add(this.priceAskButton);
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.ManagerButton);
+            this.panel5.Controls.Add(this.UpButton);
+            this.panel5.Controls.Add(this.paymentButton);
+            this.panel5.Location = new System.Drawing.Point(515, 868);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1005, 188);
+            this.panel5.TabIndex = 10;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(1920, 1055);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.numpadPanel);
             this.Controls.Add(this.mBSmartsButton);
@@ -1834,18 +1876,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sumLabel);
-            this.Controls.Add(this.paymentButton);
-            this.Controls.Add(this.UpButton);
-            this.Controls.Add(this.DownButton);
-            this.Controls.Add(this.ManagerButton);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.priceAskButton);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.CouponsButton);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.ExchangeButton);
-            this.Controls.Add(this.CancelReceiptButton);
-            this.Controls.Add(this.RemoveItemButton);
             this.Controls.Add(this.listView);
             this.Font = new System.Drawing.Font("Arial", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1864,6 +1894,7 @@
             this.panel4.ResumeLayout(false);
             this.numpadPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1967,6 +1998,8 @@
         private System.Windows.Forms.Panel numpadPanel;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button giftCardButton;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

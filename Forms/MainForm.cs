@@ -10,7 +10,7 @@ namespace Pokladna
 {
     public partial class MainForm : Form
     {
-        internal int SumPrice;
+        internal int SumPrice { get; set; }
         private int Multiplier = 1;
         internal static int ExternalProduct { get; set; }
 
@@ -305,6 +305,15 @@ namespace Pokladna
         private void CouponsButton_Click(object sender, EventArgs e)
         {
             new CouponsForm().ShowDialog();
+        }
+
+        private void giftCardButton_Click(object sender, EventArgs e)
+        {
+            var grf = new GiftCardReadForm();
+            if(grf.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

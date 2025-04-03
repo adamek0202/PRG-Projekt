@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("9982330789088");
             this.keypadPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.kRemoveButton = new System.Windows.Forms.Button();
@@ -45,17 +44,17 @@
             this.kOneButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.kDualZeroButton = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.listViewWithScrollBar1 = new Pokladna.ListViewWithScrollBar();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.keypadPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // keypadPanel
             // 
-            this.keypadPanel.Controls.Add(this.button1);
             this.keypadPanel.Controls.Add(this.button2);
-            this.keypadPanel.Controls.Add(this.kDualZeroButton);
             this.keypadPanel.Controls.Add(this.kRemoveButton);
             this.keypadPanel.Controls.Add(this.kZeroButton);
             this.keypadPanel.Controls.Add(this.kNineButton);
@@ -68,10 +67,10 @@
             this.keypadPanel.Controls.Add(this.kThreeButton);
             this.keypadPanel.Controls.Add(this.kTwoButton);
             this.keypadPanel.Controls.Add(this.kOneButton);
-            this.keypadPanel.Location = new System.Drawing.Point(470, 13);
+            this.keypadPanel.Location = new System.Drawing.Point(638, 13);
             this.keypadPanel.Margin = new System.Windows.Forms.Padding(4);
             this.keypadPanel.Name = "keypadPanel";
-            this.keypadPanel.Size = new System.Drawing.Size(293, 548);
+            this.keypadPanel.Size = new System.Drawing.Size(293, 434);
             this.keypadPanel.TabIndex = 0;
             // 
             // button2
@@ -319,10 +318,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(199, 463);
+            this.button1.Location = new System.Drawing.Point(536, 355);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 81);
+            this.button1.Size = new System.Drawing.Size(94, 81);
             this.button1.TabIndex = 0;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = false;
@@ -337,54 +336,79 @@
             this.kDualZeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kDualZeroButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kDualZeroButton.ForeColor = System.Drawing.Color.White;
-            this.kDualZeroButton.Location = new System.Drawing.Point(4, 463);
+            this.kDualZeroButton.Location = new System.Drawing.Point(536, 268);
             this.kDualZeroButton.Margin = new System.Windows.Forms.Padding(4);
             this.kDualZeroButton.Name = "kDualZeroButton";
-            this.kDualZeroButton.Size = new System.Drawing.Size(90, 81);
+            this.kDualZeroButton.Size = new System.Drawing.Size(94, 81);
             this.kDualZeroButton.TabIndex = 0;
             this.kDualZeroButton.Tag = "00";
             this.kDualZeroButton.Text = "X";
             this.kDualZeroButton.UseVisualStyleBackColor = false;
             this.kDualZeroButton.Click += new System.EventHandler(this.kDualZeroButton_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(536, 13);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 81);
+            this.button3.TabIndex = 0;
+            this.button3.Tag = "00";
+            this.button3.Text = "Odstranit";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // listViewWithScrollBar1
             // 
             this.listViewWithScrollBar1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.listViewWithScrollBar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.listViewWithScrollBar1.FullRowSelect = true;
             this.listViewWithScrollBar1.GridLines = true;
-            this.listViewWithScrollBar1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewWithScrollBar1.HideSelection = false;
-            this.listViewWithScrollBar1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
             this.listViewWithScrollBar1.Location = new System.Drawing.Point(0, 0);
             this.listViewWithScrollBar1.Name = "listViewWithScrollBar1";
-            this.listViewWithScrollBar1.Size = new System.Drawing.Size(463, 567);
-            this.listViewWithScrollBar1.TabIndex = 0;
+            this.listViewWithScrollBar1.ShowGroups = false;
+            this.listViewWithScrollBar1.Size = new System.Drawing.Size(529, 445);
+            this.listViewWithScrollBar1.TabIndex = 1;
             this.listViewWithScrollBar1.UseCompatibleStateImageBehavior = false;
             this.listViewWithScrollBar1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Kód";
-            this.columnHeader1.Width = 200;
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 33;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Produkt";
-            this.columnHeader2.Width = 256;
+            this.columnHeader2.Text = "Kupon";
+            this.columnHeader2.Width = 289;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Cena";
             // 
             // CouponsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(768, 567);
+            this.ClientSize = new System.Drawing.Size(932, 445);
             this.ControlBox = false;
-            this.Controls.Add(this.keypadPanel);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listViewWithScrollBar1);
+            this.Controls.Add(this.keypadPanel);
+            this.Controls.Add(this.kDualZeroButton);
+            this.Controls.Add(this.button3);
             this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -394,7 +418,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Kupóny";
+            this.Text = "Kopony";
             this.TopMost = true;
             this.keypadPanel.ResumeLayout(false);
             this.keypadPanel.PerformLayout();
@@ -403,10 +427,6 @@
         }
 
         #endregion
-
-        private ListViewWithScrollBar listViewWithScrollBar1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Panel keypadPanel;
         private System.Windows.Forms.Button kRemoveButton;
         private System.Windows.Forms.Button kZeroButton;
@@ -423,5 +443,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button kDualZeroButton;
         private System.Windows.Forms.Button button2;
+        private ListViewWithScrollBar listViewWithScrollBar1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button button3;
     }
 }
