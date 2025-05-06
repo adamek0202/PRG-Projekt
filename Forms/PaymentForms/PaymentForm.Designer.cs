@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.keypadPanel = new System.Windows.Forms.Panel();
             this.kRemoveButton = new System.Windows.Forms.Button();
             this.kDualZeroButton = new System.Windows.Forms.Button();
@@ -81,7 +81,7 @@
             this.keypadPanel.Controls.Add(this.kThreeButton);
             this.keypadPanel.Controls.Add(this.kTwoButton);
             this.keypadPanel.Controls.Add(this.kOneButton);
-            this.keypadPanel.Location = new System.Drawing.Point(477, 312);
+            this.keypadPanel.Location = new System.Drawing.Point(462, 312);
             this.keypadPanel.Margin = new System.Windows.Forms.Padding(4);
             this.keypadPanel.Name = "keypadPanel";
             this.keypadPanel.Size = new System.Drawing.Size(293, 431);
@@ -331,7 +331,7 @@
             this.cardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cardButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cardButton.ForeColor = System.Drawing.Color.Black;
-            this.cardButton.Location = new System.Drawing.Point(15, 149);
+            this.cardButton.Location = new System.Drawing.Point(4, 72);
             this.cardButton.Margin = new System.Windows.Forms.Padding(4);
             this.cardButton.Name = "cardButton";
             this.cardButton.Size = new System.Drawing.Size(169, 126);
@@ -349,7 +349,7 @@
             this.foodCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.foodCardButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.foodCardButton.ForeColor = System.Drawing.Color.Black;
-            this.foodCardButton.Location = new System.Drawing.Point(15, 283);
+            this.foodCardButton.Location = new System.Drawing.Point(4, 206);
             this.foodCardButton.Margin = new System.Windows.Forms.Padding(4);
             this.foodCardButton.Name = "foodCardButton";
             this.foodCardButton.Size = new System.Drawing.Size(169, 126);
@@ -368,10 +368,10 @@
             this.PluxeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PluxeeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PluxeeButton.ForeColor = System.Drawing.Color.Black;
-            this.PluxeeButton.Location = new System.Drawing.Point(192, 149);
+            this.PluxeeButton.Location = new System.Drawing.Point(181, 72);
             this.PluxeeButton.Margin = new System.Windows.Forms.Padding(4);
             this.PluxeeButton.Name = "PluxeeButton";
-            this.PluxeeButton.Size = new System.Drawing.Size(145, 59);
+            this.PluxeeButton.Size = new System.Drawing.Size(168, 59);
             this.PluxeeButton.TabIndex = 4;
             this.PluxeeButton.Text = "Pluxee*";
             this.PluxeeButton.UseVisualStyleBackColor = false;
@@ -385,10 +385,10 @@
             this.ChequeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChequeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ChequeButton.ForeColor = System.Drawing.Color.Black;
-            this.ChequeButton.Location = new System.Drawing.Point(192, 216);
+            this.ChequeButton.Location = new System.Drawing.Point(181, 139);
             this.ChequeButton.Margin = new System.Windows.Forms.Padding(4);
             this.ChequeButton.Name = "ChequeButton";
-            this.ChequeButton.Size = new System.Drawing.Size(145, 59);
+            this.ChequeButton.Size = new System.Drawing.Size(168, 59);
             this.ChequeButton.TabIndex = 5;
             this.ChequeButton.Text = "Cheque*";
             this.ChequeButton.UseVisualStyleBackColor = false;
@@ -402,10 +402,10 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button16.ForeColor = System.Drawing.Color.Black;
-            this.button16.Location = new System.Drawing.Point(192, 283);
+            this.button16.Location = new System.Drawing.Point(181, 206);
             this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(145, 59);
+            this.button16.Size = new System.Drawing.Size(168, 59);
             this.button16.TabIndex = 6;
             this.button16.Text = "Ticket Restaurant*";
             this.button16.UseVisualStyleBackColor = false;
@@ -419,10 +419,10 @@
             this.giftCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.giftCardButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.giftCardButton.ForeColor = System.Drawing.Color.Black;
-            this.giftCardButton.Location = new System.Drawing.Point(191, 82);
+            this.giftCardButton.Location = new System.Drawing.Point(180, 5);
             this.giftCardButton.Margin = new System.Windows.Forms.Padding(4);
             this.giftCardButton.Name = "giftCardButton";
-            this.giftCardButton.Size = new System.Drawing.Size(145, 59);
+            this.giftCardButton.Size = new System.Drawing.Size(169, 59);
             this.giftCardButton.TabIndex = 7;
             this.giftCardButton.Text = "Dárková karta*";
             this.giftCardButton.UseVisualStyleBackColor = false;
@@ -437,7 +437,7 @@
             this.discountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.discountButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.discountButton.ForeColor = System.Drawing.Color.Black;
-            this.discountButton.Location = new System.Drawing.Point(15, 82);
+            this.discountButton.Location = new System.Drawing.Point(4, 5);
             this.discountButton.Margin = new System.Windows.Forms.Padding(4);
             this.discountButton.Name = "discountButton";
             this.discountButton.Size = new System.Drawing.Size(169, 59);
@@ -455,7 +455,7 @@
             this.cashButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cashButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cashButton.ForeColor = System.Drawing.Color.Black;
-            this.cashButton.Location = new System.Drawing.Point(14, 540);
+            this.cashButton.Location = new System.Drawing.Point(4, 471);
             this.cashButton.Margin = new System.Windows.Forms.Padding(4);
             this.cashButton.Name = "cashButton";
             this.cashButton.Size = new System.Drawing.Size(169, 126);
@@ -473,7 +473,7 @@
             this.exactCashButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exactCashButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exactCashButton.ForeColor = System.Drawing.Color.Black;
-            this.exactCashButton.Location = new System.Drawing.Point(191, 540);
+            this.exactCashButton.Location = new System.Drawing.Point(181, 471);
             this.exactCashButton.Margin = new System.Windows.Forms.Padding(4);
             this.exactCashButton.Name = "exactCashButton";
             this.exactCashButton.Size = new System.Drawing.Size(169, 126);
@@ -504,9 +504,9 @@
             this.panel2.Controls.Add(this.cashButton);
             this.panel2.Controls.Add(this.ChequeButton);
             this.panel2.Controls.Add(this.button16);
-            this.panel2.Location = new System.Drawing.Point(787, 66);
+            this.panel2.Location = new System.Drawing.Point(762, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(371, 677);
+            this.panel2.Size = new System.Drawing.Size(355, 603);
             this.panel2.TabIndex = 14;
             // 
             // cancelButton
@@ -519,7 +519,7 @@
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(1165, 644);
+            this.cancelButton.Location = new System.Drawing.Point(1124, 645);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(140, 99);
@@ -539,13 +539,13 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup3.Header = "Menu 1";
-            listViewGroup3.Name = "listViewGroup1";
-            listViewGroup4.Header = "Menu 2";
-            listViewGroup4.Name = "listViewGroup2";
+            listViewGroup7.Header = "Menu 1";
+            listViewGroup7.Name = "listViewGroup1";
+            listViewGroup8.Header = "Menu 2";
+            listViewGroup8.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4});
+            listViewGroup7,
+            listViewGroup8});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
@@ -585,7 +585,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(1318, 755);
+            this.ClientSize = new System.Drawing.Size(1272, 755);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listView1);
@@ -597,7 +597,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1324, 761);
+            this.MinimumSize = new System.Drawing.Size(1290, 761);
             this.Name = "PaymentForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

@@ -163,7 +163,7 @@
     <value>121, 56</value>
   </data>
   <data name="button3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="button3.Text" xml:space="preserve">
     <value>Přihlásit se</value>
@@ -193,7 +193,7 @@
     <value>121, 56</value>
   </data>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="button4.Text" xml:space="preserve">
     <value>Manažerské
