@@ -16,12 +16,12 @@ namespace Pokladna
             if (!PrinterExists(printerName))
             {
                 EPrinter = null;
-                return $"Chyba při tiskárny: Tiskárna neexistuje";
+                return $"Chyba při inicializaci tiskárny: Tiskárna neexistuje";
             }
             if (!CheckPrinterStatus(printerName))
             {
                 EPrinter = null;
-                return $"Chyba při tiskárny: Tiskárna je offline";
+                return $"Chyba při inicializaci tiskárny: Tiskárna je offline";
             }
             try
             {
@@ -31,7 +31,7 @@ namespace Pokladna
             catch (Exception ex)
             {
                 EPrinter = null;
-                return $"Chyba při tiskárny: {ex.Message}";
+                return $"Chyba při inicializaci tiskárny: {ex.Message}";
             }
         }
 
@@ -45,18 +45,18 @@ namespace Pokladna
                     int printerStatus = Convert.ToInt32(printer["PrinterStatus"]);
                     bool workOffline = Convert.ToBoolean(printer["WorkOffline"]);
 
-                    Console.WriteLine($"Tiskárna: {printer["Name"]}");
-                    Console.WriteLine($"Status: {printerStatus}");
-                    Console.WriteLine($"Offline: {workOffline}");
+                    //Console.WriteLine($"Info: Tiskárna: {printer["Name"]}");
+                    //Console.WriteLine($"Info: Status tiskárny: {printerStatus}");
+                    //Console.WriteLine($"Info: Tiskárna Offline: {workOffline}");
 
                     if (workOffline || printerStatus == 7) // 7 = Printer Offline
                     {
-                        Console.WriteLine("Tiskárna je offline.");
+                        //Console.WriteLine("Chyba: Tiskárna je offline.");
                         return false;
                     }
                     else
                     {
-                        Console.WriteLine("Tiskárna je online.");
+                        //Console.WriteLine("Tiskárna je online.");
                         return true;
                     }
                 }

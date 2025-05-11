@@ -43,6 +43,25 @@ namespace Pokladna
     {
         public static int orderId;
 
+        public static int LoadReceiptNumber()
+        {
+            const string querry = "SELECT value from Sysvars WHERE key = 'ReceiptNumber'";
+            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                using(var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return int.Parse(reader["value"].ToString());
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+        }
+
         public static void RecordSale(System.Windows.Forms.ListView listView, Payments payment, int price)
         {
             const string querry = "UPDATE Products SET Sold = Sold + 1 WHERE Name = @name";

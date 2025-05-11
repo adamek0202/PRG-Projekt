@@ -245,6 +245,7 @@
       <DependentUpon>Keypad.cs</DependentUpon>
     </Compile>
     <Compile Include="NativeFunctions.cs" />
+    <Compile Include="NFC.cs" />
     <Compile Include="PDFGeneration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
