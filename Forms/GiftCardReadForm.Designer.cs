@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(501, 284);
+            this.ClientSize = new System.Drawing.Size(497, 280);
             this.ControlBox = false;
             this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -45,6 +45,7 @@
             this.Name = "GiftCardReadForm";
             this.ShowIcon = false;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.GiftCardReadForm_Load);
             this.ResumeLayout(false);
 
         }

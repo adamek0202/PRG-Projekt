@@ -1,6 +1,5 @@
 ﻿using PCSC;
 using PCSC.Monitoring;
-using Sydesoft.NfcDevice;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -11,14 +10,10 @@ namespace Pokladna.Forms
 {
     public partial class GiftCardReadForm : Form
     {
-        private static ACR122U acr122u = new ACR122U();
 
         public GiftCardReadForm()
         {
             InitializeComponent();
-
-            acr122u.Init(false, 50, 4, 4, 200);
-            acr122u.CardInserted += ReadCard;
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -32,9 +27,12 @@ namespace Pokladna.Forms
             }
         }
 
-        private static void ReadCard(ICardReader reader)
+        private void GiftCardReadForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show($"ID karty: {BitConverter.ToString(acr122u.GetUID(reader))}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            NfcReader.Instance.CardUidReceived += uid =>
+            {
+                MessageBox.Show($"ID karty: {uid}");
+            };
         }
     }
 }
