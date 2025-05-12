@@ -13,6 +13,8 @@ namespace Pokladna
         {
             Console.Write("Info: Načítání konfigurace... ");
             Console.WriteLine("[OK]");
+            Console.Write("Info: Inicializace prostředí... ");
+            Console.WriteLine("[OK]");
             Console.Write("Info: Inicializace databáze... ");
             if (!File.Exists(Environment.CurrentDirectory + "\\pokladna.db") && !(DatabaseConnection.IsConnectionValid(out string error)))
             {
@@ -87,7 +89,6 @@ namespace Pokladna
             QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
             Console.WriteLine("Info: Spouštění aplikace...");
             Application.Run(new StartForm());
-            File.WriteAllText("receiptNumber", GlobalPosPrinter.receiptId.ToString());
         }
     }
 }
