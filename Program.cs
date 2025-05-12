@@ -1,5 +1,6 @@
 ﻿using Pokladna.Forms;
 using System;
+using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
 
@@ -7,25 +8,48 @@ namespace Pokladna
 {
     internal static class Program
     {
-        /// <summary>
-        /// Hlavní vstupní bod aplikace.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            Console.WriteLine("Info: Načítání konfigurace... [OK]");
-            Console.Write("Info: inicializace databáze... ");
-            if (!File.Exists(Environment.CurrentDirectory + "\\pokladna.db"))
+            Console.Write("Info: Načítání konfigurace... ");
+            Console.WriteLine("[OK]");
+            Console.Write("Info: Inicializace databáze... ");
+            if (!File.Exists(Environment.CurrentDirectory + "\\pokladna.db") && !(DatabaseConnection.IsConnectionValid(out string error)))
             {
-                if (MessageBox.Show("Databáze nebyla nenalezena", "Chyba databáze", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.No)
-                {
-                    Console.WriteLine("[Chyba]");
-                    Console.WriteLine("Chyba: Databáze nenalezena");
-                    return;
-                }
+                Console.WriteLine("[Chyba]");
+                Console.WriteLine("Chyba: Databáze nenalezena");
+                MessageBox.Show("Databáze nebyla nenalezena", "Chyba databáze", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+            else
+            {
+                Console.WriteLine("[OK]");
+            }
+            Console.Write("Info: Kontrola integrity databáze... ");
+            if (!DatabaseFunctions.CheckDatabaseIntegrity())
+            {
+                Console.WriteLine("[Chyba]");
+                Console.WriteLine("Chyba: Integrita databáze byla porušena");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("[OK]");
+            }
+            Console.Write("Info: Kontrola integrity databázových tabulek... ");
+            if (DatabaseFunctions.CheckTables())
+            {
+                Console.WriteLine("[OK]");
+            }
+            else
+            {
+                Console.WriteLine("[Chyba]");
+                return;
+            }
+
+            Console.Write("Info: Načítání stavových dat...");
             int receiptNumber = DatabaseFunctions.LoadReceiptNumber();
-            if(receiptNumber != 0)
+            if (receiptNumber != 0)
             {
                 GlobalPosPrinter.receiptId = receiptNumber;
                 Console.WriteLine("[OK]");
@@ -49,7 +73,7 @@ namespace Pokladna
             }
             else
             {
-                Console.WriteLine("[OK]"); 
+                Console.WriteLine("[OK]");
             }
             Console.Write("Info: Inicializace čtečky karet... ");
             if (!NfcReader.Instance.Start())

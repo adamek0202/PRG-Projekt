@@ -32,6 +32,21 @@ namespace Pokladna
             }
         }
 
+        public static bool IsConnectionValid(out string error)
+        {
+            try
+            {
+                var _ = Connection; // vyvolá inicializaci
+                error = null;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return false;
+            }
+        }
+
         public static void CloseConnection()
         {
             _connection?.Close();
@@ -61,6 +76,83 @@ namespace Pokladna
                 }
             }
         }
+
+        public static bool CheckTables()
+        {
+            var requiredTables = new Dictionary<string, List<string>>
+            {
+                { "Categories", new List<string> { "Id", "Name" } },
+                {"Coupons", new List<string> {"Id", "Code", "Name", "Items", "Price", "Validity", "Maxuses", "Uses"} },
+                {"GiftCards", new List<string> {"Id", "Code", "Holder", "Valid"} },
+                {"Menus", new List<string> {"MenuID", "Name", "Price", "Components"} },
+                {"Products", new List<string> {"ProductID", "Name", "Price", "CategoryID", "Sold"} },
+                {"Sysvars", new List<string> {"Key", "Value"} },
+                {"Transactions", new List<string> {"Id", "Number", "DateTime", "Price", "Payment", "User"} },
+                {"Users", new List<string> {"Id", "Password", "FullName", "Position"} }
+            };
+
+            foreach (var table in requiredTables)
+            {
+                string tableName = table.Key;
+                List<string> expectedColumns = table.Value;
+
+                if (!TableExists(tableName))
+                {
+                    Console.WriteLine($"Chybí tabulka: {tableName}");
+                    return false;
+                }
+
+                if (!ColumnsMatch(tableName, expectedColumns))
+                {
+                    Console.WriteLine($"Tabulka {tableName} má neodpovídající sloupce.");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private static bool TableExists(string tableName)
+        {
+            using (var cmd = new SQLiteCommand(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name=@name;", DatabaseConnection.Connection))
+            {
+                cmd.Parameters.AddWithValue("@name", tableName);
+                var result = cmd.ExecuteScalar();
+                return result != null;
+            }
+        }
+
+        private static bool ColumnsMatch(string tableName, List<string> expectedColumns)
+        {
+            var actualColumns = new List<string>();
+
+            using (var cmd = new SQLiteCommand($"PRAGMA table_info({tableName});", DatabaseConnection.Connection))
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    actualColumns.Add(reader["name"].ToString());
+                }
+            }
+
+            foreach (var column in expectedColumns)
+            {
+                if (!actualColumns.Contains(column))
+                    return false;
+            }
+
+            return true;
+        }
+
+        public static bool CheckDatabaseIntegrity()
+        {
+            using (var cmd = new SQLiteCommand("PRAGMA integrity_check;", DatabaseConnection.Connection))
+            {
+                var result = cmd.ExecuteScalar()?.ToString();
+                return result == "ok";
+            }
+        }
+
 
         public static void RecordSale(System.Windows.Forms.ListView listView, Payments payment, int price)
         {
