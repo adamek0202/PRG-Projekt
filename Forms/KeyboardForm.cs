@@ -57,7 +57,10 @@ namespace Pokladna.Forms
 
         private void backspaceButton_Click(object sender, EventArgs e)
         {
-            textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1, 1);
+            if (textBox.Text.Length > 0)
+            {
+                textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1, 1); 
+            }
         }
     }
 }
