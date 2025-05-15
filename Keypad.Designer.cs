@@ -45,25 +45,24 @@
             // 
             // kRemoveButton
             // 
-            this.kRemoveButton.BackColor = System.Drawing.Color.Lime;
+            this.kRemoveButton.BackColor = System.Drawing.Color.Black;
             this.kRemoveButton.FlatAppearance.BorderSize = 0;
             this.kRemoveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.kRemoveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.kRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kRemoveButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kRemoveButton.ForeColor = System.Drawing.Color.Black;
+            this.kRemoveButton.ForeColor = System.Drawing.Color.White;
             this.kRemoveButton.Location = new System.Drawing.Point(200, 332);
             this.kRemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.kRemoveButton.Name = "kRemoveButton";
             this.kRemoveButton.Size = new System.Drawing.Size(90, 81);
             this.kRemoveButton.TabIndex = 4;
-            this.kRemoveButton.Text = "OK";
+            this.kRemoveButton.Text = "←";
             this.kRemoveButton.UseVisualStyleBackColor = false;
-            this.kRemoveButton.Click += new System.EventHandler(this.kRemoveButton_Click);
             // 
             // kDualZeroButton
             // 
-            this.kDualZeroButton.BackColor = System.Drawing.Color.Red;
+            this.kDualZeroButton.BackColor = System.Drawing.Color.Black;
             this.kDualZeroButton.FlatAppearance.BorderSize = 0;
             this.kDualZeroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.kDualZeroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -76,7 +75,7 @@
             this.kDualZeroButton.Size = new System.Drawing.Size(90, 81);
             this.kDualZeroButton.TabIndex = 4;
             this.kDualZeroButton.Tag = "00";
-            this.kDualZeroButton.Text = "C";
+            this.kDualZeroButton.Text = "00";
             this.kDualZeroButton.UseVisualStyleBackColor = false;
             this.kDualZeroButton.Click += new System.EventHandler(this.kOneButton_Click);
             // 
@@ -310,7 +309,6 @@
         private System.Windows.Forms.Button kZeroButton;
         private System.Windows.Forms.Button kNineButton;
         private System.Windows.Forms.Button kEightButton;
-        private System.Windows.Forms.TextBox numberTextBox;
         private System.Windows.Forms.Button kSevenButton;
         private System.Windows.Forms.Button kSixButton;
         private System.Windows.Forms.Button kFiveButton;
@@ -318,5 +316,6 @@
         private System.Windows.Forms.Button kThreeButton;
         private System.Windows.Forms.Button kTwoButton;
         private System.Windows.Forms.Button kOneButton;
+        public System.Windows.Forms.TextBox numberTextBox;
     }
 }

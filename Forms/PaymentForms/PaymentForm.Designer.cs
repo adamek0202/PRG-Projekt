@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Menu 1", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Menu 2", System.Windows.Forms.HorizontalAlignment.Left);
             this.keypadPanel = new System.Windows.Forms.Panel();
             this.kRemoveButton = new System.Windows.Forms.Button();
             this.kDualZeroButton = new System.Windows.Forms.Button();
@@ -539,13 +539,13 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup7.Header = "Menu 1";
-            listViewGroup7.Name = "listViewGroup1";
-            listViewGroup8.Header = "Menu 2";
-            listViewGroup8.Name = "listViewGroup2";
+            listViewGroup3.Header = "Menu 1";
+            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup4.Header = "Menu 2";
+            listViewGroup4.Name = "listViewGroup2";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup7,
-            listViewGroup8});
+            listViewGroup3,
+            listViewGroup4});
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
@@ -585,7 +585,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(1272, 755);
+            this.ClientSize = new System.Drawing.Size(1284, 755);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listView1);

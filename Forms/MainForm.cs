@@ -312,7 +312,7 @@ namespace Pokladna
             var grf = new GiftCardReadForm();
             if(grf.ShowDialog() == DialogResult.OK)
             {
-
+                new GiftCardInfoForm().ShowDialog();
             }
         }
     }

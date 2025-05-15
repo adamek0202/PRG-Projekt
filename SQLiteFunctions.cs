@@ -83,7 +83,7 @@ namespace Pokladna
             {
                 { "Categories", new List<string> { "Id", "Name" } },
                 {"Coupons", new List<string> {"Id", "Code", "Name", "Items", "Price", "Validity", "Maxuses", "Uses"} },
-                {"GiftCards", new List<string> {"Id", "Code", "Holder", "Valid"} },
+                {"GiftCards", new List<string> {"Id", "Code", "Holder","Money", "ValidityEnd"} },
                 {"Menus", new List<string> {"MenuID", "Name", "Price", "Components"} },
                 {"Products", new List<string> {"ProductID", "Name", "Price", "CategoryID", "Sold"} },
                 {"Sysvars", new List<string> {"Key", "Value"} },
@@ -362,7 +362,7 @@ namespace Pokladna
         {
             List<string> values = new List<string>();
 
-            string querry = "SELECT FullName from Users WHERE Position = @position OR Position = manager";
+            string querry = "SELECT FullName from Users WHERE (Position = @position) OR (Position = manager)";
             using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
                 command.Parameters.AddWithValue("position", position);
