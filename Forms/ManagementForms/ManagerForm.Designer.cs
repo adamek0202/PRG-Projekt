@@ -37,6 +37,7 @@
             this.itemSalesButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.removeUserButton = new System.Windows.Forms.Button();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             // 
             this.listBoxEmployees.FormattingEnabled = true;
             this.listBoxEmployees.ItemHeight = 22;
-            this.listBoxEmployees.Location = new System.Drawing.Point(12, 12);
+            this.listBoxEmployees.Location = new System.Drawing.Point(225, 167);
             this.listBoxEmployees.Name = "listBoxEmployees";
             this.listBoxEmployees.Size = new System.Drawing.Size(363, 334);
             this.listBoxEmployees.TabIndex = 0;
@@ -76,7 +77,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(381, 311);
+            this.button1.Location = new System.Drawing.Point(594, 466);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 35);
             this.button1.TabIndex = 2;
@@ -100,7 +101,7 @@
             this.groupBox1.Controls.Add(this.itemSalesButton);
             this.groupBox1.Controls.Add(this.transactionsButton);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(502, 12);
+            this.groupBox1.Location = new System.Drawing.Point(715, 167);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(250, 100);
             this.groupBox1.TabIndex = 1;
@@ -124,7 +125,7 @@
             this.groupBox2.Controls.Add(this.removeUserButton);
             this.groupBox2.Controls.Add(this.buttonAdd);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(381, 12);
+            this.groupBox2.Location = new System.Drawing.Point(594, 167);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(115, 227);
             this.groupBox2.TabIndex = 0;
@@ -142,21 +143,30 @@
             this.removeUserButton.UseVisualStyleBackColor = true;
             this.removeUserButton.Click += new System.EventHandler(this.RemoveUserButton_Click);
             // 
+            // elementHost1
+            // 
+            this.elementHost1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.elementHost1.Location = new System.Drawing.Point(0, 0);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(1285, 95);
+            this.elementHost1.TabIndex = 4;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = null;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(759, 355);
+            this.ClientSize = new System.Drawing.Size(1285, 719);
+            this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBoxEmployees);
             this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ManagerForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -179,5 +189,6 @@
         private System.Windows.Forms.Button itemSalesButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button removeUserButton;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
     }
 }

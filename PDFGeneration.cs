@@ -1,12 +1,11 @@
-﻿using Projekt.Forms;
+﻿using Pokladna.Forms;
 using QuestPDF.Fluent;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 
-namespace Projekt
+namespace Pokladna
 {
     internal static class PDFGeneration
     {

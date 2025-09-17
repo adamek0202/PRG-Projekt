@@ -1,4 +1,4 @@
-﻿namespace Projekt.Forms
+﻿namespace Pokladna.Forms
 {
     partial class PrintPreviewForm
     {

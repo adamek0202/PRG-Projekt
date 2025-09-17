@@ -1,5 +1,4 @@
-﻿using Projekt.Forms;
-using System;
+﻿using System;
 using System.Data.SQLite;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
@@ -13,6 +12,7 @@ namespace Pokladna.Forms
         public ManagerForm()
         {
             InitializeComponent();
+            elementHost1.Child = new Ribbon();
             ReallyCenterToScreen(this);
             NativeFunctions.DisableVisualStyles(listBoxEmployees);
             LoadEmployees();
@@ -49,7 +49,9 @@ namespace Pokladna.Forms
         // Kliknutí na tlačítko "Přidat zaměstnance"
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if(new AddEmployeeForm().ShowDialog() == DialogResult.OK)
+            var aef = new AddEmployeeForm();
+            aef.MdiParent = this;
+            if (aef.ShowDialog() == DialogResult.OK)
             {
                 LoadEmployees();
             }
@@ -141,6 +143,16 @@ namespace Pokladna.Forms
         private string RemoveTextInParentheses(string input)
         {
             return Regex.Replace(input, @"\s*\(.*?\)", "");
+        }
+
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolBar1_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
+        {
+
         }
     }
 }

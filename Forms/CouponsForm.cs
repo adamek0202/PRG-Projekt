@@ -11,7 +11,6 @@ namespace Pokladna.Forms
         public CouponsForm()
         {
             InitializeComponent();
-            NativeFunctions.DisableVisualStyles(listViewWithScrollBar1);
             ReallyCenterToScreen(this);
         }
 
@@ -34,9 +33,9 @@ namespace Pokladna.Forms
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
-            ProcessCoupon(textBox.Text);
+            textBox.Text = string.Empty;
         }
 
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -47,17 +46,19 @@ namespace Pokladna.Forms
             }
         }
 
-        private void ProcessCoupon(string code)
+        private bool ProcessCoupon(string code)
         {
             if (textBox.Text.All(char.IsDigit) && textBox.Text.Length == 13)
             {
-                listViewWithScrollBar1.Items.Add(textBox.Text);
-                textBox.Clear(); 
+                MessageBox.Show($"Byl naskenován kupón: {textBox.Text}", "Info");
+                textBox.Text = string.Empty;
+                return true;
             }
             else
             {
                 MessageBox.Show("Nebyl zadán platný kód kopónu", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox.Clear();
+                return false;
             }
         }
 
@@ -69,6 +70,7 @@ namespace Pokladna.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ProcessCoupon(textBox.Text);
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -84,10 +86,6 @@ namespace Pokladna.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(listViewWithScrollBar1.SelectedItems.Count == 1)
-            {
-                listViewWithScrollBar1.Items.Remove(listViewWithScrollBar1.SelectedItems[0]);
-            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Pokladna.Forms
+﻿namespace Pokladna
 {
     public class Employee
     {

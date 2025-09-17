@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Pokladna.BasicTheme;
 
-namespace Projekt.Forms
+namespace Pokladna.Forms
 {
     public partial class SalesForm : Form
     {

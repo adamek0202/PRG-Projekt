@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Pokladna.GlobalPosPrinter;
 using System.Collections.Generic;
-using Projekt.Forms;
+using Pokladna.Forms;
+using System.Globalization;
 
 //Databázová logika
 //Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
@@ -279,7 +280,7 @@ namespace Pokladna
                                 if (!MainForm.PriceCheck)
                                 {
                                     form.AddHeadItem(name, price, times, group, true);
-                                    var componentsIds = System.Text.Json.JsonSerializer.Deserialize<int[]>(componentsJson);
+                                    var componentsIds = JsonSerializer.Deserialize<int[]>(componentsJson);
                                     AddMenuComponents(form, componentsIds, group); 
                                 }
                                 else
@@ -294,7 +295,29 @@ namespace Pokladna
             }
         }
 
-        
+        public static Coupon GetCoupon(string code)
+        {
+            string querry = "SELECT * from Coupons WHERE Code = @code";
+            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("@code", code);
+                using(var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var items = JsonSerializer.Deserialize<int[]>(reader["Items"].ToString());
+                        if(items.Length == 0)
+                        {
+                            throw new CouponException("Systémová chyba: kupón nemá žádné položky");
+                        }
+                        if (DateTime.TryParse(reader["Validity"].ToString(), new CultureInfo("cs-CZ"), DateTimeStyles.None, out _))
+                        {
+
+                        }
+                    }
+                }
+            }
+        }
 
         public static async void SendOrderName(ListView listView)
         {

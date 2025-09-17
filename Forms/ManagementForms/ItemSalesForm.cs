@@ -10,7 +10,7 @@ using System.Security.Cryptography;
 using System.Windows.Forms;
 using static Pokladna.BasicTheme;
 
-namespace Projekt.Forms
+namespace Pokladna.Forms
 {
     public partial class ItemSalesForm : Form
     {
