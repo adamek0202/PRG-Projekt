@@ -26,14 +26,14 @@ namespace Pokladna
             Height = 1080;
 		}
 
-        public List<ListViewItem> ListViewData
+        internal List<ListRow> ListViewData
         {
             get
             {
-                List<ListViewItem> data = new List<ListViewItem>();
-                foreach (ListViewItem item in listView.Items)
+                List<ListRow> data = new List<ListRow>();
+                foreach (ListRow item in listView.Items)
                 {
-                    data.Add((ListViewItem)item.Clone());
+                    data.Add((ListRow)item);
                 }
                 return data;
             }
@@ -84,18 +84,15 @@ namespace Pokladna
         }
         #endregion Posun
 
-        public void AddHeadItem(string name, int price, int times, ListViewGroup group, bool root = false)
+        public void AddHeadItem(string name, int price, int times, ListViewGroup group, bool root = false, string couponID = "")
         {
-            listView.Items.Add(new ListViewItem(new string[] { name, price.ToString() + " Kč", times.ToString() }, group) { BackColor = Color.Orange, Tag = (root ? "root" : "") });
+            listView.Items.Add(new ListRow(new string[] { name, price.ToString() + " Kč", times.ToString() }, group) { BackColor = Color.Orange, Tag = (root ? "root" : ""), CouponID = couponID });
             UpdateSumPrice(price);
         }
 
-        public void AddSubItem(string[] names, ListViewGroup group)
+        public void AddSubItem(string name, ListViewGroup group)
         {
-            foreach (var item in names)
-            {
-                listView.Items.Add(new ListViewItem(item, group) { BackColor = Color.Yellow });
-            }
+                listView.Items.Add(new ListRow(name, group) { BackColor = Color.Yellow });
         }
 
         private void UpdateSumPrice(int price)
@@ -117,7 +114,7 @@ namespace Pokladna
                     }
                     foreach (var item in listView.SelectedItems[0].Group.Items)
                     {
-                        listView.Items.Remove((ListViewItem)item);
+                        listView.Items.Remove((ListRow)item);
                     }
                 }
             }
@@ -290,7 +287,7 @@ namespace Pokladna
                 var noteForm = new ItemNotesForm();
                 if(noteForm.ShowDialog() == DialogResult.OK)
                 {
-                    listView.Items.Insert(listView.SelectedItems[0].Index + 1, new ListViewItem(noteForm.Note, listView.SelectedItems[0].Group) { BackColor = Color.SpringGreen, Tag = "note"});
+                    listView.Items.Insert(listView.SelectedItems[0].Index + 1, new ListRow(noteForm.Note, listView.SelectedItems[0].Group) { BackColor = Color.SpringGreen, Tag = "note"});
                 }
             }
             else if (listView.SelectedItems.Count == 1 && (string)listView.SelectedItems[0].Tag == "note")
@@ -304,7 +301,18 @@ namespace Pokladna
 
         private void CouponsButton_Click(object sender, EventArgs e)
         {
-            new CouponsForm().ShowDialog();
+            var cf = new CouponsForm();
+            if(cf.ShowDialog() == DialogResult.OK)
+            {
+                var coupon = cf.Coupon;
+                var group = new ListViewGroup();
+                Console.WriteLine(coupon.Code);
+                AddHeadItem(coupon.Name, coupon.Price, 1, group, true, coupon.Code);
+                foreach(var item in coupon.Items)
+                {
+                    AddSubItem(item.Name, group);
+                }
+            }
         }
 
         private void giftCardButton_Click(object sender, EventArgs e)

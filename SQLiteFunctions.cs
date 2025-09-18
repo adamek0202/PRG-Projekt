@@ -63,9 +63,9 @@ namespace Pokladna
         public static int LoadReceiptNumber()
         {
             const string querry = "SELECT value from Sysvars WHERE key = 'ReceiptNumber'";
-            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
-                using(var reader = command.ExecuteReader())
+                using (var reader = command.ExecuteReader())
                 {
                     if (reader.Read())
                     {
@@ -160,11 +160,16 @@ namespace Pokladna
         {
             const string querry = "UPDATE Products SET Sold = Sold + 1 WHERE Name = @name";
 
-            foreach (ListViewItem item in listView.Items)
+            foreach (ListRow item in listView.Items)
             {
                 if (item.Text != "Sleva")
                 {
                     int count = 0;
+
+                    if(item.CouponID != string.Empty)
+                    {
+                        RecordCouponsUsage(item.CouponID);
+                    }
 
                     if (item.SubItems.Count > 1)
                     {
@@ -184,7 +189,7 @@ namespace Pokladna
                             command.Parameters.AddWithValue("@name", productName);
                             command.ExecuteNonQuery();
                         }
-                    } 
+                    }
                 }
             }
 
@@ -202,23 +207,11 @@ namespace Pokladna
 
         private static void AddMenuComponents(MainForm form, int[] componentIds, ListViewGroup group)
         {
-            //string querry = "SELECT Name FROM Products WHERE ProductID = @ProductID";
 
             foreach (var componentId in componentIds)
             {
-                //using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
-                //{
-                //    command.Parameters.AddWithValue("@ProductID", componentId);
-                //    using (var reader = command.ExecuteReader())
-                //    {
-                //       if (reader.Read())
-                //        {
-                //            string componentName = reader["Name"].ToString();
-                            var product = GetProduct(componentId);
-                            form.AddSubItem(new[] { product.Name }, group);
-                //        }
-                //    }
-                //}
+                var product = GetProduct(componentId);
+                form.AddSubItem(product.Name, group);
             }
         }
 
@@ -270,7 +263,7 @@ namespace Pokladna
                     }
                 }
 
-                
+
                 else if (buttonId >= 1000)
                 {
                     string querry = "SELECT Name, Price, Components FROM Menus WHERE MenuID = @MenuID";
@@ -315,12 +308,12 @@ namespace Pokladna
         public static Coupon GetCoupon(string code)
         {
             string querry = "SELECT * from Coupons WHERE Code = @code";
-            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
                 command.Parameters.AddWithValue("@code", code);
-                using(var reader = command.ExecuteReader())
+                using (var reader = command.ExecuteReader())
                 {
-                    if(reader.Read())
+                    if (reader.Read())
                     {
                         int[] itemIDs;
                         try
@@ -331,28 +324,30 @@ namespace Pokladna
                         {
                             throw new FormatException("");
                         }
-                        if(itemIDs.Length == 0)
+                        if (itemIDs.Length == 0)
                         {
                             throw new EmptyDatasetException("Systémová chyba: kupón nemá žádné položky");
                         }
                         DateTime validity;
                         DateTime.TryParse(reader["Validity"].ToString(), new CultureInfo("cs-CZ"), DateTimeStyles.None, out validity);
-                        if(validity < DateTime.Today)
+                        if (validity < DateTime.Today)
                         {
                             throw new CouponException("Datum platnosti kupónu vypršelo");
                         }
-                        int maxuses = (int)reader["Maxuses"];
-                        int uses = (int)reader["Uses"];
-                        if(uses == maxuses)
+                        int maxuses;
+                        int.TryParse(reader["Maxuses"].ToString(), out maxuses);
+                        int uses;
+                        int.TryParse(reader["Uses"].ToString(), out uses);
+                        if (uses == maxuses)
                         {
-                            throw new CouponException("Bylo dosaženo maximílního počtu použití kupónu");
+                            throw new CouponException("Bylo dosaženo maximálního počtu použití kupónu");
                         }
                         var items = new List<CouponItem>();
-                        foreach(var item in itemIDs)
+                        foreach (var item in itemIDs)
                         {
                             items.Add(new CouponItem(1, GetProduct(item).Name));
                         }
-                        return new Coupon((string)reader["Name"], (int)reader["Price"], items);
+                        return new Coupon(code, reader["Name"].ToString(), (int.Parse(reader["Price"].ToString())), items);
                     }
                     else
                     {
@@ -362,9 +357,20 @@ namespace Pokladna
             }
         }
 
+        public static void RecordCouponsUsage(string code)
+        {
+            Console.WriteLine("kod" + code);
+            string querry = "UPDATE Coupons SET Uses = Uses + 1 WHERE Code = @code";
+            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("@code", code);
+                command.ExecuteNonQuery();
+            }
+        }
+
         public static async void SendOrderName(ListView listView)
         {
-            foreach (ListViewItem item in listView.Items)
+            foreach (ListRow item in listView.Items)
             {
                 string itemName = item.Text;
                 string querry = "SELECT CategoryId FROM Products WHERE Name = @name";
@@ -400,7 +406,7 @@ namespace Pokladna
         public static bool CheckEmployeeExistence(string password)
         {
             string querry = $"SELECT EXISTS(SELECT 1 FROM Users WHERE Password = @password LIMIT 1)";
-            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
                 command.Parameters.AddWithValue("password", password);
                 return Convert.ToBoolean(command.ExecuteScalar());
@@ -412,7 +418,7 @@ namespace Pokladna
             if (!CheckEmployeeExistence(password))
             {
                 string querry = "INSERT INTO Users (Password, FullName, Position) VALUES (@password, @fullname, @position)";
-                using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
                 {
                     command.Parameters.AddWithValue("password", password);
                     command.Parameters.AddWithValue("fullname", name);
@@ -429,10 +435,10 @@ namespace Pokladna
             List<string> values = new List<string>();
 
             string querry = "SELECT FullName from Users WHERE (Position = @position) OR (Position = manager)";
-            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
                 command.Parameters.AddWithValue("position", position);
-                using(var reader = command.ExecuteReader())
+                using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
@@ -446,7 +452,7 @@ namespace Pokladna
         public static bool RemoveEmployee(string name)
         {
             string querry = "DELETE FROM Users WHERE FullName = @name";
-            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
                 command.Parameters.AddWithValue("name", name);
                 return command.ExecuteNonQuery() > 0;
@@ -457,13 +463,13 @@ namespace Pokladna
         {
             List<Sale> sales = new List<Sale>();
             string querry = "SELECT Number, DateTime, Price, Payment, User FROM Transactions";
-            if(user != string.Empty)
+            if (user != string.Empty)
             {
                 querry += " WHERE User = @user";
             }
             using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
             {
-                if(user != string.Empty)
+                if (user != string.Empty)
                 {
                     command.Parameters.AddWithValue("user", user);
                 }
@@ -507,7 +513,7 @@ namespace Pokladna
                 EPrinter.PartialPaperCut();
                 EPrinter.NormalWidth();
                 EPrinter.PrintDocument();
-                EPrinter.Clear(); 
+                EPrinter.Clear();
             }
         }
 
@@ -547,7 +553,7 @@ namespace Pokladna
         public static async Task ProcessListViewAndSend(ListView listView, string ipAddress)
         {
             var itemsList = new List<object>();
-            foreach(ListViewItem item in listView.Items)
+            foreach (ListRow item in listView.Items)
             {
                 string itemName = item.Text;
                 if (IsNormalProduct(itemName))
@@ -588,7 +594,6 @@ namespace Pokladna
                         if (reader.Read())
                         {
                             string jsonComponents = reader.GetString(0);
-                            Console.WriteLine($"Načtený JSON komponent pro '{menuName}': {jsonComponents}");
 
                             if (!string.IsNullOrEmpty(jsonComponents))
                             {
@@ -601,7 +606,6 @@ namespace Pokladna
                                         string productName = GetProductNameById(componentId);
                                         if (!string.IsNullOrEmpty(productName))
                                         {
-                                            Console.WriteLine($"Přidávám komponentu: {productName} (ID: {componentId})");
                                             components.Add(new { count = 1, name = productName });
                                         }
                                         else

@@ -59,7 +59,7 @@ namespace Pokladna
                 EPrinter.NormalWidth();
                 EPrinter.NewLine();
                 EPrinter.AlignLeft();
-                foreach (ListViewItem item in listView.Items)
+                foreach (ListRow item in listView.Items)
                 {
                     if (item.Text != "Sleva")
                     {

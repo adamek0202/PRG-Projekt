@@ -40,7 +40,7 @@ namespace Pokladna.Forms
             {
                 foreach (var item in Sales)
                 {
-                    listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] { item.Number.ToString(), item.DateAndTime.Date.ToShortDateString(), $"{item.DateAndTime.Hour}:{item.DateAndTime.Minute}",item.Price.ToString() + " Kč", item.Payment, item.User }));
+                    listViewWithScrollBar1.Items.Add(new ListRow(new string[] { item.Number.ToString(), item.DateAndTime.Date.ToShortDateString(), $"{item.DateAndTime.Hour}:{item.DateAndTime.Minute}",item.Price.ToString() + " Kč", item.Payment, item.User }));
                 }
             }
         }

@@ -64,7 +64,7 @@ namespace Pokladna.Forms
             {
                 foreach (var item in Items)
                 {
-                    listViewWithScrollBar1.Items.Add(new ListViewItem(new string[] {
+                    listViewWithScrollBar1.Items.Add(new ListRow(new string[] {
                         item.Id.ToString(),
                         item.Name,
                         item.Price.ToString() + " Kč",

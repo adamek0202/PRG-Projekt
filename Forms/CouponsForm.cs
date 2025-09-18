@@ -9,6 +9,8 @@ namespace Pokladna.Forms
 {
     public partial class CouponsForm : Form
     {
+        internal Coupon Coupon { get; private set; }
+
         public CouponsForm()
         {
             InitializeComponent();
@@ -54,18 +56,25 @@ namespace Pokladna.Forms
                 try
                 {
                     var coupon = DatabaseFunctions.GetCoupon(textBox.Text);
-                    MessageBox.Show($"Byl naskenován kupón: {textBox.Text}", "Info");
+                    MessageBox.Show($"Byl naskenován kupón: {coupon.Name}", "Info");
+                    Coupon = coupon;
                     textBox.Text = string.Empty;
                     DialogResult = DialogResult.OK;
+                    Close();
                 }
-                catch (CouponException)
+                catch (CouponException ex)
                 {
-
+                    textBox.Text = string.Empty;
+                    new MessageForm(ex.Message).ShowDialog();
+                }
+                catch (EmptyDatasetException ex)
+                {
+                    new MessageForm(ex.Message).ShowDialog();
                 }
             }
             else
             {
-                new MessageForm("Nebyl zadán platný kód kopónu").ShowDialog();
+                new MessageForm("Neplatný kupón").ShowDialog();
                 textBox.Clear();
             }
         }

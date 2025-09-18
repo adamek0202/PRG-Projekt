@@ -265,6 +265,7 @@
     <Compile Include="Keypad.Designer.cs">
       <DependentUpon>Keypad.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListRow.cs" />
     <Compile Include="NativeFunctions.cs" />
     <Compile Include="NFC.cs" />
     <Compile Include="PDFGeneration.cs" />

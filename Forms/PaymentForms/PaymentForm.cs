@@ -13,7 +13,7 @@ namespace Pokladna.Forms
         public static int Price { get; private set; }
         private static int Discount { get; set; } = 0;
 
-        public PaymentForm(int price, List<ListViewItem> data)
+        internal PaymentForm(int price, List<ListRow> data)
         {
             InitializeComponent();
             Price = price;
@@ -32,11 +32,11 @@ namespace Pokladna.Forms
             }
         }
 
-        private void LoadListViewData(List<ListViewItem> data)
+        private void LoadListViewData(List<ListRow> data)
         {
             foreach (var item in data)
             {
-                listView1.Items.Add((ListViewItem)item.Clone());
+                listView1.Items.Add((ListRow)item.Clone());
             }
         }
 
@@ -111,7 +111,7 @@ namespace Pokladna.Forms
             var df = new DiscountForm();
             if(df.ShowDialog() == DialogResult.OK)
             {
-                listView1.Items.Add(new ListViewItem(new string[] { "Sleva", $"-{Math.Round((double)df.Discount / 100 * Price).ToString()} Kč" }) { BackColor = Color.Lime});
+                listView1.Items.Add(new ListRow(new string[] { "Sleva", $"-{Math.Round((double)df.Discount / 100 * Price).ToString()} Kč" }) { BackColor = Color.Lime});
                 Price -= (int)Math.Round((double)df.Discount / 100 * Price);
                 Discount = (int)Math.Round((double)df.Discount / 100 * Price);
                 sumLabel.Text = $"Celkem: {Price} Kč";
