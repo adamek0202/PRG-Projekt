@@ -323,7 +323,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(309, 513);
+            this.ClientSize = new System.Drawing.Size(306, 511);
             this.ControlBox = false;
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.okButton);

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Pokladna.BasicTheme;
+using static Pokladna.Forms.ItemSalesForm;
 
 namespace Pokladna.Forms
 {
@@ -46,19 +47,26 @@ namespace Pokladna.Forms
             }
         }
 
-        private bool ProcessCoupon(string code)
+        private void ProcessCoupon(string code)
         {
             if (textBox.Text.All(char.IsDigit) && textBox.Text.Length == 13)
             {
-                MessageBox.Show($"Byl naskenován kupón: {textBox.Text}", "Info");
-                textBox.Text = string.Empty;
-                return true;
+                try
+                {
+                    var coupon = DatabaseFunctions.GetCoupon(textBox.Text);
+                    MessageBox.Show($"Byl naskenován kupón: {textBox.Text}", "Info");
+                    textBox.Text = string.Empty;
+                    DialogResult = DialogResult.OK;
+                }
+                catch (CouponException)
+                {
+
+                }
             }
             else
             {
-                MessageBox.Show("Nebyl zadán platný kód kopónu", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                new MessageForm("Nebyl zadán platný kód kopónu").ShowDialog();
                 textBox.Clear();
-                return false;
             }
         }
 
@@ -71,8 +79,6 @@ namespace Pokladna.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             ProcessCoupon(textBox.Text);
-            DialogResult = DialogResult.OK;
-            Close();
         }
 
         private void numberButton_Click(object sender, EventArgs e)

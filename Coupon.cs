@@ -20,14 +20,12 @@ namespace Pokladna
 
     internal class Coupon
     {
-        public string Code { get; }
         public string Name { get; }
         public int Price { get; }
         public List<CouponItem> Items { get; }
 
-        public Coupon(string code, string name, int price, List<CouponItem> items)
+        public Coupon(string name, int price, List<CouponItem> items)
         {
-            Code = code;
             Name = name;
             Price = price;
             Items = items;
@@ -37,6 +35,13 @@ namespace Pokladna
     internal class CouponException : Exception
     {
         public CouponException(string message) : base(message)
+        {
+        }
+    }
+
+    internal class EmptyDatasetException : Exception
+    {
+        public EmptyDatasetException(string message) : base(message)
         {
         }
     }

@@ -1,15 +1,16 @@
-﻿using System;
+﻿using Pokladna.Forms;
+using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
-using System.Text.Json;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Pokladna.Forms.ItemSalesForm;
 using static Pokladna.GlobalPosPrinter;
-using System.Collections.Generic;
-using Pokladna.Forms;
-using System.Globalization;
 
 //Databázová logika
 //Neprovádět bezdůvodné zásahy, hrozí rozbití aplikace
@@ -201,20 +202,43 @@ namespace Pokladna
 
         private static void AddMenuComponents(MainForm form, int[] componentIds, ListViewGroup group)
         {
-            string querry = "SELECT Name FROM Products WHERE ProductID = @ProductID";
+            //string querry = "SELECT Name FROM Products WHERE ProductID = @ProductID";
 
             foreach (var componentId in componentIds)
             {
-                using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                //using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                //{
+                //    command.Parameters.AddWithValue("@ProductID", componentId);
+                //    using (var reader = command.ExecuteReader())
+                //    {
+                //       if (reader.Read())
+                //        {
+                //            string componentName = reader["Name"].ToString();
+                            var product = GetProduct(componentId);
+                            form.AddSubItem(new[] { product.Name }, group);
+                //        }
+                //    }
+                //}
+            }
+        }
+
+        private static Product GetProduct(int id)
+        {
+            string querry = "SELECT Name, Price FROM Products WHERE ProductID = @ProductID";
+            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+                command.Parameters.AddWithValue("@ProductID", id);
+                using (var reader = command.ExecuteReader())
                 {
-                    command.Parameters.AddWithValue("@ProductID", componentId);
-                    using (var reader = command.ExecuteReader())
+                    if (reader.Read())
                     {
-                        if (reader.Read())
-                        {
-                            string componentName = reader["Name"].ToString();
-                            form.AddSubItem(new[] { componentName }, group);
-                        }
+                        string name = reader["Name"].ToString();
+                        int price = Convert.ToInt32(reader["Price"]);
+                        return new Product(name, price);
+                    }
+                    else
+                    {
+                        throw new ProductNotFoundException();
                     }
                 }
             }
@@ -227,33 +251,26 @@ namespace Pokladna
                 var group = new ListViewGroup();
                 if (buttonId < 1000)
                 {
-                    string querry = "SELECT Name, Price FROM Products WHERE ProductID = @ProductID";
-                    using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                    try
                     {
-                        command.Parameters.AddWithValue("@ProductID", buttonId);
-                        using (var reader = command.ExecuteReader())
+                        var product = GetProduct(buttonId);
+                        if (!MainForm.PriceCheck)
                         {
-                            if (reader.Read())
-                            {
-                                string name = reader["Name"].ToString();
-                                int price = Convert.ToInt32(reader["Price"]) * times;
-                                if (!MainForm.PriceCheck)
-                                {
-                                    form.AddHeadItem(name, price, times, group); 
-                                }
-                                else
-                                {
-                                    MessageBox.Show($"Cena položky {name} je {price} Kč", "Cena", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    MainForm.PriceCheck = false;
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show($"Produkt s ID {buttonId} nebyl v databázi nalezen\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
+                            form.AddHeadItem(product.Name, product.Price, times, group);
+                        }
+                        else
+                        {
+                            new MessageForm($"Cena položky {product.Name} je {product.Price} Kč").ShowDialog();
+                            MainForm.PriceCheck = false;
                         }
                     }
+                    catch (ProductNotFoundException)
+                    {
+                        MessageBox.Show($"Produkt s ID {buttonId} nebyl v databázi nalezen\nKontaktujte prosím správce systému", "Systémová chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
+
+                
                 else if (buttonId >= 1000)
                 {
                     string querry = "SELECT Name, Price, Components FROM Menus WHERE MenuID = @MenuID";
@@ -281,11 +298,11 @@ namespace Pokladna
                                 {
                                     form.AddHeadItem(name, price, times, group, true);
                                     var componentsIds = JsonSerializer.Deserialize<int[]>(componentsJson);
-                                    AddMenuComponents(form, componentsIds, group); 
+                                    AddMenuComponents(form, componentsIds, group);
                                 }
                                 else
                                 {
-                                    MessageBox.Show($"Cena položky {name} je {price} Kč", "Cena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    new MessageForm($"Cena položky {name} je {price} Kč").ShowDialog();
                                     MainForm.PriceCheck = false;
                                 }
                             }
@@ -303,17 +320,43 @@ namespace Pokladna
                 command.Parameters.AddWithValue("@code", code);
                 using(var reader = command.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if(reader.Read())
                     {
-                        var items = JsonSerializer.Deserialize<int[]>(reader["Items"].ToString());
-                        if(items.Length == 0)
+                        int[] itemIDs;
+                        try
                         {
-                            throw new CouponException("Systémová chyba: kupón nemá žádné položky");
+                            itemIDs = JsonSerializer.Deserialize<int[]>(reader["Items"].ToString());
                         }
-                        if (DateTime.TryParse(reader["Validity"].ToString(), new CultureInfo("cs-CZ"), DateTimeStyles.None, out _))
+                        catch (JsonException)
                         {
-
+                            throw new FormatException("");
                         }
+                        if(itemIDs.Length == 0)
+                        {
+                            throw new EmptyDatasetException("Systémová chyba: kupón nemá žádné položky");
+                        }
+                        DateTime validity;
+                        DateTime.TryParse(reader["Validity"].ToString(), new CultureInfo("cs-CZ"), DateTimeStyles.None, out validity);
+                        if(validity < DateTime.Today)
+                        {
+                            throw new CouponException("Datum platnosti kupónu vypršelo");
+                        }
+                        int maxuses = (int)reader["Maxuses"];
+                        int uses = (int)reader["Uses"];
+                        if(uses == maxuses)
+                        {
+                            throw new CouponException("Bylo dosaženo maximílního počtu použití kupónu");
+                        }
+                        var items = new List<CouponItem>();
+                        foreach(var item in itemIDs)
+                        {
+                            items.Add(new CouponItem(1, GetProduct(item).Name));
+                        }
+                        return new Coupon((string)reader["Name"], (int)reader["Price"], items);
+                    }
+                    else
+                    {
+                        throw new CouponException("Neplatný kupón");
                     }
                 }
             }
