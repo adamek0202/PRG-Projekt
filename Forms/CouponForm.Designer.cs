@@ -1,6 +1,6 @@
 ﻿namespace Pokladna.Forms
 {
-    partial class CouponsForm
+    partial class CouponForm
     {
         /// <summary>
         /// Required designer variable.

@@ -301,7 +301,7 @@ namespace Pokladna
 
         private void CouponsButton_Click(object sender, EventArgs e)
         {
-            var cf = new CouponsForm();
+            var cf = new CouponForm();
             if(cf.ShowDialog() == DialogResult.OK)
             {
                 var coupon = cf.Coupon;

@@ -152,7 +152,6 @@ namespace Pokladna.Forms
 
         private void toolBar1_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
         {
-
         }
     }
 }

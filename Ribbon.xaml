@@ -10,28 +10,56 @@
         <Ribbon SelectedIndex="0">
             <RibbonTab Header="Domů">
                 <RibbonGroup Header="Hlavní">
-                    <RibbonButton Label="Zaměstnanci" />
+                    <RibbonButton Label="Ceník" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Zaměstnanci" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Dárkové karty" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Kupony" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Výstupy">
-                    <RibbonButton Label="Transakce" />
-                    <RibbonButton Label="Prodeje položek" />
+                    <RibbonButton Label="Transakce" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Prodeje položek" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
                 </RibbonGroup>
-                <RibbonGroup>
-                    <RibbonButton Label="Nastavení" />
+                <RibbonGroup Header="Nastavení">
+                    <RibbonButton Label="Nastavení" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                </RibbonGroup>
+                <RibbonGroup></RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="Ceník">
+                <RibbonGroup Header="Ceník"></RibbonGroup>
+                <RibbonGroup Header="Konec">
+                    <RibbonButton Label="Konec" />
                 </RibbonGroup>
             </RibbonTab>
-            <Ribbon.ContextualTabGroups>
-                <RibbonContextualTabGroup Background="LightGreen" Visibility="Visible">
-                    <RibbonTab Header="Zaměstnanci">
-                        <RibbonGroup Header="Zaměstnanec">
-                            <RibbonButton Label="Přidat" LargeImageSource="Pokladna;component/Resources/user-new.png"/>
-                            <RibbonButton Label="Upravit" LargeImageSource="Pokladna;component/Resources/user-properties.png" />
-                            <RibbonButton Label="Odstranit" LargeImageSource="Pokladna;component/Resources/user-delete.png" />
-                        </RibbonGroup>
-                    </RibbonTab>
-                </RibbonContextualTabGroup>
-            </Ribbon.ContextualTabGroups>
-
+            <RibbonTab Header="Dárkové karty">
+                <RibbonGroup Header="Úpravy">
+                    <RibbonButton Label="Přidat" />
+                    <RibbonButton Label="PUpravit" />
+                    <RibbonButton Label="Odstranit" />
+                </RibbonGroup>
+                <RibbonGroup Header="Konec">
+                    <RibbonButton Label="Konec" />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="Zaměstnanci">
+                <RibbonGroup Header="Zaměstnanec">
+                    <RibbonButton Label="Přidat" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png" />
+                    <RibbonButton Label="Upravit" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-properties.png" />
+                    <RibbonButton Label="Odstranit" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-delete.png" />
+                </RibbonGroup>
+                <RibbonGroup Header="Konec">
+                    <RibbonButton Label="Konec" />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="Kupony">
+                <RibbonGroup Header="Kupon">
+                    <RibbonButton Label="Přidat" />
+                    <RibbonButton Label="Upravit" />
+                    <RibbonButton Label="Odstranit" />
+                </RibbonGroup>
+                <RibbonGroup>
+                    <RibbonButton Label="Konec" />
+                </RibbonGroup>
+            </RibbonTab>
         </Ribbon>
     </Grid>
 </UserControl>

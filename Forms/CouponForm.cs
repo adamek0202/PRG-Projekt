@@ -7,11 +7,11 @@ using static Pokladna.Forms.ItemSalesForm;
 
 namespace Pokladna.Forms
 {
-    public partial class CouponsForm : Form
+    public partial class CouponForm : Form
     {
         internal Coupon Coupon { get; private set; }
 
-        public CouponsForm()
+        public CouponForm()
         {
             InitializeComponent();
             ReallyCenterToScreen(this);

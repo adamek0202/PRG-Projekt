@@ -89,11 +89,11 @@
   <ItemGroup>
     <Compile Include="Coupon.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Forms\CouponsForm.cs">
+    <Compile Include="Forms\CouponForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CouponsForm.Designer.cs">
-      <DependentUpon>CouponsForm.cs</DependentUpon>
+    <Compile Include="Forms\CouponForm.Designer.cs">
+      <DependentUpon>CouponForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GiftCardInfoForm.cs">
       <SubType>Form</SubType>
@@ -114,6 +114,18 @@
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\BasicTheme.cs" />
+    <Compile Include="Forms\ManagementForms\CouponEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\CouponEditForm.Designer.cs">
+      <DependentUpon>CouponEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\CouponsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\CouponsForm.Designer.cs">
+      <DependentUpon>CouponsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManagementForms\DateSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,8 +297,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQLiteFunctions.cs" />
-    <EmbeddedResource Include="Forms\CouponsForm.resx">
-      <DependentUpon>CouponsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CouponForm.resx">
+      <DependentUpon>CouponForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GiftCardInfoForm.resx">
       <DependentUpon>GiftCardInfoForm.cs</DependentUpon>
@@ -296,6 +308,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagementForms\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementForms\CouponEditForm.resx">
+      <DependentUpon>CouponEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementForms\CouponsForm.resx">
+      <DependentUpon>CouponsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagementForms\DateSelectForm.resx">
       <DependentUpon>DateSelectForm.cs</DependentUpon>
