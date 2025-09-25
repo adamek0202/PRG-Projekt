@@ -10,10 +10,12 @@ using System.Windows.Forms;
 
 namespace Pokladna.Forms.ManagementForms
 {
-    public partial class CouponEditForm : Form
+    internal partial class CouponEditForm : Form
     {
-        public CouponEditForm()
+        public Coupon Coupon { get; private set; }
+        public CouponEditForm(Coupon editedCoupon)
         {
+            this.Coupon = editedCoupon;
             InitializeComponent();
         }
     }

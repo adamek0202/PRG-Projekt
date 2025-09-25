@@ -156,6 +156,7 @@
     <Compile Include="Forms\ManagementForms\PrintPreviewForm.Designer.cs">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManagementForms\RibbonCommands.cs" />
     <Compile Include="Forms\MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,7 +291,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Receipt.cs" />
-    <Compile Include="Ribbon.xaml.cs">
+    <Compile Include="Forms\ManagementForms\Ribbon.xaml.cs">
       <DependentUpon>Ribbon.xaml</DependentUpon>
     </Compile>
     <Compile Include="ScrollListView.cs">
@@ -486,17 +487,23 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Ribbon.xaml">
+    <Page Include="Forms\ManagementForms\Ribbon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\calendar.png" />
+    <Resource Include="Resources\user.png" />
+    <Resource Include="Resources\exit.png" />
+    <Resource Include="Resources\document-edit.png" />
+    <Resource Include="Resources\document-close.png" />
+    <Resource Include="Resources\document-new.png" />
     <Content Include="Resources\Filter.ico" />
     <Resource Include="Resources\configure.png" />
     <Content Include="Resources\ikona.ico" />
     <Content Include="Resources\list.ico" />
+    <Resource Include="Resources\Pencil.png" />
     <Content Include="Resources\printer.ico" />
     <Resource Include="Resources\user-delete.png" />
     <Resource Include="Resources\user-new.png" />

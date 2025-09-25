@@ -357,6 +357,15 @@ namespace Pokladna
             }
         }
 
+        public static void ModifyCoupon(Coupon coupon)
+        {
+            string querry = "UPDATE Coupons";
+            using(var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+            {
+
+            }
+        }
+
         public static void RecordCouponsUsage(string code)
         {
             Console.WriteLine("kod" + code);

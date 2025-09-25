@@ -1,14 +1,18 @@
-﻿using System;
+﻿using Pokladna.Forms.ManagementForms;
+using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Windows.Input;
 using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
     public partial class ManagerForm : Form
     {
+        private List<CommandBinding> _bindings = new();
         public ManagerForm()
         {
             InitializeComponent();
@@ -28,6 +32,25 @@ namespace Pokladna.Forms
                 throw Marshal.GetExceptionForHR(hr);
             }
         }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+
+            if (_bindings.Count == 0)
+            {
+                foreach(var kv in _commandMap)
+                {
+
+                }
+            }
+        }
+
+        private readonly Dictionary<RoutedUICommand, ExecutedRoutedEventHandler> _commandMap =
+            new()
+            {
+                { RibbonCommands.Coupons, (s, e) => new CouponsForm {MdiParent = (s as ManagerForm)}.Show() }
+            };
 
         // Načtení zaměstnanců do ListBoxu
         public void LoadEmployees()

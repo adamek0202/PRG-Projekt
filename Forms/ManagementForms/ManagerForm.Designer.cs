@@ -43,7 +43,7 @@
             // 
             this.listBoxEmployees.FormattingEnabled = true;
             this.listBoxEmployees.ItemHeight = 22;
-            this.listBoxEmployees.Location = new System.Drawing.Point(357, 230);
+            this.listBoxEmployees.Location = new System.Drawing.Point(606, 308);
             this.listBoxEmployees.Name = "listBoxEmployees";
             this.listBoxEmployees.Size = new System.Drawing.Size(363, 334);
             this.listBoxEmployees.TabIndex = 0;
@@ -74,7 +74,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(726, 529);
+            this.button1.Location = new System.Drawing.Point(975, 607);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 35);
             this.button1.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.groupBox2.Controls.Add(this.removeUserButton);
             this.groupBox2.Controls.Add(this.buttonAdd);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(726, 230);
+            this.groupBox2.Location = new System.Drawing.Point(975, 308);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(115, 227);
             this.groupBox2.TabIndex = 0;

@@ -61,7 +61,9 @@
             this.listViewWithScrollBar1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listViewWithScrollBar1.Location = new System.Drawing.Point(0, 0);
+            this.listViewWithScrollBar1.MultiSelect = false;
             this.listViewWithScrollBar1.Name = "listViewWithScrollBar1";
+            this.listViewWithScrollBar1.ShowGroups = false;
             this.listViewWithScrollBar1.Size = new System.Drawing.Size(1027, 663);
             this.listViewWithScrollBar1.TabIndex = 0;
             this.listViewWithScrollBar1.UseCompatibleStateImageBehavior = false;

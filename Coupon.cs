@@ -20,10 +20,12 @@ namespace Pokladna
 
     internal class Coupon
     {
-        public string Code { get; }
-        public string Name { get; }
-        public int Price { get; }
-        public List<CouponItem> Items { get; }
+        public string Code { get; } = "";
+        public string Name { get; } = "";
+        public int Price { get; } = 0;
+        public List<CouponItem> Items { get; } = new List<CouponItem>();
+
+        public Coupon() { }
 
         public Coupon(string code, string name, int price, List<CouponItem> items)
         {
