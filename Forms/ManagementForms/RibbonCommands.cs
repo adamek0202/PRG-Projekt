@@ -17,12 +17,13 @@ namespace Pokladna
         public static readonly System.Windows.Input.RoutedUICommand BulkPriceChange = new System.Windows.Input.RoutedUICommand("Pøecenìní položek", "BulkPriceChange", typeof(RibbonCommands));
         //Kupony + karty
         public static readonly System.Windows.Input.RoutedUICommand ClearExpired = new System.Windows.Input.RoutedUICommand("Vymazat neplatné", "ClearExpired", typeof(RibbonCommands));
-        //Výpisy
+        //Export
         public static readonly System.Windows.Input.RoutedUICommand PDFExport = new System.Windows.Input.RoutedUICommand("PDF", "PDF_Export", typeof(RibbonCommands));
         public static readonly System.Windows.Input.RoutedUICommand ExcelExport = new System.Windows.Input.RoutedUICommand("Excel", "Excel_Export", typeof(RibbonCommands));
         public static readonly System.Windows.Input.RoutedUICommand CSVExport = new System.Windows.Input.RoutedUICommand("CSV", "CSV_Export", typeof(RibbonCommands));
+        //Výpisy
         public static readonly System.Windows.Input.RoutedUICommand Filter = new System.Windows.Input.RoutedUICommand("Filtr", "Filter", typeof(RibbonCommands));
-        //Konec
+        //Kosnec
         public static readonly System.Windows.Input.RoutedUICommand Exit = new System.Windows.Input.RoutedUICommand("Konec", "Exit", typeof(RibbonCommands));
     }
 }

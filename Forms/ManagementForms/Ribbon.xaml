@@ -25,7 +25,7 @@
                     <RibbonButton Label="Prodeje položek" Command="{x:Static local:RibbonCommands.Sales}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Nastavení">
-                    <RibbonButton Label="Nastavení" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Nastavení" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" ToolTipDescription="Nastavení parametrů systému" />
                 </RibbonGroup>
                 <RibbonGroup></RibbonGroup>
             </RibbonTab>
@@ -35,7 +35,7 @@
                     <RibbonButton Label="Přecenění položek" Command="{x:Static local:RibbonCommands.BulkPriceChange}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Konec">
-                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
+                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" ToolTipDescription="Zavřít aktuální okno" />
                 </RibbonGroup>
             </RibbonTab>
             <RibbonTab Header="Dárkové karty">
@@ -46,6 +46,11 @@
                 </RibbonGroup>
                 <RibbonGroup Header="Úpravy">
                     <RibbonButton Label="Vymazat neplatné" Command="{x:Static local:RibbonCommands.ClearExpired}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png"/>
+                </RibbonGroup>
+                <RibbonGroup Header="Export">
+                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
                 </RibbonGroup>
                 <RibbonGroup Header="Konec">
                     <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
@@ -60,7 +65,12 @@
                 <RibbonGroup Header="Úpravy">
                     <RibbonButton Label="Vymazat neplatné" Command="{x:Static local:RibbonCommands.ClearExpired}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png"/>
                 </RibbonGroup>
-                <RibbonGroup>
+                <RibbonGroup Header="Export">
+                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                </RibbonGroup>
+                <RibbonGroup Header="Konec">
                     <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
                 </RibbonGroup>
             </RibbonTab>
