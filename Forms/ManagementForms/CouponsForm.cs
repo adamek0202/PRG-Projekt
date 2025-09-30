@@ -21,9 +21,9 @@ namespace Pokladna.Forms.ManagementForms
 
             if(_bindings.Count == 0)
             {
-                _bindings.Add(new CommandBinding(RibbonCommands.Add, (s, args) => AddCoupon()));
-                _bindings.Add(new CommandBinding(RibbonCommands.Edit, (s, args) => EditCoupon()));
-                _bindings.Add(new CommandBinding(RibbonCommands.Delete, (s, args) => RemoveCoupon()));
+                _bindings.Add(new CommandBinding(RibbonCommands.Add, (s, args) => AddCoupon(), (s, args) => { args.CanExecute = true; }));
+                _bindings.Add(new CommandBinding(RibbonCommands.Edit, (s, args) => EditCoupon(), (s, args) => { args.CanExecute = true; }));
+                _bindings.Add(new CommandBinding(RibbonCommands.Delete, (s, args) => RemoveCoupon(), (s, args) => { args.CanExecute = true; }));
             }
         }
 

@@ -33,24 +33,25 @@ namespace Pokladna.Forms
             }
         }
 
-        protected override void OnActivated(EventArgs e)
+        private void InitRibbonCommands()
         {
-            base.OnActivated(e);
+            var ribbon = (Ribbon)elementHost1.Child;
 
-            if (_bindings.Count == 0)
-            {
-                foreach(var kv in _commandMap)
+            ribbon.CommandInvoked += (s, cmd) => {
+                switch (cmd.Name)
                 {
-
+                    case nameof(RibbonCommands.PriceList):
+                        break;
+                    case nameof(RibbonCommands.Employees):
+                        break;
+                    case nameof(RibbonCommands.GiftCards):
+                        break;
+                    case nameof(RibbonCommands.Coupons):
+                        new CouponsForm() { MdiParent = this }.Show();
+                        break;
                 }
-            }
-        }
-
-        private readonly Dictionary<RoutedUICommand, ExecutedRoutedEventHandler> _commandMap =
-            new()
-            {
-                { RibbonCommands.Coupons, (s, e) => new CouponsForm {MdiParent = (s as ManagerForm)}.Show() }
             };
+        }
 
         // Načtení zaměstnanců do ListBoxu
         public void LoadEmployees()

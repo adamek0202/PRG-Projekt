@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+using System.Windows.Controls.Ribbon;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Pokladna
 {
@@ -23,11 +15,33 @@ namespace Pokladna
         public Ribbon()
         {
             InitializeComponent();
+            BindCommands();
         }
 
-        private void Ribbon_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        public event EventHandler<RoutedUICommand>? CommandInvoked;
 
+        private void OnRibbonClick(object sender, RoutedEventArgs e)
+        {
+            if(sender is RibbonButton btn && btn.Command is RoutedUICommand cmd)
+            {
+                CommandInvoked?.Invoke(this, cmd);
+            }
+        }
+
+        private void BindCommands()
+        {
+//            var commandType = typeof(RibbonCommands);
+//            foreach(var field in commandType.GetFields(BindingFlags.Public | BindingFlags.Static))
+//            {
+//                if(field.GetValue(null) is RoutedUICommand cmd)
+//                {
+                    this.CommandBindings.Add(new CommandBinding(
+                        RibbonCommands.Coupons,
+                        (s, e) => e.Handled = true,
+                        (s, e) => { e.CanExecute = true; e.Handled = true; }
+                    ));
+//                }
+//            }
         }
     }
 }

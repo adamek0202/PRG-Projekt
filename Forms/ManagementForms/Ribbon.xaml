@@ -15,14 +15,14 @@
             </Ribbon.ApplicationMenu>
             <RibbonTab Header="Domů">
                 <RibbonGroup Header="Hlavní">
-                    <RibbonButton Label="Ceník" Command="{x:Static local:RibbonCommands.PriceList}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
-                    <RibbonButton Label="Zaměstnanci" Command="{x:Static local:RibbonCommands.Employees}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user.png" />
-                    <RibbonButton Label="Dárkové karty" Command="{x:Static local:RibbonCommands.GiftCards}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
-                    <RibbonButton Label="Kupony" Command="{x:Static local:RibbonCommands.Coupons}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Ceník" Command="{x:Static local:RibbonCommands.PriceList}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Zaměstnanci" Command="{x:Static local:RibbonCommands.Employees}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user.png" />
+                    <RibbonButton Label="Dárkové karty" Command="{x:Static local:RibbonCommands.GiftCards}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Kupony" Command="{x:Static local:RibbonCommands.Coupons}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Výstupy">
-                    <RibbonButton Label="Transakce" Command="{x:Static local:RibbonCommands.Transactions}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
-                    <RibbonButton Label="Prodeje položek" Command="{x:Static local:RibbonCommands.Sales}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Transakce" Command="{x:Static local:RibbonCommands.Transactions}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
+                    <RibbonButton Label="Prodeje položek" Command="{x:Static local:RibbonCommands.Sales}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Nastavení">
                     <RibbonButton Label="Nastavení" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/configure.png" ToolTipDescription="Nastavení parametrů systému" />
@@ -31,70 +31,70 @@
             </RibbonTab>
             <RibbonTab Header="Ceník">
                 <RibbonGroup Header="Ceník">
-                    <RibbonButton Label="Upravit položku" Command="{x:Static local:RibbonCommands.Edit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/pencil.png" />
-                    <RibbonButton Label="Přecenění položek" Command="{x:Static local:RibbonCommands.BulkPriceChange}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
+                    <RibbonButton Label="Upravit položku" Command="{x:Static local:RibbonCommands.Edit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/pencil.png" />
+                    <RibbonButton Label="Přecenění položek" Command="{x:Static local:RibbonCommands.BulkPriceChange}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Konec">
-                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" ToolTipDescription="Zavřít aktuální okno" />
+                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" ToolTipDescription="Zavřít aktuální okno" />
                 </RibbonGroup>
             </RibbonTab>
             <RibbonTab Header="Dárkové karty">
                 <RibbonGroup Header="Záznam">
-                    <RibbonButton Label="Přidat" Command="{x:Static local:RibbonCommands.Add}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-new.png" />
+                    <RibbonButton Label="Přidat" Command="{x:Static local:RibbonCommands.Add}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-new.png" />
                     <RibbonButton Label="Upravit" Command="{x:Static local:RibbonCommands.Edit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-edit.png" />
                     <RibbonButton Label="Odstranit" Command="{x:Static local:RibbonCommands.Delete}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-close.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Úpravy">
-                    <RibbonButton Label="Vymazat neplatné" Command="{x:Static local:RibbonCommands.ClearExpired}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png"/>
+                    <RibbonButton Label="Vymazat neplatné" Command="{x:Static local:RibbonCommands.ClearExpired}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png"/>
                 </RibbonGroup>
                 <RibbonGroup Header="Export">
-                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
-                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
-                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
                 </RibbonGroup>
                 <RibbonGroup Header="Konec">
-                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
+                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
                 </RibbonGroup>
             </RibbonTab>
             <RibbonTab Header="Kupony">
                 <RibbonGroup Header="Záznam">
-                    <RibbonButton Label="Přidat" Command="{x:Static local:RibbonCommands.Add}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-new.png" />
-                    <RibbonButton Label="Upravit" Command="{x:Static local:RibbonCommands.Edit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-edit.png" />
-                    <RibbonButton Label="Odstranit" Command="{x:Static local:RibbonCommands.Delete}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-close.png" />
+                    <RibbonButton Label="Přidat" Command="{x:Static local:RibbonCommands.Add}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-new.png" />
+                    <RibbonButton Label="Upravit" Command="{x:Static local:RibbonCommands.Edit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-edit.png" />
+                    <RibbonButton Label="Odstranit" Command="{x:Static local:RibbonCommands.Delete}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/document-close.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Úpravy">
-                    <RibbonButton Label="Vymazat neplatné" Command="{x:Static local:RibbonCommands.ClearExpired}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png"/>
+                    <RibbonButton Label="Vymazat neplatné" Command="{x:Static local:RibbonCommands.ClearExpired}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png"/>
                 </RibbonGroup>
                 <RibbonGroup Header="Export">
-                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
-                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
-                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
                 </RibbonGroup>
                 <RibbonGroup Header="Konec">
-                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
+                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
                 </RibbonGroup>
             </RibbonTab>
             <RibbonTab Header="Zaměstnanci">
                 <RibbonGroup Header="Zaměstnanec">
-                    <RibbonButton Label="Přidat" Command="{x:Static local:RibbonCommands.Add}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png" />
-                    <RibbonButton Label="Upravit" Command="{x:Static local:RibbonCommands.Edit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-properties.png" />
-                    <RibbonButton Label="Odstranit" Command="{x:Static local:RibbonCommands.Delete}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-delete.png" />
+                    <RibbonButton Label="Přidat" Command="{x:Static local:RibbonCommands.Add}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png" />
+                    <RibbonButton Label="Upravit" Command="{x:Static local:RibbonCommands.Edit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-properties.png" />
+                    <RibbonButton Label="Odstranit" Command="{x:Static local:RibbonCommands.Delete}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-delete.png" />
                 </RibbonGroup>
                 <RibbonGroup Header="Konec">
-                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
+                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
                 </RibbonGroup>
             </RibbonTab>
             <RibbonTab Header="Výpisy">
                 <RibbonGroup Header="Výpis">
-                    <RibbonButton Label="Filtr" Command="{x:Static local:RibbonCommands.Filter}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="Filtr" Command="{x:Static local:RibbonCommands.Filter}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
                 </RibbonGroup>
                 <RibbonGroup Header="Export">
-                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
-                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
-                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="PDF" Command="{x:Static local:RibbonCommands.PDFExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="Excel" Command="{x:Static local:RibbonCommands.ExcelExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
+                    <RibbonButton Label="CSV" Command="{x:Static local:RibbonCommands.CSVExport}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/user-new.png"/>
                 </RibbonGroup>
                 <RibbonGroup Header="Konec">
-                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
+                    <RibbonButton Label="Konec" Command="{x:Static local:RibbonCommands.Exit}" Click="OnRibbonClick" LargeImageSource="pack://application:,,,/Pokladna;component/Resources/exit.png" />
                 </RibbonGroup>
             </RibbonTab>
         </Ribbon>
