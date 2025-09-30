@@ -1,6 +1,7 @@
 ﻿using Pokladna.Forms;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Globalization;
 using System.Linq;
@@ -9,7 +10,6 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Pokladna.Forms.ItemSalesForm;
 using static Pokladna.GlobalPosPrinter;
 
 //Databázová logika
@@ -166,7 +166,7 @@ namespace Pokladna
                 {
                     int count = 0;
 
-                    if(item.CouponID != string.Empty)
+                    if (item.CouponID != string.Empty)
                     {
                         RecordCouponsUsage(item.CouponID);
                     }
@@ -202,6 +202,52 @@ namespace Pokladna
                 command.Parameters.AddWithValue("payment", payment.ToString());
                 command.Parameters.AddWithValue("user", MainForm.Cashier);
                 command.ExecuteNonQuery();
+            }
+        }
+
+        private static DataTable ReadFullTable(string name)
+        {
+            if (name != string.Empty)
+            {
+                DataTable table = new DataTable();
+                string querry = "SELECT * FROM @table";
+                using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
+                {
+                    command.Parameters.AddWithValue("@table", name);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string[] data = new string[reader.FieldCount];
+
+                            for (int i = 1; i > reader.FieldCount; i++)
+                            {
+                                data.Append(reader.GetValue(i).ToString());
+                            }
+                            table.Rows.Add(data);
+                        }
+                        if (table.Rows.Count < 0)
+                        {
+                            return table;
+                        }
+                        else
+                        {
+                            throw new EmptyDatasetException("Tabulka je prázdná");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+        }
+
+        private static void ExportCSV(string path, DataTable table)
+        {
+            if(path == string.Empty || table == null || table.Rows.Count > 0)
+            {
+                throw new ArgumentException();
             }
         }
 

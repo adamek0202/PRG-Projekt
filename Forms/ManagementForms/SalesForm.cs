@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Pokladna.BasicTheme;
@@ -57,6 +58,19 @@ namespace Pokladna.Forms
                         csv.WriteRecords(Sales);
                     }
                 } 
+            }
+        }
+
+        private void ExcelExport()
+        {
+            var sfd = new SaveFileDialog();
+            sfd.Title = "Export";
+            sfd.Filter = "Excel sešit|*.xlsx";
+            sfd.DefaultExt = "xlsx";
+            sfd.InitialDirectory = "%USERPROFILE%\\Documents";
+            if(sfd.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
 
