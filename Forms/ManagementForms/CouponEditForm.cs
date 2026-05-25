@@ -18,5 +18,10 @@ namespace Pokladna.Forms.ManagementForms
             this.Coupon = editedCoupon;
             InitializeComponent();
         }
+
+        public CouponEditForm()
+        {
+            InitializeComponent();
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Pokladna
+namespace Pokladna.Forms.Controls
 {
     public partial class Keypad : UserControl
     {

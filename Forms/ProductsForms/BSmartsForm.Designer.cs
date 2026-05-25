@@ -1,6 +1,6 @@
-﻿namespace Pokladna.Forms
+﻿namespace Pokladna.Forms.ProductSelectionForms
 {
-    partial class BSmartsForm
+    partial class BSmartsForm : BaseForm
     {
         /// <summary>
         /// Required designer variable.

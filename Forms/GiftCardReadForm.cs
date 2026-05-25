@@ -1,73 +1,70 @@
-﻿using PCSC;
-using PCSC.Monitoring;
+﻿using Pokladna.Database;
 using System;
-using System.Data.SQLite;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
-    public partial class GiftCardReadForm : Form
+    internal partial class GiftCardReadForm : BaseForm
     {
+        // Vlastnost, kam si uložíme nalezenou kartu, aby si ji mohl MainForm po úspěchu vytáhnout
+        public GiftCard ScannedGiftCard { get; private set; }
 
-        public GiftCardReadForm()
+        internal GiftCardReadForm(PosContext context) : base(context)
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
-            CheckForIllegalCrossThreadCalls = false;
-        }
-
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
         }
 
         private void GiftCardReadForm_Load(object sender, EventArgs e)
         {
-            NfcReader.Instance.CardUidReceived += ReadCard;
+            // Přihlášení k nfc události singeltonu
+            NfcReader.Instance.CardUidReceived += OnCardUidReceived;
         }
 
         private void GiftCardReadForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            NfcReader.Instance.CardUidReceived -= ReadCard;
+            // Striktní odhlášení, aby nedocházelo k únikům paměti (Memory Leaks)
+            NfcReader.Instance.CardUidReceived -= OnCardUidReceived;
         }
 
-        private void ReadCard(string uid)
+        /// <summary>
+        /// Událost odpálená z background vlákna PCSC knihovny
+        /// </summary>
+        private void OnCardUidReceived(string uid)
         {
-            label1.Text = "Čtení karty...";
-            if(uid.Length == 20)
+            // !!! KLÍČOVÉ ROZHRANÍ PRO VLÁKNA !!!
+            // Pokud kód běží na jiném vlákně než okno, přepošleme ho bezpečně do UI vlákna
+            if (InvokeRequired)
             {
-                const string querry = "SELECT * from GiftCards WHERE Code = @code";
-                using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
-                {
-                    command.Parameters.AddWithValue("code", uid);
-                    using (var reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            //MessageBox.Show($"Karta s ID {uid}\nDržitele {reader["Holder"]}\nbyla nalezena");
-                        }
-                        else
-                        {
-                            //MessageBox.Show($"Karta s ID {uid} nebyla nalezena");
-                        }
-                    }
-                }
+                Invoke(new Action<string>(OnCardUidReceived), uid);
+                return;
+            }
+
+            // --- TADY UŽ JSME STOPROCENTNĚ V BEZPEČNÉM UI VLÁKNĚ ---
+            label1.Text = "Čtení karty...";
+
+            // UID z PCSC vrací hex řetězec oddělený pomlčkami (např. "04-A2-B3-C4...") 
+            // Očistíme délku, tvůj starý kód kontroloval natvrdo délku 20 znaků
+            if (string.IsNullOrWhiteSpace(uid))
+            {
+                MessageBox.Show("Nepodařilo se přečíst kód karty.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Zavoláme databázovou vrstvu (MySQL) mimo GUI
+            GiftCard card = DatabaseFunctions.GetGiftCardByUid(uid);
+
+            if (card != null)
+            {
+                // Kartu si schováme do vlastnosti a zavřeme okno s výsledkem OK
+                ScannedGiftCard = card;
                 DialogResult = DialogResult.OK;
                 Close();
             }
-            else {
-                MessageBox.Show($"Karta s ID {uid} není platná dárková karta...", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                MessageBox.Show($"Karta s ID {uid} nebyla v databázi nalezena.", "Karta neexistuje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 DialogResult = DialogResult.Cancel;
-                return;
+                Close();
             }
         }
     }

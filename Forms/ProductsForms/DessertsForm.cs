@@ -1,27 +1,15 @@
-﻿using System.Runtime.InteropServices;
-using System;
+﻿using System;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
-namespace Pokladna.Forms
+namespace Pokladna.Forms.ProductSelectionForms
 {
-    public partial class DessertsForm : Form
+    internal partial class DessertsForm : BaseForm, IProductSelector
     {
-        public DessertsForm()
+        public int SelectedProductId { get; private set; }
+
+        internal DessertsForm(PosContext context) : base(context)
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
-        }
-
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -33,9 +21,20 @@ namespace Pokladna.Forms
         private void DessertsButton_Click(object sender, EventArgs e)
         {
             var btn = sender as Button;
-            MainForm.ExternalProduct = int.Parse((string)btn.Tag);
-            DialogResult = DialogResult.OK;
-            Close();
+
+            // Bezpečné parsování ID z Tagu tlačítka
+            if (btn?.Tag != null && int.TryParse(btn.Tag.ToString(), out int productId))
+            {
+                // Žádná statická proměnná. ID si MainForm vytáhne přímo odsud.
+                SelectedProductId = productId;
+
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                Serilog.Log.Warning("Tlačítko {ButtonName} v DessertsForm nemá platné ID produktu v Tagu!", btn?.Name);
+            }
         }
 
     }

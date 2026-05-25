@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Pokladna.Database;
+using Pokladna.Exceptions;
+using Pokladna.Services;
+using System;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static Pokladna.BasicTheme;
-using static Pokladna.Forms.ItemSalesForm;
 
 namespace Pokladna.Forms
 {
@@ -49,32 +51,46 @@ namespace Pokladna.Forms
             }
         }
 
-        private void ProcessCoupon(string code)
+        private void ProcessCoupon(string couponCode)
         {
-            if (textBox.Text.All(char.IsDigit) && textBox.Text.Length == 13)
+            // Použijeme parametr 'code', který do metody přišel. 
+            // Pokud by byl prázdný, ořízneme text z textboxu jako zálohu.;
+
+            // Validace formátu EAN-13 (fastfoodové kupóny z appky/papíru)
+            if (couponCode.All(char.IsDigit) && couponCode.Length == 13)
             {
                 try
                 {
-                    var coupon = DatabaseFunctions.GetCoupon(textBox.Text);
-                    MessageBox.Show($"Byl naskenován kupón: {coupon.Name}", "Info");
-                    Coupon = coupon;
-                    textBox.Text = string.Empty;
-                    DialogResult = DialogResult.OK;
-                    Close();
+                    // Voláme novou CouponService místo DatabaseFunctions
+                    var coupon = CouponService.GetCoupon(couponCode);
+
+                    MessageBox.Show($"Byl naskenován kupón: {coupon.Name}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Uložíme do vlastnosti ve Formu, ať k němu má MainForm přístup
+                    this.Coupon = coupon;
+
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
-                catch (CouponException ex)
+                catch (CouponValidationException ex)
                 {
-                    textBox.Text = string.Empty;
+                    // Naše nová specifická výjimka (prošlý kupón, vyčerpaný počet použití atd.)
                     new MessageForm(ex.Message).ShowDialog();
                 }
-                catch (EmptyDatasetException ex)
+                catch (Exception ex)
                 {
-                    new MessageForm(ex.Message).ShowDialog();
+                    // Pro strach z nečekaných chyb (např. pád SQLite, neošetřený formát v DB)
+                    new MessageForm($"Systémová chyba při načítání kupónu: {ex.Message}").ShowDialog();
+                }
+                finally
+                {
+                    // Ať už to projde, nebo vyletí chyba, textbox vyčistíme vždycky na jednom místě
+                    textBox.Clear();
                 }
             }
             else
             {
-                new MessageForm("Neplatný kupón").ShowDialog();
+                new MessageForm("Neplatný formát kupónu.").ShowDialog();
                 textBox.Clear();
             }
         }

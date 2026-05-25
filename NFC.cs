@@ -27,9 +27,12 @@ namespace Pokladna
             var readers = _context.GetReaders();
             if (readers == null || readers.Length == 0)
             {
-                MessageBox.Show("UPOS: Čtečka karet nenalezena", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Místo otravného okna to zalogujeme. Kasa může běžet dál (třeba na ruční zadávání kódů)
+                Serilog.Log.Warning("UPOS: NFC čtečka dárkových karet nebyla v systému nalezena.");
                 return false;
             }
+
+            _readerName = readers[0];
 
             _readerName = readers[0];
 

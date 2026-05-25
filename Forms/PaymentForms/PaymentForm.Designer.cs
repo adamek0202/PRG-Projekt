@@ -1,4 +1,6 @@
-﻿namespace Pokladna.Forms
+﻿using System;
+
+namespace Pokladna.Forms
 {
     partial class PaymentForm
     {
@@ -610,6 +612,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void giftCardButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

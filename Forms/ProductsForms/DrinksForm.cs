@@ -1,26 +1,20 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
-namespace Pokladna.Forms
+namespace Pokladna.Forms.ProductSelectionForms
 {
-    public partial class DrinksForm : Form
+    // 1. Změníme dědičnost z Form na BaseForm
+    // 2. Přidáme implementaci rozhraní IProductSelector
+    public partial class DrinksForm : BaseForm, IProductSelector
     {
-        public DrinksForm()
+        // Vlastnost, kterou vyžaduje rozhraní IProductSelector pro předání ID zpět do MainFormu
+        public int SelectedProductId { get; private set; }
+
+        // Konstruktor přijímá PosContext a předává ho pomocí : base(context) do BaseFormu
+        internal DrinksForm(PosContext context) : base(context)
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
-        }
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
+            // ReallyCenterToScreen(this) už nemusíš volat, řeší to BaseForm!
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -32,9 +26,21 @@ namespace Pokladna.Forms
         private void DrinkButton_Click(object sender, EventArgs e)
         {
             var btn = sender as Button;
-            MainForm.ExternalProduct = int.Parse((string)btn.Tag);
-            DialogResult = DialogResult.OK;
-            Close();
+
+            if (btn?.Tag != null && int.TryParse(btn.Tag.ToString(), out int productId))
+            {
+                // ŽÁDNÝ STATICKÝ ZÁPIS! 
+                // ID uložíme do vlastnosti instance a MainForm si ho sám přečte.
+                SelectedProductId = productId;
+
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                // Pokud bys měl v Tagu tlačítka překlep nebo prázdno, zalogujeme to
+                Serilog.Log.Warning("Tlačítko {ButtonName} v DrinksForm nemá platné ID produktu v Tagu!", btn?.Name);
+            }
         }
     }
 }

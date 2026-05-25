@@ -1,4 +1,4 @@
-﻿namespace Pokladna
+﻿namespace Pokladna.Forms.Controls
 {
     partial class Keypad
     {

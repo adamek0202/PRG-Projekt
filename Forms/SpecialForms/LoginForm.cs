@@ -1,96 +1,60 @@
-﻿using System;
-using System.Data.SQLite;
-using System.Runtime.InteropServices;
+﻿using Pokladna.Database;
+using Pokladna.Dto;
+using System;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
-    public partial class LoginForm : Form
+    // Dědí z BaseForm, takže má automaticky DWM vypnutí a přístup k _context
+    public partial class LoginForm : BaseForm
     {
-        // Uchováváme informaci o tom, jaké tlačítko bylo stisknuto
-        private string roleRequired = "";
+        private readonly string _roleRequired = "";
 
-        public LoginForm(string roleRequired = "")
+        // Konstruktor vyžaduje PosContext a volitelně roli
+        internal LoginForm(PosContext context, string roleRequired = "") : base(context)
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
             textBox1.Focus();
-            this.roleRequired = roleRequired; // Určujeme požadovanou roli
-        }
-
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
+            _roleRequired = roleRequired;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string password = textBox1.Text;
 
-            if (AuthenticateUser(password, out string fullName, out string role))
+            // Voláme byznys logiku kompletně mimo GUI
+            UserSession user = DatabaseFunctions.AuthenticateUser(password);
+
+            if (user != null)
             {
-                if (roleRequired == "manager" && role != "manager")
+                // Kontrola manažerské role
+                if (_roleRequired == "manager" && user.Role != "manager")
                 {
-                    MessageBox.Show($"Zaměstnanec {fullName} s pozicí {role} nemá přístup do manažerské sekce. Pro přístup přiřaďte správnou pozici.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Zaměstnanec {user.FullName} s pozicí {user.Role} nemá přístup do manažerské sekce.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                MainForm.Cashier = fullName;
+                // Zapíšeme data do kontextu a zresetujeme objednávku
+                _context.CurrentCashierName = user.FullName;
+                _context.ResetCurrentOrder();
 
-                if (role == "manager" && roleRequired == "manager")
-                {
+                // Kontrola, zda má vůbec povolený přístup
+                //if (user.Role == "crew" || user.Role == "manager")
+                //{
                     DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else if (role == "crew" || role == "manager")
-                {
-                    DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show($"Zaměstnanec {fullName} s pozicí {role} nemá práva pro vstup do kasy. Pro vstup přiřaďte správnou pozici.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox1.Text = string.Empty;
-                }
-
+                    Close();
+                //}
+                //else
+                //{
+                //    MessageBox.Show($"Zaměstnanec {user.FullName} nemá dostatečná práva pro vstup.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    textBox1.Text = string.Empty;
+                //}
             }
             else
             {
                 MessageBox.Show("Zadali jste špatné heslo.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox1.Text = string.Empty;
-
             }
-        }
-
-        // Metoda pro autentizaci a vrácení role uživatele
-        private bool AuthenticateUser(string password, out string fullName, out string role)
-        {
-            fullName = null;
-            role = null;
-            string query = "SELECT FullName, Position FROM Users WHERE Password = @password";
-
-            using (SQLiteCommand cmd = new SQLiteCommand(query, DatabaseConnection.Connection))
-            {
-                cmd.Parameters.AddWithValue("@password", password);
-
-                using (SQLiteDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        fullName = reader.GetString(0);
-                        role = reader.GetString(1); // Předpokládáme, že tabulka Users má sloupec "Role"
-                        return true;
-                    }
-                }
-            }
-            return false;
         }
     }
 }

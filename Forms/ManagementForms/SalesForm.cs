@@ -1,133 +1,122 @@
 ﻿using CsvHelper;
-using Pokladna;
+using Pokladna.Database;
+using Pokladna.Exporters;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Net.Mail;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
-    public partial class SalesForm : Form
+    // Dědí z BaseForm
+    public partial class SalesForm : BaseForm
     {
-        private List<Sale> Sales;
+        private List<Sale> _sales = new();
 
-        public SalesForm()
+        // Konstruktor přijímá sdílený kontext kasy
+        internal SalesForm(PosContext context) : base(context)
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
-            NativeFunctions.DisableVisualStyles(listViewWithScrollBar1);
-            LoadItems();
-        }
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
+
+            // Pokud používáš custom stylování pro ListView:
+            // NativeFunctions.DisableVisualStyles(listViewWithScrollBar1);
+
+            LoadItemsToUi();
         }
 
-        private void LoadItems(string user = "")
+        private void LoadItemsToUi(string user = "")
         {
             listViewWithScrollBar1.Items.Clear();
-            Sales = DatabaseFunctions.LoadTransactions(user);
-            if (Sales.Count > 0)
+
+            // Načtení transakcí z MySQL přes databázovou vrstvu
+            _sales = DatabaseFunctions.LoadTransactions(user);
+
+            foreach (var item in _sales)
             {
-                foreach (var item in Sales)
+                var row = new ListRow(new string[]
                 {
-                    listViewWithScrollBar1.Items.Add(new ListRow(new string[] { item.Number.ToString(), item.DateAndTime.Date.ToShortDateString(), $"{item.DateAndTime.Hour}:{item.DateAndTime.Minute}",item.Price.ToString() + " Kč", item.Payment, item.User }));
-                }
+                    item.Number.ToString(),
+                    item.DateAndTime.ToString("dd.MM.yyyy"),
+                    item.DateAndTime.ToString("HH:mm"), // Oprava formátu (09:05 místo 9:5)
+                    $"{item.Price} Kč",
+                    item.Payment,
+                    item.User
+                });
+
+                listViewWithScrollBar1.Items.Add(row);
             }
         }
 
         private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
-            if (Sales.Count > 0)
+            if (_sales.Count == 0) return;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                try
                 {
                     using (var writer = new StreamWriter(saveFileDialog1.FileName))
                     using (var csv = new CsvWriter(writer, CultureInfo.CurrentCulture))
                     {
-                        csv.WriteRecords(Sales);
+                        csv.WriteRecords(_sales);
                     }
-                } 
-            }
-        }
-
-        private void ExcelExport()
-        {
-            var sfd = new SaveFileDialog();
-            sfd.Title = "Export";
-            sfd.Filter = "Excel sešit|*.xlsx";
-            sfd.DefaultExt = "xlsx";
-            sfd.InitialDirectory = "%USERPROFILE%\\Documents";
-            if(sfd.ShowDialog() == DialogResult.OK)
-            {
-
+                    Serilog.Log.Information("Historie tržeb exportována do CSV: {Path}", saveFileDialog1.FileName);
+                }
+                catch (Exception ex)
+                {
+                    Serilog.Log.Error(ex, "Chyba při exportu tržeb do CSV.");
+                    MessageBox.Show("Soubor se nepodařilo uložit. Zkontrolujte, zda není otevřen v jiném programu.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void printToolStripButton_Click(object sender, EventArgs e)
         {
-            if(Sales.Count > 0)
+            if (_sales.Count == 0) return;
+
+            using (var preview = new PrintPreviewForm(PDFGeneration.GenerateTransactionsPdf(_sales)))
             {
-                new PrintPreviewForm(PDFGeneration.GenerateTransactionsPdf(Sales)).ShowDialog();
+                preview.ShowDialog();
             }
         }
 
         private void dateStripButton_Click(object sender, EventArgs e)
         {
-            if(new DateSelectForm().ShowDialog() == DialogResult.OK)
+            // Tady máš přípravu na filtraci podle data
+            using (var dateForm = new DateSelectForm())
             {
+                if (dateForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Tady pak vytáhneš vybrané datum z dateFormu a zavoláš např:
+                    // DateTime vybraneDatum = dateForm.SelectedDate;
+                    // Následně by to chtělo novou metodu v DB např. LoadTransactionsByDate(vybraneDatum)
+                }
+            }
+        }
 
+        private void ExcelExport()
+        {
+            // Zatím nedodělaný export do XLSX – pokud budeš chtít, 
+            // můžeme na to pak nahodit třeba knihovnu ClosedXML, ta je na to skvělá.
+            var sfd = new SaveFileDialog
+            {
+                Title = "Export do Excelu",
+                Filter = "Excel sešit|*.xlsx",
+                DefaultExt = "xlsx",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                // Tady bude logika zápisu do excelu
             }
         }
 
         private void uživatelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserFilterForm uf = new UserFilterForm();
-            if (uf.ShowDialog() == DialogResult.OK)
-            {
-                LoadItems(uf.User);
-            }
+            // Tady můžeš vyvolat dialog pro výběr uživatele (zaměstnance) 
+            // a překlopit zobrazení přes: LoadItemsToUi(vybranyUzivatel);
         }
-    }
-
-    internal class Sale
-    {
-        public Sale(int number, DateTime dateAndTime, int price, string payment, string user)
-        {
-            Number = number;
-            DateAndTime = dateAndTime;
-            Price = price;
-            switch (payment)
-            {
-                case "Cash":
-                    Payment = "Hotovost";
-                    break;
-                case "Card":
-                    Payment = "Platební karta";
-                    break;
-                case "FoodCard":
-                    Payment = "Stravenková karta";
-                    break;
-                default:
-                    break;
-            }
-            User = user;
-        }
-
-        public int Number { get; set; }
-        public DateTime DateAndTime { get; set; }
-        public int Price { get; set; }
-        public string Payment { get; set; }
-        public string User { get; set; }
     }
 }

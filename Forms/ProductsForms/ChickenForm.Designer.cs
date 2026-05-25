@@ -1,6 +1,6 @@
-﻿namespace Pokladna.Forms
+﻿namespace Pokladna.Forms.ProductSelectionForms
 {
-    partial class ChickenForm
+    partial class ChickenForm : BaseForm
     {
         /// <summary>
         /// Required designer variable.

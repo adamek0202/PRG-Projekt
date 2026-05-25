@@ -1,112 +1,85 @@
 ﻿using CsvHelper;
-using Pokladna;
+using Pokladna.Database;
+using Pokladna.Exporters;
+using Pokladna.Forms.ProductSelectionForms;
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Globalization;
 using System.IO;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
-namespace Pokladna.Forms
+namespace Pokladna.Forms.ManagementForms
 {
-    public partial class ItemSalesForm : Form
+    // Dědí z BaseForm
+    internal partial class ItemSalesForm : BaseForm
     {
-        private List<Product> Items;
+        // Seznam načtených dat pro exporty
+        private List<SoldProduct> _items = new();
 
-        public ItemSalesForm()
+        // Konstruktor přijímá kontext
+        internal ItemSalesForm(PosContext context) : base(context)
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
-            NativeFunctions.DisableVisualStyles(listViewWithScrollBar1);
-            LoadItems();
+
+            // Pokud má tvůj custom ListView tuhle metodu pro starší skinování:
+            // NativeFunctions.DisableVisualStyles(listViewWithScrollBar1);
+
+            LoadItemsToUi();
         }
 
-        protected override void OnHandleCreated(EventArgs e)
+        private void LoadItemsToUi()
         {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
+            listViewWithScrollBar1.Items.Clear();
+
+            // Vytáhneme data z MySQL přes databázovou vrstvu
+            _items = DatabaseFunctions.GetSoldProductsReport();
+
+            // Naplníme grafické komponenty
+            foreach (var item in _items)
             {
-                throw Marshal.GetExceptionForHR(hr);
+                var row = new ListRow(new string[] {
+                    item.Id.ToString(),
+                    item.Name,
+                    $"{item.Price} Kč",
+                    item.Count.ToString(),
+                    $"{item.Count * item.Price} Kč"
+                });
+
+                listViewWithScrollBar1.Items.Add(row);
             }
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void LoadItems()
-        {
-            Items = new List<Product>();
-            string querry = "SELECT ProductId, Name, Price, Sold FROM Products WHERE Sold > 0";
-            using (var command = new SQLiteCommand(querry, DatabaseConnection.Connection))
-            {
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Items.Add(new Product(
-                            int.Parse(reader["ProductId"].ToString()),
-                            reader["Name"].ToString(),
-                            int.Parse(reader["Price"].ToString()),
-                            int.Parse(reader["Sold"].ToString())
-                        ));
-                    }
-                }
-            }
-
-            if (Items.Count > 0)
-            {
-                foreach (var item in Items)
-                {
-                    listViewWithScrollBar1.Items.Add(new ListRow(new string[] {
-                        item.Id.ToString(),
-                        item.Name,
-                        item.Price.ToString() + " Kč",
-                        item.Count.ToString(),
-                        (item.Count * item.Price).ToString() + " Kč"
-                    }));
-                }
-            }
-        }
-
-        internal class Product
-        {
-            public Product(int id, string name, int price, int count)
-            {
-                Id = id;
-                Name = name;
-                Price = price;
-                Count = count;
-            }
-
-            public int Id { get; set;}
-            public string Name { get; set; }
-            public int Price { get; set; }
-            public int Count { get; set; }
         }
 
         private void printToolStripButton_Click(object sender, EventArgs e)
         {
-            new PrintPreviewForm(PDFGeneration.GenerateProductsPdf(Items)).ShowDialog();
+            if (_items.Count == 0) return;
+
+            // Předpokládám, že PDF generation si upravíš na nový typ objektu SoldProduct, nebo použiješ generický list
+            var pdfDocument = PDFGeneration.GenerateProductsPdf(_items);
+            using (var preview = new PrintPreviewForm(pdfDocument))
+            {
+                preview.ShowDialog();
+            }
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            if (Items.Count > 0)
+            if (_items.Count == 0) return;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                try
                 {
                     using (var writer = new StreamWriter(saveFileDialog1.FileName))
                     using (var csv = new CsvWriter(writer, CultureInfo.CurrentCulture))
                     {
-                        csv.WriteRecords(Items);
+                        csv.WriteRecords(_items);
                     }
+                    Serilog.Log.Information("Statistika prodejů úspěšně exportována do CSV: {Path}", saveFileDialog1.FileName);
+                }
+                catch (Exception ex)
+                {
+                    Serilog.Log.Error(ex, "Chyba při exportu statistik do CSV.");
+                    MessageBox.Show("Nepodařilo se uložit CSV soubor. Data jsou pravděpodobně blokována jiným programem.", "Chyba exportu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Pokladna
+namespace Pokladna.Exporters
 {
     internal static class PDFGeneration
     {
@@ -92,7 +92,7 @@ namespace Pokladna
             return stream;
         }
 
-        public static MemoryStream GenerateProductsPdf(List<ItemSalesForm.Product> products)
+        public static MemoryStream GenerateProductsPdf(List<SoldProduct> products)
         {
             var stream = new MemoryStream();
 
@@ -183,7 +183,7 @@ namespace Pokladna
             return price.ToString();
         }
 
-        private static string SumProductsPrice(List<ItemSalesForm.Product> items)
+        private static string SumProductsPrice(List<SoldProduct> items)
         {
             int price = 0;
             foreach(var item in items)
