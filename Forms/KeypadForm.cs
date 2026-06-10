@@ -1,30 +1,16 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
-    public partial class DiscountForm : Form
+    public partial class DiscountForm : BaseForm
     {
         public int Discount { get; private set; }
 
         public DiscountForm()
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
-        }
-
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
         }
 
         private void KeypadButton_Click(object sender, EventArgs e)

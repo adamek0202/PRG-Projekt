@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 //Neprovádět bezdůvodné zásahy do logiky, hrozí rozbití aplikace
 
-namespace Pokladna
+namespace Pokladna.Forms.Controls
 {
     public class ListViewWithScrollBar : ListView
     {

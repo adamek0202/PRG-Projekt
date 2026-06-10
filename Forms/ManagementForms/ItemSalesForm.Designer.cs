@@ -36,7 +36,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listViewWithScrollBar1 = new Pokladna.ListViewWithScrollBar();
+            this.listViewWithScrollBar1 = new Pokladna.Forms.Controls.ListViewWithScrollBar();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -180,7 +180,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private Pokladna.ListViewWithScrollBar listViewWithScrollBar1;
+        private Pokladna.Forms.Controls.ListViewWithScrollBar listViewWithScrollBar1;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }

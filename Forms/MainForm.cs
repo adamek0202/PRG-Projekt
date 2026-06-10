@@ -1,13 +1,14 @@
 ﻿using Pokladna.Database;
 using Pokladna.Dto;
 using Pokladna.Forms;
+using Pokladna.Forms.Controls;
 using Pokladna.Forms.ProductSelectionForms;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Pokladna
+namespace Pokladna.Forms
 {
     internal partial class MainForm : Form
     {

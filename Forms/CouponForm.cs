@@ -1,33 +1,18 @@
-﻿using Pokladna.Database;
-using Pokladna.Exceptions;
+﻿using Pokladna.Exceptions;
 using Pokladna.Services;
 using System;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
-    public partial class CouponForm : Form
+    public partial class CouponForm : BaseForm
     {
         internal Coupon Coupon { get; private set; }
 
         public CouponForm()
         {
             InitializeComponent();
-            ReallyCenterToScreen(this);
-        }
-
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
         }
 
         private void kRemoveButton_Click(object sender, EventArgs e)

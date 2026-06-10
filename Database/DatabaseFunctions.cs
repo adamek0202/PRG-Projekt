@@ -643,62 +643,6 @@ namespace Pokladna.Database
             return sales;
         }
 
-
-
-        private static readonly HttpClient httpClient = new HttpClient();
-
-        public static async Task SendOrder(int orderId)
-        {
-            try
-            {
-                string url = "http://192.168.0.2:8080/new-order"; // Cílová adresa
-                var payload = new { OrderId = orderId };
-                string json = System.Text.Json.JsonSerializer.Serialize(payload);
-
-                Console.WriteLine("Odesílám JSON:");
-                Console.WriteLine(json);
-
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await httpClient.PostAsync(url, content);
-                if (response.IsSuccessStatusCode)
-                {
-                    Console.WriteLine($"Objednávka {orderId} byla úspěšně odeslána.");
-                }
-                else
-                {
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Chyba při odesílání objednávky {orderId}. Kód odpovědi: {response.StatusCode}");
-                    Console.WriteLine("Odpověď serveru:");
-                    Console.WriteLine(responseBody);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Chyba při odesílání objednávky {orderId}: {ex.Message}");
-            }
-        }
-
-        //public static async Task ProcessListViewAndSend(ListView listView, string ipAddress)
-        //{
-        //    var itemsList = new List<object>();
-        //    foreach (ListRow item in listView.Items)
-        //    {
-        //        string itemName = item.Text;
-        //        if (IsNormalProduct(itemName))
-        //        {
-        //            itemsList.Add(new { type = "normal", name = itemName });
-        //        }
-        //        else
-        //        {
-        //            var components = MenuService.GetMenuComponents(itemName);
-        //            itemsList.Add(new { type = "composite", name = itemName, components });
-        //        }
-        //    }
-
-        //    var jsonPayload = JsonSerializer.Serialize(new { location = "here", items = itemsList }, new JsonSerializerOptions { WriteIndented = true });
-        //    await SendHttpPost(ipAddress, jsonPayload);
-        //}
-
         /// <summary>
         /// Vyhledá dárkovou kartu v MySQL podle jejího UID kódu.
         /// </summary>

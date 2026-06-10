@@ -87,9 +87,33 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\ConfigManager.cs" />
+    <Compile Include="Configuration\ConfigModel.cs" />
+    <Compile Include="Events\AppEventBroker.cs" />
+    <Compile Include="Events\AppEvents.cs" />
     <Compile Include="Exporters\CSVExport.cs" />
     <Compile Include="Forms\ButtonHandler.cs" />
     <Compile Include="Coupon.cs" />
+    <Compile Include="Forms\ManagementForms\GiftCardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\GiftCardsForm.Designer.cs">
+      <DependentUpon>GiftCardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\IRibbonActionTarget.cs" />
+    <Compile Include="Forms\ManagementForms\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementForms\UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\RawPrintHelper.cs" />
     <Compile Include="Services\CouponService.cs" />
     <Compile Include="Dto\MenuComponentDto.cs" />
     <Compile Include="Dto\UserSession.cs" />
@@ -143,7 +167,6 @@
     <Compile Include="Forms\ItemNotesForm.Designer.cs">
       <DependentUpon>ItemNotesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManagementForms\ICommandHandler.cs" />
     <Compile Include="Forms\ManagementForms\ItemSalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,7 +185,6 @@
     <Compile Include="Forms\ManagementForms\PrintPreviewForm.Designer.cs">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManagementForms\RibbonCommands.cs" />
     <Compile Include="Forms\MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,7 +292,7 @@
       <DependentUpon>TenderedReturnForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GiftCard.cs" />
-    <Compile Include="GlobalPosPrinter.cs" />
+    <Compile Include="Helpers\GlobalPosPrinter.cs" />
     <Compile Include="Forms\Controls\Keypad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,9 +300,9 @@
       <DependentUpon>Keypad.cs</DependentUpon>
     </Compile>
     <Compile Include="ListExtensions.cs" />
-    <Compile Include="ListRow.cs" />
-    <Compile Include="NativeFunctions.cs" />
-    <Compile Include="NFC.cs" />
+    <Compile Include="Forms\Controls\ListRow.cs" />
+    <Compile Include="Helpers\NativeFunctions.cs" />
+    <Compile Include="Helpers\NFC.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Services\OrderPrintingService.cs" />
     <Compile Include="Exporters\PDFGeneration.cs" />
@@ -296,13 +318,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Receipt.cs" />
+    <Compile Include="Helpers\Receipt.cs" />
     <Compile Include="Forms\ManagementForms\Ribbon.xaml.cs">
       <DependentUpon>Ribbon.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dto\SaleItemDTO.cs" />
     <Compile Include="Sale.cs" />
-    <Compile Include="ScrollListView.cs">
+    <Compile Include="Forms\Controls\ScrollListView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Services\MenuService.cs" />
@@ -329,6 +351,9 @@
     <EmbeddedResource Include="Forms\ItemNotesForm.resx">
       <DependentUpon>ItemNotesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementForms\GiftCardsForm.resx">
+      <DependentUpon>GiftCardsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagementForms\ItemSalesForm.resx">
       <DependentUpon>ItemSalesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +362,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagementForms\PrintPreviewForm.resx">
       <DependentUpon>PrintPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementForms\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementForms\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MessageForm.resx">
       <DependentUpon>MessageForm.cs</DependentUpon>
@@ -431,7 +462,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="bblanchon.PDFium.Win32">
-      <Version>150.0.7843</Version>
+      <Version>151.0.7881</Version>
     </PackageReference>
     <PackageReference Include="ClosedXML">
       <Version>0.105.0</Version>
@@ -439,20 +470,14 @@
     <PackageReference Include="CsvHelper">
       <Version>33.1.0</Version>
     </PackageReference>
-    <PackageReference Include="EntityFramework">
-      <Version>6.5.2</Version>
-    </PackageReference>
-    <PackageReference Include="ESC-POS-USB-NET">
-      <Version>1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Fluent.Ribbon">
-      <Version>11.0.2</Version>
+    <PackageReference Include="ESCPOS_NET">
+      <Version>3.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging">
-      <Version>10.0.8</Version>
+      <Version>10.0.9</Version>
     </PackageReference>
     <PackageReference Include="MySqlConnector">
-      <Version>2.5.0</Version>
+      <Version>2.6.0</Version>
     </PackageReference>
     <PackageReference Include="PCSC">
       <Version>7.0.1</Version>
@@ -464,7 +489,7 @@
       <Version>2.14.5</Version>
     </PackageReference>
     <PackageReference Include="QuestPDF">
-      <Version>2026.5.0</Version>
+      <Version>2026.6.0</Version>
     </PackageReference>
     <PackageReference Include="Serilog">
       <Version>4.3.1</Version>
@@ -475,14 +500,17 @@
     <PackageReference Include="Serilog.Sinks.File">
       <Version>7.0.0</Version>
     </PackageReference>
+    <PackageReference Include="SixLabors.ImageSharp">
+      <Version>2.1.13</Version>
+    </PackageReference>
     <PackageReference Include="System.Drawing.Common">
-      <Version>10.0.8</Version>
+      <Version>10.0.9</Version>
     </PackageReference>
     <PackageReference Include="System.Memory">
       <Version>4.6.3</Version>
     </PackageReference>
     <PackageReference Include="System.Text.Json">
-      <Version>10.0.8</Version>
+      <Version>10.0.9</Version>
     </PackageReference>
     <PackageReference Include="System.Threading.Tasks.Extensions">
       <Version>4.6.3</Version>
@@ -498,6 +526,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\calendar.png" />
     <Resource Include="Resources\user.png" />
     <Resource Include="Resources\exit.png" />

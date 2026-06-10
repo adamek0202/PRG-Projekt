@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using Pokladna.Configuration;
 using System;
 using System.Data;
 
@@ -7,16 +8,18 @@ using System.Data;
 
 namespace Pokladna.Database
 {
-    public static class DatabaseConnection
+    internal static class DatabaseConnection
     {
         public static string ConnectionString =>
-            "Server=192.168.0.2;" +
-            "Port=3306;" +
-            "Database=fastfood_db;" +
-            "Uid=adam;" +
-            "Pwd=111111;" +
-            "Pooling=true;" +      // Zapne connection pooling
-            "MinimumPoolSize=5;" + // Udrží 5 spojení neustále otevřených pro rychlou reakci kasy
+            $"Server={ConfigManager.Values.Database.Server};" +
+            $"Port={ConfigManager.Values.Database.Port};" +
+            $"Database={ConfigManager.Values.Database.DatabaseName};" +
+            $"Uid={ConfigManager.Values.Database.User};" +
+            $"Pwd={ConfigManager.Values.Database.Password};" +
+            $"Connection Timeout={ConfigManager.Values.Database.Timeout};" +
+            $"Pooling=true;" +
+            "MinimumPoolSize=5;" +
+            "AllowUserVariables=True;" +
             "MaximumPoolSize=50;";
 
         private static MySqlConnection _connection;

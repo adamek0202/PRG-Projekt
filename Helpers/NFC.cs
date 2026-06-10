@@ -4,7 +4,7 @@ using PCSC;
 using PCSC.Iso7816;
 using PCSC.Monitoring;
 
-namespace Pokladna
+namespace Pokladna.Helpers
 {
     public class NfcReader : IDisposable
     {

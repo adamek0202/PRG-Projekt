@@ -1,9 +1,13 @@
-﻿using System;
-using System.IO;
-using System.Windows.Forms;
-using Serilog;
-using Pokladna.Forms;
+﻿using Pokladna.Configuration;
 using Pokladna.Database;
+using Pokladna.Forms;
+using Pokladna.Helpers;
+using Serilog;
+using Serilog.Events;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Pokladna
 {
@@ -12,32 +16,60 @@ namespace Pokladna
         [STAThread]
         static void Main()
         {
-            // 1. NASTAVENÍ SERILOGU
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug() // Logujeme vše od úrovně Debug výše
                 .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
                 .WriteTo.File(
                     path: Path.Combine(Environment.CurrentDirectory, "logs", "pokladna-.txt"),
                     rollingInterval: RollingInterval.Day, // Každý den vytvoří nový soubor (např. pokladna-20260525.txt)
-                    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+                    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+                    restrictedToMinimumLevel: LogEventLevel.Warning, // DO SOUBORU JEN WARNING A VYŠŠÍ
+                    buffered: false
                 )
                 .CreateLogger();
 
-            // 2. GLOBÁLNÍ ODCHYTÁVÁNÍ CHYB
-            // Zachytí chyby z ne-UI vláken
+            Serilog.Debugging.SelfLog.Enable(Console.Error);
+
             AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
-                Log.Fatal(e.ExceptionObject as Exception, "Kritická chyba mimo UI vlákno!");
+            {
+                var ex = e.ExceptionObject as Exception;
+                if (ex != null)
+                {
+                    Log.Fatal(ex, "Kritická chyba mimo UI vlákno! Aplikace bude ukončena.");
+                }
+                else
+                {
+                    Log.Fatal("Kritická chyba mimo UI vlákno bez objektu výjimky: {ExceptionObject}", e.ExceptionObject);
+                }
+
+                Log.CloseAndFlush(); // Klíčové – bez toho v logu na disku nic nebude!
+            };
 
             // Zachytí chyby z hlavního UI vlákna WinForms
             Application.ThreadException += (sender, e) =>
+            {
                 Log.Fatal(e.Exception, "Kritická chyba v UI vlákně kasy!");
+                Log.CloseAndFlush();
+            };
 
+            TaskScheduler.UnobservedTaskException += (sender, e) =>
+            {
+                Log.Error(e.Exception, "Neošetřená chyba v asynchronní úloze (Task).");
+                // e.SetObserved(); // Pokud nechceš, aby kvůli tomu aplikace spadla (závisí na nastavení configu)
+            };
             try
             {
                 Application.SetCompatibleTextRenderingDefault(false);
                 QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
 
                 Log.Information("=== START POKLADNÍHO SYSTÉMU ===");
+
+                Log.Information("Načítání konfigurace...");
+                if (!Configuration.ConfigManager.Initialize())
+                {
+                    Log.CloseAndFlush();
+                    return;
+                }
 
                 // --- DATABÁZE ---
                 Log.Information("Připojování k MySQL databázi...");
@@ -91,8 +123,9 @@ namespace Pokladna
                 DatabaseFunctions.orderId = 1;
 
                 // --- HARDWARE ---
+                Log.Information("Inicializace HW...");
                 Log.Information("Inicializace pokladní tiskárny...");
-                string printerError = GlobalPosPrinter.InitPrinter(posContext.PrinterName);
+                string printerError = GlobalPosPrinter.InitPrinter(ConfigManager.Values.Devices.Printer.PrinterName);
                 if (!string.IsNullOrEmpty(printerError))
                 {
                     Log.Warning("Tiskárna nebyla inicializována: {Error}", printerError);
@@ -105,6 +138,7 @@ namespace Pokladna
                 {
                     Log.Warning("NFC čtečka nebyla nalezena. Přihlašování bude možné pouze kódem.");
                 }
+                Log.Information("Inicializace HW dokončena");
 
                 Log.Information("Všechny subsystémy připraveny. Spouštění GUI...");
                 Application.Run(new StartForm());

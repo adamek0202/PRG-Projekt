@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 
-namespace Pokladna
+namespace Pokladna.Forms.Controls
 {
     internal class ListRow : ListViewItem
     {

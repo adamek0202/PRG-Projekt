@@ -1,14 +1,13 @@
 ﻿using Pokladna.Database;
 using Pokladna.Dto;
+using Pokladna.Forms.Controls;
 using System;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static Pokladna.BasicTheme;
 
 namespace Pokladna.Forms
 {
-    public partial class PaymentForm : Form
+    public partial class PaymentForm : BaseForm
     {
         private readonly PosContext _context;
 
@@ -17,19 +16,6 @@ namespace Pokladna.Forms
         {
             InitializeComponent();
             _context = context;
-
-            ReallyCenterToScreen(this);
-        }
-
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            DWMNCRENDERINGPOLICY renderingPolicy = DWMNCRENDERINGPOLICY.DWMNCRP_DISABLED;
-            int hr = DwmSetWindowAttribute(Handle, DWMWINDOWATTRIBUTE.DWMWA_NCRENDERING_POLICY, renderingPolicy, sizeof(DWMNCRENDERINGPOLICY));
-            if (hr != 0)
-            {
-                throw Marshal.GetExceptionForHR(hr);
-            }
         }
 
         private void PaymentForm_Load(object sender, EventArgs e)
@@ -217,7 +203,7 @@ namespace Pokladna.Forms
                     _context.CurrentOrder.ManualDiscountPercentage,    // Výše uplatněné slevy
                     _context.CurrentOrder.ReceiptId,   // Číslo účtenky z DB
                     _context.CurrentOrder.CashierName, // Jméno přihlášeného uživatele
-                    _context.CurrentOrder.IsTakeAway      // Příznak V restauraci / S sebou
+                    _context.CurrentOrder.IsTakeAway     // Příznak V restauraci / S sebou
                 );
             }
             catch (Exception ex)

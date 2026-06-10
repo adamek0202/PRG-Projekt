@@ -60,7 +60,7 @@ namespace Pokladna.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.listView1 = new Pokladna.ListViewWithScrollBar();
+            this.listView1 = new Pokladna.Forms.Controls.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -643,7 +643,7 @@ namespace Pokladna.Forms
         private System.Windows.Forms.Button exactCashButton;
         private System.Windows.Forms.TextBox PayedTextBox;
         private System.Windows.Forms.Label sumLabel;
-        private ListViewWithScrollBar listView1;
+        private Controls.ListViewWithScrollBar listView1;
         private System.Windows.Forms.ColumnHeader Produkt;
         private System.Windows.Forms.ColumnHeader Cena;
         private System.Windows.Forms.ColumnHeader Mnozstvi;

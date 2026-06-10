@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration>
+
+	<DatabaseSettings provider="MySQL" connectionTimeout="15">
+		<Server>192.168.0.2</Server>
+		<Port>3306</Port>
+		<DatabaseName>fastfood_db</DatabaseName>
+		<User>posuser</User>
+		<Password>111111</Password>
+	</DatabaseSettings>
+
+	<DeviceSettings>
+		<Printer enabled="true">
+			<PrinterName>STAR-TSP650</PrinterName>
+			<PrinterWidthChars>42</PrinterWidthChars>
+			<CodePage>windows-1250</CodePage>
+		</Printer>
+
+		<CustomerDisplay enabled="true">
+			<PortName>COM5</PortName>
+			<BaudRate>9600</BaudRate>
+			<DisplayWidthChars>20</DisplayWidthChars>
+		</CustomerDisplay>
+
+		<BarcodeScanner enabled="true" mode="KeyboardEmulation">
+			<PortName></PortName>
+		</BarcodeScanner>
+	</DeviceSettings>
+
+	<StoreSettings>
+		<StoreName>Gastro Prodejna Čelákovice</StoreName>
+		<CompanyId_ICO>12345678</CompanyId_ICO>
+		<Street>Masarykova 100</Street>
+		<City>Čelákovice</City>
+		<ReceiptHeaderNote>Děkujeme za vaši návštěvu!</ReceiptHeaderNote>
+	</StoreSettings>
+
+	<ApplicationSettings>
+		<DefaultCashier>Adam Benda</DefaultCashier>
+		<DebugMode>false</DebugMode>
+		<CurrencySign>Kč</CurrencySign>
+	</ApplicationSettings>
+
+</SystemConfiguration>

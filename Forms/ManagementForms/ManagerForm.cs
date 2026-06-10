@@ -1,50 +1,90 @@
-﻿using Pokladna.Forms.ProductSelectionForms;
+﻿using Pokladna.Events;
+using Pokladna.Forms.ProductSelectionForms;
+using System;
+using System.Windows.Forms;
 
-namespace Pokladna.Forms
+namespace Pokladna.Forms.ManagementForms
 {
-    // Dědí z BaseForm, odebíráme ruční Win32 API pro DWM a centrování
     public partial class ManagerForm : BaseForm
     {
+        private Ribbon wpfRibbon;
         // Konstruktor přijímá sdílený kontext z úvodní obrazovky
         internal ManagerForm(PosContext context) : base(context)
         {
             InitializeComponent();
-
-            // Inicializace WPF Ribbonu uvnitř ElementHostu
-            elementHost1.Child = new Ribbon();
-
-            // !!! OPRAVA: Metodu musíme reálně zavolat, aby Ribbon reagoval na klikání !!!
-            InitRibbonCommands();
+            wpfRibbon = (Ribbon)elementHost1.Child;
         }
 
-        private void InitRibbonCommands()
+        private void OnRibbonActionTriggered(object sender, AppActionEventArgs e)
         {
-            var ribbon = (Ribbon)elementHost1.Child;
-
-            ribbon.CommandInvoked += (s, cmd) =>
+            if (this.InvokeRequired)
             {
-                switch (cmd.Name)
+                this.Invoke(new Action(() => OnRibbonActionTriggered(sender, e)));
+                return;
+            }
+
+            switch (e.Action)
+            {
+                case AppActionType.OpenPriceList:
+                    //OpenSingleWindow<PriceListForm>();
+                    return;
+
+                case AppActionType.OpenGiftCards:
+                    OpenSingleWindow<GiftCardsForm>();
+                    return;
+
+                case AppActionType.CloseWindow:
+                    // Tlačítko Konec z jakékoliv sekce zavře aktivní okno
+                    if (ActiveMdiChild != null)
+                    {
+                        ActiveMdiChild.Close();
+                        // Po zavření okna řekneme Ribbonu, že nic neběží -> vrátí se na záložku "Domů"
+                        wpfRibbon.UpdateRibbonState(null);
+                    }
+                    return;
+            }
+
+            // Ostatní datové akce (Add, Edit, Delete) posíláme do běžícího okna
+            if (ActiveMdiChild is IRibbonActionTarget activeWindow)
+            {
+                switch (e.Action)
                 {
-                    case nameof(RibbonCommands.PriceList):
-                        // Tady pak otevřeš ceníky
-                        break;
-
-                    case nameof(RibbonCommands.Employees):
-                        // Tady správu zaměstnanců
-                        break;
-
-                    case nameof(RibbonCommands.GiftCards):
-                        // Tady dárkové karty
-                        break;
-
-                    case nameof(RibbonCommands.Coupons):
-                        // Otevře formulář kupónů jako MDI dítě a předá mu kontext
-                        // (Až budeš CouponsForm upravovat, nezapomeň mu přidat konstruktor pro PosContext)
-                        //var coupons = new CouponsForm(_context) { MdiParent = this };
-                        //coupons.Show();
-                        break;
+                    case AppActionType.AddRecord: activeWindow.ExecuteAdd(); break;
                 }
-            };
+            }
+        }
+
+        /// <summary>
+        /// Otevře požadované okno a nahlásí to Ribbonu, aby přepnul záložku.
+        /// </summary>
+        private void OpenSingleWindow<T>() where T : Form, new()
+        {
+            // Protože může běžet jen jedno okno, pojistka:
+            if (ActiveMdiChild != null) return;
+
+            T newChild = new T();
+            newChild.MdiParent = this;
+            newChild.WindowState = FormWindowState.Maximized;
+
+            // Navážeme se na událost FormClosed samotného okna. 
+            // Kdyby uživatel okno zavřel jinak (třeba křížkem, pokud ho tam necháš), 
+            // Ribbon se musí taky správně vrátit na domovskou záložku.
+            newChild.FormClosed += (s, args) => { wpfRibbon.UpdateRibbonState(null); };
+
+            newChild.Show();
+
+            // Řekneme Ribbonu, jaké okno se zrovna otevřelo (např. "PriceListForm")
+            wpfRibbon.UpdateRibbonState(typeof(T).Name);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                AppEventBroker.ActionTriggered -= OnRibbonActionTriggered;
+                if (components != null) components.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

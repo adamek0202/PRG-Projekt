@@ -19,18 +19,6 @@ namespace Pokladna.Forms.ManagementForms
             RefreshListView();
         }
 
-        protected override void OnActivated(EventArgs e)
-        {
-            base.OnActivated(e);
-
-            if (_bindings.Count == 0)
-            {
-                _bindings.Add(new CommandBinding(RibbonCommands.Add, (s, args) => AddCoupon(), (s, args) => { args.CanExecute = true; }));
-                _bindings.Add(new CommandBinding(RibbonCommands.Edit, (s, args) => EditCoupon(), (s, args) => { args.CanExecute = true; }));
-                _bindings.Add(new CommandBinding(RibbonCommands.Delete, (s, args) => RemoveCoupon(), (s, args) => { args.CanExecute = true; }));
-            }
-        }
-
         private void listViewWithScrollBar1_DoubleClick(object sender, EventArgs e)
         {
             EditCoupon();

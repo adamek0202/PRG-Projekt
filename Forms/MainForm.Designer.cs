@@ -1,4 +1,4 @@
-﻿namespace Pokladna
+﻿namespace Pokladna.Forms
 {
     partial class MainForm
     {
@@ -123,7 +123,7 @@
             this.numpadPanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.listView = new Pokladna.ListViewWithScrollBar();
+            this.listView = new Pokladna.Forms.Controls.ListViewWithScrollBar();
             this.Produkt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mnozstvi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -1902,7 +1902,7 @@
 
         #endregion
 
-        private ListViewWithScrollBar listView;
+        private Controls.ListViewWithScrollBar listView;
         private System.Windows.Forms.ColumnHeader Produkt;
         private System.Windows.Forms.ColumnHeader Cena;
         private System.Windows.Forms.Button RemoveItemButton;

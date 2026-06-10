@@ -4,9 +4,6 @@ namespace Pokladna
 {
     internal class PosContext
     {
-        // Konstanta pro HW tiskárnu, klidně může žít zde
-        public string PrinterName { get; } = "BP-T3";
-
         // Běžné stavové proměnné pokladny
         public int NextReceiptId { get; set; }
         public string CurrentCashierName { get; set; } = "Administrátor";
@@ -30,7 +27,6 @@ namespace Pokladna
         public void ResetCurrentOrder()
         {
             CurrentOrder.Clear();
-            // Zde můžeme objednávce rovnou vnutit aktuální stav pokladny
             CurrentOrder.ReceiptId = NextReceiptId;
             CurrentOrder.CashierName = CurrentCashierName;
             CurrentOrder.IsTakeAway = IsTakeAway;

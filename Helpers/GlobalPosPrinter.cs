@@ -1,13 +1,13 @@
-﻿using ESC_POS_USB_NET.Printer;
+﻿using ESCPOS_NET;
+using ESCPOS_NET.Emitters;
 using System;
 using System.Drawing.Printing;
 using System.Management;
 
-namespace Pokladna
+namespace Pokladna.Helpers
 {
     internal static class GlobalPosPrinter
     {
-        public static Printer EPrinter;
 
         public static int receiptId;
 
@@ -15,22 +15,18 @@ namespace Pokladna
         {
             if (!PrinterExists(printerName))
             {
-                EPrinter = null;
                 return $"Chyba při inicializaci tiskárny: Tiskárna neexistuje";
             }
             if (!CheckPrinterStatus(printerName))
             {
-                EPrinter = null;
                 return $"Chyba při inicializaci tiskárny: Tiskárna je offline";
             }
             try
             {
-                EPrinter = new Printer(printerName);
                 return "";
             }
             catch (Exception ex)
             {
-                EPrinter = null;
                 return $"Chyba při inicializaci tiskárny: {ex.Message}";
             }
         }
