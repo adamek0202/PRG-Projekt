@@ -3,7 +3,6 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">win-x64</Platform>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <LangVersion>9</LangVersion>
     <OutputType>Exe</OutputType>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -11,6 +10,7 @@
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
+	<ImplicitUsings>disable</ImplicitUsings>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
@@ -26,19 +26,28 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <StartupObject />
     <ApplicationIcon>Resources\ikona.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
+    <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>win-x64</PlatformTarget>
+    <DebugType>full</DebugType>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="newdata\**" />
+    <EmbeddedResource Remove="newdata\**" />
+    <None Remove="newdata\**" />
+    <Page Remove="newdata\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="bblanchon.PDFium.Win32" Version="151.0.7881" />
     <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="CsvHelper" Version="33.1.0" />
     <PackageReference Include="ESCPOS_NET" Version="3.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.9" />
     <PackageReference Include="MySqlConnector" Version="2.6.0" />
     <PackageReference Include="PCSC" Version="7.0.1" />
     <PackageReference Include="PCSC.Iso7816" Version="7.0.1" />
@@ -48,9 +57,9 @@
     <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
     <PackageReference Include="SixLabors.ImageSharp" Version="2.1.13" />
-    <PackageReference Include="System.Drawing.Common" Version="9.0.17" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.9" />
     <PackageReference Include="System.Management" Version="10.0.9" />
-    <PackageReference Include="System.Text.Json" Version="9.0.17" />
+    <PackageReference Include="System.Text.Json" Version="10.0.9" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Forms\Controls\Keypad.cs">
